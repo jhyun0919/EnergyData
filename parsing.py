@@ -41,11 +41,12 @@ print tsfile['ts'][10]
 print
 """
 
-for i in range(0, 100):
+for i in range(0, 25):
 	print "tsfile['ts'][%d]" %i
 	print tsfile['ts'][i]
 	print
 
+"""
 print "tsfile['value'][0]"
 print tsfile['value'][0]
 print
@@ -53,6 +54,17 @@ print
 print "tsfile['value'][-1]"
 print tsfile['value'][-1]
 print
+"""
+
+for i in range(0, 21):
+	try:
+		print "tsfile['value'][%d]" %(i*10000)
+		print tsfile['value'][i*10000]
+		print
+	except IndexError as err:
+		print('Index Error: '+ str(err))
+		print
 
 print "length of key ts is %d" % len(tsfile['ts'])
+print "length of key value is %d" % len(tsfile['value'])
 
