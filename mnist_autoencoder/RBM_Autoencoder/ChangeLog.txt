@@ -1,0 +1,12 @@
+2013-07-23
+    * RBM_Autoencoder 0.1.2
+    * Broken package
+    * Updated for new OpenCV
+
+2012-12-10
+    * RBM_Autoencoder 0.1.1 
+    * Allow more flexible choice over which unit type for the hidden layers
+
+2012-12-08
+    * RBM_Autoencoder 0.1.0 
+    * First released!

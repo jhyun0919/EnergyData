@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1355136225 source:/home/nghia/Downloads/RBM_Autoencoder/RBM.cpp
+	"RBM.h"
+	<cstdlib>
+	<float.h>
+
+1374893756 /home/nghia/Downloads/RBM_Autoencoder/RBM.h
+	<armadillo>
+
