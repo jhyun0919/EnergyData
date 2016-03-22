@@ -42,10 +42,9 @@ for i in range(0, len(x)):
 
 
 
-"""
+
 plt.plot(x,y,linestyle = '-', marker = 'x', label = "value")
 
 plt.xlabel('time')
 plt.legend(loc = 2)
 plt.show()
-"""
