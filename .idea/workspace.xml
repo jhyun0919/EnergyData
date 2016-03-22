@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9e90c6a0-c712-4bc0-9204-421017e6380e" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/.ipynb_checkpoints/Untitled-checkpoint.ipynb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/Untitled.ipynb" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/matplot_pracice_01.py" afterPath="$PROJECT_DIR$/matplot_pracice_01.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parsing.py" afterPath="$PROJECT_DIR$/parsing.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/show_graph.py" afterPath="$PROJECT_DIR$/show_graph.py" />
-    </list>
+    <list default="true" id="9e90c6a0-c712-4bc0-9204-421017e6380e" name="Default" comment="" />
     <ignored path="EnergyData_jhyun.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -63,7 +56,7 @@
           <file leaf-file-name="parsing.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/parsing.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.9501385">
+                <state vertical-scroll-proportion="1.8448753">
                   <caret line="74" column="23" selection-start-line="74" selection-start-column="23" selection-end-line="74" selection-end-column="23" />
                   <folding>
                     <element signature="e#45#69#0" expanded="true" />
@@ -701,7 +694,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/parsing.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9501385">
+        <state vertical-scroll-proportion="1.8448753">
           <caret line="74" column="23" selection-start-line="74" selection-start-column="23" selection-end-line="74" selection-end-column="23" />
           <folding>
             <element signature="e#45#69#0" expanded="true" />
