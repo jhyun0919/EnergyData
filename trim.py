@@ -2,6 +2,7 @@
 
 import sys
 import cPickle as pickle
+import copy
 import matplotlib.pyplot as plt
 
 
@@ -22,6 +23,9 @@ value = data['value']
 
 print(time_stamp)
 print(value)
+
+print('total length: '+str(len(time_stamp)))
+
 
 x, y = [], []
 
@@ -52,16 +56,39 @@ for i in range (0, len(time_stamp)):
 
         i = i-1
 
-print(len(x))
+print
+print('######### trimmed ##########')
+print
+
+for i in range(0, 5):
+    print('ts: ' +str(x[i])),
+    print('\tvalue: %d' %y[i])
+
+print('.\n.\n.')
+
+for i in xrange(len(x)-5,len(x)-1):
+    print('ts: ' +str(x[i])),
+    print('\tvalue: %d' %y[i])
+
+
+print
+print('total length: ' + str(len(x)))
 print(float(len(x))/len(time_stamp))
+
+y_temp = copy.copy(y)
+y_temp.sort()
+y_max = y_temp[-100]
+print('y_max: ' + str(y_max))
+
+for i in range(0, len(y)):
+    y[i] = (y[i]/y_max)*100
+
+
+
 
 plt.scatter(x,y,linestyle = '-', marker = 'x', label = "value")
 
 plt.xlabel('time')
 plt.legend(loc = 2)
 plt.show()
-"""
-for i in range(0, len(x)):
-    print(x[i]),
-    print(y[i])
-"""
+
