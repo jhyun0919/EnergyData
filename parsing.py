@@ -5,7 +5,8 @@ import sys
 
 
 try:
-	file_path = sys.argv[1]
+	file_path = '/Users/JH/Documents/GitHub/EnergyData_jhyun/VTT/VTT_GW1_HA2_VM_EP_KV_K.bin'
+		#sys.argv[1]
 except IndexError as err:
 	print('IndexError: ' + str(err))
 	print('Usage: python parsing <filename>')
@@ -41,7 +42,7 @@ print tsfile['ts'][10]
 print
 """
 
-for i in range(0, 25):
+for i in range(0, 10):
 	print "tsfile['ts'][%d]" %i
 	print tsfile['ts'][i]
 	print
@@ -68,3 +69,7 @@ for i in range(0, 21):
 print "length of key ts is %d" % len(tsfile['ts'])
 print "length of key value is %d" % len(tsfile['value'])
 
+print('start-ts: '),
+print(tsfile['ts'][0])
+print('end-ts: '),
+print(tsfile['ts'][-1])

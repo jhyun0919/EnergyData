@@ -23,7 +23,7 @@ for line in plot_data:
 
 
 # plt.plot(x,y,'o-', label="value")
-plt.plot(x,y,linestyle='-', marker='o', label="value")
+plt.plot(x,y,linestyle='-', marker='x', label="value")
 
 plt.xlabel('time')
 plt.legend(loc=2)
