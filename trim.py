@@ -21,9 +21,10 @@ data = pickle.load(open(file_path))
 time_stamp = data['ts']
 value = data['value']
 
-print(time_stamp)
-print(value)
+print
+print(data)
 
+print
 print('total length: '+str(len(time_stamp)))
 
 
