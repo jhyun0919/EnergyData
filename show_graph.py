@@ -37,12 +37,6 @@ for i in range(0, len(x)):
 	print('\t value: %d' %y[i])
 
 
-
-
-
-
-
-
 plt.plot(x,y,linestyle = '-', marker = 'x', label = "value")
 
 plt.xlabel('time')

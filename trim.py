@@ -87,7 +87,7 @@ for i in range(0, len(y)):
 
 
 
-plt.scatter(x,y,linestyle = '-', marker = 'x', label = "value")
+plt.scatter(x, y, marker = 'x', label = "value")
 
 plt.xlabel('time')
 plt.legend(loc = 2)
