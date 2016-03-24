@@ -4,6 +4,7 @@ import sys
 import cPickle as pickle
 import copy
 import matplotlib.pyplot as plt
+import numpy as np
 
 # Load Data
 
@@ -19,11 +20,7 @@ data = pickle.load(open(file_path))
 time_stamp = data['ts']
 value = data['value']
 
-print
-print(data)
-
-print
-print('total length: ' + str(len(time_stamp)))
+# Interpolation
 
 x, y = [], []
 
@@ -51,34 +48,31 @@ for i in range(0, len(time_stamp)):
 
         i = i - 1
 
-print
-print('######### trimmed ##########')
-print
-
-for i in range(0, 5):
-    print('ts: ' + str(x[i])),
-    print('\tvalue: %d' % y[i])
-
-print('.\n.\n.')
-
-for i in xrange(len(x) - 5, len(x) - 1):
-    print('ts: ' + str(x[i])),
-    print('\tvalue: %d' % y[i])
-
-print
-print('total length: ' + str(len(x)))
-print(float(len(x)) / len(time_stamp))
+# Normalization
 
 y_temp = copy.copy(y)
 y_temp.sort()
 y_max = y_temp[-100]
-print('y_max: ' + str(y_max))
-
 for i in range(0, len(y)):
     y[i] = (y[i] / y_max) * 100
 
-plt.scatter(x, y, marker='x', label="value")
+# Vectorization
 
-plt.xlabel('time')
-plt.legend(loc=2)
+v_dimension = 20
+slicing_size = len(y) / v_dimension
+
+vector = []
+v_temp = 0
+
+for i in range(0, len(y)):
+    v_temp += y[i]
+    if (i + 1) % slicing_size == 0:
+        vector.append(int(v_temp / slicing_size))
+        v_temp = 0
+
+file_storage = []
+file_storage.append((file_path, vector))
+
+i = np.linspace(0, 1, len(vector))
+plt.scatter(i, vector, marker='x')
 plt.show()
