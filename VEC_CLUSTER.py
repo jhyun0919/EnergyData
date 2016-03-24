@@ -20,13 +20,13 @@ def file_directory():
 def load_file(dirname):
     file_list = []
     filenames = os.listdir(dirname)
-    abs_dir= os.path.dirname(os.path.abspath(__file__))
+    abs_dir = os.path.dirname(os.path.abspath(__file__))
 
     for filename in filenames:
         full_filename = os.path.join(dirname, filename)
         ext = os.path.splitext(full_filename)[-1]
         if ext == '.bin':
-            file = os.path.join(abs_dir,dirname, filename)
+            file = os.path.join(abs_dir, dirname, filename)
             file_list.append(trim_data(file))
 
     return file_list
@@ -36,6 +36,7 @@ def trim_data(binfile):
     data = pickle.load(open(binfile))
     vector_data = vectorization(normalization(interpolation(data['ts'], data['value'])))
     return vector_data
+
 
 def interpolation(ts, value):
     x, y = [], []
@@ -69,7 +70,16 @@ def interpolation(ts, value):
 
 
 def normalization(list):
-    normalizer = n_th_maximun(100, list)
+    filter = 100
+    while True:
+        normalizer = n_th_maximun(filter, list)
+        if normalizer != 0:
+            break
+        else:
+            filter = filter - 10
+        if filter == 0:
+            normalizer = 1
+
     list_normalized = np.array(list) / normalizer * 100
     return list_normalized
 
@@ -94,7 +104,7 @@ def vectorization(list):
             except ValueError as verr:
                 vec.append(0)
             except OverflowError as oerr:
-                vec.append(-10)
+                vec.append(-100)
             finally:
                 vec_collector = 0
     return vec
@@ -110,5 +120,3 @@ if __name__ == "__main__":
     vector_list = load_file(file_directory())
     for vec in vector_list:
         print vec
-
-
