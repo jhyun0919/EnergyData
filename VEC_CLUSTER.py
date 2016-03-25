@@ -4,6 +4,7 @@ import os
 import sys
 import cPickle as pickle
 import numpy as np
+from sklearn.cluster import KMeans
 import copy
 import matplotlib.pyplot as plt
 
@@ -120,3 +121,4 @@ if __name__ == "__main__":
     vector_list = load_file(file_directory())
     for vec in vector_list:
         print vec
+
