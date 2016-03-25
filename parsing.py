@@ -5,8 +5,8 @@ import sys
 
 
 try:
-	file_path = '/Users/JH/Documents/GitHub/EnergyData_jhyun/VTT/VTT_GW1_HA2_VM_EP_KV_K.bin'
-		#sys.argv[1]
+	# file_path = '/Users/JH/Documents/GitHub/EnergyData_jhyun/VTT/VTT_GW1_HA2_VM_EP_KV_K.bin'
+	file_path = sys.argv[1]
 except IndexError as err:
 	print('IndexError: ' + str(err))
 	print('Usage: python parsing <filename>')
