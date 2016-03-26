@@ -86,7 +86,7 @@ def interpolation(ts, value):
 
 # 일정한 크기로 scale을 normalization된 data를 반환
 def normalization(list):
-    noise_filter = 10
+    noise_filter = 100
     while True:
         normalizer = n_th_maximum(noise_filter, list)
         if normalizer != 0:
