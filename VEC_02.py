@@ -127,6 +127,7 @@ def vectorization(list):
     return vec
 
 
+# main function
 if __name__ == "__main__":
     dir_name = get_directory()
 
