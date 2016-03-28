@@ -2,9 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9e90c6a0-c712-4bc0-9204-421017e6380e" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/foo.jpg" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/kmenas_clustering.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/VTT_GW1_HA10_VM_EP_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/VTT_GW1_HA10_VM_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/VTT_GW1_HA10_VM_KV_KAM.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/VTT_GW1_HA1_VM_EP_KV_K.jpg" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/VEC_02.py" afterPath="$PROJECT_DIR$/VEC_02.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/show_graph.py" afterPath="$PROJECT_DIR$/show_graph.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/show_graph_02.py" afterPath="$PROJECT_DIR$/show_graph_02.py" />
     </list>
     <ignored path="EnergyData_jhyun.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,6 +31,7 @@
     <SUITE FILE_PATH="coverage/EnergyData_jhyun$interpolation_practice_01.coverage" NAME="interpolation_practice_01 Coverage Results" MODIFIED="1457685974634" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/EnergyData_jhyun$Doctests_in_rbm.coverage" NAME="Doctests in rbm Coverage Results" MODIFIED="1458563814234" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/rbm" />
     <SUITE FILE_PATH="coverage/EnergyData_jhyun$show_graph_02.coverage" NAME="show_graph_02 Coverage Results" MODIFIED="1459132489048" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/EnergyData_jhyun$kmenas_clustering.coverage" NAME="kmenas_clustering Coverage Results" MODIFIED="1459146024714" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/EnergyData_jhyun$interpolation_practice_02.coverage" NAME="interpolation_practice_02 Coverage Results" MODIFIED="1457914771874" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/EnergyData_jhyun$VEC_02.coverage" NAME="VEC_02 Coverage Results" MODIFIED="1458905651755" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/EnergyData_jhyun$matplot_practice_02.coverage" NAME="matplot_practice_02 Coverage Results" MODIFIED="1457685678850" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -53,25 +59,13 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="VEC_02.py" pinned="false" current-in-tab="false">
+          <file leaf-file-name="VEC_02.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/VEC_02.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="61" column="32" selection-start-line="61" selection-start-column="32" selection-end-line="61" selection-end-column="32" />
+                <state vertical-scroll-proportion="0.8951613">
+                  <caret line="37" column="65" selection-start-line="37" selection-start-column="65" selection-end-line="37" selection-end-column="65" />
                   <folding>
                     <element signature="e#25#34#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="show_graph.py" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/show_graph.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.58870965">
-                  <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-                  <folding>
-                    <element signature="e#69#79#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -84,11 +78,21 @@
           <file leaf-file-name="show_graph_02.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/show_graph_02.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="1.1854838">
-                  <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+                <state vertical-scroll-proportion="0.6854839">
+                  <caret line="53" column="18" selection-start-line="53" selection-start-column="18" selection-end-line="53" selection-end-column="18" />
                   <folding>
                     <element signature="e#25#34#0" expanded="true" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="kmenas_clustering.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/kmenas_clustering.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -131,8 +135,9 @@
         <option value="$PROJECT_DIR$/VEC_01.py" />
         <option value="$PROJECT_DIR$/parsing.py" />
         <option value="$PROJECT_DIR$/show_graph.py" />
-        <option value="$PROJECT_DIR$/VEC_02.py" />
+        <option value="$PROJECT_DIR$/kmenas_clustering.py" />
         <option value="$PROJECT_DIR$/show_graph_02.py" />
+        <option value="$PROJECT_DIR$/VEC_02.py" />
       </list>
     </option>
   </component>
@@ -142,7 +147,7 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="632" />
+    <option name="x" value="936" />
     <option name="y" value="-1080" />
     <option name="width" value="1920" />
     <option name="height" value="1080" />
@@ -224,7 +229,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.show_graph_02">
+  <component name="RunManager" selected="Python.kmenas_clustering">
     <configuration default="false" name="show_graph" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -239,24 +244,6 @@
       <module name="EnergyData_jhyun" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/show_graph.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="vectorize_02" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="EnergyData_jhyun" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/VEC_01.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -311,6 +298,24 @@
       <module name="EnergyData_jhyun" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/show_graph_02.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="kmenas_clustering" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="EnergyData_jhyun" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/kmenas_clustering.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -510,18 +515,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.show_graph" />
-      <item index="1" class="java.lang.String" itemvalue="Python.vectorize_02" />
-      <item index="2" class="java.lang.String" itemvalue="Python.clustering_01" />
-      <item index="3" class="java.lang.String" itemvalue="Python.VEC_02" />
-      <item index="4" class="java.lang.String" itemvalue="Python.show_graph_02" />
+      <item index="1" class="java.lang.String" itemvalue="Python.clustering_01" />
+      <item index="2" class="java.lang.String" itemvalue="Python.VEC_02" />
+      <item index="3" class="java.lang.String" itemvalue="Python.show_graph_02" />
+      <item index="4" class="java.lang.String" itemvalue="Python.kmenas_clustering" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.show_graph_02" />
-        <item index="1" class="java.lang.String" itemvalue="Python.VEC_02" />
-        <item index="2" class="java.lang.String" itemvalue="Python.clustering_01" />
-        <item index="3" class="java.lang.String" itemvalue="Python.show_graph" />
-        <item index="4" class="java.lang.String" itemvalue="Python.vectorize_02" />
+        <item index="0" class="java.lang.String" itemvalue="Python.kmenas_clustering" />
+        <item index="1" class="java.lang.String" itemvalue="Python.show_graph_02" />
+        <item index="2" class="java.lang.String" itemvalue="Python.VEC_02" />
+        <item index="3" class="java.lang.String" itemvalue="Python.clustering_01" />
+        <item index="4" class="java.lang.String" itemvalue="Python.show_graph" />
       </list>
     </recent_temporary>
   </component>
@@ -559,7 +564,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="632" y="-1080" width="1920" height="1080" extended-state="0" />
+    <frame x="936" y="-1080" width="1920" height="1080" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13312034" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -733,13 +738,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vectorize_01.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.803476">
-          <caret line="73" column="40" selection-start-line="73" selection-start-column="40" selection-end-line="73" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/clustering_example/clustering_01.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.296334">
@@ -762,32 +760,48 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/show_graph.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.63709676">
+          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+          <folding>
+            <element signature="e#69#79#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vectorize_01.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.733871">
+          <caret line="73" column="40" selection-start-line="73" selection-start-column="40" selection-end-line="73" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/VEC_02.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="61" column="32" selection-start-line="61" selection-start-column="32" selection-end-line="61" selection-end-column="32" />
+        <state vertical-scroll-proportion="0.8951613">
+          <caret line="37" column="65" selection-start-line="37" selection-start-column="65" selection-end-line="37" selection-end-column="65" />
           <folding>
             <element signature="e#25#34#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kmenas_clustering.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/show_graph_02.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.1854838">
-          <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.6854839">
+          <caret line="53" column="18" selection-start-line="53" selection-start-column="18" selection-end-line="53" selection-end-column="18" />
           <folding>
             <element signature="e#25#34#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/show_graph.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.58870965">
-          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-          <folding>
-            <element signature="e#69#79#0" expanded="true" />
           </folding>
         </state>
       </provider>

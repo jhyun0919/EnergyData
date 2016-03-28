@@ -6,9 +6,10 @@ import cPickle as pickle
 import numpy as np
 import copy
 import time
+import types
 import matplotlib.pyplot as plt
 
-VEC_DIMENSION = 20
+VEC_DIMENSION = 40
 INTERPOLATION_INTERVAL = 10
 
 
@@ -126,19 +127,41 @@ def vectorization(list):
     return vec
 
 
+def draw_vec_graph(name, vec_value):
+    path, name = name.rsplit('/', 1)
+
+    path = path + '/graph'
+
+    if not os.path.exists(path):
+        os.makedirs(path)
+
+    os.chdir(path)
+    # print os.getcwd()
+
+    name = name.split('.')[0]
+    name = name + '_vec_'+str(VEC_DIMENSION) +'.jpg'
+
+    x = np.linspace(0, 1, len(vec_value))
+    plt.scatter(x, vec_value, marker='+')
+    plt.savefig(name)
+    plt.close()
+
+
+
 # main function
 if __name__ == "__main__":
     dir_name = get_directory()
 
     file_list = load_file(dir_name)
 
-    vector_list = []
+    vector_dic = {}
+    # {'file_path' : vector}
 
     for file in file_list:
         try:
             print 'working on ' + file,
             start_time = time.time()
-            vector_list.append(trim_data(file))
+            vector_dic[file] = trim_data(file)
         except:
             print 'An error occurred'
             exit()
@@ -146,5 +169,8 @@ if __name__ == "__main__":
             end_time = time.time()
             print '\t\t' + 'run time: ' + str(end_time - start_time)
 
-    for vec in vector_list:
-        print vec
+
+    for vec_name in vector_dic:
+        print vector_dic[vec_name]
+        draw_vec_graph(vec_name, vector_dic[vec_name])
+

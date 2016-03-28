@@ -5,6 +5,7 @@ import sys
 import cPickle as pickle
 import numpy as np
 import matplotlib.pyplot as plt
+import types
 
 
 def get_directory():
@@ -35,13 +36,18 @@ def load_file(dir_name):
     return file_list
 
 
-def draw_graph(file):
+def draw_bin_graph(file):
     y = unpickling(file)['value']
+    x = np.linspace(0, 1, len(y))
 
-    i = np.linspace(0, 1, len(y))
-    plt.scatter(i, y, marker='x')
-    # plt.show()
-    file_name = file.rsplit('/', 1)[-1]
+    plt.scatter(x, y, marker='x')
+
+    file_path, file_name = file.rsplit('/', 1)
+    file_path = file_path + '/graph'
+    print file_path
+    if not os.path.exists(file_path):
+        os.mkdir(file_path)
+    os.chdir(file_path)
     file_name = file_name.split('.')[0]
     file_name = file_name + '.jpg'
     print file_name
@@ -58,4 +64,4 @@ if __name__ == "__main__":
     file_list = load_file(dir_name)
 
     for file in file_list:
-        draw_graph(file)
+        draw_bin_graph(file)
