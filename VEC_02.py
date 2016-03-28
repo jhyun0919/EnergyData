@@ -36,9 +36,8 @@ def load_file(dir_name):
             if ext == '.bin':
                 file = os.path.join(abs_dir, dir_name, file_name)
                 file_list.append(file)
-    except OSError:
-        # print 'you put a file for argument[1]'
-        file_list.append((dir_name))
+    except OSError as err:
+        print 'OSError' + str(err)
 
 
     return file_list
@@ -47,26 +46,26 @@ def load_file(dir_name):
 # binary data를 가공하여 반환
 def trim_data(bin_file):
     data = pickle.load(open(bin_file))
-    vector_data = vectorization(normalization(interpolation(data['ts'], data['value'])))
+    vector_data = vectorization(normalization(interpolation(data)))
 
     return vector_data
 
 # 일정한 간격으로 interpolation 된 data를 list형식으로 반환
-def interpolation(ts, value):
+def interpolation(data):
     # x = []
     y = []
 
-    minute_check = ts[0][0].minute / INTERPOLATION_INTERVAL
+    minute_check = data['ts'][0][0].minute / INTERPOLATION_INTERVAL
     item = 0
     value_collector = 0
 
-    for i in range(0, len(ts)):
-        if ts[i][2] / INTERPOLATION_INTERVAL == minute_check:
+    for i in range(0, len(data['ts'])):
+        if data['ts'][i][2] / INTERPOLATION_INTERVAL == minute_check:
             item += 1
-            value_collector += value[i]
+            value_collector += data['value'][i]
         else:
             # ts 간격 일정하게 조정
-            # x.append(ts[i - 1][0].replace(minute=10 * minute_check, second=0))
+            # x.append(data['ts'][i - 1][0].replace(minute=10 * minute_check, second=0))
 
             minute_check += 1
             if minute_check == 6:

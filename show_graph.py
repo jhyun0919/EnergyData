@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 # contact: https://github.com/jeonghoonkang
 
 import sys
