@@ -156,6 +156,11 @@ def save_as_txt(vec_dic):
 
     f.close()
 
+def save_as_bin(vec_dic):
+    f = open("vector.bin", 'wb')
+    pickle.dump(vec_dic, f, 1)
+    f.close()
+
 
 # main function
 if __name__ == "__main__":
@@ -186,11 +191,9 @@ if __name__ == "__main__":
     #     draw_vec_graph(vector_dic.keys()[i], vector_dic[vector_dic.keys()[i]])
 
 
-    # 완성된 vector_dic을 본격적으로 활용하여 clustering 해보자
+    # 매번 변환 할 수 없으니 bin file로 저장하자
 
-    # 매번 변환 할 수 없으니 text file로 저장하자
-
-    save_as_txt(vector_dic)
+    save_as_bin(vector_dic)
 
 
 
