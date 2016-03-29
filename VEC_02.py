@@ -118,10 +118,10 @@ def vectorization(list):
         if (i + 1) % slicing_size == 0:
             try:
                 vec.append(int(vec_collector / slicing_size))
-            # except ValueError:
-            #     vec.append(0)
-            # except OverflowError:
-            #     vec.append(-100)
+            except ValueError:
+                vec.append(0)
+            except OverflowError:
+                vec.append(-100)
             finally:
                 vec_collector = 0
     return vec
@@ -136,7 +136,6 @@ def draw_vec_graph(name, vec_value):
         os.makedirs(path)
 
     os.chdir(path)
-    # print os.getcwd()
 
     name = name.split('.')[0]
     name = name + '_vec_'+str(VEC_DIMENSION) +'.jpg'
@@ -150,6 +149,8 @@ def draw_vec_graph(name, vec_value):
 
 # main function
 if __name__ == "__main__":
+    ST = time.time()
+
     dir_name = get_directory()
 
     file_list = load_file(dir_name)
@@ -164,7 +165,7 @@ if __name__ == "__main__":
             vector_dic[file] = trim_data(file)
         except:
             print 'An error occurred'
-            exit()
+            # exit()
         finally:
             end_time = time.time()
             print '\t\t' + 'run time: ' + str(end_time - start_time)
@@ -173,4 +174,8 @@ if __name__ == "__main__":
     for vec_name in vector_dic:
         print vector_dic[vec_name]
         draw_vec_graph(vec_name, vector_dic[vec_name])
+
+    ET = time.time()
+
+    print '*** TOATL TIME: ' + str(ET - ST) + ' ***'
 

@@ -4,7 +4,9 @@ import os
 import sys
 import cPickle as pickle
 import numpy as np
+import time
 import matplotlib.pyplot as plt
+from VEC_03 import normalization
 import types
 
 
@@ -59,9 +61,15 @@ def unpickling(bin_file):
     return data
 
 if __name__ == "__main__":
+    start_time = time.time()
+
     dir_name = get_directory()
 
     file_list = load_file(dir_name)
 
     for file in file_list:
         draw_bin_graph(file)
+
+    end_time = time.time()
+
+    print '*** TOATL TIME: ' + str(end_time - start_time) + ' ***'

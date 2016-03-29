@@ -44,6 +44,7 @@ def draw_graph(y):
 	i = np.linspace(0, 1, len(y))
 	plt.scatter(i, y, marker='x')
 	plt.show()
+	plt.close()
 
 	# plt.savefig('foo.jpg')
 
