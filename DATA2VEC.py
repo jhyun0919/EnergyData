@@ -11,11 +11,10 @@ import cPickle as pickle
 import numpy as np
 import copy
 import time
-import types
 import matplotlib.pyplot as plt
 
-VEC_DIMENSION = 40
-INTERPOLATION_INTERVAL = 10 # -> minute
+VEC_DIMENSION = 50
+INTERPOLATION_INTERVAL = 10  # -> minute
 SCALE_SIZE = 100
 
 
@@ -47,18 +46,45 @@ def load_file(dir_name):
     except OSError as err:
         print 'OSError' + str(err)
 
-
     return file_list
+
+
+def vector2dic(file_list):
+    vector_dic = {}
+
+    vector_dic['file_name'] = np.asarray(file_list)
+    data = []
+
+    for file in vector_dic['file_name']:
+        try:
+            print 'working on ' + file,
+            start_time = time.time()
+            data.append(trim_data(file))
+        except:
+            print 'An error occurred'
+        finally:
+            end_time = time.time()
+            print '\t\t' + 'run time: ' + str(end_time - start_time)
+
+    vector_dic['data'] = np.asarray(data)
+
+    return vector_dic
 
 
 # binary data를 가공하여 반환
 def trim_data(bin_file):
-    data = pickle.load(open(bin_file))
+    data = unpickling(bin_file)
     data = interpolation(data)
     data = normalization(data)
     vector_data = vectorization(data)
 
     return vector_data
+
+
+def unpickling(bin_file):
+    data = pickle.load(open(bin_file))
+    return data
+
 
 # 일정한 간격으로 interpolation 된 data를 list형식으로 반환
 def interpolation(data):
@@ -128,56 +154,26 @@ def vectorization(list):
     return vec
 
 
-def vector2graph(name, vec_value):
-    path, name = name.rsplit('/', 1)
-
-    path = os.path.join(path, 'graph')
-
-    if not os.path.exists(path):
-        os.makedirs(path)
-
-    os.chdir(path)
-
-    name = name.split('.')[0]
-    name = name + '_vec_'+str(VEC_DIMENSION) +'.jpg'
-
-    x = np.linspace(0, 1, len(vec_value))
-    plt.scatter(x, vec_value, marker='+')
-    plt.savefig(name)
-    plt.close()
-
-
-def vector2dic(file_list):
-    vector_dic = {}
-
-    vector_dic['file_name'] = np.asarray(file_list)
-    data = []
-
-    for file in vector_dic['file_name']:
-        try:
-            print 'working on ' + file,
-            start_time = time.time()
-            data.append(trim_data(file))
-        except:
-            print 'An error occurred'
-        finally:
-            end_time = time.time()
-            print '\t\t' + 'run time: ' + str(end_time - start_time)
-
-    vector_dic['data'] = np.asarray(data)
-
-    return vector_dic
-
-
 def dictionary2bin(vec_dic):
-    f = open("vector.bin", 'wb')
+    bin_name = sys.argv[1] + '_vec.bin'
+    f = open(bin_name, 'wb')
     pickle.dump(vec_dic, f, 1)
+    f.close()
+
+
+def dictionary2txt(vec_dic):
+    f = open("vector.txt", 'w')
+
+    for vec in vec_dic:
+        f.write(vec + '\n')
+        f.write(str(vec_dic[vec]) + '\n')
+
     f.close()
 
 
 # main function
 if __name__ == "__main__":
-    ST = time.time()
+    start_time = time.time()
 
     # get directory path
     dir_name = get_directory()
@@ -191,9 +187,8 @@ if __name__ == "__main__":
     # save as bin file
     dictionary2bin(vector_dic)
 
-    ET = time.time()
+    end_time = time.time()
 
     print
-    print '*** TOATL TIME: ' + str(ET - ST) + ' ***'
+    print '*** TOATL TIME: ' + str(end_time - start_time) + ' ***'
     print
-

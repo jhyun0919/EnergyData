@@ -2,344 +2,66 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9e90c6a0-c712-4bc0-9204-421017e6380e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DATA2GRAPH.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DATA2VEC_GRAPH.py" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA10_VM_EP_KV_K_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA10_VM_KV_KAM_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA10_VM_KV_K_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA11_VM_EP_KV_K_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA11_VM_KV_KAM_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA11_VM_KV_K_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA12_VM_EP_KV_K_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA12_VM_KV_KAM_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA12_VM_KV_K_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA13_VM_EP_KV_K_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA13_VM_KV_KAM_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA13_VM_KV_K_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA14_VM_EP_KV_K_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA14_VM_KV_KAM_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA14_VM_KV_K_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA15_VM_EP_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA15_VM_EP_KV_K_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA15_VM_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA15_VM_KV_KAM.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA15_VM_KV_KAM_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA15_VM_KV_K_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA16_VM_EP_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA16_VM_EP_KV_K_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA16_VM_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA16_VM_KV_KAM.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA16_VM_KV_KAM_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA16_VM_KV_K_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA1_VM_EP_KV_K_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA1_VM_KV_KAM_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA1_VM_KV_K_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA25_VM_EP_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA25_VM_EP_KV_K_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA25_VM_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA25_VM_KV_KAM.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA25_VM_KV_KAM_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA25_VM_KV_K_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA26_VM_EP_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA26_VM_EP_KV_K_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA26_VM_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA26_VM_KV_KAM.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA26_VM_KV_KAM_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA26_VM_KV_K_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA27_VM_EP_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA27_VM_EP_KV_K_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA27_VM_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA27_VM_KV_KAM.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA27_VM_KV_KAM_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA27_VM_KV_K_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA28_VM_EP_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA28_VM_EP_KV_K_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA28_VM_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA28_VM_KV_KAM.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA28_VM_KV_KAM_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA28_VM_KV_K_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA29_VM_EP_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA29_VM_EP_KV_K_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA29_VM_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA29_VM_KV_KAM.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA29_VM_KV_KAM_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA29_VM_KV_K_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA2_VM_EP_KV_K_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA2_VM_KV_KAM_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA2_VM_KV_K_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA30_VM_EP_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA30_VM_EP_KV_K_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA30_VM_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA30_VM_KV_KAM.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA30_VM_KV_KAM_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA30_VM_KV_K_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA31_VM_EP_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA31_VM_EP_KV_K_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA31_VM_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA31_VM_KV_KAM.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA31_VM_KV_KAM_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA31_VM_KV_K_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA3_VM_EP_KV_K_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA3_VM_KV_KAM_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA3_VM_KV_K_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA40_VM_EP_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA40_VM_EP_KV_K_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA40_VM_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA40_VM_KV_KAM.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA40_VM_KV_KAM_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA40_VM_KV_K_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA41_VM_EP_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA41_VM_EP_KV_K_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA41_VM_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA41_VM_KV_KAM.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA41_VM_KV_KAM_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA41_VM_KV_K_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA42_VM_EP_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA42_VM_EP_KV_K_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA42_VM_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA42_VM_KV_KAM.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA42_VM_KV_KAM_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA42_VM_KV_K_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA43_VM_EP_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA43_VM_EP_KV_K_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA43_VM_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA43_VM_KV_KAM.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA43_VM_KV_KAM_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA43_VM_KV_K_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA44_VM_EP_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA44_VM_EP_KV_K_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA44_VM_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA44_VM_KV_KAM.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA44_VM_KV_KAM_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA44_VM_KV_K_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA45_VM_EP_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA45_VM_EP_KV_K_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA45_VM_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA45_VM_KV_KAM.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA45_VM_KV_KAM_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA45_VM_KV_K_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_KIINT_KV_KAM.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_KIINT_KV_KAM_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_KIINT_KV_KO_KAM.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_KIINT_KV_KO_KAM_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_TAVOIT_KV_KAM.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_TAVOIT_KV_KAM_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA17_VM_EP_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA17_VM_EP_KV_K_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA17_VM_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA17_VM_KV_KAM.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA17_VM_KV_KAM_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA17_VM_KV_K_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA18_VM_EP_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA18_VM_EP_KV_K_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA18_VM_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA18_VM_KV_KAM.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA18_VM_KV_KAM_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA18_VM_KV_K_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA19_VM_EP_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA19_VM_EP_KV_K_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA19_VM_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA19_VM_KV_KAM.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA19_VM_KV_KAM_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA19_VM_KV_K_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA20_VM_EP_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA20_VM_EP_KV_K_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA20_VM_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA20_VM_KV_KAM.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA20_VM_KV_KAM_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA20_VM_KV_K_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA21_VM_EP_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA21_VM_EP_KV_K_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA21_VM_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA21_VM_KV_KAM.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA21_VM_KV_KAM_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA21_VM_KV_K_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA22_VM_EP_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA22_VM_EP_KV_K_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA22_VM_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA22_VM_KV_KAM.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA22_VM_KV_KAM_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA22_VM_KV_K_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA23_VM_EP_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA23_VM_EP_KV_K_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA23_VM_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA23_VM_KV_KAM.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA23_VM_KV_KAM_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA23_VM_KV_K_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA24_VM_EP_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA24_VM_EP_KV_K_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA24_VM_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA24_VM_KV_KAM.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA24_VM_KV_KAM_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA24_VM_KV_K_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA31_VM_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA31_VM_KV_K_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA32_VM_EP_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA32_VM_EP_KV_K_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA32_VM_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA32_VM_KV_KAM.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA32_VM_KV_KAM_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA32_VM_KV_K_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA33_VM_EP_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA33_VM_EP_KV_K_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA33_VM_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA33_VM_KV_KAM.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA33_VM_KV_KAM_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA33_VM_KV_K_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA34_VM_EP_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA34_VM_EP_KV_K_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA34_VM_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA34_VM_KV_KAM.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA34_VM_KV_KAM_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA34_VM_KV_K_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA35_VM_EP_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA35_VM_EP_KV_K_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA35_VM_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA35_VM_KV_KAM.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA35_VM_KV_KAM_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA35_VM_KV_K_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA36_VM_EP_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA36_VM_EP_KV_K_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA36_VM_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA36_VM_KV_KAM.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA36_VM_KV_KAM_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA36_VM_KV_K_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA37_VM_EP_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA37_VM_EP_KV_K_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA37_VM_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA37_VM_KV_KAM.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA37_VM_KV_KAM_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA37_VM_KV_K_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA38_VM_EP_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA38_VM_EP_KV_K_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA38_VM_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA38_VM_KV_KAM.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA38_VM_KV_KAM_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA38_VM_KV_K_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA39_VM_EP_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA39_VM_EP_KV_K_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA39_VM_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA39_VM_KV_KAM.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA39_VM_KV_KAM_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA39_VM_KV_K_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA46_VM_EP_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA46_VM_EP_KV_K_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA46_VM_KV_KAM.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA46_VM_KV_KAM_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA47_VM_EP_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA47_VM_EP_KV_K_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA47_VM_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA47_VM_KV_KAM.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA47_VM_KV_KAM_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA47_VM_KV_K_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA48_VM_EP_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA48_VM_EP_KV_K_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA48_VM_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA48_VM_KV_KAM.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA48_VM_KV_KAM_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA48_VM_KV_K_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA49_VM_EP_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA49_VM_EP_KV_K_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA49_VM_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA49_VM_KV_KAM.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA49_VM_KV_KAM_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA49_VM_KV_K_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA4_VM_EP_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA4_VM_EP_KV_K_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA4_VM_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA4_VM_KV_KAM.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA4_VM_KV_KAM_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA4_VM_KV_K_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA50_VM_EP_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA50_VM_EP_KV_K_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA50_VM_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA50_VM_KV_KAM.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA50_VM_KV_KAM_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA50_VM_KV_K_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA51_VM_EP_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA51_VM_EP_KV_K_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA51_VM_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA51_VM_KV_KAM.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA51_VM_KV_KAM_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA51_VM_KV_K_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA52_VM_EP_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA52_VM_EP_KV_K_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA52_VM_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA52_VM_KV_KAM.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA52_VM_KV_KAM_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA52_VM_KV_K_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA5_VM_EP_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA5_VM_EP_KV_K_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA5_VM_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA5_VM_KV_KAM.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA5_VM_KV_KAM_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA5_VM_KV_K_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA6_VM_EP_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA6_VM_EP_KV_K_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA6_VM_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA6_VM_KV_KAM.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA6_VM_KV_KAM_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA6_VM_KV_K_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA7_VM_EP_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA7_VM_EP_KV_K_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA7_VM_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA7_VM_KV_KAM.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA7_VM_KV_KAM_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA7_VM_KV_K_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA8_VM_EP_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA8_VM_EP_KV_K_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA8_VM_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA8_VM_KV_KAM.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA8_VM_KV_KAM_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA8_VM_KV_K_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA9_VM_EP_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA9_VM_EP_KV_K_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA9_VM_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA9_VM_KV_KAM.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA9_VM_KV_KAM_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_HA9_VM_KV_K_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_KIINT_KV_KAM.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_KIINT_KV_KAM_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_KIINT_KV_KO_KAM.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_KIINT_KV_KO_KAM_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_TAVOIT_KV_KAM.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW2_TAVOIT_KV_KAM_vec_40.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clustering_example/.ipynb_checkpoints/Classifier comparison-checkpoint.ipynb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clustering_example/.ipynb_checkpoints/k-means-checkpoint.ipynb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clustering_example/.ipynb_checkpoints/mean-shift-checkpoint.ipynb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clustering_example/Classifier comparison.ipynb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clustering_example/clustering_01.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clustering_example/k-means.ipynb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clustering_example/mean-shift.ipynb" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA10_VM_EP_KV_K.jpg" afterPath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA10_VM_EP_KV_K.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA10_VM_KV_K.jpg" afterPath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA10_VM_KV_K.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA10_VM_KV_KAM.jpg" afterPath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA10_VM_KV_KAM.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA11_VM_EP_KV_K.jpg" afterPath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA11_VM_EP_KV_K.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA11_VM_KV_K.jpg" afterPath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA11_VM_KV_K.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA11_VM_KV_KAM.jpg" afterPath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA11_VM_KV_KAM.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA12_VM_EP_KV_K.jpg" afterPath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA12_VM_EP_KV_K.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA12_VM_KV_K.jpg" afterPath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA12_VM_KV_K.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA12_VM_KV_KAM.jpg" afterPath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA12_VM_KV_KAM.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA13_VM_EP_KV_K.jpg" afterPath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA13_VM_EP_KV_K.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA13_VM_KV_K.jpg" afterPath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA13_VM_KV_K.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA13_VM_KV_KAM.jpg" afterPath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA13_VM_KV_KAM.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA14_VM_EP_KV_K.jpg" afterPath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA14_VM_EP_KV_K.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA14_VM_KV_K.jpg" afterPath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA14_VM_KV_K.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA14_VM_KV_KAM.jpg" afterPath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA14_VM_KV_KAM.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA1_VM_EP_KV_K.jpg" afterPath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA1_VM_EP_KV_K.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA1_VM_KV_K.jpg" afterPath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA1_VM_KV_K.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA1_VM_KV_KAM.jpg" afterPath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA1_VM_KV_KAM.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA2_VM_EP_KV_K.jpg" afterPath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA2_VM_EP_KV_K.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA2_VM_KV_K.jpg" afterPath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA2_VM_KV_K.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA2_VM_KV_KAM.jpg" afterPath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA2_VM_KV_KAM.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA3_VM_EP_KV_K.jpg" afterPath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA3_VM_EP_KV_K.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA3_VM_KV_K.jpg" afterPath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA3_VM_KV_K.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA3_VM_KV_KAM.jpg" afterPath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA3_VM_KV_KAM.jpg" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.ipynb_checkpoints/Untitled-checkpoint.ipynb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.ipynb_checkpoints/Untitled1-checkpoint.ipynb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DATA2VEC_GRAPH.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Untitled.ipynb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/vector_graph/VTT_GW1_HA10_VM_EP_KV_K_vec_40.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/vector_graph/VTT_GW1_HA10_VM_KV_KAM_vec_40.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/vector_graph/VTT_GW1_HA10_VM_KV_K_vec_40.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/vector_graph/VTT_GW1_HA11_VM_EP_KV_K_vec_40.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/vector_graph/VTT_GW1_HA11_VM_KV_KAM_vec_40.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/vector_graph/VTT_GW1_HA11_VM_KV_K_vec_40.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/vector_graph/VTT_GW1_HA12_VM_EP_KV_K_vec_40.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/vector_graph/VTT_GW1_HA12_VM_KV_KAM_vec_40.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/vector_graph/VTT_GW1_HA12_VM_KV_K_vec_40.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/vector_graph/VTT_GW1_HA13_VM_EP_KV_K_vec_40.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/vector_graph/VTT_GW1_HA13_VM_KV_KAM_vec_40.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/vector_graph/VTT_GW1_HA13_VM_KV_K_vec_40.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/vector_graph/VTT_GW1_HA14_VM_EP_KV_K_vec_40.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/vector_graph/VTT_GW1_HA14_VM_KV_KAM_vec_40.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/vector_graph/VTT_GW1_HA14_VM_KV_K_vec_40.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/vector_graph/VTT_GW1_HA1_VM_EP_KV_K_vec_40.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/vector_graph/VTT_GW1_HA1_VM_KV_KAM_vec_40.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/vector_graph/VTT_GW1_HA1_VM_KV_K_vec_40.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/vector_graph/VTT_GW1_HA2_VM_EP_KV_K_vec_40.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/vector_graph/VTT_GW1_HA2_VM_KV_KAM_vec_40.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/vector_graph/VTT_GW1_HA2_VM_KV_K_vec_40.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/vector_graph/VTT_GW1_HA3_VM_EP_KV_K_vec_40.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/vector_graph/VTT_GW1_HA3_VM_KV_KAM_vec_40.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/vector_graph/VTT_GW1_HA3_VM_KV_K_vec_40.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clustered_graph/0/VTT_GW1_HA13_VM_EP_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clustered_graph/0/VTT_GW1_HA14_VM_EP_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clustered_graph/0/VTT_GW1_HA1_VM_EP_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clustered_graph/0/VTT_GW1_HA1_VM_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clustered_graph/0/VTT_GW1_HA2_VM_EP_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clustered_graph/0/VTT_GW1_HA2_VM_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clustered_graph/1/VTT_GW1_HA12_VM_EP_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clustered_graph/1/VTT_GW1_HA12_VM_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clustered_graph/2/VTT_GW1_HA10_VM_KV_KAM.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clustered_graph/2/VTT_GW1_HA11_VM_KV_KAM.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clustered_graph/2/VTT_GW1_HA12_VM_KV_KAM.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clustered_graph/2/VTT_GW1_HA13_VM_KV_KAM.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clustered_graph/2/VTT_GW1_HA14_VM_KV_KAM.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clustered_graph/2/VTT_GW1_HA1_VM_KV_KAM.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clustered_graph/2/VTT_GW1_HA2_VM_KV_KAM.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clustered_graph/2/VTT_GW1_HA3_VM_KV_KAM.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clustered_graph/3/VTT_GW1_HA10_VM_EP_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clustered_graph/3/VTT_GW1_HA10_VM_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clustered_graph/3/VTT_GW1_HA11_VM_EP_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clustered_graph/3/VTT_GW1_HA11_VM_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clustered_graph/4/VTT_GW1_HA13_VM_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clustered_graph/4/VTT_GW1_HA14_VM_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clustered_graph/4/VTT_GW1_HA3_VM_EP_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clustered_graph/4/VTT_GW1_HA3_VM_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/clustering_01.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/k_means_.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/kmenas_clustering.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/parsing_02.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vector.bin" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DATA2GRAPH.py" afterPath="$PROJECT_DIR$/DATA2GRAPH.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DATA2VEC.py" afterPath="$PROJECT_DIR$/DATA2VEC.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Untitled.ipynb" afterPath="$PROJECT_DIR$/Untitled.ipynb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/clustering_01.py" afterPath="$PROJECT_DIR$/clustering_01.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parsing_02.py" afterPath="$PROJECT_DIR$/parsing_02.py" />
     </list>
     <ignored path="EnergyData_jhyun.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -356,6 +78,7 @@
     <SUITE FILE_PATH="coverage/EnergyData_jhyun$vectorize.coverage" NAME="vectorize Coverage Results" MODIFIED="1458808162703" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/EnergyData_jhyun$interpolation_practice_04.coverage" NAME="interpolation_practice_04 Coverage Results" MODIFIED="1457913944744" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/EnergyData_jhyun$normalization.coverage" NAME="normalization Coverage Results" MODIFIED="1459230131679" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/EnergyData_jhyun$clustering_02.coverage" NAME="clustering_02 Coverage Results" MODIFIED="1459329417719" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/EnergyData_jhyun$trim.coverage" NAME="trim Coverage Results" MODIFIED="1458809211717" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/EnergyData_jhyun$VEC_03.coverage" NAME="VEC_03 Coverage Results" MODIFIED="1459233262095" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/EnergyData_jhyun$parsing_02.coverage" NAME="parsing_02 Coverage Results" MODIFIED="1459303830026" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -389,42 +112,60 @@
     <favorites_list name="EnergyData_jhyun" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="DATA2GRAPH.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DATA2GRAPH.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-              <folding>
-                <element signature="e#25#34#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DATA2VEC_GRAPH.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DATA2VEC_GRAPH.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="134" column="4" selection-start-line="134" selection-start-column="4" selection-end-line="135" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DATA2VEC.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/DATA2VEC.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4883721">
-              <caret line="82" column="31" selection-start-line="82" selection-start-column="31" selection-end-line="82" selection-end-column="31" />
-              <folding>
-                <element signature="e#133#142#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.5">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="VEC2CLUSTER.py" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/VEC2CLUSTER.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="0" column="23" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
+                  <folding>
+                    <element signature="e#25#72#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="clustering_02.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/practice/clustering_02.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="clustering_02.py" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/practice/clustering_02.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.16216215">
+                  <caret line="7" column="30" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="DATA2VEC.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/DATA2VEC.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="84" column="36" selection-start-line="84" selection-start-column="36" selection-end-line="84" selection-end-column="36" />
+                  <folding>
+                    <element signature="e#133#142#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -467,11 +208,18 @@
         <option value="$PROJECT_DIR$/show_graph_02.py" />
         <option value="$PROJECT_DIR$/VEC_03.py" />
         <option value="$PROJECT_DIR$/VECTORIZATION.py" />
-        <option value="$PROJECT_DIR$/DATA2VEC_GRAPH.py" />
-        <option value="$PROJECT_DIR$/DATA2VEC.py" />
-        <option value="$PROJECT_DIR$/DATA2GRAPH.py" />
-        <option value="$PROJECT_DIR$/clustering_01.py" />
         <option value="$PROJECT_DIR$/parsing_02.py" />
+        <option value="$PROJECT_DIR$/DATA2VEC_GRAPH.py" />
+        <option value="$PROJECT_DIR$/clustering_01.py" />
+        <option value="$PROJECT_DIR$/TFKmeans.py" />
+        <option value="$PROJECT_DIR$/CLASSIFIER_01.py" />
+        <option value="$PROJECT_DIR$/DATA2VEC2GRAPH.py" />
+        <option value="$PROJECT_DIR$/clustering_02.py" />
+        <option value="$PROJECT_DIR$/DATA2GRAPH.py" />
+        <option value="$PROJECT_DIR$/DATA2VEC.py" />
+        <option value="$PROJECT_DIR$/VEC2GRAPH.py" />
+        <option value="$PROJECT_DIR$/practice/clustering_02.py" />
+        <option value="$PROJECT_DIR$/VEC2CLUSTER.py" />
       </list>
     </option>
   </component>
@@ -528,6 +276,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -546,9 +295,22 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EnergyData_jhyun" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EnergyData_jhyun" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="practice" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -563,7 +325,7 @@
       <recent name="$PROJECT_DIR$/rbm" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.clustering_01">
+  <component name="RunManager" selected="Python.clustering_02">
     <configuration default="false" name="kmenas_clustering" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -578,24 +340,6 @@
       <module name="EnergyData_jhyun" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/kmenas_clustering.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="normalization" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="EnergyData_jhyun" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/normalization.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -650,6 +394,24 @@
       <module name="EnergyData_jhyun" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/clustering_01.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="clustering_02" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="EnergyData_jhyun" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/clustering_02.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -849,18 +611,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.kmenas_clustering" />
-      <item index="1" class="java.lang.String" itemvalue="Python.normalization" />
-      <item index="2" class="java.lang.String" itemvalue="Python.VEC_03" />
-      <item index="3" class="java.lang.String" itemvalue="Python.parsing_02" />
-      <item index="4" class="java.lang.String" itemvalue="Python.clustering_01" />
+      <item index="1" class="java.lang.String" itemvalue="Python.VEC_03" />
+      <item index="2" class="java.lang.String" itemvalue="Python.parsing_02" />
+      <item index="3" class="java.lang.String" itemvalue="Python.clustering_01" />
+      <item index="4" class="java.lang.String" itemvalue="Python.clustering_02" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.clustering_01" />
-        <item index="1" class="java.lang.String" itemvalue="Python.parsing_02" />
-        <item index="2" class="java.lang.String" itemvalue="Python.kmenas_clustering" />
-        <item index="3" class="java.lang.String" itemvalue="Python.VEC_03" />
-        <item index="4" class="java.lang.String" itemvalue="Python.normalization" />
+        <item index="0" class="java.lang.String" itemvalue="Python.clustering_02" />
+        <item index="1" class="java.lang.String" itemvalue="Python.clustering_01" />
+        <item index="2" class="java.lang.String" itemvalue="Python.parsing_02" />
+        <item index="3" class="java.lang.String" itemvalue="Python.kmenas_clustering" />
+        <item index="4" class="java.lang.String" itemvalue="Python.VEC_03" />
       </list>
     </recent_temporary>
   </component>
@@ -899,26 +661,26 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="580" y="-1080" width="1920" height="1080" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18477103" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18636848" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32871288" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32905138" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960597" sideWeight="0.4960396" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24110672" sideWeight="0.4914803" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32905138" sideWeight="0.4978701" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20750988" sideWeight="0.48988286" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20750988" sideWeight="0.5101172" order="9" side_tool="true" content_ui="tabs" x="653" y="-830" width="1878" height="579" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20454545" sideWeight="0.5101172" order="9" side_tool="true" content_ui="tabs" x="653" y="-830" width="1878" height="579" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960597" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20454545" sideWeight="0.48988286" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -939,10 +701,31 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/kmenas_clustering.py">
+    <entry file="file://$PROJECT_DIR$/VEC2CLUSTER.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <caret line="0" column="23" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
+          <folding>
+            <element signature="e#25#72#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/practice/clustering_02.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DATA2VEC.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="84" column="36" selection-start-line="84" selection-start-column="36" selection-end-line="84" selection-end-column="36" />
+          <folding>
+            <element signature="e#133#142#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -988,19 +771,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/k_means_.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/practice/VEC_03.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5026316">
           <caret line="139" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="204" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1008,17 +782,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="31" column="33" selection-start-line="0" selection-start-column="0" selection-end-line="74" selection-end-column="66" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/kmenas_clustering.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.2093023">
-          <caret line="52" column="13" selection-start-line="52" selection-start-column="13" selection-end-line="52" selection-end-column="13" />
-          <folding>
-            <element signature="e#714#732#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1026,7 +789,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.55813956">
           <caret line="265" column="45" selection-start-line="265" selection-start-column="45" selection-end-line="265" selection-end-column="45" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1034,7 +796,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.8604652">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1042,7 +803,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1050,27 +810,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/parsing_02.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#24#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/clustering_01.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.11627907">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding>
-            <element signature="e#25#35#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1079,7 +818,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#31#0" expanded="true" />
+            <element signature="e#0#31#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1087,28 +826,50 @@
     <entry file="file://$PROJECT_DIR$/DATA2GRAPH.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-          <folding>
-            <element signature="e#25#34#0" expanded="true" />
-          </folding>
+          <caret line="24" column="31" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DATA2VEC_GRAPH.py">
+    <entry file="file://$PROJECT_DIR$/DATA2VEC2GRAPH.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="134" column="4" selection-start-line="134" selection-start-column="4" selection-end-line="135" selection-end-column="25" />
-          <folding />
+          <caret line="11" column="35" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/VEC2GRAPH.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="35" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DATA2VEC.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4883721">
-          <caret line="82" column="31" selection-start-line="82" selection-start-column="31" selection-end-line="82" selection-end-column="31" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="84" column="36" selection-start-line="84" selection-start-column="36" selection-end-line="84" selection-end-column="36" />
           <folding>
             <element signature="e#133#142#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/VEC2CLUSTER.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="23" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
+          <folding>
+            <element signature="e#25#72#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/practice/clustering_02.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.16216215">
+          <caret line="7" column="30" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
+          <folding />
         </state>
       </provider>
     </entry>
