@@ -1,12 +1,7 @@
 # -*- coding: utf-8 -*-
 
-# import os
-# import sys
-# import cPickle as pickle
-# import time
-# import matplotlib.pyplot as plt
-
 from DATA2VEC import *
+import matplotlib.pyplot as plt
 
 
 def bin2graph(file_list):

@@ -1,16 +1,10 @@
 # -*- coding: utf-8 -*-
 
+from DATA2VEC import *
 from sklearn.cluster import AffinityPropagation
-import os
-import sys
-import time
 import matplotlib.pyplot as plt
-import cPickle as pickle
 
-
-
-
-AF_PREFERENCE = -3000
+AF_PREFERENCE = -4000
 
 
 def bin2graph(file):
@@ -39,18 +33,11 @@ def bin2graph(file):
 def affinity_propagation(vector_dic):
     vectors = vector_dic['data']
 
-    af = AffinityPropagation(preference=AF_PREFERENCE).fit_predict(vectors)
-
-    return af
-
-
-def unpickling(bin_file):
-    data = pickle.load(open(bin_file))
-    return data
+    return AffinityPropagation(preference=AF_PREFERENCE).fit_predict(vectors)
 
 
 def clustered_graph(names, cluster):
-    path = os.path.join(os.getcwd(), 'clustered_graph')
+    path = os.path.join(os.getcwd(), 'VTT','clustered_graph')
     if not os.path.exists(path):
         os.makedirs(path)
     os.chdir(path)
@@ -67,11 +54,14 @@ def clustered_graph(names, cluster):
 if __name__ == "__main__":
     start_time = time.time()
 
-    dir_name = sys.argv[1]
+    # dir_name = sys.argv[1]
+    dir_name = '/Users/JH/Documents/GitHub/EnergyData_jhyun/VTT_vec.bin'
 
     vector_dic = unpickling(dir_name)
 
     cluster = affinity_propagation(vector_dic)
+
+    print cluster
 
     clustered_graph(vector_dic['file_name'], cluster)
 

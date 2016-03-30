@@ -1,5 +1,5 @@
 from DATA2VEC import *
-
+import matplotlib.pyplot as plt
 
 def vector2graph(vectors):
     for i in xrange(len(vectors['file_name'])):

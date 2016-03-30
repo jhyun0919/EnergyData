@@ -35,6 +35,13 @@ def bin2graph(file):
     end_time = time.time()
     print '\t\t' + 'run time: ' + str(end_time - start_time)
 
+
+def kmeans(vectors_dic):
+    vectors = vectors_dic['data']
+    return KMeans (n_clusters=5, verbose=True).fit_predict(vectors)
+
+
+
 def clustered_graph(names, cluster):
     path = os.path.join(os.getcwd(), 'clustered_graph')
     if not os.path.exists(path):
@@ -53,19 +60,19 @@ def clustered_graph(names, cluster):
 
 
 # directory = sys.argv[1]
-file_path = '/Users/JH/Documents/GitHub/EnergyData_jhyun/vector.bin'
+file_path = '/Users/JH/Documents/GitHub/EnergyData_jhyun/VTT_vec.bin'
 
 vec_data = pickle.load(open(file_path))
 
 names = vec_data['file_name']
 vectors = vec_data['data']
 
-y_pred = KMeans (n_clusters=5, verbose=True).fit_predict(vectors)
+cluster = KMeans (n_clusters=5, verbose=True).fit_predict(vectors)
 
 for name in names:
     print name
 
-print y_pred
+print cluster
 
-clustered_graph(names, y_pred)
+clustered_graph(names, cluster)
 

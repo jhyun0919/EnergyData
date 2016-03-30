@@ -11,7 +11,7 @@ import cPickle as pickle
 import numpy as np
 import copy
 import time
-import matplotlib.pyplot as plt
+
 
 VEC_DIMENSION = 50
 INTERPOLATION_INTERVAL = 10  # -> minute
