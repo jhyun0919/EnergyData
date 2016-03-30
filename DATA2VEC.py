@@ -149,21 +149,21 @@ def draw_vec_graph(name, vec_value):
 def vector2dic(file_list):
     vector_dic = {}
 
-    vector_dic['file_name'] = file_list
-    vector_dic['data'] = []
+    vector_dic['file_name'] = np.asarray(file_list)
+    data = []
 
     for file in vector_dic['file_name']:
         try:
             print 'working on ' + file,
             start_time = time.time()
-            vector_dic['data'].append(trim_data(file))
+            data.append(trim_data(file))
         except:
             print 'An error occurred'
         finally:
             end_time = time.time()
             print '\t\t' + 'run time: ' + str(end_time - start_time)
 
-
+    vector_dic['data'] = np.asarray(data)
 
     return vector_dic
 
