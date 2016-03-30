@@ -1,10 +1,5 @@
 # -*- coding: utf-8 -*-
 
-"""
-This module gets a directory path as an input argument and
-makes a binary file of vectorized data.
-"""
-
 import os
 import sys
 import cPickle as pickle
@@ -74,6 +69,9 @@ def interpolation(data):
             item += 1
             value_collector += data['value'][i]
         else:
+            # ts 간격 일정하게 조정
+            # x.append(data['ts'][i - 1][0].replace(minute=10 * minute_check, second=0))
+
             minute_check += 1
             if minute_check == 6:
                 minute_check = 0
@@ -93,6 +91,7 @@ def interpolation(data):
 # 일정한 크기로 scale을 normalization된 data를 반환
 def normalization(list):
     noise_filter = 10
+
     normalizer = n_th_maximum(noise_filter, list)
 
     if normalizer == 0:
@@ -131,7 +130,7 @@ def vectorization(list):
 def vector2graph(name, vec_value):
     path, name = name.rsplit('/', 1)
 
-    path = os.path.join(path, 'graph')
+    path = os.path.join(path, 'vector_graph')
 
     if not os.path.exists(path):
         os.makedirs(path)
@@ -147,27 +146,14 @@ def vector2graph(name, vec_value):
     plt.close()
 
 
-def vector2dic(file_list):
-    vector_dic = {}
+def dictionary2txt(vec_dic):
+    f = open("vector.txt", 'w')
 
-    vector_dic['file_name'] = np.asarray(file_list)
-    data = []
+    for vec in vec_dic:
+        f.write(vec+'\n')
+        f.write(str(vec_dic[vec])+'\n')
 
-    for file in vector_dic['file_name']:
-        try:
-            print 'working on ' + file,
-            start_time = time.time()
-            data.append(trim_data(file))
-        except:
-            print 'An error occurred'
-        finally:
-            end_time = time.time()
-            print '\t\t' + 'run time: ' + str(end_time - start_time)
-
-    vector_dic['data'] = np.asarray(data)
-
-    return vector_dic
-
+    f.close()
 
 def dictionary2bin(vec_dic):
     f = open("vector.bin", 'wb')
@@ -179,21 +165,29 @@ def dictionary2bin(vec_dic):
 if __name__ == "__main__":
     ST = time.time()
 
-    # get directory path
     dir_name = get_directory()
 
-    # make a list of files from the path
     file_list = load_file(dir_name)
 
-    # convert files to vector dictionary
-    vector_dic = vector2dic(file_list)
+    vector_dic = {}
+    # {'file_path' : vector}
 
-    # save as bin file
-    dictionary2bin(vector_dic)
+    for file in file_list:
+        try:
+            print 'working on ' + file,
+            start_time = time.time()
+            vector_dic[file] = trim_data(file)
+            vector2graph(file, vector_dic[file])
+        except:
+            print 'An error occurred'
+            # exit()
+        finally:
+            end_time = time.time()
+            print '\t\t' + 'run time: ' + str(end_time - start_time)
+
 
     ET = time.time()
 
     print
     print '*** TOATL TIME: ' + str(ET - ST) + ' ***'
-    print
 
