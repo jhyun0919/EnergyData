@@ -4,9 +4,9 @@ from DATA2VEC import *
 import matplotlib.pyplot as plt
 
 
-def bin2graph(file_list):
+def bins2graphs(file_list):
     for file in file_list:
-        print 'working on ' + file,
+        print 'vector 2 graph ' + file,
         start_time = time.time()
 
         x = []
@@ -39,7 +39,7 @@ if __name__ == "__main__":
 
     file_list = load_file(dir_name)
 
-    bin2graph(file_list)
+    bins2graphs(file_list)
 
     end_time = time.time()
 

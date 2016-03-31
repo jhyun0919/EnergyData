@@ -9,9 +9,7 @@ vec_data = pickle.load(open(file_path))
 names = vec_data['file_name']
 vectors = vec_data['data']
 
-
 if __name__ == "__main__":
-
     print vec_data
 
     # for name in names:

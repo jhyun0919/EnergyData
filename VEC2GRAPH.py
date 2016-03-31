@@ -1,7 +1,7 @@
 from DATA2VEC import *
 import matplotlib.pyplot as plt
 
-def vector2graph(vectors):
+def vectors2graphs(vectors):
     for i in xrange(len(vectors['file_name'])):
         start_time = time.time()
 
@@ -36,7 +36,7 @@ if __name__ == "__main__":
 
     vectors = unpickling(dir_name)
 
-    vector2graph(vectors)
+    vectors2graphs(vectors)
 
     end_time = time.time()
 

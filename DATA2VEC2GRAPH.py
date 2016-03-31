@@ -2,7 +2,6 @@
 
 from VEC2GRAPH import *
 
-
 # main function
 if __name__ == "__main__":
     start_time = time.time()
@@ -11,12 +10,11 @@ if __name__ == "__main__":
 
     file_list = load_file(dir_name)
 
-    vector_dic = vector2dic(file_list)
+    vector_dic = bins2vectors2dic(file_list)
 
-    vector2graph(vector_dic)
+    vectors2graphs(vector_dic)
 
     end_time = time.time()
 
     print
     print '*** TOATL TIME: ' + str(end_time - start_time) + ' ***'
-

@@ -8,7 +8,7 @@ AF_PREFERENCE = -4000
 
 
 def bin2graph(file):
-    print 'working on ' + file,
+    print 'vector 2 graph ' + file,
     start_time = time.time()
 
     x = []
@@ -32,12 +32,11 @@ def bin2graph(file):
 
 def affinity_propagation(vector_dic):
     vectors = vector_dic['data']
-
     return AffinityPropagation(preference=AF_PREFERENCE).fit_predict(vectors)
 
 
 def clustered_graph(names, cluster):
-    path = os.path.join(os.getcwd(), 'VTT','clustered_graph')
+    path = os.path.join(os.getcwd(), 'VTT', 'clustered_graph')
     if not os.path.exists(path):
         os.makedirs(path)
     os.chdir(path)
@@ -54,8 +53,8 @@ def clustered_graph(names, cluster):
 if __name__ == "__main__":
     start_time = time.time()
 
-    # dir_name = sys.argv[1]
-    dir_name = '/Users/JH/Documents/GitHub/EnergyData_jhyun/VTT_vec.bin'
+    dir_name = sys.argv[1]
+    # dir_name = '/Users/JH/Documents/GitHub/EnergyData_jhyun/VTT_vec.bin'
 
     vector_dic = unpickling(dir_name)
 

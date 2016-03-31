@@ -12,7 +12,6 @@ import numpy as np
 import copy
 import time
 
-
 VEC_DIMENSION = 50
 INTERPOLATION_INTERVAL = 10  # -> minute
 SCALE_SIZE = 100
@@ -49,7 +48,7 @@ def load_file(dir_name):
     return file_list
 
 
-def vector2dic(file_list):
+def bins2vectors2dic(file_list):
     vector_dic = {}
 
     vector_dic['file_name'] = np.asarray(file_list)
@@ -57,7 +56,7 @@ def vector2dic(file_list):
 
     for file in vector_dic['file_name']:
         try:
-            print 'working on ' + file,
+            print 'data 2 vector ' + file,
             start_time = time.time()
             data.append(trim_data(file))
         except:
@@ -182,7 +181,7 @@ if __name__ == "__main__":
     file_list = load_file(dir_name)
 
     # convert files to vector dictionary
-    vector_dic = vector2dic(file_list)
+    vector_dic = bins2vectors2dic(file_list)
 
     # save as bin file
     dictionary2bin(vector_dic)
