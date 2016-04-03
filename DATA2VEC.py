@@ -1,9 +1,11 @@
 # -*- coding: utf-8 -*-
 
-"""
-This module gets a directory path as an input argument and
-makes a binary file of vectorized data.
-"""
+
+# This module gets a directory path as an input argument and
+# makes a binary file of vectorized data.
+
+# >>> python DATA2VEC.py <directory>
+
 
 import os
 import sys
@@ -17,7 +19,7 @@ INTERPOLATION_INTERVAL = 10  # -> minute
 SCALE_SIZE = 100
 
 
-# 인자로 전달된 디렉토리를 반환
+# 외부에서 인자로 전달된 디렉토리를 반환
 def get_directory():
     try:
         dir_name = sys.argv[1]
@@ -28,7 +30,7 @@ def get_directory():
         exit()
 
 
-# 파일리스트를 만들어 반환
+# 디렉토리를 입력받아 그 디렉토리 내의 파일들을 리스트로 만들어 반환
 def load_file(dir_name):
     file_list = []
 
@@ -48,6 +50,7 @@ def load_file(dir_name):
     return file_list
 
 
+# 파일 리스트를 입력 받아 각각의 파일들을 벡터로 전처리한 뒤, 딕셔너리로 구성하여 반환
 def bins2vectors2dic(file_list):
     vector_dic = {}
 
@@ -70,7 +73,7 @@ def bins2vectors2dic(file_list):
     return vector_dic
 
 
-# binary data를 가공하여 반환
+# 바이너리 파일을 가공하여  벡터로 반환
 def trim_data(bin_file):
     data = unpickling(bin_file)
     data = interpolation(data)
@@ -80,6 +83,7 @@ def trim_data(bin_file):
     return vector_data
 
 
+# 바이너리 파일을 언피클링 처리하여 읽어옴
 def unpickling(bin_file):
     data = pickle.load(open(bin_file))
     return data
@@ -87,7 +91,6 @@ def unpickling(bin_file):
 
 # 일정한 간격으로 interpolation 된 data를 list형식으로 반환
 def interpolation(data):
-    # x = []
     y = []
 
     minute_check = data['ts'][0][0].minute / INTERPOLATION_INTERVAL
@@ -115,7 +118,7 @@ def interpolation(data):
     return y
 
 
-# 일정한 크기로 scale을 normalization된 data를 반환
+# 일정한 크기로 scale을 조정한 데이터를 반환
 def normalization(list):
     noise_filter = 10
     normalizer = n_th_maximum(noise_filter, list)
@@ -128,12 +131,14 @@ def normalization(list):
     return list_normalized
 
 
+# 입력받은 리스트의 n번째 최대값을 반환
 def n_th_maximum(n_th, list):
     list_copy = copy.copy(list)
     list_copy.sort()
     return list_copy[-n_th]
 
 
+# 리스트를 입력받아 벡터화 하여 반환
 def vectorization(list):
     slicing_size = len(list) / VEC_DIMENSION
     vec = []
@@ -145,14 +150,17 @@ def vectorization(list):
             try:
                 vec.append(int(vec_collector / slicing_size))
             except ValueError:
+                # 0을 나누는 경우
                 vec.append(0)
             except OverflowError:
-                vec.append(-100)
+                # 0으로 나누는 경우
+                vec.append(-1000)
             finally:
                 vec_collector = 0
     return vec
 
 
+# 벡터직셔너리를 마이너리 파일로 저장
 def dictionary2bin(vec_dic):
     bin_name = sys.argv[1] + '_vec.bin'
     f = open(bin_name, 'wb')
@@ -160,13 +168,12 @@ def dictionary2bin(vec_dic):
     f.close()
 
 
+# 벡터 딕셔너리를 텍스트 파일로 저장
 def dictionary2txt(vec_dic):
     f = open("vector.txt", 'w')
-
     for vec in vec_dic:
         f.write(vec + '\n')
         f.write(str(vec_dic[vec]) + '\n')
-
     f.close()
 
 

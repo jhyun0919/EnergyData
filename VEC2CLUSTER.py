@@ -4,7 +4,7 @@ from DATA2VEC import *
 from sklearn.cluster import AffinityPropagation
 import matplotlib.pyplot as plt
 
-AF_PREFERENCE = -4000
+AF_PREFERENCE = -5000
 
 
 def bin2graph(file):
@@ -36,7 +36,7 @@ def affinity_propagation(vector_dic):
 
 
 def clustered_graph(names, cluster):
-    path = os.path.join(os.getcwd(), 'VTT', 'clustered_graph')
+    path = os.path.join(os.getcwd(), get_directory(), 'clustered_graph')
     if not os.path.exists(path):
         os.makedirs(path)
     os.chdir(path)
