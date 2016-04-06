@@ -20,17 +20,19 @@ This is a series of process showing the effort to manage energy more efficiently
 ### Getting started
 
 * Prerequisites
+ *   
 
 * Setup the environment  
-
+ *  
   
 ### Running the codes
  * Preprocessing   
    ```
+   # input: directory path
+   # output: vectors in binary file
+   
    $ python DATA2VEC.py <directory_path>
    ```
-   * input: directory path
-   * output: vectors in binary file  
    
    1. parse bin files located in given **directory_path**
    2. unpickle bin data
@@ -40,10 +42,11 @@ This is a series of process showing the effort to manage energy more efficiently
     
  * Clustering   
    ```
+   # input: vectors in binary file
+   # output: clusters, (optional clustered graph figures)
+   
    $ python VEC2CLUSTER.py <bin_file_path>
    ```
-   * input: vectors in binary file
-   * output: clusters, (optional clustered graph figures)
    
    1. parse bin file desigated by input argument
    2. return a cluster
@@ -52,10 +55,11 @@ This is a series of process showing the effort to manage energy more efficiently
    
  * (Optional) Visualuzation
    ```
+   # input: directory path
+   # output: binary files in graph figures
+   
    $ python DATA2GRAPH.py <directory_path>
    ```
-   * input: directory path
-   * output: binary files in graph figures
    
    1. parse bin files located in given **directory_path**
    2. create a "/graph" folder in given **directory_path**
@@ -63,10 +67,12 @@ This is a series of process showing the effort to manage energy more efficiently
      
    
    ```
+   # input: vectors in binary file
+   # output: vectors in graph figures
+   
    $ python VEC2GRAPH.py <directory_path>
    ```
-   * input: vectors in binary file
-   * output: vectors in graph figures
+  
    
    1. parse bin files located in given **directory_path**
    2. create a "/graph" folder in given **directory_path**
