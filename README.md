@@ -59,7 +59,8 @@ This is a series of process showing the effort to manage energy more efficiently
    
    1. parse bin files located in given **directory_path**
    2. create a "/graph" folder in given **directory_path**
-   3. draw and save graph figures
+   3. draw and save graph figures  
+     
    
    ```
    $ python VEC2GRAPH.py <directory_path>
@@ -70,7 +71,7 @@ This is a series of process showing the effort to manage energy more efficiently
    1. parse bin files located in given **directory_path**
    2. create a "/graph" folder in given **directory_path**
    3. draw and save graph figures
-  
+    
 
  * Abnormal detection   
    ```
