@@ -23,19 +23,19 @@ This is a series of process showing the effort to manage energy more efficiently
 
 * Setup the environment  
 
-* Running the codes
-  * Preprocessing   
-    ```
-    $ python DATA2VEC.py <directory_path>
-    ```
-  * Clustering   
-    ```
-    $ python VEC2CLUSTER.py <bin_file_path>
-    ```
-  * Abnormal detection   
-    ```
-    $ python ...
-    ```
+### Running the codes
+ * Preprocessing   
+   ```
+   $ python DATA2VEC.py <directory_path>
+   ```
+ * Clustering   
+   ```
+   $ python VEC2CLUSTER.py <bin_file_path>
+   ```
+ * Abnormal detection   
+   ```
+   $ python ...
+   ```
   
 ---
 ### Upcoming & Further Study
