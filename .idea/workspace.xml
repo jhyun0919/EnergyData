@@ -2,52 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9e90c6a0-c712-4bc0-9204-421017e6380e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CLASSIFIER.py" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/3/VTT_GW1_HA13_VM_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/4/VTT_GW1_HA14_VM_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/4/VTT_GW1_HA3_VM_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/5/VTT_GW1_HA10_VM_KV_KAM.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/5/VTT_GW1_HA11_VM_KV_KAM.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/5/VTT_GW1_HA12_VM_KV_KAM.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/5/VTT_GW1_HA13_VM_KV_KAM.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/5/VTT_GW1_HA14_VM_KV_KAM.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/5/VTT_GW1_HA1_VM_KV_KAM.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/5/VTT_GW1_HA2_VM_KV_KAM.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/5/VTT_GW1_HA3_VM_KV_KAM.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/6/VTT_GW1_HA1_VM_EP_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/6/VTT_GW1_HA1_VM_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/7/VTT_GW1_HA13_VM_EP_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/7/VTT_GW1_HA14_VM_EP_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/7/VTT_GW1_HA2_VM_EP_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/7/VTT_GW1_HA2_VM_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/8/VTT_GW1_HA3_VM_EP_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clustered_graph/0/VTT_GW1_HA13_VM_EP_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clustered_graph/0/VTT_GW1_HA14_VM_EP_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clustered_graph/0/VTT_GW1_HA1_VM_EP_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clustered_graph/0/VTT_GW1_HA1_VM_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clustered_graph/0/VTT_GW1_HA2_VM_EP_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clustered_graph/0/VTT_GW1_HA2_VM_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clustered_graph/1/VTT_GW1_HA12_VM_EP_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clustered_graph/1/VTT_GW1_HA12_VM_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clustered_graph/2/VTT_GW1_HA10_VM_KV_KAM.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clustered_graph/2/VTT_GW1_HA11_VM_KV_KAM.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clustered_graph/2/VTT_GW1_HA12_VM_KV_KAM.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clustered_graph/2/VTT_GW1_HA13_VM_KV_KAM.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clustered_graph/2/VTT_GW1_HA14_VM_KV_KAM.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clustered_graph/2/VTT_GW1_HA1_VM_KV_KAM.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clustered_graph/2/VTT_GW1_HA2_VM_KV_KAM.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clustered_graph/2/VTT_GW1_HA3_VM_KV_KAM.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clustered_graph/3/VTT_GW1_HA10_VM_EP_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clustered_graph/3/VTT_GW1_HA10_VM_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clustered_graph/3/VTT_GW1_HA11_VM_EP_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clustered_graph/3/VTT_GW1_HA11_VM_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clustered_graph/4/VTT_GW1_HA13_VM_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clustered_graph/4/VTT_GW1_HA14_VM_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clustered_graph/4/VTT_GW1_HA3_VM_EP_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clustered_graph/4/VTT_GW1_HA3_VM_KV_K.jpg" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/REDD_excercise/load_data.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/clustering_01.py" afterPath="$PROJECT_DIR$/practice/kmeans_practice.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/parsing_02.py" afterPath="$PROJECT_DIR$/parsing_module.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Paper/Multi-User Energy Consumption Monitoring and Anomaly Detection with Partial Context Information.pdf" afterPath="$PROJECT_DIR$/Paper/Multi-User Energy Consumption Monitoring and Anomaly Detection with Partial Context Information.pdf" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DATA2VEC.py" afterPath="$PROJECT_DIR$/DATA2VEC.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/VEC2CLUSTER.py" afterPath="$PROJECT_DIR$/VEC2CLUSTER.py" />
     </list>
     <ignored path="EnergyData_jhyun.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -72,6 +31,7 @@
     <SUITE FILE_PATH="coverage/EnergyData_jhyun$interpolation_practice_01.coverage" NAME="interpolation_practice_01 Coverage Results" MODIFIED="1457685974634" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/EnergyData_jhyun$Doctests_in_rbm.coverage" NAME="Doctests in rbm Coverage Results" MODIFIED="1458563814234" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/rbm" />
     <SUITE FILE_PATH="coverage/EnergyData_jhyun$show_graph_02.coverage" NAME="show_graph_02 Coverage Results" MODIFIED="1459132489048" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/EnergyData_jhyun$load_data.coverage" NAME="load_data Coverage Results" MODIFIED="1459847106179" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/REDD_excercise" />
     <SUITE FILE_PATH="coverage/EnergyData_jhyun$kmenas_clustering.coverage" NAME="kmenas_clustering Coverage Results" MODIFIED="1459239707338" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/EnergyData_jhyun$interpolation_practice_02.coverage" NAME="interpolation_practice_02 Coverage Results" MODIFIED="1457914771874" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/EnergyData_jhyun$VEC_02.coverage" NAME="VEC_02 Coverage Results" MODIFIED="1458905651755" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -100,14 +60,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="DATA2GRAPH.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/DATA2GRAPH.py">
+      <file leaf-file-name="CLASSIFIER.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CLASSIFIER.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.71590906">
-              <caret line="28" column="19" selection-start-line="28" selection-start-column="19" selection-end-line="28" selection-end-column="19" />
-              <folding>
-                <element signature="e#25#47#0" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="0.0">
+              <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="VEC2CLUSTER.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/VEC2CLUSTER.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.71137726">
+              <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -164,6 +132,7 @@
         <option value="$PROJECT_DIR$/VEC2CLUSTER.py" />
         <option value="$PROJECT_DIR$/DATA2VEC.py" />
         <option value="$PROJECT_DIR$/CLASSIFIER.py" />
+        <option value="$PROJECT_DIR$/REDD_excercise/load_data.py" />
       </list>
     </option>
   </component>
@@ -173,8 +142,10 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="width" value="1280" />
-    <option name="height" value="800" />
+    <option name="x" value="580" />
+    <option name="y" value="-1080" />
+    <option name="width" value="1920" />
+    <option name="height" value="1080" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -235,10 +206,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EnergyData_jhyun" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EnergyData_jhyun" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="REDD_excercise" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -254,25 +239,7 @@
       <recent name="$PROJECT_DIR$/rbm" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Doctests in DATA2VEC">
-    <configuration default="false" name="kmenas_clustering" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="EnergyData_jhyun" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/practice/kmenas_clustering.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Python.load_data">
     <configuration default="false" name="parsing_02" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -286,7 +253,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="EnergyData_jhyun" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/parsing_02.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/parsing_module.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -304,7 +271,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="EnergyData_jhyun" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/clustering_01.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/practice/kmeans_practice.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -345,6 +312,24 @@
       <option name="TEST_TYPE" value="TEST_SCRIPT" />
       <option name="PATTERN" value="" />
       <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="load_data" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/REDD_excercise" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="EnergyData_jhyun" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/REDD_excercise/load_data.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
     <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
@@ -541,19 +526,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.kmenas_clustering" />
-      <item index="1" class="java.lang.String" itemvalue="Python.parsing_02" />
-      <item index="2" class="java.lang.String" itemvalue="Python.clustering_01" />
-      <item index="3" class="java.lang.String" itemvalue="Python.VEC2CLUSTER" />
-      <item index="4" class="java.lang.String" itemvalue="Python tests.Doctests in DATA2VEC" />
+      <item index="0" class="java.lang.String" itemvalue="Python.parsing_02" />
+      <item index="1" class="java.lang.String" itemvalue="Python.clustering_01" />
+      <item index="2" class="java.lang.String" itemvalue="Python.VEC2CLUSTER" />
+      <item index="3" class="java.lang.String" itemvalue="Python tests.Doctests in DATA2VEC" />
+      <item index="4" class="java.lang.String" itemvalue="Python.load_data" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python tests.Doctests in DATA2VEC" />
-        <item index="1" class="java.lang.String" itemvalue="Python.VEC2CLUSTER" />
-        <item index="2" class="java.lang.String" itemvalue="Python.clustering_01" />
-        <item index="3" class="java.lang.String" itemvalue="Python.parsing_02" />
-        <item index="4" class="java.lang.String" itemvalue="Python.kmenas_clustering" />
+        <item index="0" class="java.lang.String" itemvalue="Python.load_data" />
+        <item index="1" class="java.lang.String" itemvalue="Python tests.Doctests in DATA2VEC" />
+        <item index="2" class="java.lang.String" itemvalue="Python.VEC2CLUSTER" />
+        <item index="3" class="java.lang.String" itemvalue="Python.clustering_01" />
+        <item index="4" class="java.lang.String" itemvalue="Python.parsing_02" />
       </list>
     </recent_temporary>
   </component>
@@ -597,27 +582,27 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1280" height="800" extended-state="0" />
-    <editor active="false" />
+    <frame x="580" y="-1080" width="1920" height="1080" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15508886" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15654951" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32871288" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32905138" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960597" sideWeight="0.4960396" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24110672" sideWeight="0.4914803" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3883399" sideWeight="0.48935038" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32905138" sideWeight="0.4978701" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1472332" sideWeight="0.48828542" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3387978" sideWeight="0.50958467" order="9" side_tool="true" content_ui="tabs" x="653" y="-830" width="1878" height="579" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1472332" sideWeight="0.5117146" order="9" side_tool="true" content_ui="tabs" x="653" y="-830" width="1878" height="579" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960597" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1472332" sideWeight="0.49041533" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -643,7 +628,17 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#25#47#0" expanded="true" />
+            <element signature="e#25#47#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DATA2GRAPH.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#25#47#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -652,9 +647,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
-          <folding>
-            <element signature="e#169#178#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -663,7 +655,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
           <folding>
-            <element signature="e#25#47#0" expanded="true" />
+            <element signature="e#25#47#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -679,9 +671,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="82" column="0" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
-          <folding>
-            <element signature="e#169#178#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -690,7 +679,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
           <folding>
-            <element signature="e#25#47#0" expanded="true" />
+            <element signature="e#25#47#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -706,9 +695,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#169#178#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -831,24 +817,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/clustering_01.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.11568123">
-          <caret line="32" column="21" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DATA2VEC2GRAPH.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.20822622">
           <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/parsing_02.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.25449872">
-          <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
         </state>
       </provider>
     </entry>
@@ -859,29 +831,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/VEC2CLUSTER.py">
+    <entry file="file://$PROJECT_DIR$/DATA2VEC.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.48579547">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/practice/kmeans_practice.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="32" column="21" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="21" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DATA2GRAPH.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.71590906">
+        <state vertical-scroll-proportion="0.5121951">
           <caret line="28" column="19" selection-start-line="28" selection-start-column="19" selection-end-line="28" selection-end-column="19" />
           <folding>
-            <element signature="e#25#47#0" expanded="true" />
+            <element signature="e#25#47#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DATA2VEC.py">
+    <entry file="file://$PROJECT_DIR$/parsing_module.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.15228426">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/REDD_excercise/load_data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.10778443">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding>
-            <element signature="e#169#178#0" expanded="true" />
+            <element signature="e#0#11#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -889,7 +877,15 @@
     <entry file="file://$PROJECT_DIR$/CLASSIFIER.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/VEC2CLUSTER.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.71137726">
+          <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
           <folding />
         </state>
       </provider>
