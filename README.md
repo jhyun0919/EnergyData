@@ -21,6 +21,8 @@ This is a series of process showing the effort to manage energy more efficiently
 
 * Prerequisites
 
+* Setup the environment  
+
 * Running the codes
   * Preprocessing   
     ```
