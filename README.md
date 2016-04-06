@@ -35,11 +35,13 @@ This is a series of process showing the effort to manage energy more efficiently
     $ python ...
     ```
   
-  ---
+---
 ### Upcoming & Further Study
-    - [ ] Baysesian network
-    - [ ] Abnormal detection
-    - [ ] Cluster Verification Strategies
+ - [x] Data Preprocessing
+ - [x] Clustering
+ - [ ] Baysesian network
+ - [ ] Abnormal detection
+ - [ ] Cluster Verification Strategies
   
   
   
