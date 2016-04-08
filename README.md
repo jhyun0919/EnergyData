@@ -20,10 +20,17 @@ This is a series of process showing the effort to manage energy more efficiently
 ### Getting started
 
 * Prerequisites
- *   
+ * [requirements.txt](https://github.com/jhyun0919/EnergyData_jhyun/blob/master/requirements.txt)  
 
 * Setup the environment  
- *  
+ *  how to setup
+   ```
+   $ git clone https://github.com/jhyun0919/EnergyData_jhyun.git  
+   
+   $ source energy_data_venv/bin/activate  
+   
+   $ pip install -r requirements.txt
+   ```
   
 ### Running the codes
  * Preprocessing   
