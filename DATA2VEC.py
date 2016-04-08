@@ -14,7 +14,7 @@ import numpy as np
 import copy
 import time
 
-VEC_DIMENSION = 50
+VEC_DIMENSION = 100
 INTERPOLATION_INTERVAL = 10  # -> minute
 SCALE_SIZE = 100
 

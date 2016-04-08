@@ -2,11 +2,284 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9e90c6a0-c712-4bc0-9204-421017e6380e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/REDD_excercise/load_data.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/clustering_01.py" afterPath="$PROJECT_DIR$/practice/kmeans_practice.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/parsing_02.py" afterPath="$PROJECT_DIR$/parsing_module.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Paper/Multi-User Energy Consumption Monitoring and Anomaly Detection with Partial Context Information.pdf" afterPath="$PROJECT_DIR$/Paper/Multi-User Energy Consumption Monitoring and Anomaly Detection with Partial Context Information.pdf" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Paper/Context-Aware Time Series Anomaly Detection for Complex Systems.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Paper/Data Driven Investigation of Faults in HVAC Systems with Model, Cluster and Compare (MCC).pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Paper/Energy Outlier Detection in Smart Environments.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Paper/EnergyLens- Combining Smartphones with Electricity Meter for Accurate Activity Detection and User Annotation.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Paper/Multi-User Energy Consumption Monitoring and Anomaly Detection with Partial Context Information.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Paper/Towards an Understanding of Campus-Scale Power Consumption.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Paper/Urban Sensing and Smart Home Energy Optimisations- A Machine Learning Approach.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Paper/[slide]Multi-User Energy Consumption Monitoring and Anomaly Detection with Partial Context Information.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/REDD_excercise/load_data.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Untitled.ipynb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/0/VTT_GW1_HA10_VM_EP_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/0/VTT_GW1_HA10_VM_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/0/VTT_GW1_HA45_VM_EP_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/0/VTT_GW2_HA18_VM_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/1/VTT_GW1_HA10_VM_KV_KAM.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/1/VTT_GW1_HA11_VM_EP_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/1/VTT_GW1_HA11_VM_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/1/VTT_GW1_HA11_VM_KV_KAM.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/1/VTT_GW1_HA12_VM_KV_KAM.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/1/VTT_GW1_HA13_VM_KV_KAM.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/1/VTT_GW1_HA14_VM_KV_KAM.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/1/VTT_GW1_HA15_VM_KV_KAM.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/1/VTT_GW1_HA16_VM_KV_KAM.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/1/VTT_GW1_HA1_VM_KV_KAM.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/1/VTT_GW1_HA25_VM_KV_KAM.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/1/VTT_GW1_HA26_VM_KV_KAM.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/1/VTT_GW1_HA27_VM_KV_KAM.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/1/VTT_GW1_HA28_VM_KV_KAM.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/1/VTT_GW1_HA29_VM_KV_KAM.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/1/VTT_GW1_HA2_VM_KV_KAM.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/1/VTT_GW1_HA30_VM_KV_KAM.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/1/VTT_GW1_HA31_VM_KV_KAM.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/1/VTT_GW1_HA3_VM_KV_KAM.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/1/VTT_GW1_HA40_VM_KV_KAM.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/1/VTT_GW1_HA41_VM_KV_KAM.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/1/VTT_GW1_HA42_VM_KV_KAM.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/1/VTT_GW1_HA43_VM_KV_KAM.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/1/VTT_GW1_HA44_VM_KV_KAM.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/1/VTT_GW1_HA45_VM_KV_KAM.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/1/VTT_GW1_KIINT_KV_KAM.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/1/VTT_GW1_KIINT_KV_KO_KAM.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/1/VTT_GW2_HA31_VM_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/1/VTT_GW2_HA32_VM_KV_KAM.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/1/VTT_GW2_HA33_VM_KV_KAM.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/1/VTT_GW2_HA4_VM_KV_KAM.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/1/VTT_GW2_HA50_VM_KV_KAM.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/1/VTT_GW2_HA52_VM_KV_KAM.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/1/VTT_GW2_HA5_VM_KV_KAM.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/1/VTT_GW2_HA8_VM_KV_KAM.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/1/VTT_GW2_HA9_VM_KV_KAM.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/1/VTT_GW2_TAVOIT_KV_KAM.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/10/VTT_GW1_HA25_VM_EP_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/10/VTT_GW1_HA25_VM_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/10/VTT_GW2_HA39_VM_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/10/VTT_GW2_HA8_VM_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/11/VTT_GW1_HA13_VM_EP_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/11/VTT_GW1_HA26_VM_EP_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/11/VTT_GW1_HA27_VM_EP_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/11/VTT_GW1_HA41_VM_EP_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/12/VTT_GW1_HA28_VM_EP_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/12/VTT_GW1_HA29_VM_EP_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/12/VTT_GW1_HA3_VM_EP_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/13/VTT_GW1_HA14_VM_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/13/VTT_GW1_HA26_VM_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/13/VTT_GW1_HA28_VM_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/13/VTT_GW1_HA29_VM_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/13/VTT_GW1_HA3_VM_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/13/VTT_GW2_HA6_VM_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/14/VTT_GW1_HA14_VM_EP_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/14/VTT_GW1_HA2_VM_EP_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/14/VTT_GW1_HA2_VM_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/15/VTT_GW1_HA30_VM_EP_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/15/VTT_GW1_HA30_VM_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/16/VTT_GW1_HA31_VM_EP_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/16/VTT_GW1_HA31_VM_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/17/VTT_GW1_HA40_VM_EP_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/17/VTT_GW1_HA40_VM_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/18/VTT_GW1_HA42_VM_EP_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/19/VTT_GW1_HA42_VM_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/2/VTT_GW1_HA11_VM_EP_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/2/VTT_GW1_HA11_VM_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/2/VTT_GW1_HA12_VM_EP_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/2/VTT_GW1_HA12_VM_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/2/VTT_GW2_HA47_VM_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/2/VTT_GW2_HA51_VM_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/20/VTT_GW1_HA43_VM_EP_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/20/VTT_GW1_HA43_VM_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/21/VTT_GW1_HA44_VM_EP_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/21/VTT_GW1_HA44_VM_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/22/VTT_GW1_HA45_VM_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/23/VTT_GW1_TAVOIT_KV_KAM.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/24/VTT_GW2_HA17_VM_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/24/VTT_GW2_HA48_VM_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/24/VTT_GW2_HA49_VM_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/25/VTT_GW2_HA19_VM_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/25/VTT_GW2_HA21_VM_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/25/VTT_GW2_HA34_VM_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/26/VTT_GW2_HA20_VM_KV_KAM.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/27/VTT_GW2_HA17_VM_EP_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/27/VTT_GW2_HA19_VM_EP_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/27/VTT_GW2_HA21_VM_EP_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/27/VTT_GW2_HA34_VM_EP_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/27/VTT_GW2_HA47_VM_EP_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/27/VTT_GW2_HA48_VM_EP_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/27/VTT_GW2_HA49_VM_EP_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/27/VTT_GW2_HA51_VM_EP_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/27/VTT_GW2_HA52_VM_EP_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/27/VTT_GW2_HA6_VM_EP_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/27/VTT_GW2_HA8_VM_EP_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/27/VTT_GW2_HA9_VM_EP_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/28/VTT_GW2_HA17_VM_KV_KAM.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/28/VTT_GW2_HA18_VM_KV_KAM.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/28/VTT_GW2_HA19_VM_KV_KAM.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/28/VTT_GW2_HA21_VM_KV_KAM.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/28/VTT_GW2_HA22_VM_KV_KAM.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/28/VTT_GW2_HA24_VM_KV_KAM.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/28/VTT_GW2_HA34_VM_KV_KAM.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/28/VTT_GW2_HA37_VM_KV_KAM.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/28/VTT_GW2_HA38_VM_KV_KAM.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/28/VTT_GW2_HA39_VM_KV_KAM.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/28/VTT_GW2_HA51_VM_KV_KAM.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/28/VTT_GW2_HA6_VM_KV_KAM.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/28/VTT_GW2_HA7_VM_KV_KAM.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/28/VTT_GW2_KIINT_KV_KAM.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/28/VTT_GW2_KIINT_KV_KO_KAM.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/29/VTT_GW2_HA18_VM_EP_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/29/VTT_GW2_HA20_VM_EP_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/29/VTT_GW2_HA22_VM_EP_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/29/VTT_GW2_HA24_VM_EP_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/29/VTT_GW2_HA37_VM_EP_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/29/VTT_GW2_HA38_VM_EP_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/29/VTT_GW2_HA39_VM_EP_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/29/VTT_GW2_HA4_VM_EP_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/29/VTT_GW2_HA5_VM_EP_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/29/VTT_GW2_HA7_VM_EP_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/3/VTT_GW1_HA10_VM_KV_KAM.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/3/VTT_GW1_HA11_VM_KV_KAM.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/3/VTT_GW1_HA12_VM_EP_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/3/VTT_GW1_HA12_VM_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/3/VTT_GW1_HA12_VM_KV_KAM.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/3/VTT_GW1_HA13_VM_KV_KAM.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/3/VTT_GW1_HA14_VM_KV_KAM.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/3/VTT_GW1_HA1_VM_KV_KAM.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/3/VTT_GW1_HA2_VM_KV_KAM.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/3/VTT_GW1_HA3_VM_KV_KAM.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/30/VTT_GW2_HA22_VM_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/31/VTT_GW2_HA23_VM_EP_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/32/VTT_GW2_HA23_VM_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/33/VTT_GW2_HA23_VM_KV_KAM.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/34/VTT_GW2_HA32_VM_EP_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/35/VTT_GW2_HA32_VM_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/36/VTT_GW2_HA33_VM_EP_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/37/VTT_GW2_HA33_VM_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/38/VTT_GW2_HA35_VM_EP_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/39/VTT_GW2_HA35_VM_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/4/VTT_GW1_HA13_VM_EP_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/4/VTT_GW1_HA13_VM_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/4/VTT_GW1_HA14_VM_EP_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/4/VTT_GW1_HA1_VM_EP_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/4/VTT_GW1_HA1_VM_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/4/VTT_GW1_HA27_VM_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/4/VTT_GW1_HA2_VM_EP_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/4/VTT_GW1_HA2_VM_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/4/VTT_GW1_HA41_VM_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/4/VTT_GW2_HA20_VM_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/4/VTT_GW2_HA24_VM_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/40/VTT_GW2_HA35_VM_KV_KAM.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/41/VTT_GW2_HA36_VM_EP_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/42/VTT_GW2_HA36_VM_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/43/VTT_GW2_HA36_VM_KV_KAM.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/44/VTT_GW2_HA37_VM_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/44/VTT_GW2_HA4_VM_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/44/VTT_GW2_HA7_VM_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/45/VTT_GW2_HA38_VM_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/46/VTT_GW2_HA46_VM_EP_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/47/VTT_GW2_HA46_VM_KV_KAM.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/48/VTT_GW2_HA47_VM_KV_KAM.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/49/VTT_GW2_HA48_VM_KV_KAM.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/49/VTT_GW2_HA49_VM_KV_KAM.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/5/VTT_GW1_HA13_VM_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/5/VTT_GW1_HA14_VM_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/5/VTT_GW1_HA15_VM_EP_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/5/VTT_GW1_HA3_VM_EP_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/5/VTT_GW1_HA3_VM_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/50/VTT_GW2_HA50_VM_EP_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/51/VTT_GW2_HA50_VM_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/52/VTT_GW2_HA52_VM_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/53/VTT_GW2_HA9_VM_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/6/VTT_GW1_HA15_VM_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/7/VTT_GW1_HA16_VM_EP_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/8/VTT_GW1_HA16_VM_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/9/VTT_GW1_HA1_VM_EP_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/9/VTT_GW1_HA1_VM_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/clustered_graph/9/VTT_GW2_HA5_VM_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA10_VM_EP_KV_K_vec_50.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA10_VM_KV_KAM_vec_50.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA10_VM_KV_K_vec_50.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA11_VM_EP_KV_K_vec_50.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA11_VM_KV_KAM_vec_50.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA11_VM_KV_K_vec_50.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA12_VM_EP_KV_K_vec_50.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA12_VM_KV_KAM_vec_50.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA12_VM_KV_K_vec_50.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA13_VM_EP_KV_K_vec_50.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA13_VM_KV_KAM_vec_50.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA13_VM_KV_K_vec_50.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA14_VM_EP_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA14_VM_EP_KV_K_vec_50.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA14_VM_KV_K.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA14_VM_KV_KAM.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA14_VM_KV_KAM_vec_50.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA14_VM_KV_K_vec_50.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA1_VM_EP_KV_K_vec_50.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA1_VM_KV_KAM_vec_50.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA1_VM_KV_K_vec_50.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA2_VM_EP_KV_K_vec_50.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA2_VM_KV_KAM_vec_50.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA2_VM_KV_K_vec_50.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA3_VM_EP_KV_K_vec_50.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA3_VM_KV_KAM_vec_50.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA3_VM_KV_K_vec_50.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mnist_autoencoder/RBM_Autoencoder/AutoEncoder.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mnist_autoencoder/RBM_Autoencoder/AutoEncoder.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mnist_autoencoder/RBM_Autoencoder/ChangeLog.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mnist_autoencoder/RBM_Autoencoder/LICENSE.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mnist_autoencoder/RBM_Autoencoder/RBM.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mnist_autoencoder/RBM_Autoencoder/RBM.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mnist_autoencoder/RBM_Autoencoder/RBM_Autoencoder.cbp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mnist_autoencoder/RBM_Autoencoder/RBM_Autoencoder.depend" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mnist_autoencoder/RBM_Autoencoder/RBM_Autoencoder.layout" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mnist_autoencoder/RBM_Autoencoder/README.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mnist_autoencoder/RBM_Autoencoder/main.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/rbm/.ipynb_checkpoints/RBM-checkpoint.ipynb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/rbm/.ipynb_checkpoints/Restricted Boltzmann Machine features for digit classification-checkpoint.ipynb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/rbm/.ipynb_checkpoints/Untitled-checkpoint.ipynb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/rbm/DBN.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/rbm/RBM.ipynb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/rbm/Restricted Boltzmann Machine features for digit classification.ipynb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/rbm/Restricted_Boltzman_example01.ipynb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/rbm/Restricted_Boltzman_example02.ipynb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/rbm/Restricted_Boltzman_example03.ipynb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/rbm/SdA.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/rbm/Untitled.ipynb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/rbm/dA.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/rbm/logistic_sgd.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/rbm/mlp.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/rbm/rbm.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/rbm/utils.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sklearn.cluster.AffinityPropagation — scikit-learn 0.17.1 documentation.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vector.bin" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/CLASSIFIER.py" afterPath="$PROJECT_DIR$/DATA2CLUSTER.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA10_VM_EP_KV_K.jpg" afterPath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA10_VM_EP_KV_K.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA10_VM_KV_K.jpg" afterPath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA10_VM_KV_K.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA10_VM_KV_KAM.jpg" afterPath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA10_VM_KV_KAM.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA11_VM_EP_KV_K.jpg" afterPath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA11_VM_EP_KV_K.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA11_VM_KV_K.jpg" afterPath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA11_VM_KV_K.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA11_VM_KV_KAM.jpg" afterPath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA11_VM_KV_KAM.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA12_VM_EP_KV_K.jpg" afterPath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA12_VM_EP_KV_K.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA12_VM_KV_K.jpg" afterPath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA12_VM_KV_K.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA12_VM_KV_KAM.jpg" afterPath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA12_VM_KV_KAM.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA13_VM_EP_KV_K.jpg" afterPath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA13_VM_EP_KV_K.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA13_VM_KV_K.jpg" afterPath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA13_VM_KV_K.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA13_VM_KV_KAM.jpg" afterPath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA13_VM_KV_KAM.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA1_VM_EP_KV_K.jpg" afterPath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA1_VM_EP_KV_K.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA1_VM_KV_K.jpg" afterPath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA1_VM_KV_K.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA1_VM_KV_KAM.jpg" afterPath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA1_VM_KV_KAM.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA2_VM_EP_KV_K.jpg" afterPath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA2_VM_EP_KV_K.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA2_VM_KV_K.jpg" afterPath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA2_VM_KV_K.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA2_VM_KV_KAM.jpg" afterPath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA2_VM_KV_KAM.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA3_VM_EP_KV_K.jpg" afterPath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA3_VM_EP_KV_K.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA3_VM_KV_K.jpg" afterPath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA3_VM_KV_K.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA3_VM_KV_KAM.jpg" afterPath="$PROJECT_DIR$/VTT/graph/VTT_GW1_HA3_VM_KV_KAM.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/VTT_vec.bin" afterPath="$PROJECT_DIR$/VTT_vec.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/EnergyData_jhyun.iml" afterPath="$PROJECT_DIR$/.idea/EnergyData_jhyun.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DATA2VEC.py" afterPath="$PROJECT_DIR$/DATA2VEC.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/VEC2CLUSTER.py" afterPath="$PROJECT_DIR$/VEC2CLUSTER.py" />
     </list>
     <ignored path="EnergyData_jhyun.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -40,6 +313,7 @@
     <SUITE FILE_PATH="coverage/EnergyData_jhyun$interpolation_practice_03.coverage" NAME="interpolation_practice_03 Coverage Results" MODIFIED="1457686212681" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/EnergyData_jhyun$matplot_pracice_01.coverage" NAME="matplot_pracice_01 Coverage Results" MODIFIED="1458626835362" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/EnergyData_jhyun$show_graph.coverage" NAME="show_graph Coverage Results" MODIFIED="1458892917803" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/EnergyData_jhyun$VEC2GRAPH.coverage" NAME="VEC2GRAPH Coverage Results" MODIFIED="1459988891536" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/EnergyData_jhyun$vectorize_02.coverage" NAME="vectorize_02 Coverage Results" MODIFIED="1458819294053" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/EnergyData_jhyun$parsing.coverage" NAME="parsing Coverage Results" MODIFIED="1458610140282" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/EnergyData_jhyun$Doctests_in_DATA2VEC.coverage" NAME="Doctests in DATA2VEC Coverage Results" MODIFIED="1459411443255" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -60,22 +334,66 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="CLASSIFIER.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CLASSIFIER.py">
+      <file leaf-file-name="DATA2GRAPH.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DATA2GRAPH.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+              <caret line="28" column="18" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="18" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VEC2CLUSTER.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DATA2VEC2GRAPH.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DATA2VEC2GRAPH.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="VEC2CLUSTER.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/VEC2CLUSTER.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.71137726">
-              <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+              <folding>
+                <element signature="e#25#47#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DATA2CLUSTER.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DATA2CLUSTER.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="VEC2GRAPH.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/VEC2GRAPH.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="13" column="36" selection-start-line="13" selection-start-column="36" selection-end-line="13" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DATA2VEC.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/DATA2VEC.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-1.7195122">
+              <caret line="17" column="33" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
+              <folding>
+                <element signature="e#169#178#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -125,14 +443,14 @@
         <option value="$PROJECT_DIR$/VECTORIZATION.py" />
         <option value="$PROJECT_DIR$/DATA2VEC_GRAPH.py" />
         <option value="$PROJECT_DIR$/DATA2GRAPH.py" />
-        <option value="$PROJECT_DIR$/VEC2GRAPH.py" />
         <option value="$PROJECT_DIR$/clustering_01.py" />
         <option value="$PROJECT_DIR$/DATA2VEC2GRAPH.py" />
         <option value="$PROJECT_DIR$/parsing_02.py" />
-        <option value="$PROJECT_DIR$/VEC2CLUSTER.py" />
-        <option value="$PROJECT_DIR$/DATA2VEC.py" />
         <option value="$PROJECT_DIR$/CLASSIFIER.py" />
         <option value="$PROJECT_DIR$/REDD_excercise/load_data.py" />
+        <option value="$PROJECT_DIR$/DATA2VEC.py" />
+        <option value="$PROJECT_DIR$/VEC2GRAPH.py" />
+        <option value="$PROJECT_DIR$/VEC2CLUSTER.py" />
       </list>
     </option>
   </component>
@@ -206,20 +524,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="EnergyData_jhyun" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="EnergyData_jhyun" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="REDD_excercise" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
@@ -227,10 +531,11 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Console Font" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="FullScreen" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/energy_data_venv/bin/python2.7" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -239,25 +544,7 @@
       <recent name="$PROJECT_DIR$/rbm" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.load_data">
-    <configuration default="false" name="parsing_02" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="EnergyData_jhyun" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/parsing_module.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Python.VEC2GRAPH">
     <configuration default="false" name="clustering_01" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -328,6 +615,24 @@
       <module name="EnergyData_jhyun" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/REDD_excercise/load_data.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="VEC2GRAPH" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="EnergyData_jhyun" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/VEC2GRAPH.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -526,19 +831,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.parsing_02" />
-      <item index="1" class="java.lang.String" itemvalue="Python.clustering_01" />
-      <item index="2" class="java.lang.String" itemvalue="Python.VEC2CLUSTER" />
-      <item index="3" class="java.lang.String" itemvalue="Python tests.Doctests in DATA2VEC" />
-      <item index="4" class="java.lang.String" itemvalue="Python.load_data" />
+      <item index="0" class="java.lang.String" itemvalue="Python.clustering_01" />
+      <item index="1" class="java.lang.String" itemvalue="Python.VEC2CLUSTER" />
+      <item index="2" class="java.lang.String" itemvalue="Python tests.Doctests in DATA2VEC" />
+      <item index="3" class="java.lang.String" itemvalue="Python.load_data" />
+      <item index="4" class="java.lang.String" itemvalue="Python.VEC2GRAPH" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.load_data" />
-        <item index="1" class="java.lang.String" itemvalue="Python tests.Doctests in DATA2VEC" />
-        <item index="2" class="java.lang.String" itemvalue="Python.VEC2CLUSTER" />
-        <item index="3" class="java.lang.String" itemvalue="Python.clustering_01" />
-        <item index="4" class="java.lang.String" itemvalue="Python.parsing_02" />
+        <item index="0" class="java.lang.String" itemvalue="Python.VEC2GRAPH" />
+        <item index="1" class="java.lang.String" itemvalue="Python.load_data" />
+        <item index="2" class="java.lang.String" itemvalue="Python tests.Doctests in DATA2VEC" />
+        <item index="3" class="java.lang.String" itemvalue="Python.VEC2CLUSTER" />
+        <item index="4" class="java.lang.String" itemvalue="Python.clustering_01" />
       </list>
     </recent_temporary>
   </component>
@@ -582,18 +887,18 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="580" y="-1080" width="1920" height="1080" extended-state="6" />
+    <frame x="580" y="-1080" width="1920" height="1080" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15654951" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32871288" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32905138" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960597" sideWeight="0.4960396" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3883399" sideWeight="0.48935038" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27470356" sideWeight="0.48509052" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32905138" sideWeight="0.4978701" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1472332" sideWeight="0.48828542" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1472332" sideWeight="0.48615548" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1472332" sideWeight="0.5117146" order="9" side_tool="true" content_ui="tabs" x="653" y="-830" width="1878" height="579" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5128459" sideWeight="0.5149095" order="9" side_tool="true" content_ui="tabs" x="653" y="-830" width="1878" height="579" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960597" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -604,6 +909,26 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32871288" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32905138" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14624506" sideWeight="0.48722044" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32905138" sideWeight="0.4978701" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1472332" sideWeight="0.48615548" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1472332" sideWeight="0.5138445" order="9" side_tool="true" content_ui="tabs" x="653" y="-830" width="1878" height="579" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15654951" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960597" sideWeight="0.4960396" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960597" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -647,6 +972,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+          <folding>
+            <element signature="e#169#178#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -671,6 +999,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="82" column="0" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
+          <folding>
+            <element signature="e#169#178#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -695,6 +1026,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#169#178#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -702,48 +1036,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rbm/logistic_sgd.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rbm/mlp.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rbm/SdA.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.29327902">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rbm/dA.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rbm/DBN.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6077922">
-          <caret line="35" column="27" selection-start-line="35" selection-start-column="27" selection-end-line="35" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rbm/rbm.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9116883">
-          <caret line="39" column="23" selection-start-line="39" selection-start-column="23" selection-end-line="39" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -817,27 +1109,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DATA2VEC2GRAPH.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.20822622">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/VEC2GRAPH.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.71722364">
-          <caret line="32" column="28" selection-start-line="32" selection-start-column="28" selection-end-line="32" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DATA2VEC.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/practice/kmeans_practice.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -846,47 +1117,65 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DATA2GRAPH.py">
+    <entry file="file://$PROJECT_DIR$/parsing_module.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5121951">
-          <caret line="28" column="19" selection-start-line="28" selection-start-column="19" selection-end-line="28" selection-end-column="19" />
+        <state vertical-scroll-proportion="0.1529745">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="39" />
           <folding>
-            <element signature="e#25#47#0" expanded="false" />
+            <element signature="e#0#24#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/parsing_module.py">
+    <entry file="file://$PROJECT_DIR$/DATA2GRAPH.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.15228426">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="39" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="28" column="18" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/REDD_excercise/load_data.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.10778443">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CLASSIFIER.py">
+    <entry file="file://$PROJECT_DIR$/DATA2VEC2GRAPH.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/VEC2CLUSTER.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.71137726">
-          <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding>
+            <element signature="e#25#47#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DATA2CLUSTER.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/VEC2GRAPH.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="36" selection-start-line="13" selection-start-column="36" selection-end-line="13" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DATA2VEC.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.7195122">
+          <caret line="17" column="33" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
+          <folding>
+            <element signature="e#169#178#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

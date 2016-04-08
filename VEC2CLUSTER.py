@@ -4,7 +4,10 @@ from DATA2VEC import *
 from sklearn.cluster import AffinityPropagation
 import matplotlib.pyplot as plt
 
-AF_PREFERENCE = -5000
+AF_PREFERENCE = -10000
+
+
+
 
 
 def bin2graph(file):
@@ -36,7 +39,12 @@ def affinity_propagation(vector_dic):
 
 
 def clustered_graph(names, cluster):
-    path = os.path.join(os.getcwd(), get_directory(), 'clustered_graph')
+    path = os.path.join(os.getcwd(), 'clustered_graph')
+
+    print os.getcwd()
+    print get_directory()
+
+
     if not os.path.exists(path):
         os.makedirs(path)
     os.chdir(path)
@@ -62,6 +70,8 @@ if __name__ == "__main__":
 
     print cluster
 
+    # optional
+    # for visualization
     clustered_graph(vector_dic['file_name'], cluster)
 
     end_time = time.time()
