@@ -2,19 +2,17 @@ from DATA2VEC import *
 import matplotlib.pyplot as plt
 
 def vectors2graphs(vectors):
+    path = os.path.join(os.getcwd(), RESULT_DIRECTORY, 'graph', 'vectorize', str(VEC_DIMENSION))
+    if not os.path.exists(path):
+        os.makedirs(path)
+    os.chdir(path)
+
     for i in xrange(len(vectors['file_name'])):
         start_time = time.time()
 
-        path, name = vectors['file_name'][i].rsplit('/', 1)
+        name = vectors['file_name'][i].rsplit('/', 1)[1]
 
-        print 'working on VECTORIZED ' + name,
-
-        path = os.path.join(path, 'graph')
-
-        if not os.path.exists(path):
-            os.makedirs(path)
-
-        os.chdir(path)
+        print 'drawing graph of VECTORIZED ' + name,
 
         name = name.split('.')[0]
         name = name + '_vec_' + str(VEC_DIMENSION) + '.jpg'

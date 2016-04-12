@@ -15,8 +15,14 @@ if __name__ == "__main__":
     vector_dic = bins2vectors2dic(file_list)
     cluster = affinity_propagation(vector_dic)
 
-    print cluster
+    cluster_structure = make_cluster_structure(vector_dic['file_name'], cluster)
 
+    print cluster_structure
+
+    save_cluster_structure(cluster_structure)
+
+    # optional
+    # for visualization
     clustered_graph(vector_dic['file_name'], cluster)
 
 

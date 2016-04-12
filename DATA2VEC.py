@@ -18,6 +18,8 @@ VEC_DIMENSION = 100
 INTERPOLATION_INTERVAL = 10  # -> minute
 SCALE_SIZE = 100
 
+RESULT_DIRECTORY = 'results'
+
 
 # 외부에서 인자로 전달된 디렉토리를 반환
 def get_directory():
@@ -160,8 +162,13 @@ def vectorization(list):
     return vec
 
 
-# 벡터직셔너리를 마이너리 파일로 저장
+# 벡터직셔너리를 바이너리 파일로 저장
 def dictionary2bin(vec_dic):
+    path = os.path.join(os.getcwd(), RESULT_DIRECTORY)
+    if not os.path.exists(path):
+        os.makedirs(path)
+    os.chdir(path)
+
     bin_name = sys.argv[1] + '_vec.bin'
     f = open(bin_name, 'wb')
     pickle.dump(vec_dic, f, 1)
@@ -170,6 +177,11 @@ def dictionary2bin(vec_dic):
 
 # 벡터 딕셔너리를 텍스트 파일로 저장
 def dictionary2txt(vec_dic):
+    path = os.path.join(os.getcwd(), 'output_results')
+    if not os.path.exists(path):
+        os.makedirs(path)
+    os.chdir(path)
+
     f = open("vector.txt", 'w')
     for vec in vec_dic:
         f.write(vec + '\n')
