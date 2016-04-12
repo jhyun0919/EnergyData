@@ -1,30 +1,34 @@
 # -*- coding: utf-8 -*-
 
-from VEC2CLUSTER import*
-
-VEC_DIMENSION = 50
-INTERPOLATION_INTERVAL = 10  # minute
-SCALE_SIZE = 100
-AF_PREFERENCE = -5000
+from GlobalParam import *
+from utils import LoadData
+from utils import Data2Vec
+from utils import SaveData
+from utils import Cluster
+import time
 
 if __name__ == "__main__":
     start_time = time.time()
 
-    dir_name = get_directory()
-    file_list = load_file(dir_name)
-    vector_dic = bins2vectors2dic(file_list)
-    cluster = affinity_propagation(vector_dic)
+    loader = LoadData()
+    saver = SaveData(RESULT_DIRECTORY, VEC_DIMENSION, CLUSTER_STRUCTURE_NAME)
+    d2v = Data2Vec(VEC_DIMENSION, INTERPOLATION_INTERVAL, SCALE_SIZE)
+    clstr = Cluster(AF_PREFERENCE)
 
-    cluster_structure = make_cluster_structure(vector_dic['file_name'], cluster)
+    dir_name = loader.get_directory()
+    file_list = loader.load_file(dir_name)
+    vector_dic = d2v.bins2vectors2dic(file_list)
+    clusters = clstr.affinity_propagation(vector_dic)
+
+    cluster_structure = clstr.make_cluster_structure(vector_dic, clusters)
 
     print cluster_structure
 
-    save_cluster_structure(cluster_structure)
+    saver.save_cluster_structure(cluster_structure)
 
     # optional
     # for visualization
-    clustered_graph(vector_dic['file_name'], cluster)
-
+    saver.clustered_graph(vector_dic['file_name'], clusters)
 
     end_time = time.time()
 

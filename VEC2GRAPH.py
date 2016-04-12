@@ -1,40 +1,21 @@
-from DATA2VEC import *
-import matplotlib.pyplot as plt
+# -*- coding: utf-8 -*-
 
-def vectors2graphs(vectors):
-    path = os.path.join(os.getcwd(), RESULT_DIRECTORY, 'graph', 'vectorize', str(VEC_DIMENSION))
-    if not os.path.exists(path):
-        os.makedirs(path)
-    os.chdir(path)
-
-    for i in xrange(len(vectors['file_name'])):
-        start_time = time.time()
-
-        name = vectors['file_name'][i].rsplit('/', 1)[1]
-
-        print 'drawing graph of VECTORIZED ' + name,
-
-        name = name.split('.')[0]
-        name = name + '_vec_' + str(VEC_DIMENSION) + '.jpg'
-
-        x = np.linspace(0, 1, len(vectors['data'][i]))
-        plt.scatter(x, vectors['data'][i], marker='+')
-        plt.savefig(name)
-        plt.close()
-
-        end_time = time.time()
-
-        print '\t\t' + 'run time: ' + str(end_time - start_time)
-
+from GlobalParam import *
+from utils import LoadData
+from utils import SaveData
+import time
 
 if __name__ == "__main__":
     start_time = time.time()
 
-    dir_name = get_directory()
+    loader = LoadData()
+    saver = SaveData(RESULT_DIRECTORY, VEC_DIMENSION)
 
-    vectors = unpickling(dir_name)
+    dir_name = loader.get_directory()
 
-    vectors2graphs(vectors)
+    vectors = loader.unpickling(dir_name)
+
+    saver.vectors2graphs(vectors)
 
     end_time = time.time()
 

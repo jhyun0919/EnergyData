@@ -1,30 +1,32 @@
-from sklearn.naive_bayes import GaussianNB
-# from sklearn.naive_bayes import BernoulliNB
-# from sklearn.naive_bayes import MultinomialNB
-from DATA2VEC import *
-from VEC2CLUSTER import CLUSTER_STRUCTURE_NAME
-from VEC2CLUSTER import bin2graph
+# -*- coding: utf-8 -*-
 
-
-def train_clf(cluster_structure):
-    X = np.array(cluster_structure['vector'])
-    Y = np.array(cluster_structure['cluster_tag'])
-
-    clf = GaussianNB()
-    # clf = BernoulliNB()
-    # clf = MultinomialNB()
-    clf.fit(X, Y)
-
-    return clf
-
+from GlobalParam import *
+from utils import LoadData
+from utils import Data2Vec
+from utils import SaveData
+from utils import Classifier
+import time
+import os
+import sys
 
 if __name__ == "__main__":
+    start_time = time.time()
+
+    loader = LoadData()
+    saver = SaveData(RESULT_DIRECTORY, VEC_DIMENSION, CLUSTER_STRUCTURE_NAME)
+    d2v = Data2Vec(VEC_DIMENSION, INTERPOLATION_INTERVAL, SCALE_SIZE)
+    clf = Classifier()
+
     file_path = os.path.join(os.getcwd(), RESULT_DIRECTORY, CLUSTER_STRUCTURE_NAME)
-    cluster_structure = unpickling(file_path)
+    cluster_structure = loader.unpickling(file_path)
 
     print cluster_structure
 
-    clf = train_clf(cluster_structure)
+    clf = clf.train_clf(cluster_structure)
 
-    print clf.predict(trim_data(sys.argv[1]))
-    bin2graph(sys.argv[1])
+    print clf.predict(d2v.trim_data(sys.argv[1]))
+    saver.bin2graph(sys.argv[1])
+
+    end_time = time.time()
+
+    print '*** TOATL TIME: ' + str(end_time - start_time) + ' ***'

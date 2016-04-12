@@ -1,8 +1,8 @@
 import cPickle as pickle
 import sys
 
-# file_path = sys.argv[1]
-file_path = '/Users/JH/Documents/GitHub/EnergyData_jhyun/vector.bin'
+file_path = sys.argv[1]
+# file_path = '/Users/JH/Documents/GitHub/EnergyData_jhyun/vector.bin'
 
 vec_data = pickle.load(open(file_path))
 

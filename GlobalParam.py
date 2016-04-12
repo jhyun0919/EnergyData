@@ -1,0 +1,8 @@
+# -*- coding: utf-8 -*-
+
+VEC_DIMENSION = 100
+INTERPOLATION_INTERVAL = 10  # -> minute
+SCALE_SIZE = 100
+RESULT_DIRECTORY = 'results'
+AF_PREFERENCE = -10000
+CLUSTER_STRUCTURE_NAME = 'cluster_structure.bin'

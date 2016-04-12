@@ -10,19 +10,14 @@ import matplotlib.pyplot as plt
 from sklearn.cluster import AffinityPropagation
 from sklearn.naive_bayes import GaussianNB
 
-VEC_DIMENSION = 100
-INTERPOLATION_INTERVAL = 10  # -> minute
-SCALE_SIZE = 100
 
-RESULT_DIRECTORY = 'results'
+class LoadData:
+    def __init__(self):
+        pass
 
-AF_PREFERENCE = -10000
-CLUSTER_STRUCTURE_NAME = 'cluster_structure.bin'
-
-
-class LOAD_DATA:
     # 외부에서 인자로 전달된 디렉토리를 반환
-    def get_directory(self):
+    @staticmethod
+    def get_directory():
         try:
             dir_name = sys.argv[1]
             return dir_name
@@ -32,6 +27,7 @@ class LOAD_DATA:
             exit()
 
     # 디렉토리를 입력받아 그 디렉토리 내의 파일들을 리스트로 만들어 반환
+    @staticmethod
     def load_file(dir_name):
         file_list = []
 
@@ -51,27 +47,44 @@ class LOAD_DATA:
         return file_list
 
     # 바이너리 파일을 언피클링 처리하여 읽어옴
+    @staticmethod
     def unpickling(bin_file):
         data = pickle.load(open(bin_file))
         return data
 
 
-class SAVE_DATA:
+class SaveData:
+    def __init__(self, RESULT_DIRECTORY, VEC_DIMENSION=None, CLUSTER_STRUCTURE_NAME=None):
+        self.RESULT_DIRECTORY = RESULT_DIRECTORY
+
+        if VEC_DIMENSION is not None:
+            self.VEC_DIMENSION = VEC_DIMENSION
+
+        if CLUSTER_STRUCTURE_NAME is not None:
+            self.CLUSTER_STRUCTURE_NAME = CLUSTER_STRUCTURE_NAME
+
     # 벡터직셔너리를 바이너리 파일로 저장
-    def dictionary2bin(vec_dic):
-        path = os.path.join(os.getcwd(), RESULT_DIRECTORY)
+    def dictionary2bin(self, vec_dic):
+        old_path = os.getcwd()
+
+        path = os.path.join(os.getcwd(), self.RESULT_DIRECTORY)
         if not os.path.exists(path):
             os.makedirs(path)
         os.chdir(path)
 
         bin_name = sys.argv[1] + '_vec.bin'
+
         f = open(bin_name, 'wb')
         pickle.dump(vec_dic, f, 1)
         f.close()
 
+        os.chdir(old_path)
+
     # 벡터 딕셔너리를 텍스트 파일로 저장
-    def dictionary2txt(vec_dic):
-        path = os.path.join(os.getcwd(), 'output_results')
+    def dictionary2txt(self, vec_dic):
+        old_path = os.getcwd()
+
+        path = os.path.join(os.getcwd(), self.RESULT_DIRECTORY)
         if not os.path.exists(path):
             os.makedirs(path)
         os.chdir(path)
@@ -82,11 +95,14 @@ class SAVE_DATA:
             f.write(str(vec_dic[vec]) + '\n')
         f.close()
 
+        os.chdir(old_path)
+
     # 바이너리 파일들을
     # 그래프로 그려 RESULT_DIRECTORY에 저장함
-    def bins2graphs(file_list):
-        path = os.path.join(os.getcwd(), RESULT_DIRECTORY, 'graph')
+    def bins2graphs(self, file_list):
+        old_path = os.getcwd()
 
+        path = os.path.join(os.getcwd(), self.RESULT_DIRECTORY, 'graph')
         if not os.path.exists(path):
             os.makedirs(path)
         os.chdir(path)
@@ -96,9 +112,9 @@ class SAVE_DATA:
             start_time = time.time()
 
             x = []
-            for line in LOAD_DATA.unpickling(file)['ts']:
+            for line in LoadData.unpickling(file)['ts']:
                 x.append(line[0])
-            y = LOAD_DATA.unpickling(file)['value']
+            y = LoadData.unpickling(file)['value']
 
             plt.scatter(x, y, marker='x')
 
@@ -110,15 +126,18 @@ class SAVE_DATA:
             plt.close()
 
             end_time = time.time()
+            print '\t\t' + 'run time: ' + str(end_time - start_time)
 
-    def bin2graph(file):
-        print 'vector 2 graph ' + file,
+        os.chdir(old_path)
+
+    def bin2graph(self, file):
         start_time = time.time()
+        print 'vector 2 graph ' + file,
 
         x = []
-        for line in LOAD_DATA.unpickling(file)['ts']:
+        for line in LoadData.unpickling(file)['ts']:
             x.append(line[0])
-        y = LOAD_DATA.unpickling(file)['value']
+        y = LoadData.unpickling(file)['value']
 
         plt.scatter(x, y, marker='x')
 
@@ -131,10 +150,13 @@ class SAVE_DATA:
         plt.close()
 
         end_time = time.time()
+
         print '\t\t' + 'run time: ' + str(end_time - start_time)
 
-    def vectors2graphs(vectors):
-        path = os.path.join(os.getcwd(), RESULT_DIRECTORY, 'graph', 'vectorize', str(VEC_DIMENSION))
+    def vectors2graphs(self, vectors):
+        old_path = os.getcwd()
+
+        path = os.path.join(os.getcwd(), self.RESULT_DIRECTORY, 'graph', 'vectorize', str(self.VEC_DIMENSION))
         if not os.path.exists(path):
             os.makedirs(path)
         os.chdir(path)
@@ -147,7 +169,7 @@ class SAVE_DATA:
             print 'drawing graph of VECTORIZED ' + name,
 
             name = name.split('.')[0]
-            name = name + '_vec_' + str(VEC_DIMENSION) + '.jpg'
+            name = name + '_vec_' + str(self.VEC_DIMENSION) + '.jpg'
 
             x = np.linspace(0, 1, len(vectors['data'][i]))
             plt.scatter(x, vectors['data'][i], marker='+')
@@ -158,39 +180,54 @@ class SAVE_DATA:
 
             print '\t\t' + 'run time: ' + str(end_time - start_time)
 
-    def clustered_graph(names, cluster):
+        os.chdir(old_path)
+
+    def clustered_graph(self, names, clusters):
+        old_path = os.getcwd()
+
         # 출력 디렉토리로 이동
         # path_old = os.getcwd()
-        path = os.path.join(os.getcwd(), RESULT_DIRECTORY, 'clustered_graph')
+        path = os.path.join(os.getcwd(), self.RESULT_DIRECTORY, 'clustered_graph')
         if not os.path.exists(path):
             os.makedirs(path)
         os.chdir(path)
 
         # 출력 디렉토리 내에서
-        # 그래프를 그려 각각 cluster에 해당하는 폴더에 분류하여 저잫함
+        # 그래프를 그려 각각 clusters에 해당하는 폴더에 분류하여 저잫함
         for i in xrange(0, len(names)):
-            path_temp = os.path.join(path, str(cluster[i]))
+            path_temp = os.path.join(path, str(clusters[i]))
             if not os.path.exists(path_temp):
                 os.makedirs(path_temp)
             os.chdir(path_temp)
-            SAVE_DATA.bin2graph(names[i])
+            self.bin2graph(names[i])
             os.chdir(path)
 
-    def save_cluster_structure(cluster_structure):
-        path = os.path.join(os.getcwd(), RESULT_DIRECTORY)
+        os.chdir(old_path)
+
+    def save_cluster_structure(self, cluster_structure):
+        old_path = os.getcwd()
+
+        path = os.path.join(os.getcwd(), self.RESULT_DIRECTORY)
         if not os.path.exists(path):
             os.makedirs(path)
         os.chdir(path)
 
-        bin_name = CLUSTER_STRUCTURE_NAME
+        bin_name = self.CLUSTER_STRUCTURE_NAME
         f = open(bin_name, 'wb')
         pickle.dump(cluster_structure, f, 1)
         f.close()
 
+        os.chdir(old_path)
 
-class DATA2VEC:
+
+class Data2Vec:
+    def __init__(self, VEC_DIMENSION, INTERPOLATION_INTERVAL, SCALE_SIZE):
+        self.VEC_DIMENSION = VEC_DIMENSION
+        self.INTERPOLATION_INTERVAL = INTERPOLATION_INTERVAL
+        self.SCALE_SIZE = SCALE_SIZE
+
     # 파일 리스트를 입력 받아 각각의 파일들을 벡터로 전처리한 뒤, 딕셔너리로 구성하여 반환
-    def bins2vectors2dic(file_list):
+    def bins2vectors2dic(self, file_list):
         vector_dic = {}
 
         vector_dic['file_name'] = np.asarray(file_list)
@@ -200,7 +237,7 @@ class DATA2VEC:
             try:
                 print 'data 2 vector ' + file,
                 start_time = time.time()
-                data.append(DATA2VEC.trim_data(file))
+                data.append(self.trim_data(file))
             except:
                 print 'An error occurred'
             finally:
@@ -212,24 +249,24 @@ class DATA2VEC:
         return vector_dic
 
     # 바이너리 파일을 가공하여  벡터로 반환
-    def trim_data(bin_file):
-        data = LOAD_DATA.unpickling(bin_file)
-        data = DATA2VEC.interpolation(data)
-        data = DATA2VEC.normalization(data)
-        vector_data = DATA2VEC.vectorization(data)
+    def trim_data(self, bin_file):
+        data = LoadData.unpickling(bin_file)
+        data = self.interpolation(data)
+        data = self.normalization(data)
+        vector_data = self.vectorization(data)
 
         return vector_data
 
     # 일정한 간격으로 interpolation 된 data를 list형식으로 반환
-    def interpolation(data):
+    def interpolation(self, data):
         y = []
 
-        minute_check = data['ts'][0][0].minute / INTERPOLATION_INTERVAL
+        minute_check = data['ts'][0][0].minute / self.INTERPOLATION_INTERVAL
         item = 0
         value_collector = 0
 
         for i in range(0, len(data['ts'])):
-            if data['ts'][i][2] / INTERPOLATION_INTERVAL == minute_check:
+            if data['ts'][i][2] / self.INTERPOLATION_INTERVAL == minute_check:
                 item += 1
                 value_collector += data['value'][i]
             else:
@@ -249,26 +286,26 @@ class DATA2VEC:
         return y
 
     # 일정한 크기로 scale을 조정한 데이터를 반환
-    def normalization(list):
+    def normalization(self, list):
         noise_filter = 10
-        normalizer = DATA2VEC.n_th_maximum(noise_filter, list)
+        normalizer = self.n_th_maximum(noise_filter, list)
 
         if normalizer == 0:
             list_normalized = list
         else:
-            list_normalized = np.array(list) / normalizer * SCALE_SIZE
+            list_normalized = np.array(list) / normalizer * self.SCALE_SIZE
 
         return list_normalized
 
     # 입력받은 리스트의 n번째 최대값을 반환
-    def n_th_maximum(n_th, list):
+    def n_th_maximum(self, n_th, list):
         list_copy = copy.copy(list)
         list_copy.sort()
         return list_copy[-n_th]
 
     # 리스트를 입력받아 벡터화 하여 반환
-    def vectorization(list):
-        slicing_size = len(list) / VEC_DIMENSION
+    def vectorization(self, list):
+        slicing_size = len(list) / self.VEC_DIMENSION
         vec = []
         vec_collector = 0
 
@@ -288,21 +325,30 @@ class DATA2VEC:
         return vec
 
 
-class CLUSTER:
-    def affinity_propagation(vector_dic):
-        vectors = vector_dic['data']
-        return AffinityPropagation(preference=AF_PREFERENCE).fit_predict(vectors)
+class Cluster:
+    def __init__(self, AF_PREFERENCE):
+        self.AF_PREFERENCE = AF_PREFERENCE
 
-    def make_cluster_structure(vector_dic, cluster):
+    def affinity_propagation(self, vector_dic):
+        vectors = vector_dic['data']
+
+        return AffinityPropagation(preference=self.AF_PREFERENCE).fit_predict(vectors)
+
+    def make_cluster_structure(self, vector_dic, clusters):
         cluster_structure = {}
+
         cluster_structure['file_name'] = vector_dic['file_name']
         cluster_structure['vector'] = vector_dic['data']
-        cluster_structure['cluster_tag'] = cluster
+        cluster_structure['cluster_tag'] = clusters
+
         return cluster_structure
 
 
-class CLASSIFER:
-    def train_clf(cluster_structure):
+class Classifier:
+    def __init__(self):
+        pass
+
+    def train_clf(self, cluster_structure):
         X = np.array(cluster_structure['vector'])
         Y = np.array(cluster_structure['cluster_tag'])
 
