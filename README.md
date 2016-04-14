@@ -130,7 +130,7 @@ This is a series of process showing the effort to manage energy more efficiently
    
    1. parse **binary file** designated by input argument
    2. get energy data from parsed data
-   3. classify the data with cluster_structure
+   3. **classify** the data with cluster_structure and return the **index of cluster**
    
  * Dependency modeling
    ```
