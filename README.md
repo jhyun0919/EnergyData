@@ -46,7 +46,7 @@ This is a series of process showing the effort to manage energy more efficiently
    1. parse bin files located in given **directory_path**
    2. unpickle bin data
    3. convert data into vectors
-   4. pickle vectors into bin file
+   4. pickle **vectors** into **bin file**
   
     
  * Clustering   
@@ -57,9 +57,9 @@ This is a series of process showing the effort to manage energy more efficiently
    $ python VEC2CLUSTER.py <bin_file_path>
    ```
    
-   1. parse bin file designated by input argument
-   2. make and save cluster_structure
-   3. draws graphs and classifies into each folder
+   1. parse **bin file** designated by input argument
+   2. make and save **cluster_structure**
+   3. draws **graphs** and classifies into each folder
    
    ```
    # input: directory path
@@ -71,8 +71,8 @@ This is a series of process showing the effort to manage energy more efficiently
    1. parse bin files located in given **directory_path**
    2. unpickle bin data
    3. convert data into vectors
-   4. make and save cluster_structure
-   5. draws graphs and classifies into each folder
+   4. make and save **cluster_structure**
+   5. draws **graphs** and classifies into each folder
 
    
  * (Optional) Visualuzation
@@ -85,7 +85,7 @@ This is a series of process showing the effort to manage energy more efficiently
    
    1. parse bin files located in given **directory_path**
    2. create a "/graph" folder in given **directory_path**
-   3. draw and save graph figures  
+   3. draw and save **graph figures**  
      
    
    ```
@@ -98,7 +98,7 @@ This is a series of process showing the effort to manage energy more efficiently
    
    1. parse bin files located in given **directory_path**
    2. create a "/graph" folder in given **directory_path**
-   3. draw and save graph figures
+   3. draw and save **graph figures**
     
 
  * Abnormal detection   
