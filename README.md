@@ -10,9 +10,11 @@ This is a series of process showing the effort to manage energy more efficiently
   * **Clustering** - unsing unsupervised learning algorithm  
       (_yet clusters are not verified, need to give valid and meaningful identities for each clusters_)
     * K-means
-    * Affinity propagation
-    * Baysesian network
+    * Affinity propagation  
     
+  * **Dependency modeling**
+    * Bayesian Network
+
   * **Abnormal detection**
     * Detect faults in the building system
     
@@ -115,6 +117,12 @@ This is a series of process showing the effort to manage energy more efficiently
    2. get cluster_structure from parsed data
    3. draws **graphs** and classifies into each folder
 
+ * Dependency modeling
+   ```
+   $python ...
+   ```
+
+
  * Abnormal detection   
    ```
    $ python ...
@@ -123,8 +131,8 @@ This is a series of process showing the effort to manage energy more efficiently
 ========
 ### Upcoming & Further Study
  - [x] Data Preprocessing
- - [x] Clustering
- - [ ] Baysesian network
+ - [x] Clustering - affinity propagation
+ - [ ] Dependency modeling - baysesian network
  - [ ] Abnormal detection
  - [ ] Cluster Verification Strategies
   
