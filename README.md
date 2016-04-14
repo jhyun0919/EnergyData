@@ -52,14 +52,13 @@ This is a series of process showing the effort to manage energy more efficiently
  * Clustering   
    ```
    # input: vectors in binary file
-   # output: clusters, (optional clustered graph figures)
+   # output: cluster_structure
    
    $ python VEC2CLUSTER.py <bin_file_path>
    ```
    
    1. parse **bin file** designated by input argument
    2. make and save **cluster_structure**
-   3. draws **graphs** and classifies into each folder
    
    ```
    # input: directory path
@@ -72,7 +71,6 @@ This is a series of process showing the effort to manage energy more efficiently
    2. unpickle bin data
    3. convert data into vectors
    4. make and save **cluster_structure**
-   5. draws **graphs** and classifies into each folder
 
    
  * (Optional) Visualuzation
@@ -96,10 +94,21 @@ This is a series of process showing the effort to manage energy more efficiently
    ```
   
    
-   1. parse bin files located in given **directory_path**
+   1. parse **bin file** designated by input argument
    2. create a "/graph" folder in given **directory_path**
    3. draw and save **graph figures**
     
+   
+  ```
+  # input: cluster_stucture in binary file
+  # output: classified graph figures
+  
+  $ python CLUSTER2GRAPH.py <bin_file_path>
+  ```
+
+   1. parse **bin file** designated by input argument
+   2. get cluster_structure from parsed data
+   3. draws **graphs** and classifies into each folder
 
  * Abnormal detection   
    ```
