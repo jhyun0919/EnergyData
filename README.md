@@ -12,7 +12,11 @@ This is a series of process showing the effort to manage energy more efficiently
     * K-means
     * Affinity propagation  
     
+  * **Classifier**
+    * Gaussian Naive-Bayesian
+
   * **Dependency modeling**
+    * Nearest-neighbors
     * Bayesian Network
 
   * **Abnormal detection**
@@ -80,8 +84,8 @@ This is a series of process showing the effort to manage energy more efficiently
    
  * (Optional) Visualuzation
    ```
-   # input: directory path
-   # output: binary files in graph figures
+   # input: directory path of energy data
+   # output: graph figures of energy data
    
    $ python DATA2GRAPH.py <directory_path>
    ```
@@ -93,13 +97,12 @@ This is a series of process showing the effort to manage energy more efficiently
    --- 
 
    ```
-   # input: vectors in binary file
-   # output: vectors in graph figures
+   # input: binary file of vectors
+   # output: graph figures of vectors
    
    $ python VEC2GRAPH.py <directory_path>
    ```
   
-   
    1. parse **bin file** designated by input argument
    2. create a "/graph" folder in given **directory_path**
    3. draw and save **graph figures**
@@ -107,7 +110,7 @@ This is a series of process showing the effort to manage energy more efficiently
   ---
 
   ```
-  # input: cluster_stucture in binary file
+  # input: binary file of cluster structure
   # output: classified graph figures
   
   $ python CLUSTER2GRAPH.py <bin_file_path>
@@ -115,16 +118,36 @@ This is a series of process showing the effort to manage energy more efficiently
 
    1. parse **bin file** designated by input argument
    2. get cluster_structure from parsed data
-   3. draws **graphs** and classifies into each folder
+   3. draws **graphs** and classifies into each folder  
 
+ * Classifier
+   ```
+   # input: binary file of energy data
+   # output: index of the cluster
+   
+   $ python CLASSIFIER.py <bin_file_path>
+   ```
+   
+   1. parse **binary file** designated by input argument
+   2. get energy data from parsed data
+   3. classify the data with cluster_structure
+   
  * Dependency modeling
    ```
-   $python ...
+   # input: binary file of cluster structure data
+   # output: binary file of dependency model
+   
+   $python DEPENDENCY.py <bin_file_path>
    ```
-
-
+   1. parse **binary file** designated by input argument
+   2. get cluster_structure from parsed data
+   3. make a **dependency model** in array format
+   
  * Abnormal detection   
    ```
+   # input:
+   # output:
+   
    $ python ...
    ```
   
@@ -132,6 +155,8 @@ This is a series of process showing the effort to manage energy more efficiently
 ### Upcoming & Further Study
  - [x] Data Preprocessing
  - [x] Clustering - affinity propagation
+ - [x] Classifier - Gaussian Naive Bayesian
+ - [x] Dependency modeling - nearest neighbors
  - [ ] Dependency modeling - baysesian network
  - [ ] Visualize cluster with t-SNE
  - [ ] Abnormal detection
