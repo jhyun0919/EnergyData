@@ -59,7 +59,9 @@ This is a series of process showing the effort to manage energy more efficiently
    
    1. parse **bin file** designated by input argument
    2. make and save **cluster_structure**
-   
+  
+   ---
+
    ```
    # input: directory path
    # output: cluster_structure
@@ -72,6 +74,7 @@ This is a series of process showing the effort to manage energy more efficiently
    3. convert data into vectors
    4. make and save **cluster_structure**
 
+  
    
  * (Optional) Visualuzation
    ```
@@ -85,7 +88,8 @@ This is a series of process showing the effort to manage energy more efficiently
    2. create a "/graph" folder in given **directory_path**
    3. draw and save **graph figures**  
      
-   
+   --- 
+
    ```
    # input: vectors in binary file
    # output: vectors in graph figures
@@ -98,7 +102,8 @@ This is a series of process showing the effort to manage energy more efficiently
    2. create a "/graph" folder in given **directory_path**
    3. draw and save **graph figures**
     
-   
+  ---
+
   ```
   # input: cluster_stucture in binary file
   # output: classified graph figures
@@ -115,7 +120,7 @@ This is a series of process showing the effort to manage energy more efficiently
    $ python ...
    ```
   
----
+========
 ### Upcoming & Further Study
  - [x] Data Preprocessing
  - [x] Clustering
