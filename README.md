@@ -133,6 +133,7 @@ This is a series of process showing the effort to manage energy more efficiently
  - [x] Data Preprocessing
  - [x] Clustering - affinity propagation
  - [ ] Dependency modeling - baysesian network
+ - [ ] Visualize cluster with t-SNE
  - [ ] Abnormal detection
  - [ ] Cluster Verification Strategies
   
