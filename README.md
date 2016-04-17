@@ -9,7 +9,7 @@ This is a series of process showing the effort to manage energy more efficiently
     * Vectorization
   
   * **Clustering** - unsing unsupervised learning algorithm  
-      (_yet clusters are not verified, need to give valid and meaningful identities for each clusters_)
+      (_yet clusters are not verified_)
     * K-means
     * Affinity propagation  
     
