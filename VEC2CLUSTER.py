@@ -17,8 +17,6 @@ if __name__ == "__main__":
     d2v = Data2Vec(VEC_DIMENSION, INTERPOLATION_INTERVAL, SCALE_SIZE)
     clstr = Cluster(AF_PREFERENCE)
 
-    print os.getcwd()
-
     dir_name = sys.argv[1]
     # dir_name = '/Users/JH/Documents/GitHub/EnergyData_jhyun/VTT_vec.bin'
 
@@ -28,19 +26,14 @@ if __name__ == "__main__":
 
     cluster_structure = clstr.make_cluster_structure(vector_dic, cluster)
 
-    print os.getcwd()
-
     print cluster_structure
 
-    saver.save_cluster_structure(cluster_structure)
+    saver.cluster_structure2bin(cluster_structure)
 
-    print os.getcwd()
 
     # optional
     # for visualization
-    saver.clustered_graph(vector_dic['file_name'], cluster)
-
-    print os.getcwd()
+    # saver.clustered_graph(vector_dic['file_name'], cluster)
 
     end_time = time.time()
 

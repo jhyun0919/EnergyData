@@ -24,11 +24,11 @@ if __name__ == "__main__":
 
     print cluster_structure
 
-    saver.save_cluster_structure(cluster_structure)
+    saver.cluster_structure2bin(cluster_structure)
 
     # optional
     # for visualization
-    saver.clustered_graph(vector_dic['file_name'], clusters)
+    # saver.clustered_graph(vector_dic['file_name'], clusters)
 
     end_time = time.time()
 

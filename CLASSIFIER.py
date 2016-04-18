@@ -17,6 +17,8 @@ if __name__ == "__main__":
     d2v = Data2Vec(VEC_DIMENSION, INTERPOLATION_INTERVAL, SCALE_SIZE)
     clf = Classifier()
 
+    CLUSTER_STRUCTURE_NAME = CLUSTER_STRUCTURE_NAME + '_' + str(VEC_DIMENSION) + '_vec.bin'
+
     file_path = os.path.join(os.getcwd(), RESULT_DIRECTORY, CLUSTER_STRUCTURE_NAME)
     cluster_structure = loader.unpickling(file_path)
 
@@ -30,3 +32,5 @@ if __name__ == "__main__":
     end_time = time.time()
 
     print '*** TOATL TIME: ' + str(end_time - start_time) + ' ***'
+
+
