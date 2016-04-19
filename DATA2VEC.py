@@ -5,30 +5,28 @@
 
 # >>> python DATA2VEC.py <directory>
 
-from GlobalParam import *
-from utils import LoadData
-from utils import Data2Vec
-from utils import SaveData
 import time
+
+from utils import Data2Vec
+from utils import LoadData
+from utils import SaveData
 
 if __name__ == "__main__":
     start_time = time.time()
 
-    loader = LoadData()
-    saver = SaveData(RESULT_DIRECTORY, VEC_DIMENSION)
-    d2v = Data2Vec(VEC_DIMENSION, INTERPOLATION_INTERVAL, SCALE_SIZE)
+
 
     # get directory path
-    dir_name = loader.get_directory()
+    abs_path = LoadData.get_directory()
 
     # make a list of files from the path
-    file_list = loader.load_file(dir_name)
+    file_list = LoadData.load_file(abs_path)
 
     # convert files to vector dictionary
-    vector_dic = d2v.bins2vectors2dic(file_list)
+    vector_dic = Data2Vec.bins2vectors2dic(file_list)
 
     # save as bin file
-    saver.dictionary2bin(vector_dic)
+    SaveData.dictionary2bin(abs_path, vector_dic)
 
     end_time = time.time()
 

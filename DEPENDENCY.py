@@ -1,11 +1,12 @@
 # -*- coding: utf-8 -*-
 
-from GlobalParam import *
-from utils import LoadData
-from utils import SaveData
-from utils import ModelDependency
-import time
 import sys
+import time
+
+from utils import LoadData
+from utils import ModelDependency
+from utils import SaveData
+from utils.GlobalParam import *
 
 if __name__ == "__main__":
     start_time = time.time()

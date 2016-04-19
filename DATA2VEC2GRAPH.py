@@ -1,10 +1,11 @@
 # -*- coding: utf-8 -*-
 
-from GlobalParam import *
+import time
+
+from utils import Data2Vec
 from utils import LoadData
 from utils import SaveData
-from utils import Data2Vec
-import time
+from utils.GlobalParam import *
 
 # main function
 if __name__ == "__main__":

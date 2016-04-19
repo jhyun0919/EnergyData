@@ -1,9 +1,10 @@
 # -*- coding: utf-8 -*-
 
-from GlobalParam import *
+import time
+
 from utils import LoadData
 from utils import SaveData
-import time
+from utils.GlobalParam import *
 
 if __name__ == "__main__":
     start_time = time.time()
