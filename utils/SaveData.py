@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 
-import sys
 import os
 import cPickle as pickle
 import time
@@ -67,10 +66,10 @@ def dictionary2txt(path, vec_dic):
 # bin_file list를 전달받아
 # 각각의 bin_file을 그래프로 그려
 # RESULT_DIRECTORY에 저장함
-def bins2graphs(file_list):
+def bins2graphs(path, file_list):
     old_path = os.getcwd()
 
-    path = os.path.join(os.getcwd(), RESULT_DIRECTORY, 'graph')
+    path = os.path.join(path, RESULT_DIRECTORY, 'graph')
     if not os.path.exists(path):
         os.makedirs(path)
     os.chdir(path)
@@ -90,6 +89,7 @@ def bins2graphs(file_list):
 
         file_name = file_name.split('.')[0] + '.jpg'
 
+        plt.title(file_name)
         plt.savefig(file_name)
         plt.close()
 
@@ -128,10 +128,10 @@ def bin2graph(file):
 # vector dictionary를 전달받아
 # 각각의 vector를 그래프로 그려
 # RESULT_DIRECTORY에 저장함
-def vectors2graphs(vectors):
+def vectors2graphs(path, vectors):
     old_path = os.getcwd()
 
-    path = os.path.join(os.getcwd(), RESULT_DIRECTORY, 'graph', 'vectorize', str(VEC_DIMENSION))
+    path = os.path.join(path, RESULT_DIRECTORY, 'graph', 'vectorize', str(VEC_DIMENSION))
     if not os.path.exists(path):
         os.makedirs(path)
     os.chdir(path)
@@ -148,6 +148,7 @@ def vectors2graphs(vectors):
 
         x = np.linspace(0, 1, len(vectors['vec_data'][i]))
         plt.scatter(x, vectors['vec_data'][i], marker='+')
+        plt.title(name)
         plt.savefig(name)
         plt.close()
 
@@ -163,7 +164,7 @@ def vectors2graphs(vectors):
 # 각각의 bin_file을 그래프로 그려
 # cluster에 따라 분류하여
 # RESULT_DIRECTORY에 저장함
-def clusters2graph(cluster_structure):
+def clusters2graph(path, cluster_structure):
     old_path = os.getcwd()
 
     # names = cluster_structure['file_name']
@@ -171,7 +172,7 @@ def clusters2graph(cluster_structure):
 
     # 출력 디렉토리로 이동
     # path_old = os.getcwd()
-    path = os.path.join(os.getcwd(), RESULT_DIRECTORY, 'clustered_graph', str(VEC_DIMENSION))
+    path = os.path.join(path, RESULT_DIRECTORY, 'clustered_graph', str(VEC_DIMENSION))
     if not os.path.exists(path):
         os.makedirs(path)
     os.chdir(path)
