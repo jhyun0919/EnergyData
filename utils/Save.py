@@ -6,7 +6,7 @@ import time
 import matplotlib.pyplot as plt
 import numpy as np
 from GlobalParam import *
-from LoadData import unpickling
+from Load import unpickling
 
 
 # def __init__(self, RESULT_DIRECTORY, VEC_DIMENSION=None, CLUSTER_STRUCTURE_NAME=None):
@@ -83,13 +83,12 @@ def bins2graphs(path, file_list):
             x.append(line[0])
         y = unpickling(file)['value']
 
-        plt.scatter(x, y, marker='x')
-
         file_name = file.rsplit('/', 1)[1]
 
         file_name = file_name.split('.')[0] + '.jpg'
 
         plt.title(file_name)
+        plt.scatter(x, y, marker='x')
         plt.savefig(file_name)
         plt.close()
 
@@ -114,9 +113,9 @@ def bin2graph(file):
     plt.scatter(x, y, marker='x')
 
     file_name = file.rsplit('/', 1)[-1]
-
     file_name = file_name.split('.')[0] + '.jpg'
 
+    plt.title(file_name)
     plt.savefig(file_name)
     plt.close()
 

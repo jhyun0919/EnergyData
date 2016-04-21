@@ -8,8 +8,8 @@
 import time
 
 from utils import Data2Vec
-from utils import LoadData
-from utils import SaveData
+from utils import Load
+from utils import Save
 
 if __name__ == "__main__":
     start_time = time.time()
@@ -17,16 +17,16 @@ if __name__ == "__main__":
 
 
     # get directory path
-    abs_path = LoadData.get_directory()
+    abs_path = Load.get_directory()
 
     # make a list of files from the path
-    file_list = LoadData.load_file(abs_path)
+    file_list = Load.load_file(abs_path)
 
     # convert files to vector dictionary
     vector_dic = Data2Vec.bins2vectors2dic(file_list)
 
     # save as bin file
-    SaveData.dictionary2bin(abs_path, vector_dic)
+    Save.dictionary2bin(abs_path, vector_dic)
 
     end_time = time.time()
 

@@ -4,15 +4,15 @@ import time
 
 from utils import Cluster
 from utils import Data2Vec
-from utils import LoadData
-from utils import SaveData
+from utils import Load
+from utils import Save
 from utils.GlobalParam import *
 
 if __name__ == "__main__":
     start_time = time.time()
 
-    abs_path = LoadData.get_directory()
-    file_list = LoadData.load_file(abs_path)
+    abs_path = Load.get_directory()
+    file_list = Load.load_file(abs_path)
     vector_dic = Data2Vec.bins2vectors2dic(file_list)
     clusters = Cluster.affinity_propagation(vector_dic)
 
@@ -20,7 +20,7 @@ if __name__ == "__main__":
 
     print cluster_structure
 
-    SaveData.cluster_structure2bin(abs_path, cluster_structure)
+    Save.cluster_structure2bin(abs_path, cluster_structure)
 
     # optional
     # for visualization

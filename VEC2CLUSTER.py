@@ -5,15 +5,15 @@ import time
 
 from utils import Cluster
 from utils import Data2Vec
-from utils import LoadData
-from utils import SaveData
+from utils import Load
+from utils import Save
 from utils.GlobalParam import *
 
 if __name__ == "__main__":
     start_time = time.time()
 
-    loader = LoadData()
-    saver = SaveData(RESULT_DIRECTORY, VEC_DIMENSION, CLUSTER_STRUCTURE_NAME)
+    loader = Load()
+    saver = Save(RESULT_DIRECTORY, VEC_DIMENSION, CLUSTER_STRUCTURE_NAME)
     d2v = Data2Vec(VEC_DIMENSION, INTERPOLATION_INTERVAL, SCALE_SIZE)
     clstr = Cluster(AF_PREFERENCE)
 

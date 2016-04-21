@@ -2,17 +2,17 @@
 
 import time
 
-from utils import LoadData
-from utils import SaveData
+from utils import Load
+from utils import Save
 from utils import ShowData
 from utils.GlobalParam import *
 
 if __name__ == "__main__":
     start_time = time.time()
 
-    abs_path = LoadData.get_directory()
+    abs_path = Load.get_directory()
 
-    file_list = LoadData.load_file(abs_path)
+    file_list = Load.load_file(abs_path)
 
     # SaveData.bins2graphs(abs_path, file_list)
     ShowData.bins2graphs(abs_path, file_list)

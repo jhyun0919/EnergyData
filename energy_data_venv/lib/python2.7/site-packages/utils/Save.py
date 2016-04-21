@@ -6,7 +6,7 @@ import time
 import matplotlib.pyplot as plt
 import numpy as np
 from GlobalParam import *
-from LoadData import unpickling
+from Load import unpickling
 
 
 # def __init__(self, RESULT_DIRECTORY, VEC_DIMENSION=None, CLUSTER_STRUCTURE_NAME=None):

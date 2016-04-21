@@ -4,26 +4,18 @@ import time
 import numpy as np
 import copy
 from GlobalParam import *
-from LoadData import unpickling
+from Load import unpickling
+from Load import load_filelist
 
 
-# def __init__(self, VEC_DIMENSION, INTERPOLATION_INTERVAL, SCALE_SIZE):
-#     self.VEC_DIMENSION = VEC_DIMENSION
-#     self.INTERPOLATION_INTERVAL = INTERPOLATION_INTERVAL
-#     self.SCALE_SIZE = SCALE_SIZE
-
-
-# binnary_file list를 입력 받아
-# 각각의 binary_file을 vector로 전처리한 뒤,
-# dictionary로 구성하여 반환
-def bins2vectors2dic(file_list):
+def bins2vectors2dic(path):
     vector_dic = {}
-
     data = []
+    file_list = load_filelist(path)
 
     for file in file_list:
         try:
-            print 'data2vector ' + file,
+            print 'data2vector ' + file.rsplit('/', 1)[1],
             start_time = time.time()
             data.append(trim_data(file))
         except:

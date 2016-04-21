@@ -29,7 +29,7 @@ def get_directory(dir_name=None):
 # directory를 입력받아
 # 그 디렉토리 내 binary file들의 절대경로를
 # list로 만들어 반환
-def load_file(path):
+def load_filelist(path):
     bin_file_list = []
 
     try:

@@ -2,30 +2,45 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9e90c6a0-c712-4bc0-9204-421017e6380e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utils/ShowData.py" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/utils/VTT/VTT_GW1_HA1_VM_EP_KV_K.bin" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/utils/VTT/VTT_GW1_HA1_VM_KV_K.bin" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/utils/VTT/VTT_GW1_HA1_VM_KV_KAM.bin" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/utils/VTT/VTT_GW1_HA2_VM_EP_KV_K.bin" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/utils/VTT/VTT_GW1_HA2_VM_KV_K.bin" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/utils/VTT/VTT_GW1_HA2_VM_KV_KAM.bin" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/utils/VTT/VTT_GW1_HA3_VM_EP_KV_K.bin" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/utils/VTT/VTT_GW1_HA3_VM_KV_K.bin" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/utils/VTT/VTT_GW1_HA3_VM_KV_KAM.bin" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/utils-1.2.tar.gz" afterPath="$PROJECT_DIR$/dist/utils-1.2.tar.gz" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utils/BinMaker.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utils/Graph.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utils/Path.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utils/TextMaker.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/utils/LoadData.py" afterPath="$PROJECT_DIR$/utils/Load.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/utils/SaveData.py" afterPath="$PROJECT_DIR$/utils/Save.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/utils-1.3.tar.gz" afterPath="$PROJECT_DIR$/dist/utils-1.3.tar.gz" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLASSIFIER.py" afterPath="$PROJECT_DIR$/CLASSIFIER.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLUSTER2GRAPH.py" afterPath="$PROJECT_DIR$/CLUSTER2GRAPH.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DATA2CLUSTER.py" afterPath="$PROJECT_DIR$/DATA2CLUSTER.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DATA2GRAPH.py" afterPath="$PROJECT_DIR$/DATA2GRAPH.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DATA2VEC.py" afterPath="$PROJECT_DIR$/DATA2VEC.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DATA2VEC2GRAPH.py" afterPath="$PROJECT_DIR$/DATA2VEC2GRAPH.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DEPENDENCY.py" afterPath="$PROJECT_DIR$/DEPENDENCY.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MANIFEST" afterPath="$PROJECT_DIR$/MANIFEST" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/VEC2CLUSTER.py" afterPath="$PROJECT_DIR$/VEC2CLUSTER.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/VEC2GRAPH.py" afterPath="$PROJECT_DIR$/VEC2GRAPH.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/lib/utils/Data2Vec.py" afterPath="$PROJECT_DIR$/build/lib/utils/Data2Vec.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/lib/utils/LoadData.py" afterPath="$PROJECT_DIR$/build/lib/utils/LoadData.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/lib/utils/SaveData.py" afterPath="$PROJECT_DIR$/build/lib/utils/SaveData.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/lib/utils/ShowData.py" afterPath="$PROJECT_DIR$/build/lib/utils/ShowData.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/energy_data_venv/lib/python2.7/site-packages/utils/Data2Vec.py" afterPath="$PROJECT_DIR$/energy_data_venv/lib/python2.7/site-packages/utils/Data2Vec.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/energy_data_venv/lib/python2.7/site-packages/utils/LoadData.py" afterPath="$PROJECT_DIR$/energy_data_venv/lib/python2.7/site-packages/utils/LoadData.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/energy_data_venv/lib/python2.7/site-packages/utils/SaveData.py" afterPath="$PROJECT_DIR$/energy_data_venv/lib/python2.7/site-packages/utils/SaveData.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/energy_data_venv/lib/python2.7/site-packages/utils/ShowData.py" afterPath="$PROJECT_DIR$/energy_data_venv/lib/python2.7/site-packages/utils/ShowData.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/.ipynb_checkpoints/1. data-to-vectors-checkpoint.ipynb" afterPath="$PROJECT_DIR$/examples/.ipynb_checkpoints/1. data-to-vectors-checkpoint.ipynb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/.ipynb_checkpoints/2.data-to-clusters-checkpoint.ipynb" afterPath="$PROJECT_DIR$/examples/.ipynb_checkpoints/2.data-to-clusters-checkpoint.ipynb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/.ipynb_checkpoints/3-1. data-to-graph-checkpoint.ipynb" afterPath="$PROJECT_DIR$/examples/.ipynb_checkpoints/3-1. data-to-graph-checkpoint.ipynb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/.ipynb_checkpoints/3-2. vectors-to-graph-checkpoint.ipynb" afterPath="$PROJECT_DIR$/examples/.ipynb_checkpoints/3-2. vectors-to-graph-checkpoint.ipynb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/.ipynb_checkpoints/3-4. cluster-to-graph-checkpoint.ipynb" afterPath="$PROJECT_DIR$/examples/.ipynb_checkpoints/3-4. cluster-to-graph-checkpoint.ipynb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/1. data-to-vectors.ipynb" afterPath="$PROJECT_DIR$/examples/1. data-to-vectors.ipynb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/2.data-to-clusters.ipynb" afterPath="$PROJECT_DIR$/examples/2.data-to-clusters.ipynb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/3-1. data-to-graph.ipynb" afterPath="$PROJECT_DIR$/examples/3-1. data-to-graph.ipynb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/3-2. vectors-to-graph.ipynb" afterPath="$PROJECT_DIR$/examples/3-2. vectors-to-graph.ipynb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/3-4. cluster-to-graph.ipynb" afterPath="$PROJECT_DIR$/examples/3-4. cluster-to-graph.ipynb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/setup.py" afterPath="$PROJECT_DIR$/setup.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/utils/SaveData.py" afterPath="$PROJECT_DIR$/utils/SaveData.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/utils/VTT/results/cluster_structure_dim_100.bin" afterPath="$PROJECT_DIR$/utils/VTT/results/cluster_structure_dim_100.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/utils/VTT/results/vectorized_data_dim_100.bin" afterPath="$PROJECT_DIR$/utils/VTT/results/vectorized_data_dim_100.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/utils/Data2Vec.py" afterPath="$PROJECT_DIR$/utils/Data2Vec.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/utils/ShowData.py" afterPath="$PROJECT_DIR$/utils/ShowData.py" />
     </list>
     <ignored path="EnergyData_jhyun.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -83,21 +98,11 @@
     <splitter split-orientation="horizontal" split-proportion="0.49340037">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="GlobalParam.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/utils/GlobalParam.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="7" column="43" selection-start-line="7" selection-start-column="43" selection-end-line="7" selection-end-column="43" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
           <file leaf-file-name="Cluster.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/utils/Cluster.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state vertical-scroll-proportion="0.0">
-                  <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+                  <caret line="27" column="33" selection-start-line="27" selection-start-column="33" selection-end-line="27" selection-end-column="33" />
                   <folding>
                     <element signature="e#25#72#0" expanded="true" />
                   </folding>
@@ -117,95 +122,23 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Data2Vec.py" pinned="false" current-in-tab="false">
+          <file leaf-file-name="CLUSTER2GRAPH.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/CLUSTER2GRAPH.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="19" column="22" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
+                  <folding>
+                    <element signature="e#25#35#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Data2Vec.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/utils/Data2Vec.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="35" column="50" selection-start-line="35" selection-start-column="50" selection-end-line="35" selection-end-column="50" />
-                  <folding>
-                    <element signature="e#25#36#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="setup.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/setup.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="4" column="16" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="SaveData.py" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/utils/SaveData.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.59188545">
-                  <caret line="174" column="45" selection-start-line="174" selection-start-column="45" selection-end-line="174" selection-end-column="45" />
-                  <folding>
-                    <element signature="e#25#34#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="VEC2GRAPH.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/VEC2GRAPH.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="16" column="40" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
-                  <folding>
-                    <element signature="e#25#36#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="clustering_02.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/practice/clustering_02.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="DATA2VEC.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/DATA2VEC.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="25" column="28" selection-start-line="25" selection-start-column="28" selection-end-line="25" selection-end-column="28" />
-                  <folding>
-                    <element signature="e#167#178#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="DATA2CLUSTER.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/DATA2CLUSTER.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="22" column="45" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
-                  <folding>
-                    <element signature="e#25#36#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="DATA2GRAPH.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/DATA2GRAPH.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+                <state vertical-scroll-proportion="0.19331743">
+                  <caret line="17" column="31" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
                   <folding>
                     <element signature="e#25#36#0" expanded="true" />
                   </folding>
@@ -217,7 +150,7 @@
             <entry file="file://$PROJECT_DIR$/utils/ShowData.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state vertical-scroll-proportion="0.0">
-                  <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+                  <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
                   <folding>
                     <element signature="e#25#34#0" expanded="true" />
                   </folding>
@@ -225,12 +158,70 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="CLUSTER2GRAPH.py" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/CLUSTER2GRAPH.py">
+          <file leaf-file-name="setup.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/setup.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.10739857">
-                  <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
                   <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="BinMaker.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/utils/BinMaker.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Graph.py" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/utils/Graph.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="1.2028639">
+                  <caret line="62" column="0" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
+                  <folding>
+                    <element signature="e#25#34#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Path.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/utils/Path.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="7" column="24" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="TextMaker.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/utils/TextMaker.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Save.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/utils/Save.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="118" column="23" selection-start-line="118" selection-start-column="23" selection-end-line="118" selection-end-column="23" />
+                  <folding>
+                    <element signature="e#25#34#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -252,12 +243,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/interpolation_practice_04.py" />
-        <option value="$PROJECT_DIR$/interpolation_practice_01.py" />
-        <option value="$PROJECT_DIR$/rbm/rbm.py" />
-        <option value="$PROJECT_DIR$/rbm/dA.py" />
-        <option value="$PROJECT_DIR$/matplot_pracice_01.py" />
-        <option value="$PROJECT_DIR$/vectorize.py" />
         <option value="$PROJECT_DIR$/trim.py" />
         <option value="$PROJECT_DIR$/vectorize_01.py" />
         <option value="$PROJECT_DIR$/vectorize_02.py" />
@@ -290,19 +275,25 @@
         <option value="$PROJECT_DIR$/utils/Cluster.py" />
         <option value="$PROJECT_DIR$/utils/Classifier.py" />
         <option value="$PROJECT_DIR$/utils/Dependency.py" />
-        <option value="$PROJECT_DIR$/utils/LoadData.py" />
         <option value="$PROJECT_DIR$/DATA2VEC.py" />
         <option value="$PROJECT_DIR$/MANIFEST" />
         <option value="$PROJECT_DIR$/utils/parsing_module.py" />
-        <option value="$PROJECT_DIR$/utils/Data2Vec.py" />
         <option value="$PROJECT_DIR$/utils/GlobalParam.py" />
         <option value="$PROJECT_DIR$/DATA2CLUSTER.py" />
         <option value="$PROJECT_DIR$/CLASSIFIER.py" />
         <option value="$PROJECT_DIR$/utils/VTT/ShowData.py" />
-        <option value="$PROJECT_DIR$/setup.py" />
         <option value="$PROJECT_DIR$/DATA2GRAPH.py" />
         <option value="$PROJECT_DIR$/utils/ShowData.py" />
+        <option value="$PROJECT_DIR$/utils/VTT/BinMaker.py" />
+        <option value="$PROJECT_DIR$/utils/TextMaker.py" />
         <option value="$PROJECT_DIR$/utils/SaveData.py" />
+        <option value="$PROJECT_DIR$/utils/GraphMaker.py" />
+        <option value="$PROJECT_DIR$/utils/VTT/Path.py" />
+        <option value="$PROJECT_DIR$/utils/Path.py" />
+        <option value="$PROJECT_DIR$/utils/LoadData.py" />
+        <option value="$PROJECT_DIR$/utils/Graph.py" />
+        <option value="$PROJECT_DIR$/setup.py" />
+        <option value="$PROJECT_DIR$/utils/Data2Vec.py" />
       </list>
     </option>
   </component>
@@ -373,6 +364,38 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="EnergyData_jhyun" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EnergyData_jhyun" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EnergyData_jhyun" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="utils" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EnergyData_jhyun" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EnergyData_jhyun" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="utils" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VTT" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -755,16 +778,16 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="580" y="-1080" width="1920" height="1080" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14270501" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14376996" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32871288" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32905138" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960597" sideWeight="0.4960396" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27470356" sideWeight="0.48509052" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32905138" sideWeight="0.4978701" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14426878" sideWeight="0.5149095" order="9" side_tool="true" content_ui="tabs" x="653" y="-830" width="1878" height="579" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14426878" sideWeight="0.5149095" order="9" side_tool="true" content_ui="tabs" x="653" y="-830" width="1878" height="579" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960597" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -790,39 +813,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="5" />
+      <option name="time" value="6" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/DATA2VEC.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DATA2GRAPH.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DATA2GRAPH.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DATA2VEC.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DATA2GRAPH.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -963,24 +958,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/naive_bayes.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.49390244">
-          <caret line="326" column="0" selection-start-line="326" selection-start-column="0" selection-end-line="326" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/practice/clustering_01.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nearest_neighbor_01.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6136364">
-          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1015,26 +996,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/VEC2CLUSTER.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.73170733">
-          <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/practice/clustering_02.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1045,21 +1010,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/utils/LoadData.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.54268295">
-          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-          <folding>
-            <element signature="e#25#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MANIFEST">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.018292682">
           <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1070,88 +1024,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DATA2VEC.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="25" column="28" selection-start-line="25" selection-start-column="28" selection-end-line="25" selection-end-column="28" />
-          <folding>
-            <element signature="e#167#178#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utils/Cluster.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding>
-            <element signature="e#25#72#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utils/Data2Vec.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="35" column="50" selection-start-line="35" selection-start-column="50" selection-end-line="35" selection-end-column="50" />
-          <folding>
-            <element signature="e#25#36#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/setup.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="16" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CLASSIFIER.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.25775656">
-          <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
-          <folding>
-            <element signature="e#25#35#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DATA2CLUSTER.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="22" column="45" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
-          <folding>
-            <element signature="e#25#36#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DATA2GRAPH.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding>
-            <element signature="e#25#36#0" expanded="true" />
+            <element signature="e#25#36#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/VEC2GRAPH.py">
+    <entry file="file://$PROJECT_DIR$/practice/clustering_02.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="40" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
-          <folding>
-            <element signature="e#25#36#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utils/GlobalParam.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="43" selection-start-line="7" selection-start-column="43" selection-end-line="7" selection-end-column="43" />
+        <state vertical-scroll-proportion="0.12887828">
+          <caret line="11" column="37" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
           <folding />
         </state>
       </provider>
@@ -1161,33 +1047,175 @@
         <state vertical-scroll-proportion="0.49403343">
           <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
           <folding>
-            <element signature="e#25#36#0" expanded="true" />
+            <element signature="e#25#36#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DATA2CLUSTER.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4725537">
+          <caret line="22" column="45" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
+          <folding>
+            <element signature="e#25#36#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/naive_bayes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.3484488">
+          <caret line="326" column="0" selection-start-line="326" selection-start-column="0" selection-end-line="326" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nearest_neighbor_01.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4725537">
+          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/VEC2CLUSTER.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.70883054">
+          <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/VEC2GRAPH.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.25775656">
+          <caret line="16" column="40" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DATA2VEC.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.53699285">
+          <caret line="25" column="28" selection-start-line="25" selection-start-column="28" selection-end-line="25" selection-end-column="28" />
+          <folding>
+            <element signature="e#167#178#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CLASSIFIER.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.08591885">
+          <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/GlobalParam.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.15035799">
+          <caret line="7" column="43" selection-start-line="7" selection-start-column="43" selection-end-line="7" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CLUSTER2GRAPH.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="22" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
+          <folding>
+            <element signature="e#25#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/BinMaker.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/TextMaker.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/utils/ShowData.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
           <folding>
             <element signature="e#25#34#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CLUSTER2GRAPH.py">
+    <entry file="file://$PROJECT_DIR$/utils/Load.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.10739857">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.36515513">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding>
+            <element signature="e#25#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/Save.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="118" column="23" selection-start-line="118" selection-start-column="23" selection-end-line="118" selection-end-column="23" />
+          <folding>
+            <element signature="e#25#34#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/Cluster.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="27" column="33" selection-start-line="27" selection-start-column="33" selection-end-line="27" selection-end-column="33" />
+          <folding>
+            <element signature="e#25#72#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/setup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/utils/SaveData.py">
+    <entry file="file://$PROJECT_DIR$/utils/Path.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.59188545">
-          <caret line="174" column="45" selection-start-line="174" selection-start-column="45" selection-end-line="174" selection-end-column="45" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="24" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/Data2Vec.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.19331743">
+          <caret line="17" column="31" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
+          <folding>
+            <element signature="e#25#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/Graph.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.2028639">
+          <caret line="62" column="0" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
           <folding>
             <element signature="e#25#34#0" expanded="true" />
           </folding>
