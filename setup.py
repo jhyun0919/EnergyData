@@ -6,6 +6,7 @@ setup(
     description="Energy Data Management",
     author="Park Jee Hyun",
     author_email="jhyun19@gmail.com",
-    packages=['utils'],
-
+    packages=['utils']
 )
+
+
