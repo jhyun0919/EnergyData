@@ -9,5 +9,3 @@ def path_checker(directory):
     else:
         directory = directory.rsplit('/', 1)[0]
         path_checker(directory)
-
-
