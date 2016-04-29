@@ -4,31 +4,16 @@ import sys
 import os
 import cPickle as pickle
 
+def unpickling(binary_file):
+    data_dictionary = pickle.load(open(binary_file))
 
-# 절대경로나 외부인자를 입력
-#
-def get_directory(dir_name=None):
-    if dir_name is None:
-        try:
-            dir_name = sys.argv[1]
-            if dir_name[0] == '.':
-                dir_name = dir_name[1:]
-                if dir_name[0] == '/':
-                    dir_name = dir_name[1:]
+    file_name = binary_file.rsplit('/', 1)[-1]
+    file_name = file_name.split('.')[0]
+    data_dictionary['file_name'] = file_name
 
-            dir_name = os.path.join(os.getcwd(), dir_name)
-            return dir_name
-        except IndexError as err:
-            print('IndexError: ' + str(err))
-            print('Put a directory path as an input argument')
-            exit()
-    else:
-        return dir_name
+    return data_dictionary
 
 
-# directory를 입력받아
-# 그 디렉토리 내 binary file들의 절대경로를
-# list로 만들어 반환
 def load_filelist(path):
     bin_file_list = []
 
@@ -43,10 +28,3 @@ def load_filelist(path):
         print 'OSError' + str(err)
 
     return bin_file_list
-
-
-# binary file을 unpickling 처리하여
-# 읽어옴
-def unpickling(bin_file):
-    data = pickle.load(open(bin_file))
-    return data
