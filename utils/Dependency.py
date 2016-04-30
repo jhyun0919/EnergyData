@@ -9,6 +9,7 @@ import Graph
 import matplotlib.pyplot as plt
 import numpy as np
 
+
 def similarity_score(data_dictionary_1, data_dictionary_2):
     similarity = []
 
@@ -22,6 +23,11 @@ def similarity_score(data_dictionary_1, data_dictionary_2):
         late = data_dictionary_1
         early = data_dictionary_2
 
+    late = scaling(interpolation(late))
+    early = scaling(interpolation(early))
+
+    print early
+
     for i in xrange(0, len(early['ts'])):
         if late['ts'][0][0] == early['ts'][i][0]:
             ts_fix = i
@@ -33,9 +39,6 @@ def similarity_score(data_dictionary_1, data_dictionary_2):
         ts_total = len(early['ts']) - ts_fix
     else:
         ts_total = len(late['ts'])
-
-    late = scaling(interpolation(late))
-    early = scaling(interpolation(early))
 
     Graph.Show.dic2graph(late)
     Graph.Show.dic2graph(early)
@@ -79,6 +82,26 @@ def far_dependency():
     pass
 
 
+def time_sync(data_dictionary_1, data_dictionary_2):
+    syncronized_early = {}
+    syncronized_late = {}
+
+    if data_dictionary_1['ts'][0][0] > data_dictionary_2['ts'][0][0]:
+        late = data_dictionary_1
+        early = data_dictionary_2
+    elif data_dictionary_1['ts'][0][0] < data_dictionary_2['ts'][0][0]:
+        late = data_dictionary_2
+        early = data_dictionary_1
+    else:
+        late = data_dictionary_1
+        early = data_dictionary_2
+
+    late = scaling(interpolation(late))
+    early = scaling(interpolation(early))
+
+    return syncronized_early, syncronized_late
+
+
 if __name__ == '__main__':
     file_path_1 = '/Users/JH/Documents/GitHub/EnergyData_jhyun/VTT_GW1_HA10_VM_EP_KV_K.bin'
     file_path_2 = '/Users/JH/Documents/GitHub/EnergyData_jhyun/VTT_GW1_HA10_VM_KV_K.bin'
@@ -86,6 +109,7 @@ if __name__ == '__main__':
     data_dictionary_1 = unpickling(file_path_1)
     data_dictionary_2 = unpickling(file_path_2)
 
+    print data_dictionary_1
 
     score = similarity_score(data_dictionary_1, data_dictionary_2)
 
