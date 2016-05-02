@@ -16,45 +16,55 @@ class Show:
 
     @staticmethod
     def dic2graph(dictionary):
+        x = []
+        for ts in dictionary['ts']:
+            try:
+                x.append(ts[0])
+            except TypeError:
+                x.append(ts)
+
+        y = dictionary['value']
 
         plt.title(dictionary['file_name'])
-        plt.scatter(dictionary['ts'], dictionary['value'], marker='x')
-        plt.show()
-        plt.close()
-
-
-    @staticmethod
-    def bin2graph(binary_file):
-        x = []
-        for line in unpickling(binary_file)['ts']:
-            x.append(line[0])
-        y = unpickling(binary_file)['value']
-
-        file_name = binary_file.rsplit('/', 1)[-1]
-        file_name = file_name.split('.')[0]
-
-        plt.title(file_name)
         plt.scatter(x, y, marker='x')
         plt.show()
         plt.close()
 
     @staticmethod
+    def bin2graph(binary_file):
+        # x = []
+        # for line in unpickling(binary_file)['ts']:
+        #     x.append(line[0])
+        # y = unpickling(binary_file)['value']
+        #
+        # file_name = binary_file.rsplit('/', 1)[-1]
+        # file_name = file_name.split('.')[0]
+        #
+        # plt.title(file_name)
+        # plt.scatter(x, y, marker='x')
+        # plt.show()
+        # plt.close()
+
+        Show.dic2graph(unpickling(binary_file))
+
+    @staticmethod
     def bins2graphs(path):
         file_list = load_filelist(path)
         for file in file_list:
-            x = []
-            for line in unpickling(file)['ts']:
-                x.append(line[0])
-            y = unpickling(file)['value']
-
-            plt.scatter(x, y, marker='x')
-
-            file_name = file.rsplit('/', 1)[1]
-            file_name = file_name.split('.')[0] + '.jpg'
-
-            plt.title(file_name)
-            plt.show()
-            plt.close()
+            # x = []
+            # for line in unpickling(file)['ts']:
+            #     x.append(line[0])
+            # y = unpickling(file)['value']
+            #
+            # plt.scatter(x, y, marker='x')
+            #
+            # file_name = file.rsplit('/', 1)[1]
+            # file_name = file_name.split('.')[0] + '.jpg'
+            #
+            # plt.title(file_name)
+            # plt.show()
+            # plt.close()
+            Show.bin2graph(file)
             print
 
     @staticmethod
@@ -71,6 +81,10 @@ class Show:
             plt.show()
             plt.close()
             print
+
+    @staticmethod
+    def weighted_graph(model):
+        pass
 
 
 """

@@ -38,15 +38,16 @@ def interpolation(data_dictionary):
 
             i -= 1
 
-            data_dictionary['ts'][i][0].replace(second=0)
-            x.append(data_dictionary['ts'][i][0])
+            ###
+            x_temp = data_dictionary['ts'][i][0].replace(second=0)
+            x.append(x_temp)
 
     if len(x) != len(y):
         print "interpolation error"
         exit()
 
-    data_dictionary['ts'] = x
-    data_dictionary['value'] = y
+    data_dictionary['ts'] = np.array(x)
+    data_dictionary['value'] = np.array(y)
 
     return data_dictionary
 
@@ -58,7 +59,7 @@ def scaling(data_dictionary):
     if normalizer == 0:
         pass
     else:
-        data_dictionary['value'] = (np.array(data_list) / normalizer) * Scale_Size
+        data_dictionary['value'] = (data_list / normalizer) * Scale_Size
 
     return data_dictionary
 
@@ -68,6 +69,76 @@ def n_th_abs_maximum(n_th, data_list):
     data_list_copy.sort()
 
     return max(abs(data_list_copy[n_th]), data_list_copy[-n_th])
+
+
+def preprocess4dependcy(binary_file_1, binary_file_2):
+    data_dictionary_1 = unpickling(binary_file_1)
+    data_dictionary_2 = unpickling(binary_file_2)
+
+    data_dictionary_1 = scaling(interpolation(data_dictionary_1))
+    data_dictionary_2 = scaling(interpolation(data_dictionary_2))
+
+    early, late = time_compare(data_dictionary_1, data_dictionary_2)
+
+    early, late = ts_synchronize(early, late)
+
+    early, late, length = length_match(early, late)
+
+    return early, late, length
+
+
+def time_compare(data_dictionary_1, data_dictionary_2):
+    if data_dictionary_1['ts'][0] > data_dictionary_2['ts'][0]:
+        late = data_dictionary_1
+        early = data_dictionary_2
+    elif data_dictionary_1['ts'][0] < data_dictionary_2['ts'][0]:
+        late = data_dictionary_2
+        early = data_dictionary_1
+    else:
+        late = data_dictionary_1
+        early = data_dictionary_2
+
+    return early, late
+
+
+def ts_synchronize(early, late):
+    for i in xrange(0, len(early['ts'])):
+        if late['ts'][0] == early['ts'][i]:
+            ts_fix = i
+            break
+
+    x, y = [], []
+    for i in xrange(ts_fix, len(early['ts'])):
+        x.append(early['ts'][i])
+        y.append((early['value'][i]))
+
+    early['ts'] = np.array(x)
+    early['value'] = np.array(y)
+
+    return early, late
+
+
+def length_match(early, late):
+    x, y = [], []
+    if len(late['ts']) >= (len(early['ts'])):
+        length = len(early['ts'])
+        for i in xrange(0, length):
+            x.append(late['ts'][i])
+            y.append((late['value'][i]))
+
+        late['ts'] = np.array(x)
+        late['value'] = np.array(y)
+
+    else:
+        length = len(late['ts'])
+        for i in xrange(0, length):
+            x.append(early['ts'][i])
+            y.append((early['value'][i]))
+
+        early['ts'] = np.array(x)
+        early['value'] = np.array(y)
+
+    return early, late, length
 
 
 if __name__ == '__main__':

@@ -1,8 +1,13 @@
 # -*- coding: utf-8 -*-
 
-Level = 9
-Interpolation_Interval = 10     # minute
+# Preprocess
+Interpolation_Interval = 10  # minute
 Noise_Filter = 10
-Scale_Size = Level * 10
-N_Neighbor = 30
-Knn_Weights = 'uniform'
+Scale_Size = 100
+
+# Dependency : close
+Level = 9
+Divider = float(Scale_Size) / Level
+
+# Dependency : far
+Gradient_Threshold = 0.5
