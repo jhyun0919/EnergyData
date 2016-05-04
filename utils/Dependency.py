@@ -6,6 +6,8 @@ import Graph
 import matplotlib.pyplot as plt
 import numpy as np
 from Load import load_filelist
+from Save import dependency_model2bin_file
+from Load import unpickling
 
 
 def close_dependency_score(binary_file_1, binary_file_2):
@@ -79,6 +81,20 @@ def close_dependency_model(file_list):
     return model
 
 
+def close_dependency_col(file_list):
+    dimension = len(file_list)
+    model = np.zeros((dimension, 1))
+
+    for row in xrange(0, dimension):
+        if row == dimension - 1:
+            model[row] = 0
+        else:
+            score = close_dependency_score(file_list[row], file_list[dimension - 1])
+            model[row] = score
+
+    return model
+
+
 def far_dependency_model(file_list):
     dimension = len(file_list)
     model = np.zeros((dimension, dimension))
@@ -87,6 +103,20 @@ def far_dependency_model(file_list):
         for col in xrange(row + 1, dimension):
             score = far_dependency_score(file_list[row], file_list[col])
             model[row][col] = score
+
+    return model
+
+
+def far_dependency_col(file_list):
+    dimension = len(file_list)
+    model = np.zeros((dimension, 1))
+
+    for row in xrange(0, dimension):
+        if row == dimension - 1:
+            model[row] = 0
+        else:
+            score = far_dependency_score(file_list[row], file_list[dimension - 1])
+            model[row] = score
 
     return model
 
@@ -103,21 +133,43 @@ def dependency_model(file_list):
     for row in xrange(0, dimension):
         for col in xrange(row + 1, dimension):
             score = far_model[row][col] / close_model[row][col]
-            model[row][col] = int(score)
+            model[row][col] = score
 
-    model_structure['file_list'] = np.array(file_list)
+    model_structure['file_list'] = file_list
     model_structure['close_model'] = close_model
     model_structure['far_model'] = far_model
     model_structure['dependency_model'] = model
 
     return model_structure
 
-def append_dependency(model_structure, file):
-    pass
+
+def append_dependency(model_structure_binary_file, file):
+    model_structure = unpickling(model_structure_binary_file)
+
+    model_structure['file_list'].append(file)
+
+    close_model = np.r_[model_structure['close_model'], [np.zeros(len(model_structure['close_model'][0]))]]
+    close_col = close_dependency_col(model_structure['file_list'])
+    close_model = np.c_[close_model, close_col]
+    model_structure['close_model'] = close_model
+
+    far_model = np.r_[model_structure['far_model'], [np.zeros(len(model_structure['far_model'][0]))]]
+    far_col = far_dependency_col(model_structure['file_list'])
+    far_model = np.c_[far_model, far_col]
+    model_structure['far_model'] = far_model
+
+    dependency_model = np.r_[
+        model_structure['dependency_model'], [np.zeros(len(model_structure['dependency_model'][0]))]]
+    dependency_col = far_col / close_col
+    dependency_col[-1] = 0
+    dependency_model = np.c_[dependency_model, dependency_col]
+    model_structure['dependency_model'] = dependency_model
+
+    return model_structure
 
 
 if __name__ == '__main__':
-    path = '/Users/JH/Documents/GitHub/EnergyData_jhyun/utils/VTT'
+    path = '/repository/VTT'
 
     file_list = load_filelist(path)
 
@@ -139,3 +191,11 @@ if __name__ == '__main__':
 
     model_structure = dependency_model(file_list)
     print model_structure
+
+    dependency_model2bin_file(model_structure)
+
+    model = unpickling('/repository/data/dependency_model.bin')
+    print model
+
+    model = append_dependency('/repository/data/dependency_model.bin', '/repository/VTT/VTT_GW1_HA10_VM_EP_KV_K.bin')
+    print model
