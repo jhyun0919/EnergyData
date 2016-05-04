@@ -91,7 +91,12 @@ def far_dependency_model(file_list):
     return model
 
 
-def dependency_model(close_model, far_model):
+def dependency_model(file_list):
+    model_structure = {}
+
+    close_model = close_dependency_model(file_list)
+    far_model = far_dependency_model(file_list)
+
     dimension = len(close_model[0])
     model = np.zeros((dimension, dimension))
 
@@ -100,7 +105,15 @@ def dependency_model(close_model, far_model):
             score = far_model[row][col] / close_model[row][col]
             model[row][col] = int(score)
 
-    return model
+    model_structure['file_list'] = np.array(file_list)
+    model_structure['close_model'] = close_model
+    model_structure['far_model'] = far_model
+    model_structure['dependency_model'] = model
+
+    return model_structure
+
+def append_dependency(model_structure, file):
+    pass
 
 
 if __name__ == '__main__':
@@ -108,8 +121,8 @@ if __name__ == '__main__':
 
     file_list = load_filelist(path)
 
-    for file in file_list:
-        print file
+    # for file in file_list:
+    #     print file
 
     # data_dictionary_1 = unpickling(file_path_1)
     # data_dictionary_2 = unpickling(file_path_2)
@@ -118,12 +131,11 @@ if __name__ == '__main__':
     # Graph.Show.dic2graph(data_dictionary_2)
     # Graph.Show.dic2graph(data_dictionary_3)
 
-    close_model = close_dependency_model(file_list)
-    print close_model
+    # close_model = close_dependency_model(file_list)
+    # print close_model
+    #
+    # far_model = far_dependency_model(file_list)
+    # print far_model
 
-    far_model = far_dependency_model(file_list)
-    print far_model
-
-    model = dependency_model(close_model, far_model)
-    print model
-
+    model_structure = dependency_model(file_list)
+    print model_structure

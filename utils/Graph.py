@@ -3,6 +3,7 @@
 import os
 import time
 import numpy as np
+import networkx as nx
 import matplotlib.pyplot as plt
 from Load import unpickling
 from Load import load_filelist
@@ -73,7 +74,6 @@ class Show:
         for i in xrange(len(vectors['file_name'])):
             name = vectors['file_name'][i].rsplit('/', 1)[1]
             name = name.split('.')[0]
-            # name = name + '_vec_' + str(VEC_DIMENSION) + '.jpg'
 
             x = np.linspace(0, 1, len(vectors['vec_data'][i]))
             plt.scatter(x, vectors['vec_data'][i], marker='+')
