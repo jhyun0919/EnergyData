@@ -2,48 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9e90c6a0-c712-4bc0-9204-421017e6380e" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT_GW1_HA10_VM_EP_KV_K.bin" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT_GW1_HA10_VM_KV_K.bin" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT_GW1_HA10_VM_KV_KAM.bin" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT_GW1_HA25_VM_KV_K.bin" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VTT_GW1_HA28_VM_KV_KAM.bin" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/utils/VTT/.ipynb_checkpoints/Restricted_Boltzman_example01-checkpoint.ipynb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/utils/VTT/.ipynb_checkpoints/Restricted_Boltzman_example02-checkpoint.ipynb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/utils/VTT/.ipynb_checkpoints/Restricted_Boltzman_example03-checkpoint.ipynb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/utils/VTT/VTT_Bigdata_BMS_Naming.xls" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/utils/VTT/VTT_GW1_HA10_VM_EP_KV_K.bin" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/utils/VTT/VTT_GW1_HA10_VM_KV_K.bin" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/utils/VTT/VTT_GW1_HA10_VM_KV_KAM.bin" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/utils/VTT/VTT_GW1_HA11_VM_EP_KV_K.bin" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/utils/VTT/VTT_GW1_HA11_VM_KV_K.bin" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/utils/VTT/VTT_GW1_HA11_VM_KV_KAM.bin" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/utils/VTT/results/cluster_structure_dim_100.bin" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/utils/VTT/results/graph/VTT_GW1_HA10_VM_EP_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/utils/VTT/results/graph/VTT_GW1_HA10_VM_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/utils/VTT/results/graph/VTT_GW1_HA10_VM_KV_KAM.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/utils/VTT/results/graph/VTT_GW1_HA11_VM_EP_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/utils/VTT/results/graph/VTT_GW1_HA11_VM_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/utils/VTT/results/graph/VTT_GW1_HA11_VM_KV_KAM.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/utils/VTT/results/graph/VTT_GW1_HA12_VM_EP_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/utils/VTT/results/graph/VTT_GW1_HA12_VM_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/utils/VTT/results/graph/VTT_GW1_HA12_VM_KV_KAM.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/utils/VTT/results/graph/VTT_GW1_HA13_VM_EP_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/utils/VTT/results/graph/VTT_GW1_HA13_VM_KV_K.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/utils/VTT/results/graph/VTT_GW1_HA13_VM_KV_KAM.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/utils/VTT/results/graph/vectorize/100/VTT_GW1_HA10_VM_EP_KV_K_vec_100.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/utils/VTT/results/graph/vectorize/100/VTT_GW1_HA10_VM_KV_KAM_vec_100.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/utils/VTT/results/graph/vectorize/100/VTT_GW1_HA10_VM_KV_K_vec_100.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/utils/VTT/results/graph/vectorize/100/VTT_GW1_HA11_VM_EP_KV_K_vec_100.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/utils/VTT/results/graph/vectorize/100/VTT_GW1_HA11_VM_KV_KAM_vec_100.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/utils/VTT/results/graph/vectorize/100/VTT_GW1_HA11_VM_KV_K_vec_100.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/utils/VTT/results/graph/vectorize/100/VTT_GW1_HA12_VM_EP_KV_K_vec_100.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/utils/VTT/results/graph/vectorize/100/VTT_GW1_HA12_VM_KV_KAM_vec_100.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/utils/VTT/results/graph/vectorize/100/VTT_GW1_HA12_VM_KV_K_vec_100.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/utils/VTT/results/graph/vectorize/100/VTT_GW1_HA13_VM_EP_KV_K_vec_100.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/utils/VTT/results/graph/vectorize/100/VTT_GW1_HA13_VM_KV_KAM_vec_100.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/utils/VTT/results/graph/vectorize/100/VTT_GW1_HA13_VM_KV_K_vec_100.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/utils/VTT/results/vectorized_data_dim_100.bin" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/utils/VTT/Save.py" afterPath="$PROJECT_DIR$/utils/Save.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/utils/Dependency.py" afterPath="$PROJECT_DIR$/utils/Dependency.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/utils/GlobalParameter.py" afterPath="$PROJECT_DIR$/utils/GlobalParameter.py" />
@@ -112,8 +70,8 @@
               <file leaf-file-name="GlobalParameter.py" pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/utils/GlobalParameter.py">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state vertical-scroll-proportion="0.30150753">
-                      <caret line="8" column="9" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
+                    <state vertical-scroll-proportion="0.4522613">
+                      <caret line="12" column="24" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
                       <folding />
                     </state>
                   </provider>
@@ -126,7 +84,7 @@
               <file leaf-file-name="Preprocess.py" pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/utils/Preprocess.py">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state vertical-scroll-proportion="0.43850267">
+                    <state vertical-scroll-proportion="4.7058825">
                       <caret line="176" column="5" selection-start-line="176" selection-start-column="5" selection-end-line="176" selection-end-column="5" />
                       <folding>
                         <element signature="e#25#54#0" expanded="true" />
@@ -198,8 +156,8 @@
           <file leaf-file-name="Dependency.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/utils/Dependency.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="1.6490872">
-                  <caret line="190" column="0" selection-start-line="190" selection-start-column="0" selection-end-line="190" selection-end-column="0" />
+                <state vertical-scroll-proportion="0.28904665">
+                  <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
                   <folding>
                     <element signature="e#25#54#0" expanded="true" />
                   </folding>
@@ -271,10 +229,10 @@
         <option value="$PROJECT_DIR$/utils/Preprocess.py" />
         <option value="$PROJECT_DIR$/setup.py" />
         <option value="$PROJECT_DIR$/utils/Graph.py" />
-        <option value="$PROJECT_DIR$/utils/GlobalParameter.py" />
         <option value="$PROJECT_DIR$/utils/VTT/Save.py" />
         <option value="$PROJECT_DIR$/utils/Save.py" />
         <option value="$PROJECT_DIR$/utils/Dependency.py" />
+        <option value="$PROJECT_DIR$/utils/GlobalParameter.py" />
       </list>
     </option>
   </component>
@@ -284,7 +242,7 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="580" />
+    <option name="x" value="-319" />
     <option name="y" value="-1080" />
     <option name="width" value="1920" />
     <option name="height" value="1080" />
@@ -761,7 +719,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="580" y="-1080" width="1920" height="1080" extended-state="0" />
+    <frame x="-319" y="-1080" width="1920" height="1080" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.13631523" sideWeight="0.48814228" order="0" side_tool="false" content_ui="combo" />
@@ -1167,31 +1125,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/utils/GlobalParameter.py">
+    <entry file="file://$PROJECT_DIR$/utils/Preprocess.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.30150753">
-          <caret line="8" column="9" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
-          <folding />
+        <state vertical-scroll-proportion="4.7058825">
+          <caret line="176" column="5" selection-start-line="176" selection-start-column="5" selection-end-line="176" selection-end-column="5" />
+          <folding>
+            <element signature="e#25#54#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/utils/Dependency.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.6490872">
-          <caret line="190" column="0" selection-start-line="190" selection-start-column="0" selection-end-line="190" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.28904665">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding>
             <element signature="e#25#54#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/utils/Preprocess.py">
+    <entry file="file://$PROJECT_DIR$/utils/GlobalParameter.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.43850267">
-          <caret line="176" column="5" selection-start-line="176" selection-start-column="5" selection-end-line="176" selection-end-column="5" />
-          <folding>
-            <element signature="e#25#54#0" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.4522613">
+          <caret line="12" column="24" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
+          <folding />
         </state>
       </provider>
     </entry>
