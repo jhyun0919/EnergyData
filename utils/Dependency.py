@@ -35,11 +35,7 @@ def close_score_calculator(early, late, length):
     # plt.show()
     # plt.close()
 
-    counter = 0
-    for i in similarity:
-        if i == 1:
-            counter += 1
-    similarity_rate = float(counter) / length
+    similarity_rate = float(similarity.count(1)) / length
 
     return similarity_rate
 
@@ -53,7 +49,7 @@ def far_dependency_score(binary_file_1, binary_file_2):
 
 
 def far_score_calculator(early, late, length):
-    dissimilarity = 0
+    dissimilarity = []
 
     early_gradient = np.gradient(early['value'])
     late_gradient = np.gradient(late['value'])
@@ -62,11 +58,13 @@ def far_score_calculator(early, late, length):
         distance = abs(early_gradient[i] - late_gradient[i])
 
         if early_gradient[i] * late_gradient[i] < 0:
-            dissimilarity += distance
+            dissimilarity.append(distance)
         elif distance > Gradient_Threshold:
-            dissimilarity += distance
+            dissimilarity.append(distance)
+        else:
+            dissimilarity.append(0)
 
-    return dissimilarity
+    return sum(dissimilarity)
 
 
 def close_dependency_model(file_list):
@@ -143,7 +141,7 @@ def dependency_model(file_list):
     return model_structure
 
 
-def append_dependency(model_structure_binary_file, file):
+def append_dependency_model(model_structure_binary_file, file):
     model_structure = unpickling(model_structure_binary_file)
 
     model_structure['file_list'].append(file)
@@ -197,5 +195,5 @@ if __name__ == '__main__':
     model = unpickling('/repository/data/dependency_model.bin')
     print model
 
-    model = append_dependency('/repository/data/dependency_model.bin', '/repository/VTT/VTT_GW1_HA10_VM_EP_KV_K.bin')
+    model = append_dependency_model('/repository/data/dependency_model.bin', '/repository/VTT/VTT_GW1_HA10_VM_EP_KV_K.bin')
     print model
