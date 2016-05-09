@@ -1,14 +1,24 @@
 # -*- coding: utf-8 -*-
 
-from sklearn import neighbors
 import Graph
 import copy
 import numpy as np
 from GlobalParameter import *
-from Load import unpickling
+import FileIO
 
 
 def interpolation(data_dictionary):
+    """
+    - interpolation을 해주는 함수
+    - Golbal_Parameter에서 정의된 Interpolation_Interval의 간격으로 interpolation을 실행
+
+    :param data_dictionary:
+        original_dictionary = {"ts": ..., "value": ...}
+        - type: dictionary
+    :return:
+        interpolated_dictionary = {"ts": ..., "value": ...}
+        - type: dictionary
+    """
     x = []
     y = []
 
@@ -53,6 +63,17 @@ def interpolation(data_dictionary):
 
 
 def scaling(data_dictionary):
+    """
+    - scaling을 해주는 함수
+    - Golbal_Parameter에서 정의된 Scale_Size에 따라 scaling 실행
+
+   :param data_dictionary:
+        original_dictionary = {"ts": ..., "value": ...}
+        - type: dictionary
+    :return:
+        scaled_dictionary = {"ts": ..., "value": ...}
+        - type: dictionary
+    """
     data_list = data_dictionary['value']
     normalizer = n_th_abs_maximum(Noise_Filter, data_list)
 
@@ -65,29 +86,68 @@ def scaling(data_dictionary):
 
 
 def n_th_abs_maximum(n_th, data_list):
+    """
+    - Golbal_Parameter에서 정의된 Noise_Filter를 고려한 normalizer에 적당한 값 계산
+
+    :param n_th:
+        Noise_Filter
+        - type: int
+    :param data_list:
+        data['value']
+        - type: ndarray
+    :return:
+        normalizer_value
+        - type: int
+    """
     data_list_copy = copy.copy(data_list)
     data_list_copy.sort()
 
     return max(abs(data_list_copy[n_th]), data_list_copy[-n_th])
 
 
+def data_preprocess(binary_file):
+    """
+    - binary file을 prepocessing 해주는 함수
+    :param binary_file:
+        binary file abs_path
+    :return:
+        preprocessed_dictionary = {"ts": ..., "value": ...}
+    """
+    data_dictionary = FileIO.Load.unpickling(binary_file)
+    data_dictionary = scaling(interpolation(data_dictionary))
+    return data_dictionary
+
+
 def preprocess4dependcy(binary_file_1, binary_file_2):
-    data_dictionary_1 = unpickling(binary_file_1)
-    data_dictionary_2 = unpickling(binary_file_2)
+    """
+    - 두 data 사이 dependency를 계산하기 위한 preprocessing 함수
+    -
 
-    data_dictionary_1 = scaling(interpolation(data_dictionary_1))
-    data_dictionary_2 = scaling(interpolation(data_dictionary_2))
+    :param binary_file_1:
+        binary file abs_path
+    :param binary_file_2:
+        binary file abs_path
+    :return:
+    """
+    data_dictionary_1 = data_preprocess(binary_file_1)
+    data_dictionary_2 = data_preprocess(binary_file_2)
 
-    early, late = time_compare(data_dictionary_1, data_dictionary_2)
+    early, late = start_time_compare(data_dictionary_1, data_dictionary_2)
 
-    early, late = ts_synchronize(early, late)
+    early, late = start_ts_synchronize(early, late)
 
     early, late, length = length_match(early, late)
 
     return early, late, length
 
 
-def time_compare(data_dictionary_1, data_dictionary_2):
+def start_time_compare(data_dictionary_1, data_dictionary_2):
+    """
+
+    :param data_dictionary_1:
+    :param data_dictionary_2:
+    :return:
+    """
     if data_dictionary_1['ts'][0] > data_dictionary_2['ts'][0]:
         late = data_dictionary_1
         early = data_dictionary_2
@@ -101,7 +161,13 @@ def time_compare(data_dictionary_1, data_dictionary_2):
     return early, late
 
 
-def ts_synchronize(early, late):
+def start_ts_synchronize(early, late):
+    """
+
+    :param early:
+    :param late:
+    :return:
+    """
     for i in xrange(0, len(early['ts'])):
         if late['ts'][0] == early['ts'][i]:
             ts_fix = i
@@ -119,34 +185,30 @@ def ts_synchronize(early, late):
 
 
 def length_match(early, late):
+    """
+
+    :param early:
+    :param late:
+    :return:
+    """
     x, y = [], []
     if len(late['ts']) >= (len(early['ts'])):
         length = len(early['ts'])
-        for i in xrange(0, length):
-            x.append(late['ts'][i])
-            y.append((late['value'][i]))
-
-        late['ts'] = np.array(x)
-        late['value'] = np.array(y)
+        late['ts'] = late['ts'][0:length]
 
     else:
         length = len(late['ts'])
-        for i in xrange(0, length):
-            x.append(early['ts'][i])
-            y.append((early['value'][i]))
-
-        early['ts'] = np.array(x)
-        early['value'] = np.array(y)
+        early['ts'] = early['ts'][0:length]
 
     return early, late, length
 
 
 if __name__ == '__main__':
-    file_path = '/Users/JH/Documents/GitHub/EnergyData_jhyun/VTT_GW1_HA25_VM_KV_K.bin'
+    file_path = '/repository/VTT/VTT_GW1_HA10_VM_EP_KV_K.bin'
 
     Graph.Show.bin2graph(file_path)
 
-    data_dictionary = unpickling(file_path)
+    data_dictionary = FileIO.Load.unpickling(file_path)
 
     data_dictionary = interpolation(data_dictionary)
 

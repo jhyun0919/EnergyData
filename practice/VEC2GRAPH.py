@@ -2,7 +2,7 @@
 
 import time
 
-from utils import Load
+from practice import Load
 from utils import Save
 from utils.GlobalParam import *
 

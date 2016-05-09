@@ -4,9 +4,9 @@ import sys
 import time
 
 import os
+from practice import Load
 from utils import Classifier
 from utils import Data2Vec
-from utils import Load
 from utils import Save
 from utils.GlobalParam import *
 

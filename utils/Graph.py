@@ -1,14 +1,9 @@
 # -*- coding: utf-8 -*-
 
-import os
-import time
 import numpy as np
 import networkx as nx
 import matplotlib.pyplot as plt
-from Load import unpickling
-from Load import load_filelist
-from GlobalParameter import *
-from Path import *
+import FileIO
 
 
 class Show:
@@ -33,44 +28,18 @@ class Show:
 
     @staticmethod
     def bin2graph(binary_file):
-        # x = []
-        # for line in unpickling(binary_file)['ts']:
-        #     x.append(line[0])
-        # y = unpickling(binary_file)['value']
-        #
-        # file_name = binary_file.rsplit('/', 1)[-1]
-        # file_name = file_name.split('.')[0]
-        #
-        # plt.title(file_name)
-        # plt.scatter(x, y, marker='x')
-        # plt.show()
-        # plt.close()
-
-        Show.dic2graph(unpickling(binary_file))
+        Show.dic2graph(FileIO.Load.unpickling(binary_file))
 
     @staticmethod
     def bins2graphs(path):
-        file_list = load_filelist(path)
+        file_list = FileIO.Load.load_filelist(path)
         for file in file_list:
-            # x = []
-            # for line in unpickling(file)['ts']:
-            #     x.append(line[0])
-            # y = unpickling(file)['value']
-            #
-            # plt.scatter(x, y, marker='x')
-            #
-            # file_name = file.rsplit('/', 1)[1]
-            # file_name = file_name.split('.')[0] + '.jpg'
-            #
-            # plt.title(file_name)
-            # plt.show()
-            # plt.close()
             Show.bin2graph(file)
             print
 
     @staticmethod
     def vectors2graphs(file):
-        vectors = unpickling(file)
+        vectors = FileIO.Load.unpickling(file)
         for i in xrange(len(vectors['file_name'])):
             name = vectors['file_name'][i].rsplit('/', 1)[1]
             name = name.split('.')[0]

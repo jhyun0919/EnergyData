@@ -2,10 +2,8 @@
 
 import time
 
-from utils import Load
-from utils import Save
+from practice import Load
 from utils import ShowData
-from utils.GlobalParam import *
 
 if __name__ == "__main__":
     start_time = time.time()

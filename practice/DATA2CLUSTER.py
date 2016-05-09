@@ -2,11 +2,10 @@
 
 import time
 
+from practice import Load
 from utils import Cluster
 from utils import Data2Vec
-from utils import Load
 from utils import Save
-from utils.GlobalParam import *
 
 if __name__ == "__main__":
     start_time = time.time()

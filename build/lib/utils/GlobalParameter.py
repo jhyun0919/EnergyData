@@ -11,3 +11,7 @@ Divider = float(Scale_Size) / Level
 
 # Dependency : far
 Gradient_Threshold = 0.5
+
+# Save
+Repository_Path = '/repository/data'
+

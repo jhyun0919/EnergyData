@@ -1,12 +1,10 @@
 # -*- coding: utf-8 -*-
 
-from sklearn import neighbors
 import Graph
 import copy
-import types
 import numpy as np
 from GlobalParameter import *
-from Load import unpickling
+import FileIO
 
 
 def interpolation(data_dictionary):
@@ -115,7 +113,7 @@ def data_preprocess(binary_file):
     :return:
         preprocessed_dictionary = {"ts": ..., "value": ...}
     """
-    data_dictionary = unpickling(binary_file)
+    data_dictionary = FileIO.Load.unpickling(binary_file)
     data_dictionary = scaling(interpolation(data_dictionary))
     return data_dictionary
 
@@ -210,7 +208,7 @@ if __name__ == '__main__':
 
     Graph.Show.bin2graph(file_path)
 
-    data_dictionary = unpickling(file_path)
+    data_dictionary = FileIO.Load.unpickling(file_path)
 
     data_dictionary = interpolation(data_dictionary)
 

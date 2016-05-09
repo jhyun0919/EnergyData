@@ -7,8 +7,8 @@
 
 import time
 
+from practice import Load
 from utils import Data2Vec
-from utils import Load
 from utils import Save
 
 if __name__ == "__main__":
