@@ -6,6 +6,8 @@ import numpy as np
 from GlobalParameter import *
 import FileIO
 
+from datetime import datetime
+
 
 def interpolation(data_dictionary):
     """
@@ -22,35 +24,35 @@ def interpolation(data_dictionary):
     x = []
     y = []
 
+    time_stamp = data_dictionary['ts'][0][0].replace(second=0)
+
     minute_scanner = data_dictionary['ts'][0][0].minute / Interpolation_Interval
 
     scanned_item = 0
     value_collector = 0
+    calculated_value = 0
 
     for i in range(0, len(data_dictionary['ts'])):
         if data_dictionary['ts'][i][0].minute / Interpolation_Interval == minute_scanner:
             scanned_item += 1
             value_collector += data_dictionary['value'][i]
         else:
-            if scanned_item == 0:
-                # interpolation strategy
-                # ============================
-                y.append(y[-1])
-                # ============================
+            if scanned_item != 0:
+                calculated_value = value_collector / scanned_item
+                y.append(calculated_value)
             else:
-                y.append(value_collector / scanned_item)
-                value_collector = 0
-                scanned_item = 0
+                y.append(0)
+                
+            x.append(time_stamp)
+
+            time_stamp = time_stamp + ts_delta
+
+            value_collector = data_dictionary['value'][i]
+            scanned_item = 1
 
             minute_scanner += 1
             if minute_scanner == 6:
                 minute_scanner = 0
-
-            i -= 1
-
-            ###
-            x_temp = data_dictionary['ts'][i][0].replace(second=0)
-            x.append(x_temp)
 
     if len(x) != len(y):
         print "interpolation error"
