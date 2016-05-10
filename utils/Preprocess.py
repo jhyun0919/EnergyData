@@ -30,7 +30,6 @@ def interpolation(data_dictionary):
 
     scanned_item = 0
     value_collector = 0
-    calculated_value = 0
 
     for i in range(0, len(data_dictionary['ts'])):
         if data_dictionary['ts'][i][0].minute / Interpolation_Interval == minute_scanner:
@@ -41,7 +40,7 @@ def interpolation(data_dictionary):
                 calculated_value = value_collector / scanned_item
                 y.append(calculated_value)
             else:
-                y.append(0)
+                y.append(np.nan)
                 
             x.append(time_stamp)
 
@@ -53,10 +52,6 @@ def interpolation(data_dictionary):
             minute_scanner += 1
             if minute_scanner == 6:
                 minute_scanner = 0
-
-    if len(x) != len(y):
-        print "interpolation error"
-        exit()
 
     data_dictionary['ts'] = np.array(x)
     data_dictionary['value'] = np.array(y)
