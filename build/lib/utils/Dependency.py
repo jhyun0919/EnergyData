@@ -263,21 +263,21 @@ def find_ordering_target(model_structure_binary_file, binray_file_name):
 
 
 if __name__ == '__main__':
-    # path = '/repository/VTT'
-    #
-    # file_list = FileIO.Load.load_filelist(path)
-    #
-    # model_structure = dependency_model(file_list)
-    # print model_structure
-    #
-    # FileIO.Save.dependency_model2bin_file(model_structure)
-    #
-    # model = FileIO.Load.unpickling('/repository/data/dependency_model.bin')
-    # print model
-    #
-    # model = append_dependency_model('/repository/data/dependency_model.bin',
-    #                                 '/repository/VTT/VTT_GW1_HA10_VM_EP_KV_K.bin')
-    # print model
+    path = '/repository/VTT'
+
+    file_list = FileIO.Load.load_filelist(path)
+
+    model_structure = dependency_model(file_list)
+    print model_structure
+
+    FileIO.Save.dependency_model2bin_file(model_structure)
+
+    model = FileIO.Load.unpickling('/repository/data/dependency_model.bin')
+    print model
+
+    model = append_dependency_model('/repository/data/dependency_model.bin',
+                                    '/repository/VTT/VTT_GW1_HA10_VM_EP_KV_K.bin')
+    print model
 
     target = dependency_ordering('/repository/data/dependency_model.bin', '/repository/VTT/VTT_GW1_HA10_VM_EP_KV_K.bin')
     print target

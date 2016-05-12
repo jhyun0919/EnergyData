@@ -5,18 +5,32 @@ import copy
 import numpy as np
 from GlobalParameter import *
 import FileIO
+import math
 
-from datetime import datetime
+
+def interpolation(data_dictionary):
+    for i in xrange(0, len(data_dictionary['value'])):
+        if math.isnan(data_dictionary['value'][i]):
+            data_dictionary['value'][i] = interpolation_strategy(i, data_dictionary['value'])
+
+    return data_dictionary
 
 
-def interpolation():
-    pass
+def interpolation_strategy(idx, value):
+    for i in xrange(idx, len(value)):
+        if math.isnan(value[i]):
+            pass
+        else:
+            interpolated_value = (value[idx - 1] + value[i]) / 2
+            break
+
+    return interpolated_value
 
 
 def normalization(data_dictionary):
     """
     - normalization을 해주는 함수
-    - Golbal_Parameter에서 정의된 Interpolation_Interval의 간격으로 normalization을 실행
+    - Golbal_Parameter에서 정의된 Interpolation_Interval의 일정한 간격으로 normalization을 실행
 
     :param data_dictionary:
         original_dictionary = {"ts": ..., "value": ...}
@@ -29,8 +43,8 @@ def normalization(data_dictionary):
     y = []
 
     present_ts = data_dictionary['ts'][0][0].replace(second=0)
-    minute_scanner = data_dictionary['ts'][0][0].minute / Interpolation_Interval
-    present_ts = present_ts.replace(minute=minute_scanner * Interpolation_Interval)
+    minute_scanner = data_dictionary['ts'][0][0].minute / Normalization_Interval
+    present_ts = present_ts.replace(minute=minute_scanner * Normalization_Interval)
     next_ts = present_ts + ts_delta
 
     value_collector = []
@@ -38,13 +52,6 @@ def normalization(data_dictionary):
     for i in range(0, len(data_dictionary['ts'])):
         if data_dictionary['ts'][i][0] < next_ts:
             value_collector.append(data_dictionary['value'][i])
-
-            # for final value
-            if i == (len(data_dictionary['ts']) - 1):
-                x.append(present_ts)
-                calculated_value = sum(value_collector) / len(value_collector)
-                y.append(calculated_value)
-
         else:
             x.append(present_ts)
 
@@ -59,12 +66,19 @@ def normalization(data_dictionary):
 
             for i_nan in xrange(0, nan_number):
                 x.append(present_ts)
+
                 y.append(np.nan)
 
                 present_ts = next_ts
                 next_ts = present_ts + ts_delta
 
             value_collector.append(data_dictionary['value'][i])
+
+        # for final ts & value
+        if i == (len(data_dictionary['ts']) - 1):
+            x.append(present_ts)
+            calculated_value = sum(value_collector) / len(value_collector)
+            y.append(calculated_value)
 
     data_dictionary['ts'] = np.array(x)
     data_dictionary['value'] = np.array(y)
@@ -137,7 +151,7 @@ def data_preprocess(binary_file):
         preprocessed_dictionary = {"ts": ..., "value": ...}
     """
     data_dictionary = FileIO.Load.unpickling(binary_file)
-    data_dictionary = scaling(normalization(data_dictionary))
+    data_dictionary = interpolation(normalization(scaling((data_dictionary))))
     return data_dictionary
 
 
@@ -233,11 +247,10 @@ if __name__ == '__main__':
 
     data_dictionary = FileIO.Load.unpickling(file_path)
 
-    data_dictionary = normalization(data_dictionary)
-
+    data_dictionary = scaling(data_dictionary)
     Graph.Show.dic2graph(data_dictionary)
 
-    data_dictionary = scaling(data_dictionary)
+    data_dictionary = normalization(data_dictionary)
     Graph.Show.dic2graph(data_dictionary)
 
 

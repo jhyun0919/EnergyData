@@ -2,8 +2,8 @@
 from datetime import timedelta
 
 # Preprocess
-Interpolation_Interval = 10  # minute
-ts_delta = timedelta(minutes=Interpolation_Interval)
+Normalization_Interval = 10  # minute
+ts_delta = timedelta(minutes=Normalization_Interval)
 Noise_Filter = 10
 Scale_Size = 100
 
