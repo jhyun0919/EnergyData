@@ -9,10 +9,14 @@ import FileIO
 from datetime import datetime
 
 
-def interpolation(data_dictionary):
+def interpolation():
+    pass
+
+
+def normalization(data_dictionary):
     """
-    - interpolation을 해주는 함수
-    - Golbal_Parameter에서 정의된 Interpolation_Interval의 간격으로 interpolation을 실행
+    - normalization을 해주는 함수
+    - Golbal_Parameter에서 정의된 Interpolation_Interval의 간격으로 normalization을 실행
 
     :param data_dictionary:
         original_dictionary = {"ts": ..., "value": ...}
@@ -24,39 +28,61 @@ def interpolation(data_dictionary):
     x = []
     y = []
 
-    time_stamp = data_dictionary['ts'][0][0].replace(second=0)
-
+    present_ts = data_dictionary['ts'][0][0].replace(second=0)
     minute_scanner = data_dictionary['ts'][0][0].minute / Interpolation_Interval
+    present_ts = present_ts.replace(minute=minute_scanner * Interpolation_Interval)
+    next_ts = present_ts + ts_delta
 
-    scanned_item = 0
-    value_collector = 0
+    value_collector = []
 
     for i in range(0, len(data_dictionary['ts'])):
-        if data_dictionary['ts'][i][0].minute / Interpolation_Interval == minute_scanner:
-            scanned_item += 1
-            value_collector += data_dictionary['value'][i]
-        else:
-            if scanned_item != 0:
-                calculated_value = value_collector / scanned_item
+        if data_dictionary['ts'][i][0] < next_ts:
+            value_collector.append(data_dictionary['value'][i])
+
+            # for final value
+            if i == (len(data_dictionary['ts']) - 1):
+                x.append(present_ts)
+                calculated_value = sum(value_collector) / len(value_collector)
                 y.append(calculated_value)
-            else:
+
+        else:
+            x.append(present_ts)
+
+            calculated_value = sum(value_collector) / len(value_collector)
+            del value_collector[:]
+            y.append(calculated_value)
+
+            present_ts = next_ts
+            next_ts = present_ts + ts_delta
+
+            nan_number = ts_validity_checker(present_ts, data_dictionary['ts'][i][0])
+
+            for i_nan in xrange(0, nan_number):
+                x.append(present_ts)
                 y.append(np.nan)
-                
-            x.append(time_stamp)
 
-            time_stamp = time_stamp + ts_delta
+                present_ts = next_ts
+                next_ts = present_ts + ts_delta
 
-            value_collector = data_dictionary['value'][i]
-            scanned_item = 1
-
-            minute_scanner += 1
-            if minute_scanner == 6:
-                minute_scanner = 0
+            value_collector.append(data_dictionary['value'][i])
 
     data_dictionary['ts'] = np.array(x)
     data_dictionary['value'] = np.array(y)
 
     return data_dictionary
+
+
+def ts_validity_checker(present_ts, ts_index):
+    validity_number = 0
+    next_ts = present_ts + ts_delta
+    while True:
+        if next_ts >= ts_index:
+            break
+        elif next_ts < ts_index:
+            validity_number += 1
+            next_ts = next_ts + ts_delta
+
+    return validity_number
 
 
 def scaling(data_dictionary):
@@ -111,7 +137,7 @@ def data_preprocess(binary_file):
         preprocessed_dictionary = {"ts": ..., "value": ...}
     """
     data_dictionary = FileIO.Load.unpickling(binary_file)
-    data_dictionary = scaling(interpolation(data_dictionary))
+    data_dictionary = scaling(normalization(data_dictionary))
     return data_dictionary
 
 
@@ -207,7 +233,7 @@ if __name__ == '__main__':
 
     data_dictionary = FileIO.Load.unpickling(file_path)
 
-    data_dictionary = interpolation(data_dictionary)
+    data_dictionary = normalization(data_dictionary)
 
     Graph.Show.dic2graph(data_dictionary)
 
@@ -215,7 +241,7 @@ if __name__ == '__main__':
     Graph.Show.dic2graph(data_dictionary)
 
 
-    # def interpolation(binary_file):
+    # def normalization(binary_file):
     #     data = unpickling(binary_file)
     #     X = data['ts']
     #     y = data['value']

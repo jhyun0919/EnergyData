@@ -48,6 +48,13 @@ class Load:
 
         return bin_file_list
 
+    @staticmethod
+    def print_dictionary(data_dictionary):
+        for i in xrange(0, len(data_dictionary['ts'])):
+            print data_dictionary['ts'][i],
+            print '\t',
+            print data_dictionary['value'][i]
+
 
 class Save:
     def __init__(self):
