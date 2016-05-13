@@ -30,12 +30,12 @@ class Show:
     def bin2graph(binary_file):
         Show.dic2graph(FileIO.Load.unpickling(binary_file))
 
-    @staticmethod
-    def bins2graphs(path):
-        file_list = FileIO.Load.load_filelist(path)
-        for file in file_list:
-            Show.bin2graph(file)
-            print
+    # @staticmethod
+    # def bins2graphs(path):
+    #     file_list = FileIO.Load.load_filelist(path)
+    #     for file in file_list:
+    #         Show.bin2graph(file)
+    #         print
 
     @staticmethod
     def vectors2graphs(file):

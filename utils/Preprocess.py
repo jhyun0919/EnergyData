@@ -183,8 +183,8 @@ def preprocess4dependcy(binary_file_1, binary_file_2):
         binary file abs_path
     :return:
     """
-    data_dictionary_1 = data_preprocess(binary_file_1)
-    data_dictionary_2 = data_preprocess(binary_file_2)
+    data_dictionary_1 = FileIO.Load.unpickling(binary_file_1)
+    data_dictionary_2 = FileIO.Load.unpickling(binary_file_2)
 
     early, late = start_time_compare(data_dictionary_1, data_dictionary_2)
 

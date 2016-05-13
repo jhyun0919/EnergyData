@@ -60,6 +60,11 @@ class Load:
                     bin_file_list.append(file)
         except OSError as err:
             print 'OSError' + str(err)
+            exit()
+
+        if len(bin_file_list) == 0:
+            print 'There is no file in the given directory path'
+            exit()
 
         return bin_file_list
 
@@ -110,13 +115,11 @@ class Save:
         :param data_dictionary:
         :return:
         """
-        path = Repository_Path
-        extra_path = 'preprocessed_data'
-        path = os.path.join(path, extra_path)
+        path = os.path.join(Repository_Path, Preprocessed_Path)
 
         Save.assure_path(path)
 
-        preprocessed_binary_file_name = data_dictionary['file_name'] + '.bin'
+        preprocessed_binary_file_name = 'PP_' + data_dictionary['file_name'] + '.bin'
         preprocessed_binary_file_name = os.path.join(path, preprocessed_binary_file_name)
 
         Save.dumping_bin(preprocessed_binary_file_name, data_dictionary)
@@ -128,9 +131,7 @@ class Save:
         :param dependency_structure:
         :return:
         """
-        path = Repository_Path
-        extra_path = 'dependency_model'
-        path = os.path.join(path, extra_path)
+        path = os.path.join(Repository_Path, Dependency_Path)
 
         Save.assure_path(path)
 
