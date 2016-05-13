@@ -9,6 +9,11 @@ import math
 
 
 def interpolation(data_dictionary):
+    """
+
+    :param data_dictionary:
+    :return:
+    """
     for i in xrange(0, len(data_dictionary['value'])):
         if math.isnan(data_dictionary['value'][i]):
             data_dictionary['value'][i] = interpolation_strategy(i, data_dictionary['value'])
@@ -17,6 +22,12 @@ def interpolation(data_dictionary):
 
 
 def interpolation_strategy(idx, value):
+    """
+
+    :param idx:
+    :param value:
+    :return:
+    """
     for i in xrange(idx, len(value)):
         if math.isnan(value[i]):
             pass
@@ -87,6 +98,12 @@ def normalization(data_dictionary):
 
 
 def ts_validity_checker(present_ts, ts_index):
+    """
+
+    :param present_ts:
+    :param ts_index:
+    :return:
+    """
     validity_number = 0
     next_ts = present_ts + ts_delta
     while True:
@@ -253,37 +270,3 @@ if __name__ == '__main__':
     data_dictionary = normalization(data_dictionary)
     Graph.Show.dic2graph(data_dictionary)
 
-
-    # def normalization(binary_file):
-    #     data = unpickling(binary_file)
-    #     X = data['ts']
-    #     y = data['value']
-    #
-    #     time_stemp = date2sec(X, -1)
-    #
-    #     Y = np.zeros((1, time_stemp))[0].reshape((time_stemp, 1))
-    #     for i in xrange (0, len(X)):
-    #         temp = date2sec(X, i)
-    #         Y[temp-1] = y[i]
-    #     X = np.arange(0, time_stemp).reshape((time_stemp, 1))
-    #     # T = np.arange(0, time_stemp).reshape((time_stemp, 1))
-    #     T = np.linspace(0, time_stemp-1, time_stemp)[:, np.newaxis]
-    #     print np.shape(T)
-    #
-    #     print len(X)
-    #
-    #
-    #     knn = neighbors.KNeighborsRegressor(N_Neighbor, weights=Knn_Weights)
-    #     y_ = knn.fit(X, Y).predict(T)
-    #     #
-    #     # plt.scatter(X, Y, c='k', label='data')
-    #     # plt.plot(T, y_, c='g', label='prediction')
-    #     # plt.axis('tight')
-    #     # plt.legend()
-    #     # plt.show()
-
-
-    # def date2sec(date, i):
-    #     delta = date[i] - date[0]
-    #     days = delta[0].days
-    #     return delta[0].seconds + (days * 24 * 60 * 60)
