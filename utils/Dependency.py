@@ -2,6 +2,7 @@
 
 from GlobalParameter import *
 from Preprocess import preprocess4dependcy
+from Preprocess import data_preprocess
 import os
 import Graph
 import matplotlib.pyplot as plt
@@ -42,10 +43,15 @@ def close_score_calculator(early, late, length):
         early_data = int(early['value'][i] / Divider)
         late_data = int(late['value'][i] / Divider)
 
+        # if early_data == late_data:
+        #     similarity.append(1)
+        # else:
+        #     similarity.append(0)
+
         if early_data == late_data:
-            similarity.append(1)
-        else:
             similarity.append(0)
+        else:
+            similarity.append(abs(early_data - late_data))
 
     similarity_rate = float(similarity.count(1)) / length
 
@@ -204,6 +210,9 @@ def append_dependency_model(model_structure_binary_file, file):
     :return:
     """
     model_structure = FileIO.Load.unpickling(model_structure_binary_file)
+    # 해당 file을 preprocessing 한 뒤 저장
+    # 저장된 data를 load 하여 사용
+    file = FileIO.Save.preprocessed_data2bin_file(data_preprocess(file))
 
     close_col = close_dependency_col(model_structure['file_list'], file)
     close_model = np.c_[model_structure['close_model'], close_col]
@@ -219,7 +228,9 @@ def append_dependency_model(model_structure_binary_file, file):
 
     model_structure['file_list'].append(file)
 
-    return model_structure
+    FileIO.Save.dependency_model2bin_file(model_structure)
+
+    return model_structure, file
 
 
 def dependency_ordering(model_structure_binary_file, binary_file_name):
@@ -243,10 +254,10 @@ def find_ordering_target(model_structure_binary_file, binary_file_name):
     :param binary_file_name:
     :return:
     """
-    try:
-        file_abs_path = os.path.abspath(binary_file_name)
-    except IOError as err:
-        print err
+    # try:
+    #     file_abs_path = os.path.abspath(binary_file_name)
+    # except IOError as err:
+    #     print err
 
     model_structure = FileIO.Load.unpickling(model_structure_binary_file)
 
@@ -254,9 +265,12 @@ def find_ordering_target(model_structure_binary_file, binary_file_name):
         # ===================
         # 수정이 필요한 부분
         # ===================
-        if model_structure['file_list'][i] == file_abs_path:
+        if model_structure['file_list'][i] == binary_file_name:
             idx = i
-            # ===================
+            break
+        if i == (len(model_structure['file_list']) - 1):
+            print 'There is no target_info in dependency_model.bin'
+            exit()
 
     target_dictionary = {}
 
@@ -264,6 +278,19 @@ def find_ordering_target(model_structure_binary_file, binary_file_name):
         target_dictionary[model_structure['dependency_model'][idx][i]] = model_structure['file_list'][i]
 
     return target_dictionary
+
+
+def target_list2file_list(target_list):
+    """
+
+    :param target_list:
+    :return:
+    """
+    file_list = []
+    for line in target_list:
+        file_list.append(line[0])
+
+    return file_list
 
 
 def dictionary2list(dictionary):
@@ -305,5 +332,5 @@ if __name__ == '__main__':
 
     target = dependency_ordering(
         '/Users/JH/Documents/GitHub/EnergyData_jhyun/repository/dependency_model/dependency_model.bin',
-        '/Users/JH/Documents/GitHub/EnergyData_jhyun/repository/preprocessed_data/VTT_GW1_HA10_VM_EP_KV_K.bin')
+        '/Users/JH/Documents/GitHub/EnergyData_jhyun/repository/preprocessed_data/PP_VTT_GW2_HA7_VM_EP_KV_K.bin')
     print target

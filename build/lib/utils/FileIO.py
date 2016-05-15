@@ -124,6 +124,8 @@ class Save:
 
         Save.dumping_bin(preprocessed_binary_file_name, data_dictionary)
 
+        return preprocessed_binary_file_name
+
     @staticmethod
     def dependency_model2bin_file(dependency_structure):
         """
@@ -139,3 +141,5 @@ class Save:
         dependency_binary_file_name = os.path.join(path, dependency_binary_file_name)
 
         Save.dumping_bin(dependency_binary_file_name, dependency_structure)
+
+        return dependency_binary_file_name
