@@ -172,6 +172,30 @@ def data_preprocess(binary_file):
     return data_dictionary
 
 
+def preprocess4similarity(binary_file_1, binary_file_2):
+    """
+    - 두 data 사이 similarity를 계산하기 위한 preprocessing 함수
+    - 공통된 ts 부분만 남기고 나머지 부분들은 삭제
+    - 공통된 ts 부분의 value 값만 남긴다
+
+    :param binary_file_1:
+        binary file abs_path
+    :param binary_file_2:
+        binary file abs_path
+    :return:
+    """
+    # print binary_file_1
+    # print binary_file_2
+    data_dictionary_1 = FileIO.Load.unpickling(binary_file_1)
+    data_dictionary_2 = FileIO.Load.unpickling(binary_file_2)
+
+    early, late = start_time_compare(data_dictionary_1, data_dictionary_2)
+    early, late = start_ts_synchronize(early, late)
+    early, late, length = length_match(early, late)
+
+    return early['value'], late['value'], length
+
+
 def preprocess4dependcy(binary_file_1, binary_file_2):
     """
     - 두 data 사이 dependency를 계산하기 위한 preprocessing 함수
@@ -269,4 +293,3 @@ if __name__ == '__main__':
 
     data_dictionary = normalization(data_dictionary)
     Graph.Show.dic2graph(data_dictionary)
-

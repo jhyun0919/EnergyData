@@ -127,7 +127,7 @@ class Save:
         return preprocessed_binary_file_name
 
     @staticmethod
-    def dependency_model2bin_file(dependency_structure):
+    def model2bin_file(dependency_structure):
         """
 
         :param dependency_structure:
@@ -137,9 +137,9 @@ class Save:
 
         Save.assure_path(path)
 
-        dependency_binary_file_name = 'dependency_model.bin'
-        dependency_binary_file_name = os.path.join(path, dependency_binary_file_name)
+        model_binary_file_name = 'model.bin'
+        model_binary_file_name = os.path.join(path, model_binary_file_name)
 
-        Save.dumping_bin(dependency_binary_file_name, dependency_structure)
+        Save.dumping_bin(model_binary_file_name, dependency_structure)
 
-        return dependency_binary_file_name
+        return model_binary_file_name
