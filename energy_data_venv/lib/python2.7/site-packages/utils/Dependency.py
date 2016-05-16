@@ -43,15 +43,15 @@ def close_score_calculator(early, late, length):
         early_data = int(early['value'][i] / Divider)
         late_data = int(late['value'][i] / Divider)
 
-        # if early_data == late_data:
-        #     similarity.append(1)
-        # else:
-        #     similarity.append(0)
-
         if early_data == late_data:
-            similarity.append(0)
+            similarity.append(1)
         else:
-            similarity.append(abs(early_data - late_data))
+            similarity.append(0)
+
+        # if early_data == late_data:
+        #     similarity.append(0)
+        # else:
+        #     similarity.append(abs(early_data - late_data))
 
     similarity_rate = float(similarity.count(1)) / length
 
