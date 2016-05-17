@@ -3,13 +3,11 @@
 from GlobalParameter import *
 from Preprocess import preprocess4dependcy
 from Preprocess import data_preprocess
-import os
-import Graph
-import matplotlib.pyplot as plt
 import numpy as np
 import FileIO
 from collections import OrderedDict
 from Matrix import decalcomanie
+import os
 
 
 def close_dependency_score(binary_file_1, binary_file_2):
@@ -228,7 +226,7 @@ def append_dependency_model(model_structure_binary_file, file):
 
     model_structure['file_list'].append(file)
 
-    FileIO.Save.dependency_model2bin_file(model_structure)
+    FileIO.Save.model2bin_file(model_structure)
 
     return model_structure, file
 
@@ -261,16 +259,21 @@ def find_ordering_target(model_structure_binary_file, binary_file_name):
 
     model_structure = FileIO.Load.unpickling(model_structure_binary_file)
 
-    for i in xrange(0, len(model_structure['file_list'])):
-        # ===================
-        # 수정이 필요한 부분
-        # ===================
-        if model_structure['file_list'][i] == binary_file_name:
-            idx = i
-            break
-        if i == (len(model_structure['file_list']) - 1):
-            print 'There is no target_info in dependency_model.bin'
-            exit()
+    # for i in xrange(0, len(model_structure['file_list'])):
+    #     # ===================
+    #     # 수정이 필요한 부분
+    #     # ===================
+    #     if model_structure['file_list'][i] == binary_file_name:
+    #         idx = i
+    #         break
+    #     if i == (len(model_structure['file_list']) - 1):
+    #         print 'There is no target_info in dependency_model.bin'
+    #         exit()
+    try:
+        idx = model_structure['file_list'].index(binary_file_name)
+    except ValueError as err:
+        print err
+        exit()
 
     target_dictionary = {}
 
@@ -280,17 +283,17 @@ def find_ordering_target(model_structure_binary_file, binary_file_name):
     return target_dictionary
 
 
-def target_list2file_list(target_list):
-    """
-
-    :param target_list:
-    :return:
-    """
-    file_list = []
-    for line in target_list:
-        file_list.append(line[0])
-
-    return file_list
+# def target_list2file_list(target_list):
+#     """
+#
+#     :param target_list:
+#     :return:
+#     """
+#     file_list = []
+#     for line in target_list:
+#         file_list.append(line[0])
+#
+#     return file_list
 
 
 def dictionary2list(dictionary):
@@ -312,14 +315,14 @@ def dictionary2list(dictionary):
 
 
 if __name__ == '__main__':
-    # path = os.path.join(Repository_Path, Preprocessed_Path)
-    #
-    # file_list = FileIO.Load.load_filelist(path)
-    #
-    # model_structure = dependency_model(file_list)
-    # print model_structure
+    path = os.path.join(Repository_Path, Preprocessed_Path)
 
-    # FileIO.Save.dependency_model2bin_file(model_structure)
+    file_list = FileIO.Load.load_filelist(path)
+
+    model_structure = dependency_model(file_list)
+    print model_structure
+
+    # FileIO.Save.model2bin_file(model_structure)
     #
     # model = FileIO.Load.unpickling(
     #     '/Users/JH/Documents/GitHub/EnergyData_jhyun/repository/dependency_model/dependency_model.bin')
@@ -330,7 +333,7 @@ if __name__ == '__main__':
     #     '/Users/JH/Documents/GitHub/EnergyData_jhyun/repository/preprocessed_data/VTT_GW1_HA10_VM_EP_KV_K.bin')
     # print model
 
-    target = dependency_ordering(
-        '/Users/JH/Documents/GitHub/EnergyData_jhyun/repository/dependency_model/dependency_model.bin',
-        '/Users/JH/Documents/GitHub/EnergyData_jhyun/repository/preprocessed_data/PP_VTT_GW2_HA7_VM_EP_KV_K.bin')
-    print target
+    # target = dependency_ordering(
+    #     '/Users/JH/Documents/GitHub/EnergyData_jhyun/repository/dependency_model/dependency_model.bin',
+    #     '/Users/JH/Documents/GitHub/EnergyData_jhyun/repository/preprocessed_data/PP_VTT_GW2_HA7_VM_EP_KV_K.bin')
+    # print target

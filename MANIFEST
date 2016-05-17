@@ -7,5 +7,6 @@ utils/GlobalParameter.py
 utils/Graph.py
 utils/Matrix.py
 utils/Preprocess.py
+utils/Similarity.py
 utils/__init__.py
 utils/net.py

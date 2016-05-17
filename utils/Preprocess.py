@@ -8,6 +8,9 @@ import FileIO
 import math
 
 
+###############################################################################
+# data preprocessing
+
 def interpolation(data_dictionary):
     """
 
@@ -172,6 +175,9 @@ def data_preprocess(binary_file):
     return data_dictionary
 
 
+###############################################################################
+# data-preprocessing 4 similarity
+
 def preprocess4similarity(binary_file_1, binary_file_2):
     """
     - 두 data 사이 similarity를 계산하기 위한 preprocessing 함수
@@ -191,10 +197,13 @@ def preprocess4similarity(binary_file_1, binary_file_2):
 
     early, late = start_time_compare(data_dictionary_1, data_dictionary_2)
     early, late = start_ts_synchronize(early, late)
-    early, late, length = length_match(early, late)
+    early, late, length = end_ts_synchronize(early, late)
 
     return early['value'], late['value'], length
 
+
+###############################################################################
+# data-preprocessing 4 dependency
 
 def preprocess4dependcy(binary_file_1, binary_file_2):
     """
@@ -211,10 +220,8 @@ def preprocess4dependcy(binary_file_1, binary_file_2):
     data_dictionary_2 = FileIO.Load.unpickling(binary_file_2)
 
     early, late = start_time_compare(data_dictionary_1, data_dictionary_2)
-
     early, late = start_ts_synchronize(early, late)
-
-    early, late, length = length_match(early, late)
+    early, late, length = end_ts_synchronize(early, late)
 
     return early, late, length
 
@@ -262,7 +269,7 @@ def start_ts_synchronize(early, late):
     return early, late
 
 
-def length_match(early, late):
+def end_ts_synchronize(early, late):
     """
 
     :param early:
@@ -280,6 +287,8 @@ def length_match(early, late):
 
     return early, late, length
 
+
+###############################################################################
 
 if __name__ == '__main__':
     file_path = '/repository/VTT/VTT_GW1_HA10_VM_EP_KV_K.bin'

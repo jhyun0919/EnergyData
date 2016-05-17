@@ -259,16 +259,21 @@ def find_ordering_target(model_structure_binary_file, binary_file_name):
 
     model_structure = FileIO.Load.unpickling(model_structure_binary_file)
 
-    for i in xrange(0, len(model_structure['file_list'])):
-        # ===================
-        # 수정이 필요한 부분
-        # ===================
-        if model_structure['file_list'][i] == binary_file_name:
-            idx = i
-            break
-        if i == (len(model_structure['file_list']) - 1):
-            print 'There is no target_info in dependency_model.bin'
-            exit()
+    # for i in xrange(0, len(model_structure['file_list'])):
+    #     # ===================
+    #     # 수정이 필요한 부분
+    #     # ===================
+    #     if model_structure['file_list'][i] == binary_file_name:
+    #         idx = i
+    #         break
+    #     if i == (len(model_structure['file_list']) - 1):
+    #         print 'There is no target_info in dependency_model.bin'
+    #         exit()
+    try:
+        idx = model_structure['file_list'].index(binary_file_name)
+    except ValueError as err:
+        print err
+        exit()
 
     target_dictionary = {}
 
@@ -278,17 +283,17 @@ def find_ordering_target(model_structure_binary_file, binary_file_name):
     return target_dictionary
 
 
-def target_list2file_list(target_list):
-    """
-
-    :param target_list:
-    :return:
-    """
-    file_list = []
-    for line in target_list:
-        file_list.append(line[0])
-
-    return file_list
+# def target_list2file_list(target_list):
+#     """
+#
+#     :param target_list:
+#     :return:
+#     """
+#     file_list = []
+#     for line in target_list:
+#         file_list.append(line[0])
+#
+#     return file_list
 
 
 def dictionary2list(dictionary):

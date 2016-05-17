@@ -8,6 +8,9 @@ def decalcomanie(matrix):
         for row in xrange(0, dimension):
             for col in xrange(row + 1, dimension):
                 matrix[col][row] = matrix[row][col]
+    else:
+        print 'given matrix is not squared matrix'
+        exit()
 
     return matrix
 
