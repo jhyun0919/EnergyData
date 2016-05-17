@@ -12,8 +12,7 @@ import numpy as np
 from Preprocess import preprocess4similarity
 
 
-
-class Similarity():
+class Model():
     def __init__(self):
         pass
 
@@ -25,15 +24,15 @@ class Similarity():
         similarity_model = {}
 
         similarity_model['file_list'] = file_list
-        similarity_model['cosine_similarity'] = decalcomanie(Similarity.cosine_similarity_model(file_list))
-        similarity_model['euclidean_distance'] = decalcomanie(Similarity.euclidean_distance_model(file_list))
-        similarity_model['gradient_similarity'] = decalcomanie(Similarity.gradient_similarity_model(file_list))
+        similarity_model['cosine_similarity'] = decalcomanie(Model.cosine_similarity_model(file_list))
+        similarity_model['euclidean_distance'] = decalcomanie(Model.euclidean_distance_model(file_list))
+        similarity_model['gradient_similarity'] = decalcomanie(Model.gradient_similarity_model(file_list))
         similarity_model['reversed_gradient_similarity'] = decalcomanie(
-            Similarity.reversed_gradient_similarity_model(file_list))
+            Model.reversed_gradient_similarity_model(file_list))
 
-        Save.model2bin_file(similarity_model)
+        saved_path = Save.model2bin_file(similarity_model)
 
-        return similarity_model
+        return similarity_model, saved_path
 
     @staticmethod
     def cosine_similarity_model(file_list):
@@ -42,7 +41,7 @@ class Similarity():
 
         for row in xrange(0, dimension):
             for col in xrange(row + 1, dimension):
-                model[row][col] = Similarity.cosine_similarity_score(file_list[row], file_list[col])
+                model[row][col] = Model.cosine_similarity_score(file_list[row], file_list[col])
 
         return model
 
@@ -53,7 +52,7 @@ class Similarity():
 
         for row in xrange(0, dimension):
             for col in xrange(row + 1, dimension):
-                model[row][col] = Similarity.euclidean_distance_score(file_list[row], file_list[col])
+                model[row][col] = Model.euclidean_distance_score(file_list[row], file_list[col])
 
         return model
 
@@ -64,7 +63,7 @@ class Similarity():
 
         for row in xrange(0, dimension):
             for col in xrange(row + 1, dimension):
-                model[row][col] = Similarity.gradient_similarity_score(file_list[row], file_list[col])
+                model[row][col] = Model.gradient_similarity_score(file_list[row], file_list[col])
 
         return model
 
@@ -75,7 +74,7 @@ class Similarity():
 
         for row in xrange(0, dimension):
             for col in xrange(row + 1, dimension):
-                model[row][col] = Similarity.reversed_gradient_similarity_score(file_list[row], file_list[col])
+                model[row][col] = Model.reversed_gradient_similarity_score(file_list[row], file_list[col])
 
         return model
 
@@ -83,34 +82,34 @@ class Similarity():
     # adding similarity column
 
     @staticmethod
-    def add_similarity_column2model(similarity_model_bin_file, file):
+    def add_extra_model(similarity_model_bin_file, file):
         model = Load.unpickling(similarity_model_bin_file)
         file = Save.preprocessed_data2bin_file(data_preprocess(file))
 
         # cosine similarity column
-        cosine_column = Similarity.cosine_similarity_column(model['file_list'], file)
-        cosine_row = Similarity.build_extra_row(cosine_column)
+        cosine_column = Model.cosine_similarity_column(model['file_list'], file)
+        cosine_row = Model.build_extra_row(cosine_column)
         cosine_model = np.c_[model['cosine_similarity'], cosine_column]
         cosine_model = np.r_[cosine_model, cosine_row]
         model['cosine_similarity'] = cosine_model
 
         # euclidean distance column
-        euclidean_column = Similarity.euclidean_distance_column(model['file_list'], file)
-        euclidean_row = Similarity.build_extra_row(euclidean_column)
+        euclidean_column = Model.euclidean_distance_column(model['file_list'], file)
+        euclidean_row = Model.build_extra_row(euclidean_column)
         euclidean_model = np.c_[model['euclidean_distance'], euclidean_column]
         euclidean_model = np.r_[euclidean_model, euclidean_row]
         model['euclidean_distance'] = euclidean_model
 
         # gradient similarity column
-        gradient_column = Similarity.gradient_similarity_column(model['file_list'], file)
-        gradient_row = Similarity.build_extra_row(gradient_column)
+        gradient_column = Model.gradient_similarity_column(model['file_list'], file)
+        gradient_row = Model.build_extra_row(gradient_column)
         gradient_model = np.c_[model['gradient_similarity'], gradient_column]
         gradient_model = np.r_[gradient_model, gradient_row]
         model['gradient_similarity'] = gradient_model
 
         # reversed-gradient similarity column
-        reversed_gradient_column = Similarity.reversed_gradient_similarity_column(model['file_list'], file)
-        reversed_gradient_row = Similarity.build_extra_row(reversed_gradient_column)
+        reversed_gradient_column = Model.reversed_gradient_similarity_column(model['file_list'], file)
+        reversed_gradient_row = Model.build_extra_row(reversed_gradient_column)
         reversed_gradient_model = np.c_[model['reversed_gradient_similarity'], reversed_gradient_column]
         reversed_gradient_model = np.r_[reversed_gradient_model, reversed_gradient_row]
         model['reversed_gradient_similarity'] = reversed_gradient_model
@@ -118,7 +117,7 @@ class Similarity():
         # file list
         model['file_list'].append(file)
 
-        Save.model2bin_file(model)
+        _ = Save.model2bin_file(model)
 
         return model, file
 
@@ -138,7 +137,7 @@ class Similarity():
         column = np.zeros((dimension, 1))
 
         for row in xrange(0, dimension):
-            column[row] = Similarity.cosine_similarity_score(file_list[row], file)
+            column[row] = Model.cosine_similarity_score(file_list[row], file)
 
         return column
 
@@ -148,7 +147,7 @@ class Similarity():
         column = np.zeros((dimension, 1))
 
         for row in xrange(0, dimension):
-            column[row] = Similarity.euclidean_distance_score(file_list[row], file)
+            column[row] = Model.euclidean_distance_score(file_list[row], file)
 
         return column
 
@@ -158,7 +157,7 @@ class Similarity():
         column = np.zeros((dimension, 1))
 
         for row in xrange(0, dimension):
-            column[row] = Similarity.gradient_similarity_score(file_list[row], file)
+            column[row] = Model.gradient_similarity_score(file_list[row], file)
 
         return column
 
@@ -168,7 +167,7 @@ class Similarity():
         column = np.zeros((dimension, 1))
 
         for row in xrange(0, dimension):
-            column[row] = Similarity.reversed_gradient_similarity_score(file_list[row], file)
+            column[row] = Model.reversed_gradient_similarity_score(file_list[row], file)
 
         return column
 
@@ -178,25 +177,25 @@ class Similarity():
     @staticmethod
     def cosine_similarity_score(binary_file_1, binary_file_2):
         early, late, _ = preprocess4similarity(binary_file_1, binary_file_2)
-        score = Similarity.cosine_similarity_calculator(early, late)
+        score = Model.cosine_similarity_calculator(early, late)
         return 1 - score
 
     @staticmethod
     def euclidean_distance_score(binary_file_1, binary_file_2):
         early, late, _ = preprocess4similarity(binary_file_1, binary_file_2)
-        score = Similarity.euclidean_distance_calculator(early, late)
+        score = Model.euclidean_distance_calculator(early, late)
         return score
 
     @staticmethod
     def gradient_similarity_score(binary_file_1, binary_file_2):
         early, late, _ = preprocess4similarity(binary_file_1, binary_file_2)
-        score = Similarity.gradient_similarity_calculator(early, late)
+        score = Model.gradient_similarity_calculator(early, late)
         return score
 
     @staticmethod
     def reversed_gradient_similarity_score(binary_file_1, binary_file_2):
         early, late, _ = preprocess4similarity(binary_file_1, binary_file_2)
-        score = Similarity.reversed_gradient_similarity_calculator(early, late)
+        score = Model.reversed_gradient_similarity_calculator(early, late)
         return score
 
     ###############################################################################
@@ -205,7 +204,7 @@ class Similarity():
     @staticmethod
     def cosine_similarity_calculator(early, late):
         numerator = sum(a * b for a, b in zip(early, late))
-        denominator = Similarity.square_rooted(early) * Similarity.square_rooted(late)
+        denominator = Model.square_rooted(early) * Model.square_rooted(late)
         return round(numerator / float(denominator), Round)
 
     @staticmethod
@@ -249,6 +248,10 @@ class Similarity():
     def square_rooted(x):
         return round(sqrt(sum([a * a for a in x])), Round)
 
+
+class Sorting():
+    def __init__(self):
+        pass
     ###############################################################################
     # ordering algorithm
 
@@ -274,17 +277,17 @@ class Similarity():
 
     @staticmethod
     def sorting_column(target_column_model):
-        euclidean_sorting_column = Similarity.sorting_dictionary(
-            Similarity.binder(target_column_model['euclidean_distance'],
+        euclidean_sorting_column = Sorting.sorting_dictionary(
+            Sorting.binder(target_column_model['euclidean_distance'],
                               target_column_model['file_list']))
-        cosine_sorting_column = Similarity.sorting_dictionary(
-            Similarity.binder(target_column_model['cosine_similarity'],
+        cosine_sorting_column = Sorting.sorting_dictionary(
+            Sorting.binder(target_column_model['cosine_similarity'],
                               target_column_model['file_list']))
-        gradient_sorting_column = Similarity.sorting_dictionary(
-            Similarity.binder(target_column_model['gradient_similarity'],
+        gradient_sorting_column = Sorting.sorting_dictionary(
+            Sorting.binder(target_column_model['gradient_similarity'],
                               target_column_model['file_list']))
-        r_gradient_sorting_column = Similarity.sorting_dictionary(
-            Similarity.binder(target_column_model['reversed_gradient_similarity'],
+        r_gradient_sorting_column = Sorting.sorting_dictionary(
+            Sorting.binder(target_column_model['reversed_gradient_similarity'],
                               target_column_model['file_list']))
 
         sorted_column_model = {}
@@ -320,7 +323,7 @@ if __name__ == '__main__':
     # for file in file_list:
     #     print file
 
-    # similarity_model = Similarity.build_model(file_list)
+    # similarity_model = Model.build_model(file_list)
 
     # print similarity_model['euclidean_distance']
     # print similarity_model['cosine_similarity']
@@ -330,7 +333,7 @@ if __name__ == '__main__':
     similarity_model = Load.unpickling(
         '/Users/JH/Documents/GitHub/EnergyData_jhyun/repository/model/model.bin')
 
-    # similarity_model, added_file_name = Similarity.add_similarity_column2model(
+    # similarity_model, added_file_name = Model.add_extra_model(
     #     '/Users/JH/Documents/GitHub/EnergyData_jhyun/repository/model/model.bin',
     #     '/Users/JH/Documents/GitHub/EnergyData_jhyun/repository/VTT_GW2_HA7_VM_EP_KV_K.bin')
     #
@@ -341,11 +344,11 @@ if __name__ == '__main__':
 
     added_file_name = '/Users/JH/Documents/GitHub/EnergyData_jhyun/repository/preprocessed_data/PP_VTT_GW2_HA7_VM_EP_KV_K.bin'
 
-    target_column_model = Similarity.pick_column(
+    target_column_model = Sorting.pick_column(
         '/Users/JH/Documents/GitHub/EnergyData_jhyun/repository/model/model.bin', added_file_name)
 
     print target_column_model
 
-    sorted_column_model = Similarity.sorting_column(target_column_model)
+    sorted_column_model = Sorting.sorting_column(target_column_model)
 
     print sorted_column_model

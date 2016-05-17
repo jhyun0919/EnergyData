@@ -133,7 +133,7 @@ class Save:
         :param dependency_structure:
         :return:
         """
-        path = os.path.join(Repository_Path, Dependency_Path)
+        path = os.path.join(Repository_Path, Model_Path)
 
         Save.assure_path(path)
 

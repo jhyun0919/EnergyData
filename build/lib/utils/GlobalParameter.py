@@ -18,4 +18,4 @@ Gradient_Threshold = 0.5
 # Save
 Repository_Path = '/Users/JH/Documents/GitHub/EnergyData_jhyun/repository'
 Preprocessed_Path = 'preprocessed_data'
-Dependency_Path = 'model'
+Model_Path = 'model'
