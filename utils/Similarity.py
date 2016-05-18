@@ -178,7 +178,13 @@ class Model():
     def cosine_similarity_score(binary_file_1, binary_file_2):
         early, late, _ = preprocess4similarity(binary_file_1, binary_file_2)
         score = Model.cosine_similarity_calculator(early, late)
-        return 1 - score
+
+        if score >= 0:
+            score = 1 - score
+        else:
+            score = -1 - score
+
+        return score
 
     @staticmethod
     def euclidean_distance_score(binary_file_1, binary_file_2):
@@ -313,42 +319,42 @@ class Report():
     def sorting_dictionary(dictionary):
         return sorted(dictionary.items(), key=operator.itemgetter(1))
 
-    ###############################################################################
+        ###############################################################################
 
 
-    # if __name__ == '__main__':
-    # path = os.path.join(Repository_Path, Preprocessed_Path)
-    # file_list = Load.load_filelist(path)
+        # if __name__ == '__main__':
+        # path = os.path.join(Repository_Path, Preprocessed_Path)
+        # file_list = Load.load_filelist(path)
 
-    # for file in file_list:
-    #     print file
+        # for file in file_list:
+        #     print file
 
-    # similarity_model = Model.build_model(file_list)
+        # similarity_model = Model.build_model(file_list)
 
-    # print similarity_model['euclidean_distance']
-    # print similarity_model['cosine_similarity']
-    # print similarity_model['gradient_similarity']
-    # print similarity_model['reversed_gradient_similarity']
+        # print similarity_model['euclidean_distance']
+        # print similarity_model['cosine_similarity']
+        # print similarity_model['gradient_similarity']
+        # print similarity_model['reversed_gradient_similarity']
 
-    # similarity_model = Load.unpickling(
-    #     '/Users/JH/Documents/GitHub/EnergyData_jhyun/repository/model/model.bin')
+        # similarity_model = Load.unpickling(
+        #     '/Users/JH/Documents/GitHub/EnergyData_jhyun/repository/model/model.bin')
 
-    # similarity_model, added_file_name = Model.add_extra_model(
-    #     '/Users/JH/Documents/GitHub/EnergyData_jhyun/repository/model/model.bin',
-    #     '/Users/JH/Documents/GitHub/EnergyData_jhyun/repository/VTT_GW2_HA7_VM_EP_KV_K.bin')
-    #
-    # print added_file_name
-    # print
+        # similarity_model, added_file_name = Model.add_extra_model(
+        #     '/Users/JH/Documents/GitHub/EnergyData_jhyun/repository/model/model.bin',
+        #     '/Users/JH/Documents/GitHub/EnergyData_jhyun/repository/VTT_GW2_HA7_VM_EP_KV_K.bin')
+        #
+        # print added_file_name
+        # print
 
-    # print similarity_model
+        # print similarity_model
 
-    # added_file_name = '/Users/JH/Documents/GitHub/EnergyData_jhyun/repository/preprocessed_data/PP_VTT_GW2_HA7_VM_EP_KV_K.bin'
-    #
-    # target_column_model = Sorting.pick_column(
-    #     '/Users/JH/Documents/GitHub/EnergyData_jhyun/repository/model/model.bin', added_file_name)
-    #
-    # print target_column_model
-    #
-    # sorted_column_model = Sorting.sorting_column(target_column_model)
-    #
-    # print sorted_column_model
+        # added_file_name = '/Users/JH/Documents/GitHub/EnergyData_jhyun/repository/preprocessed_data/PP_VTT_GW2_HA7_VM_EP_KV_K.bin'
+        #
+        # target_column_model = Sorting.pick_column(
+        #     '/Users/JH/Documents/GitHub/EnergyData_jhyun/repository/model/model.bin', added_file_name)
+        #
+        # print target_column_model
+        #
+        # sorted_column_model = Sorting.sorting_column(target_column_model)
+        #
+        # print sorted_column_model
