@@ -249,9 +249,10 @@ class Model():
         return round(sqrt(sum([a * a for a in x])), Round)
 
 
-class Sorting():
+class Report():
     def __init__(self):
         pass
+
     ###############################################################################
     # ordering algorithm
 
@@ -277,18 +278,18 @@ class Sorting():
 
     @staticmethod
     def sorting_column(target_column_model):
-        euclidean_sorting_column = Sorting.sorting_dictionary(
-            Sorting.binder(target_column_model['euclidean_distance'],
-                              target_column_model['file_list']))
-        cosine_sorting_column = Sorting.sorting_dictionary(
-            Sorting.binder(target_column_model['cosine_similarity'],
-                              target_column_model['file_list']))
-        gradient_sorting_column = Sorting.sorting_dictionary(
-            Sorting.binder(target_column_model['gradient_similarity'],
-                              target_column_model['file_list']))
-        r_gradient_sorting_column = Sorting.sorting_dictionary(
-            Sorting.binder(target_column_model['reversed_gradient_similarity'],
-                              target_column_model['file_list']))
+        euclidean_sorting_column = Report.sorting_dictionary(
+            Report.binder(target_column_model['euclidean_distance'],
+                          target_column_model['file_list']))
+        cosine_sorting_column = Report.sorting_dictionary(
+            Report.binder(target_column_model['cosine_similarity'],
+                          target_column_model['file_list']))
+        gradient_sorting_column = Report.sorting_dictionary(
+            Report.binder(target_column_model['gradient_similarity'],
+                          target_column_model['file_list']))
+        r_gradient_sorting_column = Report.sorting_dictionary(
+            Report.binder(target_column_model['reversed_gradient_similarity'],
+                          target_column_model['file_list']))
 
         sorted_column_model = {}
 
@@ -312,11 +313,10 @@ class Sorting():
     def sorting_dictionary(dictionary):
         return sorted(dictionary.items(), key=operator.itemgetter(1))
 
+    ###############################################################################
 
-###############################################################################
 
-
-# if __name__ == '__main__':
+    # if __name__ == '__main__':
     # path = os.path.join(Repository_Path, Preprocessed_Path)
     # file_list = Load.load_filelist(path)
 

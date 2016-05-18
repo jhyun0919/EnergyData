@@ -249,9 +249,10 @@ class Model():
         return round(sqrt(sum([a * a for a in x])), Round)
 
 
-class Sorting():
+class Report():
     def __init__(self):
         pass
+
     ###############################################################################
     # ordering algorithm
 
@@ -277,18 +278,18 @@ class Sorting():
 
     @staticmethod
     def sorting_column(target_column_model):
-        euclidean_sorting_column = Sorting.sorting_dictionary(
-            Sorting.binder(target_column_model['euclidean_distance'],
-                              target_column_model['file_list']))
-        cosine_sorting_column = Sorting.sorting_dictionary(
-            Sorting.binder(target_column_model['cosine_similarity'],
-                              target_column_model['file_list']))
-        gradient_sorting_column = Sorting.sorting_dictionary(
-            Sorting.binder(target_column_model['gradient_similarity'],
-                              target_column_model['file_list']))
-        r_gradient_sorting_column = Sorting.sorting_dictionary(
-            Sorting.binder(target_column_model['reversed_gradient_similarity'],
-                              target_column_model['file_list']))
+        euclidean_sorting_column = Report.sorting_dictionary(
+            Report.binder(target_column_model['euclidean_distance'],
+                          target_column_model['file_list']))
+        cosine_sorting_column = Report.sorting_dictionary(
+            Report.binder(target_column_model['cosine_similarity'],
+                          target_column_model['file_list']))
+        gradient_sorting_column = Report.sorting_dictionary(
+            Report.binder(target_column_model['gradient_similarity'],
+                          target_column_model['file_list']))
+        r_gradient_sorting_column = Report.sorting_dictionary(
+            Report.binder(target_column_model['reversed_gradient_similarity'],
+                          target_column_model['file_list']))
 
         sorted_column_model = {}
 
@@ -312,11 +313,10 @@ class Sorting():
     def sorting_dictionary(dictionary):
         return sorted(dictionary.items(), key=operator.itemgetter(1))
 
+    ###############################################################################
 
-###############################################################################
 
-
-if __name__ == '__main__':
+    # if __name__ == '__main__':
     # path = os.path.join(Repository_Path, Preprocessed_Path)
     # file_list = Load.load_filelist(path)
 
@@ -330,8 +330,8 @@ if __name__ == '__main__':
     # print similarity_model['gradient_similarity']
     # print similarity_model['reversed_gradient_similarity']
 
-    similarity_model = Load.unpickling(
-        '/Users/JH/Documents/GitHub/EnergyData_jhyun/repository/model/model.bin')
+    # similarity_model = Load.unpickling(
+    #     '/Users/JH/Documents/GitHub/EnergyData_jhyun/repository/model/model.bin')
 
     # similarity_model, added_file_name = Model.add_extra_model(
     #     '/Users/JH/Documents/GitHub/EnergyData_jhyun/repository/model/model.bin',
@@ -342,13 +342,13 @@ if __name__ == '__main__':
 
     # print similarity_model
 
-    added_file_name = '/Users/JH/Documents/GitHub/EnergyData_jhyun/repository/preprocessed_data/PP_VTT_GW2_HA7_VM_EP_KV_K.bin'
-
-    target_column_model = Sorting.pick_column(
-        '/Users/JH/Documents/GitHub/EnergyData_jhyun/repository/model/model.bin', added_file_name)
-
-    print target_column_model
-
-    sorted_column_model = Sorting.sorting_column(target_column_model)
-
-    print sorted_column_model
+    # added_file_name = '/Users/JH/Documents/GitHub/EnergyData_jhyun/repository/preprocessed_data/PP_VTT_GW2_HA7_VM_EP_KV_K.bin'
+    #
+    # target_column_model = Sorting.pick_column(
+    #     '/Users/JH/Documents/GitHub/EnergyData_jhyun/repository/model/model.bin', added_file_name)
+    #
+    # print target_column_model
+    #
+    # sorted_column_model = Sorting.sorting_column(target_column_model)
+    #
+    # print sorted_column_model
