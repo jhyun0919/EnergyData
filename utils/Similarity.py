@@ -316,7 +316,7 @@ class Sorting():
 ###############################################################################
 
 
-if __name__ == '__main__':
+# if __name__ == '__main__':
     # path = os.path.join(Repository_Path, Preprocessed_Path)
     # file_list = Load.load_filelist(path)
 
@@ -330,8 +330,8 @@ if __name__ == '__main__':
     # print similarity_model['gradient_similarity']
     # print similarity_model['reversed_gradient_similarity']
 
-    similarity_model = Load.unpickling(
-        '/Users/JH/Documents/GitHub/EnergyData_jhyun/repository/model/model.bin')
+    # similarity_model = Load.unpickling(
+    #     '/Users/JH/Documents/GitHub/EnergyData_jhyun/repository/model/model.bin')
 
     # similarity_model, added_file_name = Model.add_extra_model(
     #     '/Users/JH/Documents/GitHub/EnergyData_jhyun/repository/model/model.bin',
@@ -342,13 +342,13 @@ if __name__ == '__main__':
 
     # print similarity_model
 
-    added_file_name = '/Users/JH/Documents/GitHub/EnergyData_jhyun/repository/preprocessed_data/PP_VTT_GW2_HA7_VM_EP_KV_K.bin'
-
-    target_column_model = Sorting.pick_column(
-        '/Users/JH/Documents/GitHub/EnergyData_jhyun/repository/model/model.bin', added_file_name)
-
-    print target_column_model
-
-    sorted_column_model = Sorting.sorting_column(target_column_model)
-
-    print sorted_column_model
+    # added_file_name = '/Users/JH/Documents/GitHub/EnergyData_jhyun/repository/preprocessed_data/PP_VTT_GW2_HA7_VM_EP_KV_K.bin'
+    #
+    # target_column_model = Sorting.pick_column(
+    #     '/Users/JH/Documents/GitHub/EnergyData_jhyun/repository/model/model.bin', added_file_name)
+    #
+    # print target_column_model
+    #
+    # sorted_column_model = Sorting.sorting_column(target_column_model)
+    #
+    # print sorted_column_model
