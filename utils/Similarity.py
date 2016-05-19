@@ -7,9 +7,10 @@ from Matrix import decalcomanie
 from Preprocess import data_preprocess
 # import os
 from math import sqrt
-import operator
+from operator import itemgetter
 import numpy as np
 from Preprocess import preprocess4similarity
+import os
 
 
 class Model():
@@ -77,6 +78,52 @@ class Model():
                 model[row][col] = Model.reversed_gradient_similarity_score(file_list[row], file_list[col])
 
         return model
+
+    ###############################################################################
+    # cleaning model
+
+    @staticmethod
+    def clean_overlap(similarity_model):
+        # clean similarity model
+        overlap_list = []
+        for i in xrange(0, len(similarity_model['file_list'])):
+            for j in xrange(i + 1, len(similarity_model['file_list'])):
+                if similarity_model['file_list'][i] == similarity_model['file_list'][j]:
+                    overlap_list.append(i)
+
+        overlap_list.sort(reverse=True)
+
+        for idx in overlap_list:
+            similarity_model['file_list'].pop(idx)
+            similarity_model['cosine_similarity'] = Model.pop_row_column(similarity_model['cosine_similarity'], idx)
+            similarity_model['euclidean_distance'] = Model.pop_row_column(similarity_model['euclidean_distance'], idx)
+            similarity_model['gradient_similarity'] = Model.pop_row_column(similarity_model['gradient_similarity'], idx)
+            similarity_model['reversed_gradient_similarity'] = Model.pop_row_column(
+                similarity_model['reversed_gradient_similarity'], idx)
+
+        saved_path = Save.model2bin_file(similarity_model)
+
+        # clean preprocessed data repository
+        old_preprocessed_file_list = Load.load_filelist(os.path.join(Repository_Path, Preprocessed_Path))
+        overlap_preprocessed_file_list = Model.diff(old_preprocessed_file_list, similarity_model['file_list'])
+
+        for file_path in overlap_preprocessed_file_list:
+            os.remove(file_path)
+
+        return similarity_model, saved_path
+
+    @staticmethod
+    def pop_row_column(matrix, idx):
+        del_row = np.delete(matrix, idx, 0)
+        del_row_col = np.delete(del_row, np.s_[idx:idx + 1], 1)
+
+        return del_row_col
+
+    @staticmethod
+    def diff(list_A, list_B):
+        list_B = set(list_B)
+        return [item for item in list_A if item not in list_B]
+
 
     ###############################################################################
     # adding similarity column
@@ -284,16 +331,16 @@ class Report():
 
     @staticmethod
     def sorting_column(target_column_model):
-        euclidean_sorting_column = Report.sorting_dictionary(
+        euclidean_sorting_column = Report.sorting_tuples_list(
             Report.binder(target_column_model['euclidean_distance'],
                           target_column_model['file_list']))
-        cosine_sorting_column = Report.sorting_dictionary(
+        cosine_sorting_column = Report.sorting_tuples_list(
             Report.binder(target_column_model['cosine_similarity'],
                           target_column_model['file_list']))
-        gradient_sorting_column = Report.sorting_dictionary(
+        gradient_sorting_column = Report.sorting_tuples_list(
             Report.binder(target_column_model['gradient_similarity'],
                           target_column_model['file_list']))
-        r_gradient_sorting_column = Report.sorting_dictionary(
+        r_gradient_sorting_column = Report.sorting_tuples_list(
             Report.binder(target_column_model['reversed_gradient_similarity'],
                           target_column_model['file_list']))
 
@@ -308,53 +355,65 @@ class Report():
 
     @staticmethod
     def binder(similarity, file_list):
-        dictionary = {}
+        tuples_list = []
 
         for a, b in zip(similarity, file_list):
-            dictionary[b] = a
+            item = (b, a)
+            tuples_list.append(item)
 
-        return dictionary
+        return tuples_list
 
     @staticmethod
-    def sorting_dictionary(dictionary):
-        return sorted(dictionary.items(), key=operator.itemgetter(1))
+    def sorting_tuples_list(tuples_list):
+        tuples_list.sort(key=itemgetter(1))
+
+        return tuples_list
+
 
 ###############################################################################
 
 
-        # if __name__ == '__main__':
-        # path = os.path.join(Repository_Path, Preprocessed_Path)
-        # file_list = Load.load_filelist(path)
+if __name__ == '__main__':
+    # path = os.path.join(Repository_Path, Preprocessed_Path)
+    # file_list = Load.load_filelist(path)
 
-        # for file in file_list:
-        #     print file
+    # for file in file_list:
+    #     print file
 
-        # similarity_model = Model.build_model(file_list)
+    # similarity_model = Model.build_model(file_list)
 
-        # print similarity_model['euclidean_distance']
-        # print similarity_model['cosine_similarity']
-        # print similarity_model['gradient_similarity']
-        # print similarity_model['reversed_gradient_similarity']
+    # print similarity_model['euclidean_distance']
+    # print similarity_model['cosine_similarity']
+    # print similarity_model['gradient_similarity']
+    # print similarity_model['reversed_gradient_similarity']
 
-        # similarity_model = Load.unpickling(
-        #     '/Users/JH/Documents/GitHub/EnergyData_jhyun/repository/model/model.bin')
+    similarity_model = Load.unpickling(
+        '/Users/JH/Documents/GitHub/EnergyData_jhyun/repository/model/model.bin')
 
-        # similarity_model, added_file_name = Model.add_extra_model(
-        #     '/Users/JH/Documents/GitHub/EnergyData_jhyun/repository/model/model.bin',
-        #     '/Users/JH/Documents/GitHub/EnergyData_jhyun/repository/VTT_GW2_HA7_VM_EP_KV_K.bin')
-        #
-        # print added_file_name
-        # print
+    # similarity_model, added_file_name = Model.add_extra_model(
+    #     '/Users/JH/Documents/GitHub/EnergyData_jhyun/repository/model/model.bin',
+    #     '/Users/JH/Documents/GitHub/EnergyData_jhyun/repository/VTT_GW2_HA7_VM_EP_KV_K.bin')
+    #
+    # print added_file_name
+    # print
 
-        # print similarity_model
+    for line in similarity_model['file_list']:
+        print line
 
-        # added_file_name = '/Users/JH/Documents/GitHub/EnergyData_jhyun/repository/preprocessed_data/PP_VTT_GW2_HA7_VM_EP_KV_K.bin'
-        #
-        # target_column_model = Sorting.pick_column(
-        #     '/Users/JH/Documents/GitHub/EnergyData_jhyun/repository/model/model.bin', added_file_name)
-        #
-        # print target_column_model
-        #
-        # sorted_column_model = Sorting.sorting_column(target_column_model)
-        #
-        # print sorted_column_model
+    similarity_model, _ = Model.clean_overlap(similarity_model)
+
+    print similarity_model
+
+    # print similarity_model
+
+    # added_file_name = '/Users/JH/Documents/GitHub/EnergyData_jhyun/repository/preprocessed_data/PP_VTT_GW2_HA7_VM_EP_KV_K.bin'
+
+    # target_column_model = Report.pick_column(
+    #     '/Users/JH/Documents/GitHub/EnergyData_jhyun/repository/model/model.bin', added_file_name)
+    # print target_column_model
+    #
+    # sorted_column_model = Report.sorting_column(target_column_model)
+    # print sorted_column_model
+
+    # for line in sorted_column_model['cosine_similarity']:
+    #     print line
