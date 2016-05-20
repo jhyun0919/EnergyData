@@ -2,26 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cb953e4b-3ba5-4624-bfb3-f51d8ae97f67" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/repository/preprocessed_data/PP_VTT_GW2_HA7_VM_EP_KV_K.bin" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MANIFEST" afterPath="$PROJECT_DIR$/MANIFEST" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/lib/utils/FileIO.py" afterPath="$PROJECT_DIR$/build/lib/utils/FileIO.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/lib/utils/GlobalParameter.py" afterPath="$PROJECT_DIR$/build/lib/utils/GlobalParameter.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/lib/utils/Graph.py" afterPath="$PROJECT_DIR$/build/lib/utils/Graph.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/lib/utils/Similarity.py" afterPath="$PROJECT_DIR$/build/lib/utils/Similarity.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/02_01. Similarity.ipynb" afterPath="$PROJECT_DIR$/docs/02_01. Similarity.ipynb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/02_02. Similarity.ipynb" afterPath="$PROJECT_DIR$/docs/02_02. Similarity.ipynb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/energy_data_venv/lib/python2.7/site-packages/utils/FileIO.py" afterPath="$PROJECT_DIR$/energy_data_venv/lib/python2.7/site-packages/utils/FileIO.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/energy_data_venv/lib/python2.7/site-packages/utils/GlobalParameter.py" afterPath="$PROJECT_DIR$/energy_data_venv/lib/python2.7/site-packages/utils/GlobalParameter.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/energy_data_venv/lib/python2.7/site-packages/utils/Graph.py" afterPath="$PROJECT_DIR$/energy_data_venv/lib/python2.7/site-packages/utils/Graph.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/energy_data_venv/lib/python2.7/site-packages/utils/Similarity.py" afterPath="$PROJECT_DIR$/energy_data_venv/lib/python2.7/site-packages/utils/Similarity.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repository/model/model.bin" afterPath="$PROJECT_DIR$/repository/model/model.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/setup.py" afterPath="$PROJECT_DIR$/setup.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/utils/FileIO.py" afterPath="$PROJECT_DIR$/utils/FileIO.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/utils/GlobalParameter.py" afterPath="$PROJECT_DIR$/utils/GlobalParameter.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/utils/Graph.py" afterPath="$PROJECT_DIR$/utils/Graph.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/utils/Network.py" afterPath="$PROJECT_DIR$/utils/Network.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/utils/Similarity.py" afterPath="$PROJECT_DIR$/utils/Similarity.py" />
     </list>
     <ignored path="EnergyData_jhyun.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -94,7 +75,7 @@
           <file leaf-file-name="Similarity.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/utils/Similarity.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.63829786">
+                <state vertical-scroll-proportion="-2.4304419">
                   <caret line="292" column="60" selection-start-line="292" selection-start-column="60" selection-end-line="292" selection-end-column="60" />
                   <folding />
                 </state>
@@ -631,7 +612,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/utils/Similarity.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.63829786">
+        <state vertical-scroll-proportion="-2.4304419">
           <caret line="292" column="60" selection-start-line="292" selection-start-column="60" selection-end-line="292" selection-end-column="60" />
           <folding />
         </state>
