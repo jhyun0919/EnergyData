@@ -51,10 +51,6 @@ class Show:
             plt.close()
             print
 
-    @staticmethod
-    def weighted_graph(model):
-        pass
-
 
 """
 

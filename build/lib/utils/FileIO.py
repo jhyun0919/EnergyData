@@ -86,7 +86,7 @@ class Save:
         pass
 
     @staticmethod
-    def assure_path(path):
+    def assure_path_exist(path):
         """
 
         :param path:
@@ -117,7 +117,7 @@ class Save:
         """
         path = os.path.join(Repository_Path, Preprocessed_Path)
 
-        Save.assure_path(path)
+        Save.assure_path_exist(path)
 
         preprocessed_binary_file_name = 'PP_' + data_dictionary['file_name'] + '.bin'
         preprocessed_binary_file_name = os.path.join(path, preprocessed_binary_file_name)
@@ -135,7 +135,7 @@ class Save:
         """
         path = os.path.join(Repository_Path, Model_Path)
 
-        Save.assure_path(path)
+        Save.assure_path_exist(path)
 
         model_binary_file_name = 'model.bin'
         model_binary_file_name = os.path.join(path, model_binary_file_name)

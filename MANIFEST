@@ -6,6 +6,7 @@ utils/FileIO.py
 utils/GlobalParameter.py
 utils/Graph.py
 utils/Matrix.py
+utils/Network.py
 utils/Preprocess.py
 utils/Similarity.py
 utils/__init__.py
