@@ -273,24 +273,28 @@ class Model:
     def euclidean_distance_score(binary_file_1, binary_file_2):
         early, late, _ = preprocess4similarity(binary_file_1, binary_file_2)
         score = Model.euclidean_distance_calculator(early, late)
+
         return score
 
     @staticmethod
     def manhattan_distance_score(binary_file_1, binary_file_2):
         early, late, length = preprocess4similarity(binary_file_1, binary_file_2)
         score = Model.manhattan_distance_calculator(early, late)
+
         return score / length
 
     @staticmethod
     def gradient_similarity_score(binary_file_1, binary_file_2):
         early, late, length = preprocess4similarity(binary_file_1, binary_file_2)
         score = Model.gradient_similarity_calculator(early, late)
+
         return score / length
 
     @staticmethod
     def reversed_gradient_similarity_score(binary_file_1, binary_file_2):
         early, late, length = preprocess4similarity(binary_file_1, binary_file_2)
         score = Model.reversed_gradient_similarity_calculator(early, late)
+
         return score / length
 
     ###############################################################################
@@ -436,25 +440,26 @@ class Network():
 
 
 if __name__ == '__main__':
-    path = os.path.join(Repository_Path, Preprocessed_Path)
-    file_list = Load.load_filelist(path)
+    # path = os.path.join(Repository_Path, Preprocessed_Path)
+    # file_list = Load.load_filelist(path)
 
     # for file in file_list:
     #     print file
 
-    similarity_model, _ = Model.build_model(file_list)
+    # similarity_model, _ = Model.build_model(file_list)
 
-    # print similarity_model['euclidean_distance']
     # print similarity_model['cosine_similarity']
+    # print similarity_model['euclidean_distance']
+    # print similarity_model['manhattan_distance']
     # print similarity_model['gradient_similarity']
     # print similarity_model['reversed_gradient_similarity']
 
-    # similarity_model = Load.unpickling(
-    #     '/Users/JH/Documents/GitHub/EnergyData_jhyun/repository/model/model.bin')
+    similarity_model = Load.unpickling(
+        '/Users/JH/Documents/GitHub/EnergyData_jhyun/repository/model/model.bin')
 
-    # similarity_model, added_file_name = Model.add_extra_model(
-    #     '/Users/JH/Documents/GitHub/EnergyData_jhyun/repository/model/model.bin',
-    #     '/Users/JH/Documents/GitHub/EnergyData_jhyun/repository/VTT_GW2_HA7_VM_EP_KV_K.bin')
+    similarity_model, added_file_name = Model.add_extra_model(
+        '/Users/JH/Documents/GitHub/EnergyData_jhyun/repository/model/model.bin',
+        '/Users/JH/Documents/GitHub/EnergyData_jhyun/repository/VTT_GW2_HA7_VM_EP_KV_K.bin')
     #
     # print added_file_name
     # print
@@ -462,33 +467,36 @@ if __name__ == '__main__':
     # for line in similarity_model['file_list']:
     #     print line
 
-    # similarity_model, _ = Model.clean_overlap(similarity_model)
+    similarity_model, _ = Model.clean_overlap(similarity_model)
 
     # print similarity_model
 
     # for line in similarity_model['file_list']:
     #     print line
 
-    print similarity_model
+    # print similarity_model
 
     # added_file_name = '/Users/JH/Documents/GitHub/EnergyData_jhyun/repository/preprocessed_data/PP_VTT_GW2_HA7_VM_EP_KV_K.bin'
 
-    # target_column_model = Report.pick_column(
-    #     '/Users/JH/Documents/GitHub/EnergyData_jhyun/repository/model/model.bin', added_file_name)
+    target_column_model = Report.pick_column(
+        '/Users/JH/Documents/GitHub/EnergyData_jhyun/repository/model/model.bin', added_file_name)
     # print target_column_model
 
-    # sorted_column_model = Report.sorting_column(target_column_model)
-    # print sorted_column_model
-    # print
-    # for line in sorted_column_model['cosine_similarity']:
-    #     print line
-    # print
-    # for line in sorted_column_model['euclidean_distance']:
-    #     print line
-    # print
-    # for line in sorted_column_model['gradient_similarity']:
-    #     print line
-    # print
-    # for line in sorted_column_model['reversed_gradient_similarity']:
-    #     print line
-    # print
+    sorted_column_model = Report.sorting_column(target_column_model)
+    print sorted_column_model
+    print
+    for line in sorted_column_model['cosine_similarity']:
+        print line
+    print
+    for line in sorted_column_model['euclidean_distance']:
+        print line
+    print
+    for line in sorted_column_model['manhattan_distance']:
+        print line
+    print
+    for line in sorted_column_model['gradient_similarity']:
+        print line
+    print
+    for line in sorted_column_model['reversed_gradient_similarity']:
+        print line
+    print

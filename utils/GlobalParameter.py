@@ -22,9 +22,10 @@ Divider = float(Scale_Size) / Level
 
 # Network
 Cosine_Edge_Threshold = 0.05
-Euclidean_Edge_Threshold = 6
-Gradient_Edge_Threshold = 1
-Reversed_Gradient_Edge_Threshold = 1
+Euclidean_Edge_Threshold = 4000
+Manhattan_Edge_Threshold = 10
+Gradient_Edge_Threshold = 0.001
+Reversed_Gradient_Edge_Threshold = 0.001
 
 
 # Dependency : far
