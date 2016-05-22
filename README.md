@@ -2,7 +2,9 @@
 
 ### Introduction
 
-This is a series of process showing the effort to manage energy more efficiently through analyzing data from certatin buildings
+This is a series of process showing the effort to manage energy more efficiently through analyzing data from certatin buildings  
+
+
 ---
 * Data Preprocess
  <img src="https://raw.githubusercontent.com/jhyun0919/EnergyData_jhyun/master/docs/images/스크린샷%202016-05-22%20오후%207.23.54.jpg" alt="Drawing" style="width: 800px;"/>  
