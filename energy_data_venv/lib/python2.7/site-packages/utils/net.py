@@ -1,24 +1,41 @@
+#!/usr/bin/env python
+"""
+An example using Graph as a weighted network.
+"""
+# Author: Aric Hagberg (hagberg@lanl.gov)
+try:
+    import matplotlib.pyplot as plt
+except:
+    raise
+
 import networkx as nx
-import matplotlib.pyplot as plt
 
-data = (('a', 'b', 50), ('b', 'c', 60), ('b', 'e', 25),
-        ('e', 'f', 20), ('z', 'n', 10), ('x', 'm', 25),
-        ('v', 'p', 15))
+G = nx.Graph()
 
-G = nx.DiGraph()
-for node1, node2, weight1 in data:
-    G.add_edge(node1, node2, weight=-1)
+G.add_edge('a', 'b', weight=0.6)
+G.add_edge('a', 'c', weight=0.2)
+G.add_edge('c', 'd', weight=0.1)
+G.add_edge('c', 'e', weight=0.7)
+G.add_edge('c', 'f', weight=0.9)
+G.add_edge('a', 'd', weight=0.3)
 
-min_lenght = 2
-F = nx.DiGraph()  # filtered graphs
+elarge = [(u, v) for (u, v, d) in G.edges(data=True) if d['weight'] > 0.5]
+esmall = [(u, v) for (u, v, d) in G.edges(data=True) if d['weight'] <= 0.5]
 
-# check all edges with bellman_ford
-for u, v in G.edges():
-    vals, distances = nx.bellman_ford(G, u)
-    if min(distances.values()) < - min_lenght:
-        for u, v in vals.items():
-            if v:
-                F.add_edge(v, u)
+pos = nx.spring_layout(G)  # positions for all nodes
 
-nx.draw(F)
-plt.show()
+# nodes
+nx.draw_networkx_nodes(G, pos, node_size=700)
+
+# edges
+nx.draw_networkx_edges(G, pos, edgelist=elarge,
+                       width=6)
+nx.draw_networkx_edges(G, pos, edgelist=esmall,
+                       width=6, alpha=0.5, edge_color='b', style='dashed')
+
+# labels
+nx.draw_networkx_labels(G, pos, font_size=20, font_family='sans-serif')
+
+plt.axis('off')
+# plt.savefig("weighted_graph.png")  # save as png
+plt.show()  # display

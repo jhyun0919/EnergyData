@@ -202,6 +202,17 @@ def preprocess4similarity(binary_file_1, binary_file_2):
     return early['value'], late['value'], length
 
 
+def preprocess4similarity_matrix(similarity_matrix):
+    max_val = np.amax(similarity_matrix)
+    min_val = np.amin(similarity_matrix)
+
+    for i in xrange(0, len(similarity_matrix)):
+        for j in xrange(0, len(similarity_matrix)):
+            similarity_matrix[i][j] = (float(similarity_matrix[i][j] - min_val) / max_val) * Similarity_Matrix_Scaling
+
+    return similarity_matrix
+
+
 ###############################################################################
 # data-preprocessing 4 dependency
 

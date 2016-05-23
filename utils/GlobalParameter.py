@@ -6,6 +6,7 @@ Normalization_Interval = 10  # minute
 ts_delta = timedelta(minutes=Normalization_Interval)
 Noise_Filter = 10
 Scale_Size = 100
+Similarity_Matrix_Scaling = 50
 
 # Save
 Repository_Path = '/Users/JH/Documents/GitHub/EnergyData_jhyun/repository'
@@ -21,11 +22,11 @@ Level = 9
 Divider = float(Scale_Size) / Level
 
 # Network
-Cosine_Edge_Threshold = 0.05
-Euclidean_Edge_Threshold = 4000
+Cosine_Edge_Threshold = 3
+Euclidean_Edge_Threshold = 10
 Manhattan_Edge_Threshold = 10
-Gradient_Edge_Threshold = 0.001
-Reversed_Gradient_Edge_Threshold = 0.001
+Gradient_Edge_Threshold = 11
+Reversed_Gradient_Edge_Threshold = 15
 
 
 # Dependency : far

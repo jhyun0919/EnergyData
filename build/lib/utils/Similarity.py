@@ -10,7 +10,10 @@ from math import sqrt
 from operator import itemgetter
 import numpy as np
 from Preprocess import preprocess4similarity
+from Preprocess import preprocess4similarity_matrix
 import os
+import networkx as nx
+import matplotlib.pyplot as plt
 
 
 class Model:
@@ -273,24 +276,28 @@ class Model:
     def euclidean_distance_score(binary_file_1, binary_file_2):
         early, late, _ = preprocess4similarity(binary_file_1, binary_file_2)
         score = Model.euclidean_distance_calculator(early, late)
+
         return score
 
     @staticmethod
     def manhattan_distance_score(binary_file_1, binary_file_2):
         early, late, length = preprocess4similarity(binary_file_1, binary_file_2)
         score = Model.manhattan_distance_calculator(early, late)
+
         return score / length
 
     @staticmethod
     def gradient_similarity_score(binary_file_1, binary_file_2):
         early, late, length = preprocess4similarity(binary_file_1, binary_file_2)
         score = Model.gradient_similarity_calculator(early, late)
+
         return score / length
 
     @staticmethod
     def reversed_gradient_similarity_score(binary_file_1, binary_file_2):
         early, late, length = preprocess4similarity(binary_file_1, binary_file_2)
         score = Model.reversed_gradient_similarity_calculator(early, late)
+
         return score / length
 
     ###############################################################################
@@ -417,40 +424,111 @@ class Report:
         return tuples_list
 
     @staticmethod
-    def sorting_tuples_list(tuples_list):
-        tuples_list.sort(key=itemgetter(1))
+    def sorting_tuples_list(tuples_list, reverse=False):
+        tuples_list.sort(key=itemgetter(1), reverse=reverse)
 
         return tuples_list
 
 
-class Network():
+class Network:
     def __init__(self):
         pass
 
+    class Cosine:
+        def __init__(self):
+            pass
+
+        @staticmethod
+        def build_graph(similarity_model):
+            Network.build_network(similarity_model['file_list'], similarity_model['cosine_similarity'],
+                                  Cosine_Edge_Threshold, 'cosine_similarity')
+
+    class Euclidean:
+        def __init__(self):
+            pass
+
+        @staticmethod
+        def build_graph(similarity_model):
+            Network.build_network(similarity_model['file_list'], similarity_model['euclidean_distance'],
+                                  Euclidean_Edge_Threshold, 'euclidean_distance')
+
+    class Manhattan:
+        def __init__(self):
+            pass
+
+        @staticmethod
+        def build_graph(similarity_model):
+            Network.build_network(similarity_model['file_list'], similarity_model['manhattan_distance'],
+                                  Manhattan_Edge_Threshold, 'manhattan_distance')
+
+    class Gradient:
+        def __init__(self):
+            pass
+
+        @staticmethod
+        def build_graph(similarity_model):
+            Network.build_network(similarity_model['file_list'], similarity_model['gradient_similarity'],
+                                  Gradient_Edge_Threshold, 'gradient_similarity')
+
+    class ReversedGradient:
+        def __init__(self):
+            pass
+
+        @staticmethod
+        def build_graph(similarity_model):
+            Network.build_network(similarity_model['file_list'], similarity_model['reversed_gradient_similarity'],
+                                  Reversed_Gradient_Edge_Threshold, 'reversed_gradient_similarity')
+
     @staticmethod
-    def build_network(similarity_model):
-        pass
+    def build_network(file_path_list, similarity_matrix, threshold, title):
+        similarity_matrix = preprocess4similarity_matrix(similarity_matrix)
+
+        file_list = []
+
+        for line in file_path_list:
+            file = line.rsplit('/', 1)[-1]
+            file = file.split('.')[0]
+            file = file.split('_', 2)[-1]
+            file_list.append(file)
+
+        G = nx.MultiDiGraph()
+
+        G.add_nodes_from(file_list)
+
+        for i in xrange(0, len(file_list)):
+            for j in xrange(0, len(file_list)):
+                if similarity_matrix[i][j] <= threshold:
+                    G.add_edge(file_list[i], file_list[j], weight=similarity_matrix[i][j])
+
+        pos = nx.spring_layout(G)
+        nx.draw_networkx_nodes(G, pos)
+        nx.draw_networkx_edges(G, pos)
+        nx.draw_networkx_labels(G, pos, font_size=9, font_family='sans-serif')
+        plt.axis('off')
+        plt.title(title)
+        plt.show()
 
 
 ###############################################################################
 
 
 if __name__ == '__main__':
-    path = os.path.join(Repository_Path, Preprocessed_Path)
-    file_list = Load.load_filelist(path)
+    # path = os.path.join(Repository_Path, Preprocessed_Path)
+    # file_list = Load.load_filelist(path)
 
     # for file in file_list:
     #     print file
 
-    similarity_model, _ = Model.build_model(file_list)
+    # similarity_model, _ = Model.build_model(file_list)
 
-    # print similarity_model['euclidean_distance']
     # print similarity_model['cosine_similarity']
+    # print similarity_model['euclidean_distance']
+    # print similarity_model['manhattan_distance']
     # print similarity_model['gradient_similarity']
     # print similarity_model['reversed_gradient_similarity']
 
-    # similarity_model = Load.unpickling(
-    #     '/Users/JH/Documents/GitHub/EnergyData_jhyun/repository/model/model.bin')
+    similarity_model = Load.unpickling(
+        '/Users/JH/Documents/GitHub/EnergyData_jhyun/repository/model/model.bin')
 
     # similarity_model, added_file_name = Model.add_extra_model(
     #     '/Users/JH/Documents/GitHub/EnergyData_jhyun/repository/model/model.bin',
@@ -469,7 +547,7 @@ if __name__ == '__main__':
     # for line in similarity_model['file_list']:
     #     print line
 
-    print similarity_model
+    # print similarity_model
 
     # added_file_name = '/Users/JH/Documents/GitHub/EnergyData_jhyun/repository/preprocessed_data/PP_VTT_GW2_HA7_VM_EP_KV_K.bin'
 
@@ -486,9 +564,21 @@ if __name__ == '__main__':
     # for line in sorted_column_model['euclidean_distance']:
     #     print line
     # print
+    # for line in sorted_column_model['manhattan_distance']:
+    #     print line
+    # print
     # for line in sorted_column_model['gradient_similarity']:
     #     print line
     # print
     # for line in sorted_column_model['reversed_gradient_similarity']:
     #     print line
     # print
+
+    # Network.Cosine.build_graph(similarity_model)
+    # Network.Euclidean.build_graph(similarity_model)
+    # Network.Manhattan.build_graph(similarity_model)
+    Network.Gradient.build_graph(similarity_model)
+    # Network.ReversedGradient.build_graph(similarity_model)
+
+    # print preprocess4similarity_matrix(similarity_model['cosine_similarity'])
+    # print preprocess4similarity_matrix(similarity_model['euclidean_distance'])
