@@ -23,7 +23,11 @@ This is a series of process showing the effort to manage energy more efficiently
 ### Method of Analysis
 
  * Data Preprocess
- * Build Simialrity Matrix & Write Similarity Report 
+  - [Data Preprocessing](https://github.com/jhyun0919/EnergyData_jhyun/blob/master/docs/01_01.%20Data%20Preprocessing.ipynb)
+  - [Save Preprocessed Data](https://github.com/jhyun0919/EnergyData_jhyun/blob/master/docs/01_02.%20Save%20Preprocessed%20Data.ipynb)
+ * Build Simialrity Matrix & Write Similarity Report
+  - [Build Similarity Model](https://github.com/jhyun0919/EnergyData_jhyun/blob/master/docs/02_01.%20Build%20Similarity%20Model.ipynb)
+  - [Write Simialrity Report](https://github.com/jhyun0919/EnergyData_jhyun/blob/master/docs/02_02.%20Write%20Similarity%20Report.ipynb)
  * Visualize into Weighted-Graph (Network)
  * 
  
