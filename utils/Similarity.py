@@ -421,8 +421,8 @@ class Report:
         return tuples_list
 
     @staticmethod
-    def sorting_tuples_list(tuples_list):
-        tuples_list.sort(key=itemgetter(1))
+    def sorting_tuples_list(tuples_list, reverse=False):
+        tuples_list.sort(key=itemgetter(1), reverse=reverse)
 
         return tuples_list
 
