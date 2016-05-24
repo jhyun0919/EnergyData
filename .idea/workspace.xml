@@ -3,21 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="cb953e4b-3ba5-4624-bfb3-f51d8ae97f67" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/lib/utils/GlobalParameter.py" afterPath="$PROJECT_DIR$/build/lib/utils/GlobalParameter.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/lib/utils/Preprocess.py" afterPath="$PROJECT_DIR$/build/lib/utils/Preprocess.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/lib/utils/Similarity.py" afterPath="$PROJECT_DIR$/build/lib/utils/Similarity.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/lib/utils/net.py" afterPath="$PROJECT_DIR$/build/lib/utils/net.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/02_02. Write Similarity Report.ipynb" afterPath="$PROJECT_DIR$/docs/02_02. Write Similarity Report.ipynb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/02_03. Show Similarity Weighted-Graph.ipynb" afterPath="$PROJECT_DIR$/docs/02_03. Show Similarity Weighted-Graph.ipynb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/energy_data_venv/lib/python2.7/site-packages/utils/GlobalParameter.py" afterPath="$PROJECT_DIR$/energy_data_venv/lib/python2.7/site-packages/utils/GlobalParameter.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/energy_data_venv/lib/python2.7/site-packages/utils/Preprocess.py" afterPath="$PROJECT_DIR$/energy_data_venv/lib/python2.7/site-packages/utils/Preprocess.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/energy_data_venv/lib/python2.7/site-packages/utils/Similarity.py" afterPath="$PROJECT_DIR$/energy_data_venv/lib/python2.7/site-packages/utils/Similarity.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/energy_data_venv/lib/python2.7/site-packages/utils/net.py" afterPath="$PROJECT_DIR$/energy_data_venv/lib/python2.7/site-packages/utils/net.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/setup.py" afterPath="$PROJECT_DIR$/setup.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/utils/GlobalParameter.py" afterPath="$PROJECT_DIR$/utils/GlobalParameter.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/utils/Preprocess.py" afterPath="$PROJECT_DIR$/utils/Preprocess.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/utils/Similarity.py" afterPath="$PROJECT_DIR$/utils/Similarity.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/utils/net.py" afterPath="$PROJECT_DIR$/utils/net.py" />
     </list>
     <ignored path="EnergyData_jhyun.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -70,8 +55,8 @@
           <file leaf-file-name="Similarity.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/utils/Similarity.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="1.1529412">
-                  <caret line="485" column="31" selection-start-line="485" selection-start-column="31" selection-end-line="485" selection-end-column="31" />
+                <state vertical-scroll-proportion="-0.4674221">
+                  <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
                   <folding>
                     <element signature="e#25#54#0" expanded="true" />
                   </folding>
@@ -82,7 +67,7 @@
         </leaf>
       </split-first>
       <split-second>
-        <leaf>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="net.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/utils/net.py">
               <provider selected="true" editor-type-id="text-editor">
@@ -96,7 +81,7 @@
           <file leaf-file-name="Preprocess.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/utils/Preprocess.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-13.333333">
+                <state vertical-scroll-proportion="0.0">
                   <caret line="207" column="0" selection-start-line="207" selection-start-column="0" selection-end-line="207" selection-end-column="0" />
                   <folding>
                     <element signature="e#25#37#0" expanded="true" />
@@ -118,7 +103,7 @@
           <file leaf-file-name="GlobalParameter.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/utils/GlobalParameter.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="1.4361702">
+                <state vertical-scroll-proportion="0.5736544">
                   <caret line="27" column="28" selection-start-line="27" selection-start-column="28" selection-end-line="27" selection-end-column="28" />
                   <folding />
                 </state>
@@ -152,10 +137,8 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="660" />
-    <option name="y" value="-1080" />
-    <option name="width" value="1920" />
-    <option name="height" value="1080" />
+    <option name="width" value="1280" />
+    <option name="height" value="800" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -367,6 +350,11 @@
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
@@ -523,27 +511,27 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="660" y="-1080" width="1920" height="1080" extended-state="0" />
-    <editor active="false" />
+    <frame x="0" y="0" width="1280" height="800" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24973376" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32905138" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32905138" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6956522" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32786885" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6956522" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -562,13 +550,63 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/utils/Network.py">
+    <entry file="file://$PROJECT_DIR$/setup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/Graph.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/Similarity.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="485" column="31" selection-start-line="485" selection-start-column="31" selection-end-line="485" selection-end-column="31" />
+          <folding>
+            <element signature="e#25#54#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/net.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="40" column="21" selection-start-line="40" selection-start-column="21" selection-end-line="40" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/Preprocess.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="207" column="0" selection-start-line="207" selection-start-column="0" selection-end-line="207" selection-end-column="0" />
+          <folding>
+            <element signature="e#25#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/FileIO.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="60" column="30" selection-start-line="60" selection-start-column="30" selection-end-line="60" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/GlobalParameter.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#25#46#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -576,9 +614,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#25#46#0" expanded="false" />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/Network.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -612,9 +654,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.39553753">
           <caret line="26" column="45" selection-start-line="26" selection-start-column="45" selection-end-line="26" selection-end-column="45" />
-          <folding>
-            <element signature="e#25#46#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -652,7 +691,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/utils/Preprocess.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.333333">
+        <state vertical-scroll-proportion="0.0">
           <caret line="207" column="0" selection-start-line="207" selection-start-column="0" selection-end-line="207" selection-end-column="0" />
           <folding>
             <element signature="e#25#37#0" expanded="true" />
@@ -662,7 +701,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/utils/GlobalParameter.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.4361702">
+        <state vertical-scroll-proportion="0.5736544">
           <caret line="27" column="28" selection-start-line="27" selection-start-column="28" selection-end-line="27" selection-end-column="28" />
           <folding />
         </state>
@@ -670,8 +709,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/utils/Similarity.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.1529412">
-          <caret line="485" column="31" selection-start-line="485" selection-start-column="31" selection-end-line="485" selection-end-column="31" />
+        <state vertical-scroll-proportion="-0.4674221">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding>
             <element signature="e#25#54#0" expanded="true" />
           </folding>
