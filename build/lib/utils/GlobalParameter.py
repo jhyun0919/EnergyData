@@ -6,7 +6,7 @@ Normalization_Interval = 10  # minute
 ts_delta = timedelta(minutes=Normalization_Interval)
 Noise_Filter = 10
 Scale_Size = 100
-Similarity_Matrix_Scaling = 50
+Similarity_Matrix_Scaling = 100
 
 # Save
 Repository_Path = '/Users/JH/Documents/GitHub/EnergyData_jhyun/repository'

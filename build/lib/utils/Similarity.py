@@ -15,6 +15,11 @@ import os
 import networkx as nx
 import matplotlib.pyplot as plt
 
+import scipy.stats as stats
+import pylab as pl
+
+
+###############################################################################
 
 class Model:
     def __init__(self):
@@ -357,6 +362,8 @@ class Model:
         return round(sqrt(sum([a * a for a in x])), Round)
 
 
+###############################################################################
+
 class Report:
     def __init__(self):
         pass
@@ -430,6 +437,8 @@ class Report:
         return tuples_list
 
 
+###############################################################################
+
 class Network:
     def __init__(self):
         pass
@@ -439,49 +448,68 @@ class Network:
             pass
 
         @staticmethod
-        def build_graph(similarity_model):
+        def show_distribution(similarity_model):
+            Network.show_histogram(similarity_matrix=similarity_model['cosine_similarity'])
+
+        @staticmethod
+        def build_graph(similarity_model, Threshold):
             Network.build_network(similarity_model['file_list'], similarity_model['cosine_similarity'],
-                                  Cosine_Edge_Threshold, 'cosine_similarity')
+                                  Threshold, 'cosine_similarity')
 
     class Euclidean:
         def __init__(self):
             pass
 
         @staticmethod
-        def build_graph(similarity_model):
+        def build_graph(similarity_model, Threshold):
             Network.build_network(similarity_model['file_list'], similarity_model['euclidean_distance'],
-                                  Euclidean_Edge_Threshold, 'euclidean_distance')
+                                  Threshold, 'euclidean_distance')
 
     class Manhattan:
         def __init__(self):
             pass
 
         @staticmethod
-        def build_graph(similarity_model):
+        def build_graph(similarity_model, Threshold):
             Network.build_network(similarity_model['file_list'], similarity_model['manhattan_distance'],
-                                  Manhattan_Edge_Threshold, 'manhattan_distance')
+                                  Threshold, 'manhattan_distance')
 
     class Gradient:
         def __init__(self):
             pass
 
         @staticmethod
-        def build_graph(similarity_model):
+        def build_graph(similarity_model, Threshold):
             Network.build_network(similarity_model['file_list'], similarity_model['gradient_similarity'],
-                                  Gradient_Edge_Threshold, 'gradient_similarity')
+                                  Threshold, 'gradient_similarity')
 
     class ReversedGradient:
         def __init__(self):
             pass
 
         @staticmethod
-        def build_graph(similarity_model):
+        def build_graph(similarity_model, Threshold):
             Network.build_network(similarity_model['file_list'], similarity_model['reversed_gradient_similarity'],
-                                  Reversed_Gradient_Edge_Threshold, 'reversed_gradient_similarity')
+                                  Threshold, 'reversed_gradient_similarity')
+
+    @staticmethod
+    def show_histogram(similarity_matrix):
+        scaled_similarity_matrix = preprocess4similarity_matrix(similarity_matrix)
+        scaled_similarity_list = []
+
+        for i in xrange(0, len(scaled_similarity_matrix)):
+            for j in xrange(0, len(scaled_similarity_matrix)):
+                scaled_similarity_list.append(scaled_similarity_matrix[i][j])
+
+        scaled_similarity_list = sorted(scaled_similarity_list)
+        fit = stats.norm.pdf(scaled_similarity_list, np.mean(scaled_similarity_list), np.std(scaled_similarity_list))
+        pl.plot(scaled_similarity_list, fit, '-o')
+        pl.hist(scaled_similarity_list, normed=True)
+        pl.show()
 
     @staticmethod
     def build_network(file_path_list, similarity_matrix, threshold, title):
-        similarity_matrix = preprocess4similarity_matrix(similarity_matrix)
+        scaled_similarity_matrix = preprocess4similarity_matrix(similarity_matrix)
 
         file_list = []
 
@@ -497,8 +525,8 @@ class Network:
 
         for i in xrange(0, len(file_list)):
             for j in xrange(0, len(file_list)):
-                if similarity_matrix[i][j] <= threshold:
-                    G.add_edge(file_list[i], file_list[j], weight=similarity_matrix[i][j])
+                if scaled_similarity_matrix[i][j] <= threshold:
+                    G.add_edge(file_list[i], file_list[j], weight=scaled_similarity_matrix[i][j])
 
         pos = nx.spring_layout(G)
         nx.draw_networkx_nodes(G, pos)
@@ -506,6 +534,7 @@ class Network:
         nx.draw_networkx_labels(G, pos, font_size=9, font_family='sans-serif')
         plt.axis('off')
         plt.title(title)
+
         plt.show()
 
 
@@ -574,11 +603,11 @@ if __name__ == '__main__':
     #     print line
     # print
 
-    # Network.Cosine.build_graph(similarity_model)
-    # Network.Euclidean.build_graph(similarity_model)
-    # Network.Manhattan.build_graph(similarity_model)
+    Network.Cosine.build_graph(similarity_model)
+    Network.Euclidean.build_graph(similarity_model)
+    Network.Manhattan.build_graph(similarity_model)
     Network.Gradient.build_graph(similarity_model)
-    # Network.ReversedGradient.build_graph(similarity_model)
+    Network.ReversedGradient.build_graph(similarity_model)
 
     # print preprocess4similarity_matrix(similarity_model['cosine_similarity'])
     # print preprocess4similarity_matrix(similarity_model['euclidean_distance'])
