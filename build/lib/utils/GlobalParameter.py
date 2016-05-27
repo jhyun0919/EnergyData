@@ -28,5 +28,7 @@ Manhattan_Edge_Threshold = 10
 Gradient_Edge_Threshold = 11
 Reversed_Gradient_Edge_Threshold = 15
 
+Deviation_Multiplier = 1
+
 
 # Dependency : far

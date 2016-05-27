@@ -448,60 +448,70 @@ class Network:
             pass
 
         @staticmethod
-        def show_distribution(similarity_model):
-            return Network.show_histogram(similarity_matrix=similarity_model['cosine_similarity'])
+        def set_threshold(similarity_model):
+            return Network.get_threshold_via_pdf(similarity_matrix=similarity_model['cosine_similarity'])
 
         @staticmethod
-        def build_graph(similarity_model, Threshold):
+        def build_graph(similarity_model, threshold):
             Network.build_network(similarity_model['file_list'], similarity_model['cosine_similarity'],
-                                  Threshold, 'cosine_similarity')
+                                  threshold, 'cosine_similarity')
 
     class Euclidean:
         def __init__(self):
             pass
 
         @staticmethod
-        def build_graph(similarity_model, Threshold):
+        def set_threshold(similarity_model):
+            return Network.get_threshold_via_pdf(similarity_matrix=similarity_model['euclidean_distance'])
+
+        @staticmethod
+        def build_graph(similarity_model, threshold):
             Network.build_network(similarity_model['file_list'], similarity_model['euclidean_distance'],
-                                  Threshold, 'euclidean_distance')
+                                  threshold, 'euclidean_distance')
 
     class Manhattan:
         def __init__(self):
             pass
 
         @staticmethod
-        def show_distribution(similarity_model):
-            return Network.show_histogram(similarity_matrix=similarity_model['manhattan_distance'])
+        def set_threshold(similarity_model):
+            return Network.get_threshold_via_pdf(similarity_matrix=similarity_model['manhattan_distance'])
 
         @staticmethod
-        def build_graph(similarity_model, Threshold):
+        def build_graph(similarity_model, threshold):
             Network.build_network(similarity_model['file_list'], similarity_model['manhattan_distance'],
-                                  Threshold, 'manhattan_distance')
+                                  threshold, 'manhattan_distance')
 
     class Gradient:
         def __init__(self):
             pass
 
         @staticmethod
-        def build_graph(similarity_model, Threshold):
+        def set_threshold(similarity_model):
+            return Network.get_threshold_via_pdf(similarity_matrix=similarity_model['gradient_similarity'])
+
+        @staticmethod
+        def build_graph(similarity_model, threshold):
             Network.build_network(similarity_model['file_list'], similarity_model['gradient_similarity'],
-                                  Threshold, 'gradient_similarity')
+                                  threshold, 'gradient_similarity')
 
     class ReversedGradient:
         def __init__(self):
             pass
 
         @staticmethod
-        def build_graph(similarity_model, Threshold):
+        def set_threshold(similarity_model):
+            return Network.get_threshold_via_pdf(similarity_matrix=similarity_model['reversed_gradient_similarity'])
+
+        @staticmethod
+        def build_graph(similarity_model, threshold):
             Network.build_network(similarity_model['file_list'], similarity_model['reversed_gradient_similarity'],
-                                  Threshold, 'reversed_gradient_similarity')
+                                  threshold, 'reversed_gradient_similarity')
 
     @staticmethod
-    def show_histogram(similarity_matrix):
+    def get_threshold_via_pdf(similarity_matrix):
         scaled_similarity_matrix = preprocess4similarity_matrix(similarity_matrix)
         scaled_similarity_list = []
-
-        print scaled_similarity_matrix
 
         for i in xrange(0, len(scaled_similarity_matrix)):
             for j in xrange(0, len(scaled_similarity_matrix)):
@@ -513,15 +523,23 @@ class Network:
         pdf_mean = np.mean(scaled_similarity_list)
         pdf_stdev = np.std(scaled_similarity_list)
         pdf = stats.norm.pdf(scaled_similarity_list, pdf_mean, pdf_stdev)
+        threshold = pdf_mean - pdf_stdev * Deviation_Multiplier
 
-        print pdf_mean
-        print pdf_stdev
+        print 'similarity matrix: '
+        print similarity_matrix
+        print
+        print 'pdf mean: ' + str(pdf_mean)
+        print 'pdf_standard_deviation: ' + str(pdf_stdev)
+        print
+        print 'threshold = ' + str(threshold)
+        print '\t= pdf_mean - pdf_stdev * ' + str(Deviation_Multiplier)
 
+        pl.axvline(threshold, color='r')
         pl.plot(scaled_similarity_list, pdf, '-o')
         pl.hist(scaled_similarity_list, normed=True)
         pl.show()
 
-        return pdf_mean - pdf_stdev * Deviation_Multiplier
+        return threshold
 
     @staticmethod
     def build_network(file_path_list, similarity_matrix, threshold, title):
@@ -619,16 +637,20 @@ if __name__ == '__main__':
     #     print line
     # print
 
-    threshhold = Network.Cosine.show_distribution(similarity_model)
-    Network.Cosine.build_graph(similarity_model, threshhold)
+    threshold = Network.Cosine.set_threshold(similarity_model)
+    Network.Cosine.build_graph(similarity_model, threshold)
 
-    # Network.Euclidean.build_graph(similarity_model)
+    threshold = Network.Euclidean.set_threshold(similarity_model)
+    Network.Euclidean.build_graph(similarity_model, threshold)
 
-    threshhold = Network.Manhattan.show_distribution(similarity_model)
-    Network.Manhattan.build_graph(similarity_model, threshhold)
+    threshold = Network.Manhattan.set_threshold(similarity_model)
+    Network.Manhattan.build_graph(similarity_model, threshold)
 
-    # Network.Gradient.build_graph(similarity_model)
-    # Network.ReversedGradient.build_graph(similarity_model)
+    threshold = Network.Gradient.set_threshold(similarity_model)
+    Network.Gradient.build_graph(similarity_model, threshold)
+
+    threshold = Network.ReversedGradient.set_threshold(similarity_model)
+    Network.ReversedGradient.build_graph(similarity_model, threshold)
 
     # print preprocess4similarity_matrix(similarity_model['cosine_similarity'])
     # print preprocess4similarity_matrix(similarity_model['euclidean_distance'])
