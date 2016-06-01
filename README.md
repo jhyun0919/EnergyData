@@ -4,7 +4,7 @@
 
 This is a series of process showing the effort to manage energy more efficiently through analyzing data from certatin buildings  
 
-##### Conceptual Scheme
+##### < Conceptual Scheme >
  <img src="https://raw.githubusercontent.com/jhyun0919/EnergyData_jhyun/master/docs/images/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7%202016-06-01%20%EC%98%A4%ED%9B%84%204.58.48.jpg" alt="Drawing" style="width: 800px;"/> 
 
 ---
@@ -17,8 +17,8 @@ This is a series of process showing the effort to manage energy more efficiently
   - **data 간 dependncy** 분석을 통해 **energy usage pattern을 파악**할 수 있음
   - abnormal detection으로 낭비되는 energy를 줄일 수 있음
    * 과거와는 다른 energy pattern를 감지
-   * 같은 종류의 senor data에서 다른 energy pattern을 감지
-
+   * 같은 종류의 senor data에서 다른 energy pattern을 감지  
+ 
 ---
 ### Methods of Analysis
 
@@ -30,6 +30,13 @@ This is a series of process showing the effort to manage energy more efficiently
   - [Write Simialrity Report](https://github.com/jhyun0919/EnergyData_jhyun/blob/master/docs/02_02.%20Write%20Similarity%20Report.ipynb)
  * Visualize into Weighted-Graph (Network)
   - [Show Similarity Weighted-Graph](https://github.com/jhyun0919/EnergyData_jhyun/blob/master/docs/02_03.%20Show%20Similarity%20Networks.ipynb)
+ 
+
+---
+### Future Works
+
+ * **Energy usage pattern**를 정확하고 효율적으로 파악하는 것이 완료된 후, 분석 모델에서 나아가 **실시간 요금제**와 **OpenADR**과 같은 인터페이스와 연계된다면, **Machine Learning**을 통해 **가격의 효율 개선(price efficiency)**을 노릴 수 있을 것으로도 전망됨
+ * 
  
 ---
 ### References
