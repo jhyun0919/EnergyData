@@ -20,7 +20,7 @@ This is a series of process showing the effort to manage energy more efficiently
  * 건물에서 사용하는 에너지를 정확하고 효율적인 방법으로 추적 & 분석할 수 있는 방법이 필요함
 
 ---
-### Method of Analysis
+### Methods of Analysis
 
  * Data Preprocess
   - [Data Preprocessing](https://github.com/jhyun0919/EnergyData_jhyun/blob/master/docs/01_01.%20Data%20Preprocessing.ipynb)
