@@ -13,7 +13,7 @@ This is a series of process showing the effort to manage energy more efficiently
  * 건물의 높은 에너지 소비
  * 건물에는 여러 종류의 수많은 sensor들이 설치되어 data를 수집하고 있음
  * 낭비하는 에너지가 많음 --> 낮추고 싶음
- *
+ *  
 
 ---
 ### Energy Data Analysis
