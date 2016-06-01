@@ -4,6 +4,8 @@
 
 This is a series of process showing the effort to manage energy more efficiently through analyzing data from certatin buildings  
 
+<img src="" alt="Drawing" style="width: 800px;"/> 
+
 
 ---
 * Data Preprocess
