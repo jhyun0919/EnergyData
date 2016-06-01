@@ -11,7 +11,7 @@ This is a series of process showing the effort to manage energy more efficiently
 ### Background
  
  * 건물의 높은 에너지 소비
- * 낭비하는 에너지 high, 낮추고 싶음
+ * 낭비하는 에너지 high --> 낮추고 싶음
  * 건물에서 사용하는 에너지를 정확하고 효율적인 방법으로 추적 & 분석할 수 있는 방법이 필요함
 
 ---
