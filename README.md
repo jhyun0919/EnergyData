@@ -35,7 +35,7 @@ This is a series of process showing the effort to manage energy more efficiently
 ---
 ### Future Works
 
- * **Energy usage pattern**를 정확하고 효율적으로 파악하는 것이 완료된 후, 분석 모델에서 나아가 **실시간 요금제**와 **OpenADR**과 같은 인터페이스와 연계된다면, **Machine Learning**을 통해 **가격의 효율 개선(price efficiency)**을 노릴 수 있을 것으로도 전망됨
+ * **Energy usage pattern**를 정확하고 효율적으로 파악하는 것이 완료된 후, 분석 모델에서 나아가 **실시간 요금제(Real Time Pricing)**가 **OpenADR**과 같은 인터페이스를 통해 연계된다면, **Machine Learning**을 바탕으로 **가격의 효율 개선(price efficiency)**을 노릴 수 있을 것으로도 전망됨
  * 
  
 ---
