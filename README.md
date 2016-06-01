@@ -36,7 +36,7 @@ This is a series of process showing the effort to manage energy more efficiently
   - [Write Simialrity Report](https://github.com/jhyun0919/EnergyData_jhyun/blob/master/docs/02_02.%20Write%20Similarity%20Report.ipynb)
  * Visualize into Weighted-Graph (Network)
   - [Show Similarity Weighted-Graph](https://github.com/jhyun0919/EnergyData_jhyun/blob/master/docs/02_03.%20Show%20Similarity%20Weighted-Graph.ipynb)
- 
+ * 
 
 ---
 ### Future Works
