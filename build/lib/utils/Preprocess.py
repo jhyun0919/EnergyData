@@ -31,12 +31,17 @@ def interpolation_strategy(idx, value):
     :param value:
     :return:
     """
+
+    denominator = 1
+
     for i in xrange(idx, len(value)):
         if math.isnan(value[i]):
-            pass
+            denominator += 1
         else:
-            interpolated_value = (value[idx - 1] + value[i]) / 2
+            nominator = value[i] - value[idx - 1]
             break
+
+    interpolated_value = value[idx - 1] + nominator / denominator
 
     return interpolated_value
 
@@ -309,7 +314,16 @@ if __name__ == '__main__':
     data_dictionary = FileIO.Load.unpickling(file_path)
 
     data_dictionary = scaling(data_dictionary)
+    print data_dictionary
+    print
     Graph.Show.dic2graph(data_dictionary)
 
     data_dictionary = normalization(data_dictionary)
+    print data_dictionary
+    print
+    Graph.Show.dic2graph(data_dictionary)
+
+    data_dictionary = interpolation(data_dictionary)
+    print data_dictionary
+    print
     Graph.Show.dic2graph(data_dictionary)
