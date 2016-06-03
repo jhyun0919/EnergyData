@@ -12,6 +12,11 @@ class Show:
 
     @staticmethod
     def dic2graph(dictionary):
+        """
+
+        :param dictionary:
+        :return:
+        """
         x = []
         for ts in dictionary['ts']:
             try:
