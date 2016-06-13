@@ -143,3 +143,21 @@ class Save:
         Save.dumping_bin(model_binary_file_name, dependency_structure)
 
         return model_binary_file_name
+
+    @staticmethod
+    def network_data2bin_file(data_dictionary):
+        """
+
+        :param data_dictionary:
+        :return:
+        """
+        path = os.path.join(Repository_Path, Network_Path)
+
+        Save.assure_path_exist(path)
+
+        preprocessed_binary_file_name = 'N_' + data_dictionary['file_name'] + '.bin'
+        preprocessed_binary_file_name = os.path.join(path, preprocessed_binary_file_name)
+
+        Save.dumping_bin(preprocessed_binary_file_name, data_dictionary)
+
+        return preprocessed_binary_file_name

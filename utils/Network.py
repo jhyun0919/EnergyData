@@ -5,7 +5,7 @@ from FileIO import Load
 from FileIO import Save
 from GlobalParameter import *
 import os
-
+from Matrix import decalcomanie
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -116,7 +116,7 @@ class Show:
         Show.build_network(values, names)
 
     @staticmethod
-    def gadient_network(file_list):
+    def gradient_network(file_list):
         Preprocess.preprocess4network(file_list)
 
         names = Preprocess.name_setter(file_list)
@@ -135,8 +135,9 @@ class Show:
         # is more efficient for structure recovery
         X = variation.copy().T
         X /= X.std(axis=0)
-        print X
+
         edge_model.fit(X)
+        # model
 
         ###############################################################################
         # Cluster using affinity propagation
@@ -166,7 +167,7 @@ class Show:
         plt.axis('off')
 
         # Display a graph of the partial correlations
-        partial_correlations = edge_model.precision_.copy()
+        partial_correlations = np.linalg.inv(model)
         d = 1 / np.sqrt(np.diag(partial_correlations))
         partial_correlations *= d
         partial_correlations *= d[:, np.newaxis]
@@ -234,3 +235,5 @@ if __name__ == '__main__':
     file_list = Load.load_filelist(path)
 
     Show.value_network(file_list)
+
+    print 'end'

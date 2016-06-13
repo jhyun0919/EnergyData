@@ -12,6 +12,7 @@ Similarity_Matrix_Scaling = 100
 Repository_Path = '/Users/JH/Documents/GitHub/EnergyData_jhyun/repository'
 Preprocessed_Path = 'preprocessed_data'
 Model_Path = 'model'
+Network_Path = 'network_data'
 
 # Similarity
 Round = 3

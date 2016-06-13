@@ -169,6 +169,9 @@ X = variation.copy().T
 X /= X.std(axis=0)
 edge_model.fit(X)
 
+print edge_model.covariance_
+print edge_model.covariance_.shape
+
 ###############################################################################
 # Cluster using affinity propagation
 
@@ -188,6 +191,8 @@ for i in range(n_labels + 1):
 node_position_model = manifold.LocallyLinearEmbedding(n_components=2, eigen_solver='dense', n_neighbors=6)
 
 embedding = node_position_model.fit_transform(X.T).T
+
+print embedding
 
 ###############################################################################
 # Visualization

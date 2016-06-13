@@ -19,12 +19,12 @@ def interpolation(data_dictionary):
     """
     for i in xrange(0, len(data_dictionary['value'])):
         if math.isnan(data_dictionary['value'][i]):
-            data_dictionary['value'][i] = interpolation_strategy(i, data_dictionary['value'])
+            data_dictionary['value'][i] = interpolation_rule(i, data_dictionary['value'])
 
     return data_dictionary
 
 
-def interpolation_strategy(idx, value):
+def interpolation_rule(idx, value):
     """
 
     :param idx:
