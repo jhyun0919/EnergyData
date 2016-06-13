@@ -165,12 +165,10 @@ edge_model = covariance.GraphLassoCV()
 
 # standardize the time series: using correlations rather than covariance
 # is more efficient for structure recovery
+
 X = variation.copy().T
 X /= X.std(axis=0)
 edge_model.fit(X)
-
-print edge_model.covariance_
-print edge_model.covariance_.shape
 
 ###############################################################################
 # Cluster using affinity propagation
@@ -180,6 +178,9 @@ n_labels = labels.max()
 
 for i in range(n_labels + 1):
     print('Cluster %i: %s' % ((i + 1), ', '.join(names[labels == i])))
+
+print type(names)
+print np.shape(names)
 
 ###############################################################################
 # Find a low-dimension embedding for visualization: find the best position of
@@ -191,8 +192,6 @@ for i in range(n_labels + 1):
 node_position_model = manifold.LocallyLinearEmbedding(n_components=2, eigen_solver='dense', n_neighbors=6)
 
 embedding = node_position_model.fit_transform(X.T).T
-
-print embedding
 
 ###############################################################################
 # Visualization

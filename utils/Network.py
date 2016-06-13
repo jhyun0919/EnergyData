@@ -74,7 +74,10 @@ class Preprocess:
             data = Load.unpickling(file)
             values.append(data['value'])
 
-        return np.array(values)
+        values = np.array(values)
+        values /= values.std(axis=0)
+
+        return values
 
     @staticmethod
     def gradient_setter(file_list):
@@ -95,7 +98,19 @@ class Preprocess:
             file = file.split('_', 2)[-1]
             names.append(file)
 
-        return names
+        return np.array(names)
+
+    @staticmethod
+    def covarience_model_setter(values):
+
+        covariance_matrix = np.cov(values)
+
+        return covariance_matrix
+
+    @staticmethod
+    def precision_model_setter(covariance_matrix):
+        precision_matrix = np.linalg.inv(covariance_matrix)
+        return precision_matrix
 
 
 ###############################################################################
@@ -113,7 +128,10 @@ class Show:
 
         values = Preprocess.value_setter()
 
-        Show.build_network(values, names)
+        covariance_model = Preprocess.covarience_model_setter(values)
+        precision_model = Preprocess.precision_model_setter(covariance_model)
+
+        Show.build_network(values, covariance_model, precision_model, names)
 
     @staticmethod
     def gradient_network(file_list):
@@ -126,23 +144,11 @@ class Show:
         Show.build_network(gradients, names)
 
     @staticmethod
-    def build_network(variation, names):
-        ###############################################################################
-        # Learn a graphical structure from the correlations
-        edge_model = covariance.GraphLassoCV()
-
-        # standardize the time series: using correlations rather than covariance
-        # is more efficient for structure recovery
-        X = variation.copy().T
-        X /= X.std(axis=0)
-
-        edge_model.fit(X)
-        # model
-
+    def build_network(values, covariance_model, precision_model, names):
         ###############################################################################
         # Cluster using affinity propagation
 
-        _, labels = cluster.affinity_propagation(edge_model.covariance_)
+        _, labels = cluster.affinity_propagation(covariance_model)
         n_labels = labels.max()
 
         for i in range(n_labels + 1):
@@ -157,7 +163,7 @@ class Show:
         # use a large number of neighbors to capture the large-scale structure.
         node_position_model = manifold.LocallyLinearEmbedding(n_components=2, eigen_solver='dense', n_neighbors=6)
 
-        embedding = node_position_model.fit_transform(X.T).T
+        embedding = node_position_model.fit_transform(values.T).T
 
         ###############################################################################
         # Visualization
@@ -167,7 +173,7 @@ class Show:
         plt.axis('off')
 
         # Display a graph of the partial correlations
-        partial_correlations = np.linalg.inv(model)
+        partial_correlations = np.linalg.inv(precision_model)
         d = 1 / np.sqrt(np.diag(partial_correlations))
         partial_correlations *= d
         partial_correlations *= d[:, np.newaxis]

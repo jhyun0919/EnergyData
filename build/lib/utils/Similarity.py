@@ -224,9 +224,6 @@ class Model:
         row = row[0][0:-1]
         row = np.reshape(row, (1, len(row)))
 
-        print row
-        print column
-
         return row, column
 
     @staticmethod
@@ -491,7 +488,7 @@ class Report:
 
 
 ###############################################################################
-
+"""
 class Network:
     def __init__(self):
         pass
@@ -623,7 +620,7 @@ class Network:
         plt.title(title)
 
         plt.show()
-
+"""
 
 ###############################################################################
 

@@ -6,6 +6,8 @@ import numpy as np
 from GlobalParameter import *
 import FileIO
 import math
+from sklearn.preprocessing import scale
+from sklearn.preprocessing import Imputer
 
 
 ###############################################################################
@@ -46,10 +48,10 @@ def interpolation_rule(idx, value):
     return interpolated_value
 
 
-def normalization(data_dictionary):
+def interval_equalization(data_dictionary):
     """
-    - normalization을 해주는 함수
-    - Golbal_Parameter에서 정의된 Interpolation_Interval의 일정한 간격으로 normalization을 실행
+    - ts 간격을 같게 변환 해주는 함수
+    - Golbal_Parameter에서 정의된 Interpolation_Interval의 일정한 간격으로 변환을 실행
 
     :param data_dictionary:
         original_dictionary = {"ts": ..., "value": ...}
@@ -62,8 +64,8 @@ def normalization(data_dictionary):
     y = []
 
     present_ts = data_dictionary['ts'][0][0].replace(second=0)
-    minute_scanner = data_dictionary['ts'][0][0].minute / Normalization_Interval
-    present_ts = present_ts.replace(minute=minute_scanner * Normalization_Interval)
+    minute_scanner = data_dictionary['ts'][0][0].minute / Time_Interval
+    present_ts = present_ts.replace(minute=minute_scanner * Time_Interval)
     next_ts = present_ts + ts_delta
 
     value_collector = []
@@ -85,7 +87,6 @@ def normalization(data_dictionary):
 
             for i_nan in xrange(0, nan_number):
                 x.append(present_ts)
-
                 y.append(np.nan)
 
                 present_ts = next_ts
@@ -136,6 +137,8 @@ def scaling(data_dictionary):
         scaled_dictionary = {"ts": ..., "value": ...}
         - type: dictionary
     """
+
+    """
     data_list = data_dictionary['value']
     normalizer = n_th_abs_maximum(Noise_Filter, data_list)
 
@@ -143,6 +146,15 @@ def scaling(data_dictionary):
         pass
     else:
         data_dictionary['value'] = (data_list / normalizer) * Scale_Size
+    """
+
+    #################################################################
+    # sklearn.preprocessing.scale
+
+    # Standardize a dataset along any axis
+    # Center to the mean
+    # Component wise scale to unit variance.
+    data_dictionary['value'] = scale(data_dictionary['value'], axis=0, with_mean=True, with_std=True, copy=True)
 
     return data_dictionary
 
@@ -176,7 +188,7 @@ def data_preprocess(binary_file):
         preprocessed_dictionary = {"ts": ..., "value": ...}
     """
     data_dictionary = FileIO.Load.unpickling(binary_file)
-    data_dictionary = interpolation(normalization(scaling((data_dictionary))))
+    data_dictionary = interpolation(interval_equalization(scaling((data_dictionary))))
     return data_dictionary
 
 
@@ -313,17 +325,17 @@ if __name__ == '__main__':
 
     data_dictionary = FileIO.Load.unpickling(file_path)
 
-    data_dictionary = scaling(data_dictionary)
-    print data_dictionary
-    print
-    Graph.Show.dic2graph(data_dictionary)
-
-    data_dictionary = normalization(data_dictionary)
+    data_dictionary = interval_equalization(data_dictionary)
     print data_dictionary
     print
     Graph.Show.dic2graph(data_dictionary)
 
     data_dictionary = interpolation(data_dictionary)
+    print data_dictionary
+    print
+    Graph.Show.dic2graph(data_dictionary)
+
+    data_dictionary = scaling(data_dictionary)
     print data_dictionary
     print
     Graph.Show.dic2graph(data_dictionary)
