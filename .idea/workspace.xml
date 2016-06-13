@@ -3,43 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="cb953e4b-3ba5-4624-bfb3-f51d8ae97f67" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/lib/utils/GlobalParameter.py" afterPath="$PROJECT_DIR$/build/lib/utils/GlobalParameter.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/lib/utils/Network.py" afterPath="$PROJECT_DIR$/build/lib/utils/Network.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/lib/utils/Preprocess.py" afterPath="$PROJECT_DIR$/build/lib/utils/Preprocess.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/lib/utils/Similarity.py" afterPath="$PROJECT_DIR$/build/lib/utils/Similarity.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/01_01. Data Preprocessing.ipynb" afterPath="$PROJECT_DIR$/docs/01_01. Data Preprocessing.ipynb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/01_02. Save Preprocessed Data.ipynb" afterPath="$PROJECT_DIR$/docs/01_02. Save Preprocessed Data.ipynb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/02_01. Build Similarity Model.ipynb" afterPath="$PROJECT_DIR$/docs/02_01. Build Similarity Model.ipynb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/02_02. Write Similarity Report.ipynb" afterPath="$PROJECT_DIR$/docs/02_02. Write Similarity Report.ipynb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/energy_data_venv/lib/python2.7/site-packages/utils/GlobalParameter.py" afterPath="$PROJECT_DIR$/energy_data_venv/lib/python2.7/site-packages/utils/GlobalParameter.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/energy_data_venv/lib/python2.7/site-packages/utils/Network.py" afterPath="$PROJECT_DIR$/energy_data_venv/lib/python2.7/site-packages/utils/Network.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/02_03. Show Similarity Weighted-Graph.ipynb" afterPath="$PROJECT_DIR$/docs/02_03. Show Similarity Weighted-Graph.ipynb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/energy_data_venv/lib/python2.7/site-packages/utils/Preprocess.py" afterPath="$PROJECT_DIR$/energy_data_venv/lib/python2.7/site-packages/utils/Preprocess.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/energy_data_venv/lib/python2.7/site-packages/utils/Similarity.py" afterPath="$PROJECT_DIR$/energy_data_venv/lib/python2.7/site-packages/utils/Similarity.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/practice/plot_stock_market.py" afterPath="$PROJECT_DIR$/practice/plot_stock_market.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repository/model/model.bin" afterPath="$PROJECT_DIR$/repository/model/model.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repository/network_data/N_GW1_HA10_VM_EP_KV_K.bin" afterPath="$PROJECT_DIR$/repository/network_data/N_GW1_HA10_VM_EP_KV_K.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repository/network_data/N_GW1_HA10_VM_KV_K.bin" afterPath="$PROJECT_DIR$/repository/network_data/N_GW1_HA10_VM_KV_K.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repository/network_data/N_GW1_HA10_VM_KV_KAM.bin" afterPath="$PROJECT_DIR$/repository/network_data/N_GW1_HA10_VM_KV_KAM.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repository/network_data/N_GW1_HA11_VM_EP_KV_K.bin" afterPath="$PROJECT_DIR$/repository/network_data/N_GW1_HA11_VM_EP_KV_K.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repository/network_data/N_GW1_HA11_VM_KV_K.bin" afterPath="$PROJECT_DIR$/repository/network_data/N_GW1_HA11_VM_KV_K.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repository/network_data/N_GW1_HA11_VM_KV_KAM.bin" afterPath="$PROJECT_DIR$/repository/network_data/N_GW1_HA11_VM_KV_KAM.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repository/network_data/N_GW2_HA4_VM_EP_KV_K.bin" afterPath="$PROJECT_DIR$/repository/network_data/N_GW2_HA4_VM_EP_KV_K.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repository/network_data/N_GW2_HA4_VM_KV_K.bin" afterPath="$PROJECT_DIR$/repository/network_data/N_GW2_HA4_VM_KV_K.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repository/network_data/N_GW2_HA4_VM_KV_KAM.bin" afterPath="$PROJECT_DIR$/repository/network_data/N_GW2_HA4_VM_KV_KAM.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repository/network_data/N_GW2_HA7_VM_EP_KV_K.bin" afterPath="$PROJECT_DIR$/repository/network_data/N_GW2_HA7_VM_EP_KV_K.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repository/preprocessed_data/PP_VTT_GW1_HA10_VM_EP_KV_K.bin" afterPath="$PROJECT_DIR$/repository/preprocessed_data/PP_VTT_GW1_HA10_VM_EP_KV_K.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repository/preprocessed_data/PP_VTT_GW1_HA10_VM_KV_K.bin" afterPath="$PROJECT_DIR$/repository/preprocessed_data/PP_VTT_GW1_HA10_VM_KV_K.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repository/preprocessed_data/PP_VTT_GW1_HA10_VM_KV_KAM.bin" afterPath="$PROJECT_DIR$/repository/preprocessed_data/PP_VTT_GW1_HA10_VM_KV_KAM.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repository/preprocessed_data/PP_VTT_GW1_HA11_VM_EP_KV_K.bin" afterPath="$PROJECT_DIR$/repository/preprocessed_data/PP_VTT_GW1_HA11_VM_EP_KV_K.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repository/preprocessed_data/PP_VTT_GW1_HA11_VM_KV_K.bin" afterPath="$PROJECT_DIR$/repository/preprocessed_data/PP_VTT_GW1_HA11_VM_KV_K.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repository/preprocessed_data/PP_VTT_GW1_HA11_VM_KV_KAM.bin" afterPath="$PROJECT_DIR$/repository/preprocessed_data/PP_VTT_GW1_HA11_VM_KV_KAM.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repository/preprocessed_data/PP_VTT_GW2_HA4_VM_EP_KV_K.bin" afterPath="$PROJECT_DIR$/repository/preprocessed_data/PP_VTT_GW2_HA4_VM_EP_KV_K.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repository/preprocessed_data/PP_VTT_GW2_HA4_VM_KV_K.bin" afterPath="$PROJECT_DIR$/repository/preprocessed_data/PP_VTT_GW2_HA4_VM_KV_K.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repository/preprocessed_data/PP_VTT_GW2_HA4_VM_KV_KAM.bin" afterPath="$PROJECT_DIR$/repository/preprocessed_data/PP_VTT_GW2_HA4_VM_KV_KAM.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repository/preprocessed_data/PP_VTT_GW2_HA7_VM_EP_KV_K.bin" afterPath="$PROJECT_DIR$/repository/preprocessed_data/PP_VTT_GW2_HA7_VM_EP_KV_K.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/utils/GlobalParameter.py" afterPath="$PROJECT_DIR$/utils/GlobalParameter.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/utils/Network.py" afterPath="$PROJECT_DIR$/utils/Network.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/utils/Preprocess.py" afterPath="$PROJECT_DIR$/utils/Preprocess.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/utils/Similarity.py" afterPath="$PROJECT_DIR$/utils/Similarity.py" />
     </list>
     <ignored path="EnergyData_jhyun.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -143,8 +115,8 @@
           <file leaf-file-name="Similarity.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/utils/Similarity.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-11.003063">
-                  <caret line="118" column="0" selection-start-line="118" selection-start-column="0" selection-end-line="118" selection-end-column="0" />
+                <state vertical-scroll-proportion="-0.25267994">
+                  <caret line="444" column="60" selection-start-line="444" selection-start-column="60" selection-end-line="444" selection-end-column="60" />
                   <folding>
                     <element signature="e#25#54#0" expanded="true" />
                   </folding>
@@ -165,7 +137,7 @@
           <file leaf-file-name="Preprocess.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/utils/Preprocess.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-22.074074">
+                <state vertical-scroll-proportion="-19.296297">
                   <caret line="340" column="41" selection-start-line="340" selection-start-column="41" selection-end-line="340" selection-end-column="41" />
                   <folding>
                     <element signature="e#25#37#0" expanded="true" />
@@ -196,11 +168,11 @@
         <option value="$PROJECT_DIR$/practice/example_quotes_historical_yahoo.py" />
         <option value="$PROJECT_DIR$/utils/FileIO.py" />
         <option value="$PROJECT_DIR$/setup.py" />
-        <option value="$PROJECT_DIR$/utils/Similarity.py" />
         <option value="$PROJECT_DIR$/practice/plot_stock_market.py" />
         <option value="$PROJECT_DIR$/utils/Network.py" />
         <option value="$PROJECT_DIR$/utils/GlobalParameter.py" />
         <option value="$PROJECT_DIR$/utils/Preprocess.py" />
+        <option value="$PROJECT_DIR$/utils/Similarity.py" />
       </list>
     </option>
   </component>
@@ -969,14 +941,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/utils/GlobalParameter.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="22" column="35" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/utils/Graph.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.517611">
@@ -987,7 +951,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/utils/Preprocess.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-22.074074">
+        <state vertical-scroll-proportion="-19.296297">
           <caret line="340" column="41" selection-start-line="340" selection-start-column="41" selection-end-line="340" selection-end-column="41" />
           <folding>
             <element signature="e#25#37#0" expanded="true" />
@@ -995,10 +959,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/utils/GlobalParameter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="22" column="35" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/utils/Similarity.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.003063">
-          <caret line="118" column="0" selection-start-line="118" selection-start-column="0" selection-end-line="118" selection-end-column="0" />
+        <state vertical-scroll-proportion="-0.25267994">
+          <caret line="444" column="60" selection-start-line="444" selection-start-column="60" selection-end-line="444" selection-end-column="60" />
           <folding>
             <element signature="e#25#54#0" expanded="true" />
           </folding>

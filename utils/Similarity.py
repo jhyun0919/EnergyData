@@ -311,12 +311,12 @@ class Model:
         early, late, _ = preprocess4similarity(binary_file_1, binary_file_2)
         score = Model.cosine_similarity_calculator(early, late)
 
-        if score >= 0:
-            score = 1 - score
-        else:
-            score = -1 - score
+        # if score >= 0:
+        #     score = 1 - score
+        # else:
+        #     score = -1 - score
 
-        return score
+        return abs(1 - score)
 
     @staticmethod
     def euclidean_distance_score(binary_file_1, binary_file_2):
@@ -488,7 +488,7 @@ class Report:
 
 
 ###############################################################################
-"""
+
 class Network:
     def __init__(self):
         pass
@@ -620,7 +620,7 @@ class Network:
         plt.title(title)
 
         plt.show()
-"""
+
 
 ###############################################################################
 

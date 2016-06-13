@@ -9,6 +9,7 @@ import math
 from sklearn.preprocessing import scale
 from sklearn.preprocessing import Imputer
 
+
 ###############################################################################
 # data preprocessing
 
@@ -324,17 +325,17 @@ if __name__ == '__main__':
 
     data_dictionary = FileIO.Load.unpickling(file_path)
 
-    data_dictionary = scaling(data_dictionary)
-    print data_dictionary
-    print
-    Graph.Show.dic2graph(data_dictionary)
-
     data_dictionary = interval_equalization(data_dictionary)
     print data_dictionary
     print
     Graph.Show.dic2graph(data_dictionary)
 
     data_dictionary = interpolation(data_dictionary)
+    print data_dictionary
+    print
+    Graph.Show.dic2graph(data_dictionary)
+
+    data_dictionary = scaling(data_dictionary)
     print data_dictionary
     print
     Graph.Show.dic2graph(data_dictionary)
