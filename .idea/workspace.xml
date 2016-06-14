@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cb953e4b-3ba5-4624-bfb3-f51d8ae97f67" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/EnergyData_jhyun.iml" afterPath="$PROJECT_DIR$/.idea/EnergyData_jhyun.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/energy_data_venv/pip-selfcheck.json" afterPath="$PROJECT_DIR$/energy_data_venv/pip-selfcheck.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/utils/Preprocess.py" afterPath="$PROJECT_DIR$/utils/Preprocess.py" />
-    </list>
+    <list default="true" id="cb953e4b-3ba5-4624-bfb3-f51d8ae97f67" name="Default" comment="" />
     <ignored path="EnergyData_jhyun.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -52,7 +46,7 @@
           <file leaf-file-name="Graph.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/utils/Graph.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.5640244">
+                <state vertical-scroll-proportion="0.78835225">
                   <caret line="40" column="32" selection-start-line="40" selection-start-column="32" selection-end-line="40" selection-end-column="32" />
                   <folding />
                 </state>
@@ -136,8 +130,8 @@
           <file leaf-file-name="Preprocess.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/utils/Preprocess.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="8" column="39" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
+                <state vertical-scroll-proportion="0.42097488">
+                  <caret line="27" column="31" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
                   <folding>
                     <element signature="e#25#37#0" expanded="true" />
                   </folding>
@@ -181,10 +175,8 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="660" />
-    <option name="y" value="-1080" />
-    <option name="width" value="1920" />
-    <option name="height" value="1080" />
+    <option name="width" value="1280" />
+    <option name="height" value="800" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -584,8 +576,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="660" y="-1080" width="1920" height="1080" extended-state="0" />
-    <editor active="true" />
+    <frame x="0" y="0" width="1280" height="800" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24973376" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32905138" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -970,8 +962,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/utils/Preprocess.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="39" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
+        <state vertical-scroll-proportion="0.42097488">
+          <caret line="27" column="31" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
           <folding>
             <element signature="e#25#37#0" expanded="true" />
           </folding>
@@ -980,7 +972,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/utils/Graph.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5640244">
+        <state vertical-scroll-proportion="0.78835225">
           <caret line="40" column="32" selection-start-line="40" selection-start-column="32" selection-end-line="40" selection-end-column="32" />
           <folding />
         </state>
