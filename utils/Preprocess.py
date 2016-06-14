@@ -7,7 +7,6 @@ from GlobalParameter import *
 import FileIO
 import math
 from sklearn.preprocessing import scale
-from sklearn.preprocessing import Imputer
 
 
 ###############################################################################
