@@ -4,6 +4,8 @@ import os
 import cPickle as pickle
 from GlobalParameter import *
 
+###############################################################################
+#
 
 class Path:
     def __init__(self):
@@ -22,6 +24,9 @@ class Path:
             directory = directory.rsplit('/', 1)[0]
             Path.path_checker(directory)
 
+
+###############################################################################
+# Load File
 
 class Load:
     def __init__(self):
@@ -80,6 +85,9 @@ class Load:
             print '\t',
             print data_dictionary['value'][i]
 
+
+###############################################################################
+# Save File
 
 class Save:
     def __init__(self):
