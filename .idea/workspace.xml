@@ -1,64 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cb953e4b-3ba5-4624-bfb3-f51d8ae97f67" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/practice/AffinityPropagation.ipynb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/practice/CLASSIFIER.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/practice/CLUSTER2GRAPH.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/practice/DATA2CLUSTER.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/practice/DATA2GRAPH.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/practice/DATA2VEC.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/practice/DATA2VEC2GRAPH.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/practice/DATA2VEC_GRAPH.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/practice/DEPENDENCY.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/practice/GaussianNB_practice_01.ipynb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/practice/KMeans.ipynb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/practice/Load.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/practice/Multi-dimensional scaling.ipynb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/practice/Path.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/practice/Save.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/practice/TFKmeans.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/practice/Untitled.ipynb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/practice/Untitled.ipynb 복사본" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/practice/Untitled1.ipynb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/practice/Untitled2.ipynb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/practice/Untitled3.ipynb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/practice/VEC2CLUSTER.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/practice/VEC2GRAPH.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/practice/VEC_01.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/practice/VEC_02.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/practice/VEC_03.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/practice/VTT_data_graph_drawing_practice.ipynb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/practice/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/practice/clustering_01.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/practice/clustering_02.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/practice/ernergy_data_outline.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/practice/interpolation_practice_01.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/practice/interpolation_practice_02.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/practice/interpolation_practice_03.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/practice/interpolation_practice_04.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/practice/k_means_.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/practice/kmeans_practice.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/practice/kmenas_clustering.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/practice/matplot_pracice_01.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/practice/matplot_practice_02.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/practice/naive_bayes.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/practice/nearest_neighbor_01.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/practice/networkx_01.ipynb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/practice/normalization.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/practice/parsing.ipynb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/practice/parsing.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/practice/plot_stock_market.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/practice/show_graph.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/practice/show_graph_02.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/practice/simplest_ineterpolation_example.ipynb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/practice/trim.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/practice/vectorize_01.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/practice/visualizing_nodes_edges.ipynb" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/EnergyData_jhyun.iml" afterPath="$PROJECT_DIR$/.idea/EnergyData_jhyun.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="cb953e4b-3ba5-4624-bfb3-f51d8ae97f67" name="Default" comment="" />
     <ignored path="EnergyData_jhyun.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
