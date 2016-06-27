@@ -40,7 +40,7 @@ class Show:
         Show.dictionary2graph(data)
 
     @staticmethod
-    def defined_data2graph(binary_file):
+    def refined_data2graph(binary_file):
         """
 
         :param binary_file:

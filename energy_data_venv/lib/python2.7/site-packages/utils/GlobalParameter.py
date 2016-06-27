@@ -15,6 +15,7 @@ Similarity_Matrix_Scaling = 100
 # Save
 
 Repository_Path = '/Users/JH/Documents/GitHub/EnergyData_jhyun/repository'
+Raw_Data_Repository_Path = '/Users/JH/Documents/GitHub/EnergyData_jhyun/repository/VTT'
 Preprocessed_Path = 'preprocessed_data'
 Model_Path = 'model'
 Network_Path = 'network_data'
