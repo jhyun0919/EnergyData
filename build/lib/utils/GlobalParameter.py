@@ -5,7 +5,6 @@ from datetime import timedelta
 # Preprocess
 
 Time_Interval = 15  # minute
-ts_delta = timedelta(minutes=Time_Interval)
 Noise_Filter = 10
 Scale_Size = 100
 Similarity_Matrix_Scaling = 100

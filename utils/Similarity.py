@@ -358,6 +358,7 @@ class Model:
     def cosine_similarity_calculator(early, late):
         numerator = sum(a * b for a, b in zip(early, late))
         denominator = Model.square_rooted(early) * Model.square_rooted(late)
+
         return round(numerator / float(denominator), Round)
 
     @staticmethod

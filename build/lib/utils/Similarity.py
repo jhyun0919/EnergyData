@@ -8,7 +8,7 @@ from Preprocess import data_preprocess
 from math import sqrt
 from operator import itemgetter
 import numpy as np
-from Preprocess import preprocess4similarity
+from Preprocess import ts_synchronize
 from Preprocess import preprocess4similarity_matrix
 import os
 import networkx as nx
@@ -28,6 +28,12 @@ class Model:
 
     @staticmethod
     def build_model(file_list):
+        """
+        -
+
+        :param file_list:
+        :return:
+        """
         similarity_model = {}
 
         similarity_model['file_list'] = file_list
@@ -130,7 +136,7 @@ class Model:
         saved_path = Save.model2bin_file(similarity_model)
 
         # clean preprocessed data repository
-        old_preprocessed_file_list = Load.load_filelist(os.path.join(Repository_Path, Preprocessed_Path))
+        old_preprocessed_file_list = Load.load_binary_file_list(os.path.join(Repository_Path, Preprocessed_Path))
         overlap_preprocessed_file_list = Model.diff(old_preprocessed_file_list, similarity_model['file_list'])
 
         for file_path in overlap_preprocessed_file_list:
@@ -301,47 +307,42 @@ class Model:
 
     @staticmethod
     def covariance_score(binary_file_1, binary_file_2):
-        early, late, _ = preprocess4similarity(binary_file_1, binary_file_2)
+        early, late, _ = ts_synchronize(binary_file_1, binary_file_2)
         score = Model.covariance_calculator(early, late)
 
         return score
 
     @staticmethod
     def cosine_similarity_score(binary_file_1, binary_file_2):
-        early, late, _ = preprocess4similarity(binary_file_1, binary_file_2)
+        early, late, _ = ts_synchronize(binary_file_1, binary_file_2)
         score = Model.cosine_similarity_calculator(early, late)
-
-        # if score >= 0:
-        #     score = 1 - score
-        # else:
-        #     score = -1 - score
 
         return abs(1 - score)
 
     @staticmethod
     def euclidean_distance_score(binary_file_1, binary_file_2):
-        early, late, _ = preprocess4similarity(binary_file_1, binary_file_2)
+        early, late, _ = ts_synchronize(binary_file_1, binary_file_2)
         score = Model.euclidean_distance_calculator(early, late)
 
         return score
 
     @staticmethod
     def manhattan_distance_score(binary_file_1, binary_file_2):
-        early, late, length = preprocess4similarity(binary_file_1, binary_file_2)
+        early, late, length = ts_synchronize(binary_file_1, binary_file_2)
         score = Model.manhattan_distance_calculator(early, late)
 
         return score / length
 
     @staticmethod
     def gradient_similarity_score(binary_file_1, binary_file_2):
-        early, late, length = preprocess4similarity(binary_file_1, binary_file_2)
+        early, late, length = ts_synchronize(binary_file_1, binary_file_2)
         score = Model.gradient_similarity_calculator(early, late)
 
         return score / length
 
     @staticmethod
     def reversed_gradient_similarity_score(binary_file_1, binary_file_2):
-        early, late, length = preprocess4similarity(binary_file_1, binary_file_2)
+        early, late, length = ts_synchronize(binary_file_1, binary_file_2)
         score = Model.reversed_gradient_similarity_calculator(early, late)
 
         return score / length
@@ -357,6 +358,7 @@ class Model:
     def cosine_similarity_calculator(early, late):
         numerator = sum(a * b for a, b in zip(early, late))
         denominator = Model.square_rooted(early) * Model.square_rooted(late)
+
         return round(numerator / float(denominator), Round)
 
     @staticmethod
@@ -376,10 +378,6 @@ class Model:
 
         for a, b, in zip(early_gradient, late_gradient):
             gradient_distance = abs(a - b)
-            # if gradient_distance < Gradient_Threshold:
-            #     score.append(0)
-            # else:
-            #
             score.append(gradient_distance)
 
         return round(sum(score), 3)
@@ -394,10 +392,6 @@ class Model:
 
         for a, b, in zip(early_gradient, late_gradient):
             gradient_distance = abs(a - (-b))
-            # if gradient_distance < Gradient_Threshold:
-            #     score.append(0)
-            # else:
-            #     score.append(gradient_distance)
             score.append(gradient_distance)
 
         return round(sum(score), 3)

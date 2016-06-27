@@ -23,6 +23,7 @@ class Show:
         :return:
         """
 
+        plt.figure(figsize=(12, 9))
         plt.title(dictionary['file_name'])
         plt.scatter(x=dictionary['ts'], y=dictionary['value'], color='b', marker='o')
         plt.show()
@@ -69,6 +70,7 @@ class Save:
             start_time = time.time()
 
             # make a plot
+            plt.figure(figsize=(12, 9))
             plt.title(dictionary['file_name'])
             plt.scatter(x=dictionary['ts'][:, 0], y=dictionary['value'], color='b', marker='o')
 
