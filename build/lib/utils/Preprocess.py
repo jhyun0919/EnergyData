@@ -318,21 +318,21 @@ def preprocess4similarity_matrix(similarity_matrix):
 if __name__ == '__main__':
     file_path = '/repository/VTT/VTT_GW1_HA11_VM_KV_K.bin'
 
-    Graph.Show.bin2graph(file_path)
+    Graph.Show.raw_data2graph(file_path)
 
     data_dictionary = FileIO.Load.unpickling(file_path)
 
     data_dictionary = interval_equalization(data_dictionary)
     print data_dictionary
     print
-    Graph.Show.value2graph(data_dictionary)
+    Graph.Show.dictionary2graph(data_dictionary)
 
     data_dictionary = interpolation(data_dictionary)
     print data_dictionary
     print
-    Graph.Show.value2graph(data_dictionary)
+    Graph.Show.dictionary2graph(data_dictionary)
 
     data_dictionary = scaling(data_dictionary)
     print data_dictionary
     print
-    Graph.Show.value2graph(data_dictionary)
+    Graph.Show.dictionary2graph(data_dictionary)

@@ -14,7 +14,7 @@ class Show:
         pass
 
     @staticmethod
-    def value2graph(dictionary):
+    def dictionary2graph(dictionary):
         """
 
         :param dictionary:
@@ -27,7 +27,7 @@ class Show:
         plt.close()
 
     @staticmethod
-    def bin2graph(binary_file):
+    def raw_data2graph(binary_file):
         """
         -
         :param binary_file:
@@ -37,15 +37,20 @@ class Show:
         """
         data = FileIO.Load.unpickling(binary_file)
         data['ts'] = data['ts'][:, 0]
-        Show.value2graph(data)
+        Show.dictionary2graph(data)
 
     @staticmethod
-    def vectors2graphs(file):
+    def defined_data2graph(binary_file):
         """
 
-        :param file:
+        :param binary_file:
         :return:
         """
+        Show.dictionary2graph(FileIO.Load.unpickling(binary_file))
+    """
+    @staticmethod
+    def vectors2graphs(file):
+
         vectors = FileIO.Load.unpickling(file)
         for i in xrange(len(vectors['file_name'])):
             name = vectors['file_name'][i].rsplit('/', 1)[1]
@@ -57,3 +62,4 @@ class Show:
             plt.show()
             plt.close()
             print
+    """

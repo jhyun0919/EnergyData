@@ -5,6 +5,9 @@ import cPickle as pickle
 from GlobalParameter import *
 
 
+###############################################################################
+# Path Validity Check
+
 class Path:
     def __init__(self):
         pass
@@ -12,9 +15,13 @@ class Path:
     @staticmethod
     def path_checker(directory):
         """
+        - 주어진 directory 가 유효한 지 확인하고,
+        - 유효하지 않을 경우 해당 directory 를 만들어 줌
 
         :param directory:
+            directory
         :return:
+            N/A
         """
         if os.path.isdir(directory):
             return directory
@@ -22,6 +29,9 @@ class Path:
             directory = directory.rsplit('/', 1)[0]
             Path.path_checker(directory)
 
+
+###############################################################################
+# Load File
 
 class Load:
     def __init__(self):
@@ -43,27 +53,31 @@ class Load:
         return data_dictionary
 
     @staticmethod
-    def load_filelist(path):
+    def load_binary_file_list(directory):
         """
+        - directory 내에 있는 binary file 들의 abs_path 를 list 로 만들어 반환함
 
-        :param path:
+        :param directory:
+            directory
         :return:
+            binary file list
+            - type: list
         """
         bin_file_list = []
 
         try:
-            file_names = os.listdir(path)
+            file_names = os.listdir(directory)
             for i in xrange(0, len(file_names)):
                 ext = os.path.splitext(file_names[i])[-1]
                 if ext == '.bin':
-                    file = os.path.join(path, file_names[i])
+                    file = os.path.join(directory, file_names[i])
                     bin_file_list.append(file)
         except OSError as err:
             print 'OSError' + str(err)
             exit()
 
         if len(bin_file_list) == 0:
-            print 'There is no file in the given directory path'
+            print 'There is no binary file in the given directory path'
             exit()
 
         return bin_file_list
@@ -80,6 +94,9 @@ class Load:
             print '\t',
             print data_dictionary['value'][i]
 
+
+###############################################################################
+# Save File
 
 class Save:
     def __init__(self):
