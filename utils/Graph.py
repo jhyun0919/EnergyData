@@ -1,9 +1,11 @@
 # -*- coding: utf-8 -*-
 
-import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 import FileIO
+import os
+import time
+from GlobalParameter import *
 
 
 ###############################################################################
@@ -47,19 +49,34 @@ class Show:
         :return:
         """
         Show.dictionary2graph(FileIO.Load.unpickling(binary_file))
-    """
+
+
+class Save:
+    def __init__(self):
+        pass
+
     @staticmethod
-    def vectors2graphs(file):
+    def raw_data2graph(directory):
+        save_path = os.path.join(Repository_Path, Graph_path)
+        FileIO.Save.assure_path_exist(save_path)
 
-        vectors = FileIO.Load.unpickling(file)
-        for i in xrange(len(vectors['file_name'])):
-            name = vectors['file_name'][i].rsplit('/', 1)[1]
-            name = name.split('.')[0]
+        for binary_file in FileIO.Load.load_binary_file_list(directory):
+            # load data
+            dictionary = FileIO.Load.unpickling(binary_file)
 
-            x = np.linspace(0, 1, len(vectors['vec_data'][i]))
-            plt.scatter(x, vectors['vec_data'][i], marker='+')
-            plt.title(name)
-            plt.show()
+            print 'drawing : ',
+            print dictionary['file_name']
+            start_time = time.time()
+
+            # make a plot
+            plt.title(dictionary['file_name'])
+            plt.scatter(x=dictionary['ts'][:, 0], y=dictionary['value'], color='b', marker='o')
+
+            # save it in png formats
+            graph_figure_path = os.path.join(save_path, dictionary['file_name'] + '.png')
+            plt.savefig(graph_figure_path, format='png')
             plt.close()
-            print
-    """
+
+            end_time = time.time()
+            run_time = end_time - start_time
+            print '\t' + 'run_time: ' + str(run_time) + ' sec'

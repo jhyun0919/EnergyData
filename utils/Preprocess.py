@@ -13,14 +13,14 @@ def refining_data(raw_data_repository_path=Raw_Data_Repository_Path,
                   time_interval=Time_Interval):
     for line in FileIO.Load.load_binary_file_list(raw_data_repository_path):
         file_name = line.rsplit('/', 1)[-1]
-        print 'refining file name: ',
-        print file_name + '\t\t',
+        print 'refining : ',
+        print file_name
 
         start_time = time.time()
         _, save_path = FileIO.Save.refined_data2bin_file(data_preprocess(line), time_interval)
         end_time = time.time()
         run_time = end_time - start_time
-        print 'run_time: ' + str(run_time) + ' sec'
+        print '\t' + 'run_time: ' + str(run_time) + ' sec'
 
     return save_path
 
