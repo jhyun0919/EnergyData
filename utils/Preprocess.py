@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 
 import Graph
-import copy
 import numpy as np
 from GlobalParameter import *
 import FileIO
@@ -35,36 +34,7 @@ def data_preprocess(binary_file_path):
     # Scaling
     dictionary_data = scaling(dictionary_data)
 
-    # Insert Instantaneous Value
-    dictionary_data['instantaneous_value'] = instantaneous_value(dictionary_data['value'])
-
     return dictionary_data
-
-
-###############################################################################
-# Instantaneous Value
-
-def instantaneous_value(cumulative_value):
-    """
-    - 입력받은 data 를 누적 data 라고 가정한 뒤,
-    - 순간 data 를 계산하기 위해
-    - 이웃한 time stamp 사이 value 의 변화량을 기록하여 반환함
-
-    :param cumulative_value:
-        original data 로 cumulative 한 data 라고 가정함
-        - type: np.array
-            - shape: (length, 1)
-    :return:
-        계산된 순간 value data
-        - type: np.array
-            - shape: (length, 1)
-    """
-    forward_shifted_value = cumulative_value[1:]
-    forward_shifted_value = np.hstack((forward_shifted_value, cumulative_value[-1]))
-
-    instant_value = forward_shifted_value - cumulative_value
-
-    return instant_value
 
 
 ###############################################################################
@@ -225,8 +195,6 @@ def scaling(data_dictionary):
     # Center to the mean
     # Component wise scale to unit variance.
     data_dictionary['value'] = scale(data_dictionary['value'], axis=0, with_mean=True, with_std=True, copy=True)
-    data_dictionary['instantaneous_value'] = scale(data_dictionary['instantaneous_value'], axis=0, with_mean=True,
-                                                   with_std=True, copy=True)
 
     return data_dictionary
 
@@ -234,9 +202,9 @@ def scaling(data_dictionary):
 ###############################################################################
 # data-preprocessing 4 similarity
 
-def preprocess4similarity(binary_file_1, binary_file_2):
+def ts_synchronize(binary_file_1, binary_file_2):
     """
-    - 두 data 사이 similarity 를 계산하기 위한 preprocessing 함수
+    - 두 data 사이 similarity 를 계산하기 위해 ts 시작과 끝을 일치 시키는 함수
     - 공통된 ts 부분만 남기고 나머지 부분들은 삭제
     - 공통된 ts 부분의 value 값만 남긴다
 
@@ -246,8 +214,6 @@ def preprocess4similarity(binary_file_1, binary_file_2):
         binary file abs_path
     :return:
     """
-    # print binary_file_1
-    # print binary_file_2
     data_dictionary_1 = FileIO.Load.unpickling(binary_file_1)
     data_dictionary_2 = FileIO.Load.unpickling(binary_file_2)
 
@@ -260,6 +226,7 @@ def preprocess4similarity(binary_file_1, binary_file_2):
 
 def start_time_compare(data_dictionary_1, data_dictionary_2):
     """
+    - 시작 ts 값으로 early, late data  로 구분하여 반환
 
     :param data_dictionary_1:
     :param data_dictionary_2:
@@ -280,6 +247,7 @@ def start_time_compare(data_dictionary_1, data_dictionary_2):
 
 def start_ts_synchronize(early, late):
     """
+    - 시작 ts 값을 통일시켜 반환
 
     :param early:
     :param late:
@@ -289,7 +257,7 @@ def start_ts_synchronize(early, late):
         if late['ts'][0] == early['ts'][i]:
             ts_fix = i
             break
-
+    """
     x, y = [], []
     for i in xrange(ts_fix, len(early['ts'])):
         x.append(early['ts'][i])
@@ -297,18 +265,22 @@ def start_ts_synchronize(early, late):
 
     early['ts'] = np.array(x)
     early['value'] = np.array(y)
+    """
+
+    early['ts'] = early['ts'][ts_fix:]
+    early['value'] = early['value'][ts_fix:]
 
     return early, late
 
 
 def end_ts_synchronize(early, late):
     """
+    - end ts 값을 통일시켜 반환
 
     :param early:
     :param late:
     :return:
     """
-    x, y = [], []
     if len(late['ts']) >= (len(early['ts'])):
         length = len(early['ts'])
         late['ts'] = late['ts'][0:length]
@@ -318,6 +290,11 @@ def end_ts_synchronize(early, late):
         early['ts'] = early['ts'][0:length]
 
     return early, late, length
+
+
+"""
+X = X/X.std로 바꿀 것..
+"""
 
 
 def preprocess4similarity_matrix(similarity_matrix):
@@ -339,15 +316,10 @@ def preprocess4similarity_matrix(similarity_matrix):
 ###############################################################################
 
 if __name__ == '__main__':
-    file_path = '/repository/VTT/VTT_GW1_HA11_VM_KV_KAM.bin'
+    file_path = '/repository/VTT/VTT_GW1_HA11_VM_KV_K.bin'
 
     Graph.Show.bin2graph(file_path)
 
-    data_dictionary = data_preprocess(file_path)
-    Graph.Show.value2graph(data_dictionary)
-    Graph.Show.instant_value2graph(data_dictionary)
-
-    """
     data_dictionary = FileIO.Load.unpickling(file_path)
 
     data_dictionary = interval_equalization(data_dictionary)
@@ -364,4 +336,3 @@ if __name__ == '__main__':
     print data_dictionary
     print
     Graph.Show.value2graph(data_dictionary)
-    """

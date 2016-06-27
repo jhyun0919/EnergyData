@@ -2,6 +2,7 @@
 
 import numpy as np
 import matplotlib.pyplot as plt
+import seaborn as sns
 import FileIO
 
 
@@ -19,38 +20,9 @@ class Show:
         :param dictionary:
         :return:
         """
-        x = []
-        for ts in dictionary['ts']:
-            try:
-                x.append(ts[0])
-            except TypeError:
-                x.append(ts)
-
-        y = dictionary['value']
 
         plt.title(dictionary['file_name'])
-        plt.scatter(x, y, marker='x')
-        plt.show()
-        plt.close()
-
-    @staticmethod
-    def instant_value2graph(dictionary):
-        """
-
-        :param dictionary:
-        :return:
-        """
-        x = []
-        for ts in dictionary['ts']:
-            try:
-                x.append(ts[0])
-            except TypeError:
-                x.append(ts)
-
-        y = dictionary['instantaneous_value']
-
-        plt.title(dictionary['file_name'])
-        plt.scatter(x, y, marker='x')
+        plt.scatter(x=dictionary['ts'], y=dictionary['value'], color='b', marker='o')
         plt.show()
         plt.close()
 
@@ -63,7 +35,9 @@ class Show:
         :return:
             NA
         """
-        Show.value2graph(FileIO.Load.unpickling(binary_file))
+        data = FileIO.Load.unpickling(binary_file)
+        data['ts'] = data['ts'][:, 0]
+        Show.value2graph(data)
 
     @staticmethod
     def vectors2graphs(file):
