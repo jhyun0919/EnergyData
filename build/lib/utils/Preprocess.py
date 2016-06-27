@@ -11,6 +11,18 @@ import time
 
 def refining_data(raw_data_repository_path=Raw_Data_Repository_Path,
                   time_interval=Time_Interval):
+    """
+    - raw sensor data 를 preprocessing 과정을 통해 refined data 로 변환
+    - refined data 를 time interval 별로 지정된 directory 에 저장
+    - refined data repository directory 를 반환함
+
+    :param raw_data_repository_path:
+        row data repository directory
+    :param time_interval:
+        time interval for time scaling
+    :return:
+        refined data directory path
+    """
     for line in FileIO.Load.load_binary_file_list(raw_data_repository_path):
         file_name = line.rsplit('/', 1)[-1]
         print 'refining : ',
@@ -23,6 +35,7 @@ def refining_data(raw_data_repository_path=Raw_Data_Repository_Path,
         print '\t' + 'run_time: ' + str(run_time) + ' sec'
 
     return save_path
+
 
 ###############################################################################
 # Data Preprocess
@@ -43,10 +56,8 @@ def data_preprocess(binary_file_path):
     """
     # Load File and Unpickling
     dictionary_data = FileIO.Load.unpickling(binary_file_path)
-
     # Interval Equalization & Interpolation
-    dictionary_data = interpolation(interval_equalization(dictionary_data))
-
+    dictionary_data = interpolation(ts_scaling(dictionary_data))
     # Scaling
     dictionary_data = scaling(dictionary_data)
 
@@ -54,59 +65,9 @@ def data_preprocess(binary_file_path):
 
 
 ###############################################################################
-# Interpolation
-
-def interpolation(data_dictionary):
-    """
-    - nan 이 존재하는 data 를 interpolation 해주는 함수
-
-    :param data_dictionary:
-        nan 이 존재하는 data_dictionary
-        - type: dictionary
-    :return:
-        nan 이 interpolate 된 data_dictionary
-        - type: dictionary
-    """
-    for i in xrange(0, len(data_dictionary['value'])):
-        if math.isnan(data_dictionary['value'][i]):
-            data_dictionary['value'][i] = interpolation_rule(i, data_dictionary['value'])
-
-    return data_dictionary
-
-
-def interpolation_rule(idx, value):
-    """
-    - 감지된 nan 에 정해진 규칙에 따라 적당한 interpolation 값을 계산하여 반환해주는 함수
-
-    :param idx:
-        nan 의 index
-        - type: integer
-    :param value:
-        value data
-        - type: np.array
-            - shape: (length, 1)
-    :return:
-        계산된 interpolation 값
-        - type: float
-    """
-    denominator = 1
-
-    for i in xrange(idx, len(value)):
-        if math.isnan(value[i]):
-            denominator += 1
-        else:
-            nominator = value[i] - value[idx - 1]
-            break
-
-    interpolated_value = value[idx - 1] + nominator / denominator
-
-    return interpolated_value
-
-
-###############################################################################
 # Interval Equalization
 
-def interval_equalization(dictionary_data):
+def ts_scaling(dictionary_data):
     """
     - ts 간격을 같게 변환 해주는 함수
 
@@ -187,6 +148,56 @@ def ts_validity_checker(present_ts, ts_index):
             next_ts = next_ts + ts_delta
 
     return validity_number
+
+
+###############################################################################
+# Interpolation
+
+def interpolation(data_dictionary):
+    """
+    - nan 이 존재하는 data 를 interpolation 해주는 함수
+
+    :param data_dictionary:
+        nan 이 존재하는 data_dictionary
+        - type: dictionary
+    :return:
+        nan 이 interpolate 된 data_dictionary
+        - type: dictionary
+    """
+    for i in xrange(0, len(data_dictionary['value'])):
+        if math.isnan(data_dictionary['value'][i]):
+            data_dictionary['value'][i] = interpolation_rule(i, data_dictionary['value'])
+
+    return data_dictionary
+
+
+def interpolation_rule(idx, value):
+    """
+    - 감지된 nan 에 정해진 규칙에 따라 적당한 interpolation 값을 계산하여 반환해주는 함수
+
+    :param idx:
+        nan 의 index
+        - type: integer
+    :param value:
+        value data
+        - type: np.array
+            - shape: (length, 1)
+    :return:
+        계산된 interpolation 값
+        - type: float
+    """
+    denominator = 1
+
+    for i in xrange(idx, len(value)):
+        if math.isnan(value[i]):
+            denominator += 1
+        else:
+            nominator = value[i] - value[idx - 1]
+            break
+
+    interpolated_value = value[idx - 1] + nominator / denominator
+
+    return interpolated_value
 
 
 ###############################################################################
@@ -273,15 +284,6 @@ def start_ts_synchronize(early, late):
         if late['ts'][0] == early['ts'][i]:
             ts_fix = i
             break
-    """
-    x, y = [], []
-    for i in xrange(ts_fix, len(early['ts'])):
-        x.append(early['ts'][i])
-        y.append((early['value'][i]))
-
-    early['ts'] = np.array(x)
-    early['value'] = np.array(y)
-    """
 
     early['ts'] = early['ts'][ts_fix:]
     early['value'] = early['value'][ts_fix:]
@@ -338,7 +340,7 @@ if __name__ == '__main__':
 
     data_dictionary = FileIO.Load.unpickling(file_path)
 
-    data_dictionary = interval_equalization(data_dictionary)
+    data_dictionary = ts_scaling(data_dictionary)
     print data_dictionary
     print
     Graph.Show.dictionary2graph(data_dictionary)
