@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cb953e4b-3ba5-4624-bfb3-f51d8ae97f67" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/utils-9.0.tar.gz" afterPath="$PROJECT_DIR$/dist/utils-9.0.tar.gz" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repository/graph/VTT_GW1_HA10_VM_EP_KV_K.png" afterPath="$PROJECT_DIR$/repository/graph/VTT_GW1_HA10_VM_EP_KV_K.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repository/graph/VTT_GW1_HA10_VM_KV_K.png" afterPath="$PROJECT_DIR$/repository/graph/VTT_GW1_HA10_VM_KV_K.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repository/graph/VTT_GW1_HA10_VM_KV_KAM.png" afterPath="$PROJECT_DIR$/repository/graph/VTT_GW1_HA10_VM_KV_KAM.png" />
@@ -13,22 +12,77 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repository/graph/VTT_GW2_HA4_VM_KV_K.png" afterPath="$PROJECT_DIR$/repository/graph/VTT_GW2_HA4_VM_KV_K.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repository/graph/VTT_GW2_HA4_VM_KV_KAM.png" afterPath="$PROJECT_DIR$/repository/graph/VTT_GW2_HA4_VM_KV_KAM.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MANIFEST" afterPath="$PROJECT_DIR$/MANIFEST" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/lib/utils/FileIO.py" afterPath="$PROJECT_DIR$/build/lib/utils/FileIO.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/lib/utils/GlobalParameter.py" afterPath="$PROJECT_DIR$/build/lib/utils/GlobalParameter.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/lib/utils/Graph.py" afterPath="$PROJECT_DIR$/build/lib/utils/Graph.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/lib/utils/Network.py" afterPath="$PROJECT_DIR$/build/lib/utils/Network.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/lib/utils/Preprocess.py" afterPath="$PROJECT_DIR$/build/lib/utils/Preprocess.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/lib/utils/Similarity.py" afterPath="$PROJECT_DIR$/build/lib/utils/Similarity.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/lib/utils/main.py" afterPath="$PROJECT_DIR$/build/lib/utils/main.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/01_01. Data Preprocessing.ipynb" afterPath="$PROJECT_DIR$/docs/01_01. Data Preprocessing.ipynb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/01_02. Save Preprocessed Data.ipynb" afterPath="$PROJECT_DIR$/docs/01_02. Save Preprocessed Data.ipynb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/energy_data_venv/lib/python2.7/site-packages/utils/FileIO.py" afterPath="$PROJECT_DIR$/energy_data_venv/lib/python2.7/site-packages/utils/FileIO.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/energy_data_venv/lib/python2.7/site-packages/utils/GlobalParameter.py" afterPath="$PROJECT_DIR$/energy_data_venv/lib/python2.7/site-packages/utils/GlobalParameter.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/energy_data_venv/lib/python2.7/site-packages/utils/Graph.py" afterPath="$PROJECT_DIR$/energy_data_venv/lib/python2.7/site-packages/utils/Graph.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/energy_data_venv/lib/python2.7/site-packages/utils/Network.py" afterPath="$PROJECT_DIR$/energy_data_venv/lib/python2.7/site-packages/utils/Network.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/energy_data_venv/lib/python2.7/site-packages/utils/Preprocess.py" afterPath="$PROJECT_DIR$/energy_data_venv/lib/python2.7/site-packages/utils/Preprocess.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/energy_data_venv/lib/python2.7/site-packages/utils/Similarity.py" afterPath="$PROJECT_DIR$/energy_data_venv/lib/python2.7/site-packages/utils/Similarity.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/utils/FileIO.py" afterPath="$PROJECT_DIR$/utils/FileIO.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/utils/GlobalParameter.py" afterPath="$PROJECT_DIR$/utils/GlobalParameter.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/utils/Graph.py" afterPath="$PROJECT_DIR$/utils/Graph.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/energy_data_venv/lib/python2.7/site-packages/utils/main.py" afterPath="$PROJECT_DIR$/energy_data_venv/lib/python2.7/site-packages/utils/main.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repository/15/refined_data_fully_refined/VTT_GW1_HA10_VM_EP_KV_K.bin" afterPath="$PROJECT_DIR$/repository/15/refined_data_fully_refined/VTT_GW1_HA10_VM_EP_KV_K.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repository/15/refined_data_fully_refined/VTT_GW1_HA10_VM_KV_K.bin" afterPath="$PROJECT_DIR$/repository/15/refined_data_fully_refined/VTT_GW1_HA10_VM_KV_K.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repository/15/refined_data_fully_refined/VTT_GW1_HA10_VM_KV_KAM.bin" afterPath="$PROJECT_DIR$/repository/15/refined_data_fully_refined/VTT_GW1_HA10_VM_KV_KAM.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repository/15/refined_data_fully_refined/VTT_GW1_HA11_VM_EP_KV_K.bin" afterPath="$PROJECT_DIR$/repository/15/refined_data_fully_refined/VTT_GW1_HA11_VM_EP_KV_K.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repository/15/refined_data_fully_refined/VTT_GW1_HA11_VM_KV_K.bin" afterPath="$PROJECT_DIR$/repository/15/refined_data_fully_refined/VTT_GW1_HA11_VM_KV_K.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repository/15/refined_data_fully_refined/VTT_GW1_HA11_VM_KV_KAM.bin" afterPath="$PROJECT_DIR$/repository/15/refined_data_fully_refined/VTT_GW1_HA11_VM_KV_KAM.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repository/15/refined_data_fully_refined/VTT_GW2_HA4_VM_EP_KV_K.bin" afterPath="$PROJECT_DIR$/repository/15/refined_data_fully_refined/VTT_GW2_HA4_VM_EP_KV_K.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repository/15/refined_data_fully_refined/VTT_GW2_HA4_VM_KV_K.bin" afterPath="$PROJECT_DIR$/repository/15/refined_data_fully_refined/VTT_GW2_HA4_VM_KV_K.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repository/15/refined_data_fully_refined/VTT_GW2_HA4_VM_KV_KAM.bin" afterPath="$PROJECT_DIR$/repository/15/refined_data_fully_refined/VTT_GW2_HA4_VM_KV_KAM.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repository/15/refined_data_fully_refined/similarity_model/similarity.bin" afterPath="$PROJECT_DIR$/repository/15/refined_data_fully_refined/similarity_model/similarity.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repository/15/refined_data_skip_interpolation/VTT_GW1_HA10_VM_EP_KV_K.bin" afterPath="$PROJECT_DIR$/repository/15/refined_data_skip_interpolation/VTT_GW1_HA10_VM_EP_KV_K.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repository/15/refined_data_skip_interpolation/VTT_GW1_HA10_VM_KV_K.bin" afterPath="$PROJECT_DIR$/repository/15/refined_data_skip_interpolation/VTT_GW1_HA10_VM_KV_K.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repository/15/refined_data_skip_interpolation/VTT_GW1_HA10_VM_KV_KAM.bin" afterPath="$PROJECT_DIR$/repository/15/refined_data_skip_interpolation/VTT_GW1_HA10_VM_KV_KAM.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repository/15/refined_data_skip_interpolation/VTT_GW1_HA11_VM_EP_KV_K.bin" afterPath="$PROJECT_DIR$/repository/15/refined_data_skip_interpolation/VTT_GW1_HA11_VM_EP_KV_K.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repository/15/refined_data_skip_interpolation/VTT_GW1_HA11_VM_KV_K.bin" afterPath="$PROJECT_DIR$/repository/15/refined_data_skip_interpolation/VTT_GW1_HA11_VM_KV_K.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repository/15/refined_data_skip_interpolation/VTT_GW1_HA11_VM_KV_KAM.bin" afterPath="$PROJECT_DIR$/repository/15/refined_data_skip_interpolation/VTT_GW1_HA11_VM_KV_KAM.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repository/15/refined_data_skip_interpolation/VTT_GW2_HA4_VM_EP_KV_K.bin" afterPath="$PROJECT_DIR$/repository/15/refined_data_skip_interpolation/VTT_GW2_HA4_VM_EP_KV_K.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repository/15/refined_data_skip_interpolation/VTT_GW2_HA4_VM_KV_K.bin" afterPath="$PROJECT_DIR$/repository/15/refined_data_skip_interpolation/VTT_GW2_HA4_VM_KV_K.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repository/15/refined_data_skip_interpolation/VTT_GW2_HA4_VM_KV_KAM.bin" afterPath="$PROJECT_DIR$/repository/15/refined_data_skip_interpolation/VTT_GW2_HA4_VM_KV_KAM.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repository/30/refined_data_fully_refined/VTT_GW1_HA10_VM_EP_KV_K.bin" afterPath="$PROJECT_DIR$/repository/30/refined_data_fully_refined/VTT_GW1_HA10_VM_EP_KV_K.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repository/30/refined_data_fully_refined/VTT_GW1_HA10_VM_KV_K.bin" afterPath="$PROJECT_DIR$/repository/30/refined_data_fully_refined/VTT_GW1_HA10_VM_KV_K.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repository/30/refined_data_fully_refined/VTT_GW1_HA10_VM_KV_KAM.bin" afterPath="$PROJECT_DIR$/repository/30/refined_data_fully_refined/VTT_GW1_HA10_VM_KV_KAM.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repository/30/refined_data_fully_refined/VTT_GW1_HA11_VM_EP_KV_K.bin" afterPath="$PROJECT_DIR$/repository/30/refined_data_fully_refined/VTT_GW1_HA11_VM_EP_KV_K.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repository/30/refined_data_fully_refined/VTT_GW1_HA11_VM_KV_K.bin" afterPath="$PROJECT_DIR$/repository/30/refined_data_fully_refined/VTT_GW1_HA11_VM_KV_K.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repository/30/refined_data_fully_refined/VTT_GW1_HA11_VM_KV_KAM.bin" afterPath="$PROJECT_DIR$/repository/30/refined_data_fully_refined/VTT_GW1_HA11_VM_KV_KAM.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repository/30/refined_data_fully_refined/VTT_GW2_HA4_VM_EP_KV_K.bin" afterPath="$PROJECT_DIR$/repository/30/refined_data_fully_refined/VTT_GW2_HA4_VM_EP_KV_K.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repository/30/refined_data_fully_refined/VTT_GW2_HA4_VM_KV_K.bin" afterPath="$PROJECT_DIR$/repository/30/refined_data_fully_refined/VTT_GW2_HA4_VM_KV_K.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repository/30/refined_data_fully_refined/VTT_GW2_HA4_VM_KV_KAM.bin" afterPath="$PROJECT_DIR$/repository/30/refined_data_fully_refined/VTT_GW2_HA4_VM_KV_KAM.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repository/30/refined_data_skip_interpolation/VTT_GW1_HA10_VM_EP_KV_K.bin" afterPath="$PROJECT_DIR$/repository/30/refined_data_skip_interpolation/VTT_GW1_HA10_VM_EP_KV_K.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repository/30/refined_data_skip_interpolation/VTT_GW1_HA10_VM_KV_K.bin" afterPath="$PROJECT_DIR$/repository/30/refined_data_skip_interpolation/VTT_GW1_HA10_VM_KV_K.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repository/30/refined_data_skip_interpolation/VTT_GW1_HA10_VM_KV_KAM.bin" afterPath="$PROJECT_DIR$/repository/30/refined_data_skip_interpolation/VTT_GW1_HA10_VM_KV_KAM.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repository/30/refined_data_skip_interpolation/VTT_GW1_HA11_VM_EP_KV_K.bin" afterPath="$PROJECT_DIR$/repository/30/refined_data_skip_interpolation/VTT_GW1_HA11_VM_EP_KV_K.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repository/30/refined_data_skip_interpolation/VTT_GW1_HA11_VM_KV_K.bin" afterPath="$PROJECT_DIR$/repository/30/refined_data_skip_interpolation/VTT_GW1_HA11_VM_KV_K.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repository/30/refined_data_skip_interpolation/VTT_GW1_HA11_VM_KV_KAM.bin" afterPath="$PROJECT_DIR$/repository/30/refined_data_skip_interpolation/VTT_GW1_HA11_VM_KV_KAM.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repository/30/refined_data_skip_interpolation/VTT_GW2_HA4_VM_EP_KV_K.bin" afterPath="$PROJECT_DIR$/repository/30/refined_data_skip_interpolation/VTT_GW2_HA4_VM_EP_KV_K.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repository/30/refined_data_skip_interpolation/VTT_GW2_HA4_VM_KV_K.bin" afterPath="$PROJECT_DIR$/repository/30/refined_data_skip_interpolation/VTT_GW2_HA4_VM_KV_K.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repository/30/refined_data_skip_interpolation/VTT_GW2_HA4_VM_KV_KAM.bin" afterPath="$PROJECT_DIR$/repository/30/refined_data_skip_interpolation/VTT_GW2_HA4_VM_KV_KAM.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repository/60/refined_data_fully_refined/VTT_GW1_HA10_VM_EP_KV_K.bin" afterPath="$PROJECT_DIR$/repository/60/refined_data_fully_refined/VTT_GW1_HA10_VM_EP_KV_K.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repository/60/refined_data_fully_refined/VTT_GW1_HA10_VM_KV_K.bin" afterPath="$PROJECT_DIR$/repository/60/refined_data_fully_refined/VTT_GW1_HA10_VM_KV_K.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repository/60/refined_data_fully_refined/VTT_GW1_HA10_VM_KV_KAM.bin" afterPath="$PROJECT_DIR$/repository/60/refined_data_fully_refined/VTT_GW1_HA10_VM_KV_KAM.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repository/60/refined_data_fully_refined/VTT_GW1_HA11_VM_EP_KV_K.bin" afterPath="$PROJECT_DIR$/repository/60/refined_data_fully_refined/VTT_GW1_HA11_VM_EP_KV_K.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repository/60/refined_data_fully_refined/VTT_GW1_HA11_VM_KV_K.bin" afterPath="$PROJECT_DIR$/repository/60/refined_data_fully_refined/VTT_GW1_HA11_VM_KV_K.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repository/60/refined_data_fully_refined/VTT_GW1_HA11_VM_KV_KAM.bin" afterPath="$PROJECT_DIR$/repository/60/refined_data_fully_refined/VTT_GW1_HA11_VM_KV_KAM.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repository/60/refined_data_fully_refined/VTT_GW2_HA4_VM_EP_KV_K.bin" afterPath="$PROJECT_DIR$/repository/60/refined_data_fully_refined/VTT_GW2_HA4_VM_EP_KV_K.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repository/60/refined_data_fully_refined/VTT_GW2_HA4_VM_KV_K.bin" afterPath="$PROJECT_DIR$/repository/60/refined_data_fully_refined/VTT_GW2_HA4_VM_KV_K.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repository/60/refined_data_fully_refined/VTT_GW2_HA4_VM_KV_KAM.bin" afterPath="$PROJECT_DIR$/repository/60/refined_data_fully_refined/VTT_GW2_HA4_VM_KV_KAM.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repository/60/refined_data_skip_interpolation/VTT_GW1_HA10_VM_EP_KV_K.bin" afterPath="$PROJECT_DIR$/repository/60/refined_data_skip_interpolation/VTT_GW1_HA10_VM_EP_KV_K.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repository/60/refined_data_skip_interpolation/VTT_GW1_HA10_VM_KV_K.bin" afterPath="$PROJECT_DIR$/repository/60/refined_data_skip_interpolation/VTT_GW1_HA10_VM_KV_K.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repository/60/refined_data_skip_interpolation/VTT_GW1_HA10_VM_KV_KAM.bin" afterPath="$PROJECT_DIR$/repository/60/refined_data_skip_interpolation/VTT_GW1_HA10_VM_KV_KAM.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repository/60/refined_data_skip_interpolation/VTT_GW1_HA11_VM_EP_KV_K.bin" afterPath="$PROJECT_DIR$/repository/60/refined_data_skip_interpolation/VTT_GW1_HA11_VM_EP_KV_K.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repository/60/refined_data_skip_interpolation/VTT_GW1_HA11_VM_KV_K.bin" afterPath="$PROJECT_DIR$/repository/60/refined_data_skip_interpolation/VTT_GW1_HA11_VM_KV_K.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repository/60/refined_data_skip_interpolation/VTT_GW1_HA11_VM_KV_KAM.bin" afterPath="$PROJECT_DIR$/repository/60/refined_data_skip_interpolation/VTT_GW1_HA11_VM_KV_KAM.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repository/60/refined_data_skip_interpolation/VTT_GW2_HA4_VM_EP_KV_K.bin" afterPath="$PROJECT_DIR$/repository/60/refined_data_skip_interpolation/VTT_GW2_HA4_VM_EP_KV_K.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repository/60/refined_data_skip_interpolation/VTT_GW2_HA4_VM_KV_K.bin" afterPath="$PROJECT_DIR$/repository/60/refined_data_skip_interpolation/VTT_GW2_HA4_VM_KV_K.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repository/60/refined_data_skip_interpolation/VTT_GW2_HA4_VM_KV_KAM.bin" afterPath="$PROJECT_DIR$/repository/60/refined_data_skip_interpolation/VTT_GW2_HA4_VM_KV_KAM.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/utils/Preprocess.py" afterPath="$PROJECT_DIR$/utils/Preprocess.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/utils/Similarity.py" afterPath="$PROJECT_DIR$/utils/Similarity.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/utils/main.py" afterPath="$PROJECT_DIR$/utils/main.py" />
     </list>
     <ignored path="EnergyData_jhyun.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -48,12 +102,12 @@
     <SUITE FILE_PATH="coverage/EnergyData_jhyun$plot_stock_market.coverage" NAME="plot_stock_market Coverage Results" MODIFIED="1465793869108" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/practice" />
     <SUITE FILE_PATH="coverage/EnergyData_jhyun$Network.coverage" NAME="Network Coverage Results" MODIFIED="1465794051585" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
     <SUITE FILE_PATH="coverage/EnergyData_jhyun$net.coverage" NAME="net Coverage Results" MODIFIED="1463983117002" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
-    <SUITE FILE_PATH="coverage/EnergyData_jhyun$Similarity__1_.coverage" NAME="Similarity (1) Coverage Results" MODIFIED="1467103962381" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
+    <SUITE FILE_PATH="coverage/EnergyData_jhyun$Similarity__1_.coverage" NAME="Similarity (1) Coverage Results" MODIFIED="1467112563529" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
     <SUITE FILE_PATH="coverage/EnergyData_jhyun$Similarity.coverage" NAME="Similarity Coverage Results" MODIFIED="1467080192882" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
     <SUITE FILE_PATH="coverage/EnergyData_jhyun$FileIO.coverage" NAME="FileIO Coverage Results" MODIFIED="1466426408760" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
     <SUITE FILE_PATH="coverage/EnergyData_jhyun$GlobalParameter.coverage" NAME="GlobalParameter Coverage Results" MODIFIED="1467007345135" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
-    <SUITE FILE_PATH="coverage/EnergyData_jhyun$main.coverage" NAME="main Coverage Results" MODIFIED="1467104333343" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
-    <SUITE FILE_PATH="coverage/EnergyData_jhyun$Preprocess.coverage" NAME="Preprocess Coverage Results" MODIFIED="1467080209388" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
+    <SUITE FILE_PATH="coverage/EnergyData_jhyun$main.coverage" NAME="main Coverage Results" MODIFIED="1467112142606" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
+    <SUITE FILE_PATH="coverage/EnergyData_jhyun$Preprocess.coverage" NAME="Preprocess Coverage Results" MODIFIED="1467111688731" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -103,8 +157,8 @@
           <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/utils/main.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.22819473">
-                  <caret line="15" column="39" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="39" />
+                <state vertical-scroll-proportion="0.34456354">
+                  <caret line="15" column="36" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
                   <folding>
                     <element signature="e#25#54#0" expanded="true" />
                   </folding>
@@ -132,7 +186,7 @@
             <entry file="file://$PROJECT_DIR$/utils/Preprocess.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state vertical-scroll-proportion="0.0">
-                  <caret line="33" column="32" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="32" />
+                  <caret line="30" column="66" selection-start-line="30" selection-start-column="66" selection-end-line="30" selection-end-column="66" />
                   <folding>
                     <element signature="e#25#37#0" expanded="true" />
                   </folding>
@@ -153,8 +207,8 @@
           <file leaf-file-name="Similarity.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/utils/Similarity.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="6.6319084">
-                  <caret line="448" column="27" selection-start-line="448" selection-start-column="27" selection-end-line="448" selection-end-column="27" />
+                <state vertical-scroll-proportion="0.7907348">
+                  <caret line="69" column="13" selection-start-line="69" selection-start-column="13" selection-end-line="69" selection-end-column="13" />
                   <folding>
                     <element signature="e#25#48#0" expanded="true" />
                   </folding>
@@ -190,12 +244,12 @@
         <option value="$PROJECT_DIR$/utils/Similaritys.py" />
         <option value="$PROJECT_DIR$/utils/Report.py" />
         <option value="$PROJECT_DIR$/utils/Network.py" />
-        <option value="$PROJECT_DIR$/utils/Preprocess.py" />
         <option value="$PROJECT_DIR$/utils/FileIO.py" />
         <option value="$PROJECT_DIR$/utils/GlobalParameter.py" />
-        <option value="$PROJECT_DIR$/utils/Similarity.py" />
         <option value="$PROJECT_DIR$/utils/Graph.py" />
         <option value="$PROJECT_DIR$/utils/main.py" />
+        <option value="$PROJECT_DIR$/utils/Similarity.py" />
+        <option value="$PROJECT_DIR$/utils/Preprocess.py" />
       </list>
     </option>
   </component>
@@ -286,7 +340,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.main">
+  <component name="RunManager" selected="Python.Similarity (1)">
     <configuration default="false" name="Preprocess" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -579,8 +633,8 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.main" />
-        <item index="1" class="java.lang.String" itemvalue="Python.Similarity (1)" />
+        <item index="0" class="java.lang.String" itemvalue="Python.Similarity (1)" />
+        <item index="1" class="java.lang.String" itemvalue="Python.main" />
         <item index="2" class="java.lang.String" itemvalue="Python.Preprocess" />
         <item index="3" class="java.lang.String" itemvalue="Python.Similarity" />
         <item index="4" class="java.lang.String" itemvalue="Python.Graph" />
@@ -617,9 +671,9 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32905138" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32905138" sideWeight="0.49361023" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32905138" sideWeight="0.4914803" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32905138" sideWeight="0.5063898" order="2" side_tool="true" content_ui="tabs" x="396" y="-849" width="789" height="651" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32905138" sideWeight="0.5085197" order="2" side_tool="true" content_ui="tabs" x="396" y="-849" width="789" height="651" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3270751" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -1008,24 +1062,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/utils/Preprocess.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="33" column="32" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="32" />
-          <folding>
-            <element signature="e#25#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utils/GlobalParameter.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="6" column="31" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/utils/Graph.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1070,16 +1106,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/utils/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.22819473">
-          <caret line="15" column="39" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="39" />
-          <folding>
-            <element signature="e#25#54#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/utils/Matrix.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.21298175">
@@ -1088,10 +1114,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/utils/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.34456354">
+          <caret line="15" column="36" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
+          <folding>
+            <element signature="e#25#54#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/GlobalParameter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="31" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/Preprocess.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="30" column="66" selection-start-line="30" selection-start-column="66" selection-end-line="30" selection-end-column="66" />
+          <folding>
+            <element signature="e#25#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/utils/Similarity.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="6.6319084">
-          <caret line="448" column="27" selection-start-line="448" selection-start-column="27" selection-end-line="448" selection-end-column="27" />
+        <state vertical-scroll-proportion="0.7907348">
+          <caret line="69" column="13" selection-start-line="69" selection-start-column="13" selection-end-line="69" selection-end-column="13" />
           <folding>
             <element signature="e#25#48#0" expanded="true" />
           </folding>

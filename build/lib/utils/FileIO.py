@@ -123,8 +123,7 @@ class Save:
         path = os.path.join(directory, Model_Path)
         Save.assure_path_exist(path)
 
-        model_binary_file_name = 'similarity.bin'
-        model_binary_file_name = os.path.join(path, model_binary_file_name)
+        model_binary_file_name = os.path.join(path, 'similarity.bin')
 
         Save.dumping_bin(model_binary_file_name, similarity_structure)
 

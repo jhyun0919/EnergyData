@@ -52,6 +52,12 @@ class Build:
         else:
             exit()
 
+        try:
+            similarity_model /= similarity_model.std()
+        except ZeroDivisionError as err:
+            print err
+            exit()
+
         end_time = time.time()
         run_time = end_time - start_time
 

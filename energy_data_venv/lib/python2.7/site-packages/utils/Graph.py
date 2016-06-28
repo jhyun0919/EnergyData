@@ -60,7 +60,7 @@ class Save:
         pass
 
     @staticmethod
-    def raw_data2graph(directory):
+    def raw_data2graph(directory=Raw_Data_Repository_Path):
         """
         - directory 에 있는 raw sensor data 를 graph 로 그려 graph-figure 저장
 

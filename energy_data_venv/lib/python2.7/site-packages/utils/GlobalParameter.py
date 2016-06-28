@@ -20,7 +20,7 @@ Network_Path = 'network_data'
 ###############################################################################
 # Similarity
 
-Similarity_Model = ['covariance', 'cosine_similarity', 'euclidean_distance', 'manhattan_distance',
+Similarity_Type = ['covariance', 'cosine_similarity', 'euclidean_distance', 'manhattan_distance',
                     'gradient_similarity', 'reversed_gradient_similarity']
 Round = 3
 Gradient_Threshold = 0.5

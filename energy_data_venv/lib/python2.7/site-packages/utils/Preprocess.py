@@ -5,7 +5,6 @@ import numpy as np
 from GlobalParameter import *
 import FileIO
 import cmath as math
-from sklearn.preprocessing import scale
 import time
 from datetime import timedelta
 
@@ -29,7 +28,7 @@ def refining_data(raw_data_repository_path=Raw_Data_Repository_Path,
 
         print 'refining : ',
         print file_name
-        print '\t' + 'with ts_interval ' + str(time_interval)
+        print '\t' + 'with ts_interval ' + str(time_interval) + ' min'
 
         start_time = time.time()
 
@@ -113,7 +112,9 @@ def scaling(data_dictionary):
     # Standardize a dataset along any axis
     # Center to the mean
     # Component wise scale to unit variance.
-    data_dictionary['value'] = scale(data_dictionary['value'], axis=0, with_mean=True, with_std=True, copy=True)
+
+    # data_dictionary['value'] = scale(data_dictionary['value'], axis=0, with_mean=True, with_std=True, copy=True)
+    data_dictionary['value'] /= data_dictionary['value'].std()
 
     return data_dictionary
 
