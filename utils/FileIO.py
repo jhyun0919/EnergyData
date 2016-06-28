@@ -5,31 +5,6 @@ import cPickle as pickle
 from GlobalParameter import *
 
 
-# ###############################################################################
-# # Path Validity Check
-#
-# class Path:
-#     def __init__(self):
-#         pass
-#
-#     @staticmethod
-#     def path_checker(directory):
-#         """
-#         - 주어진 directory 가 유효한 지 확인하고,
-#         - 유효하지 않을 경우 해당 directory 를 만들어 줌
-#
-#         :param directory:
-#             directory
-#         :return:
-#             N/A
-#         """
-#         if os.path.isdir(directory):
-#             return directory
-#         else:
-#             directory = directory.rsplit('/', 1)[0]
-#             Path.path_checker(directory)
-
-
 ###############################################################################
 # Load File
 
@@ -53,7 +28,7 @@ class Load:
         return data_dictionary
 
     @staticmethod
-    def load_binary_file_list(directory):
+    def binary_file_list(directory):
         """
         - directory 내에 있는 binary file 들의 abs_path 를 list 로 만들어 반환함
 
@@ -144,21 +119,15 @@ class Save:
         return refined_data_binary_file_name, path
 
     @staticmethod
-    def model2bin_file(dependency_structure, time_interval=Time_Interval):
-        """
+    def model2bin_file(directory, similarity_structure):
 
-        :param dependency_structure:
-        :param time_interval:
-        :return:
-        """
-        path = os.path.join(Repository_Path, str(time_interval), Model_Path)
-
+        path = os.path.join(directory, Model_Path)
         Save.assure_path_exist(path)
 
-        model_binary_file_name = 'model.bin'
+        model_binary_file_name = 'similarity.bin'
         model_binary_file_name = os.path.join(path, model_binary_file_name)
 
-        Save.dumping_bin(model_binary_file_name, dependency_structure)
+        Save.dumping_bin(model_binary_file_name, similarity_structure)
 
         return model_binary_file_name
 

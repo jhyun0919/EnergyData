@@ -13,4 +13,3 @@ if __name__ == '__main__':
         raw_data_repository_path=Raw_Data_Repository_Path, time_interval=Time_Interval)
 
     # Build similarity model and save
-    

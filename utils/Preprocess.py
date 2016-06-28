@@ -24,7 +24,7 @@ def refining_data(raw_data_repository_path=Raw_Data_Repository_Path,
     :return:
         refined data directory path
     """
-    for line in FileIO.Load.load_binary_file_list(raw_data_repository_path):
+    for line in FileIO.Load.binary_file_list(raw_data_repository_path):
         file_name = line.rsplit('/', 1)[-1]
 
         print 'refining : ',
