@@ -5,29 +5,29 @@ import cPickle as pickle
 from GlobalParameter import *
 
 
-###############################################################################
-# Path Validity Check
-
-class Path:
-    def __init__(self):
-        pass
-
-    @staticmethod
-    def path_checker(directory):
-        """
-        - 주어진 directory 가 유효한 지 확인하고,
-        - 유효하지 않을 경우 해당 directory 를 만들어 줌
-
-        :param directory:
-            directory
-        :return:
-            N/A
-        """
-        if os.path.isdir(directory):
-            return directory
-        else:
-            directory = directory.rsplit('/', 1)[0]
-            Path.path_checker(directory)
+# ###############################################################################
+# # Path Validity Check
+#
+# class Path:
+#     def __init__(self):
+#         pass
+#
+#     @staticmethod
+#     def path_checker(directory):
+#         """
+#         - 주어진 directory 가 유효한 지 확인하고,
+#         - 유효하지 않을 경우 해당 directory 를 만들어 줌
+#
+#         :param directory:
+#             directory
+#         :return:
+#             N/A
+#         """
+#         if os.path.isdir(directory):
+#             return directory
+#         else:
+#             directory = directory.rsplit('/', 1)[0]
+#             Path.path_checker(directory)
 
 
 ###############################################################################
