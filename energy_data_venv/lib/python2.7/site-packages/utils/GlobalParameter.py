@@ -17,7 +17,7 @@ Repository_Path = '/Users/JH/Documents/GitHub/EnergyData_jhyun/repository'
 Raw_Data_Repository_Path = '/Users/JH/Documents/GitHub/EnergyData_jhyun/repository/VTT'
 Graph_path = 'graph'
 Preprocessed_Path = 'refined_data'
-Model_Path = 'model'
+Model_Path = 'similarity_model'
 Network_Path = 'network_data'
 
 

@@ -133,11 +133,11 @@ class Save:
         :param time_interval:
         :return:
         """
-        path = os.path.join(Repository_Path, Preprocessed_Path, str(time_interval))
+        path = os.path.join(Repository_Path, str(time_interval), Preprocessed_Path)
 
         Save.assure_path_exist(path)
 
-        preprocessed_binary_file_name = str(time_interval) + '_' + data_dictionary['file_name'] + '.bin'
+        preprocessed_binary_file_name = data_dictionary['file_name'] + '.bin'
         preprocessed_binary_file_name = os.path.join(path, preprocessed_binary_file_name)
 
         Save.dumping_bin(preprocessed_binary_file_name, data_dictionary)
@@ -145,13 +145,14 @@ class Save:
         return preprocessed_binary_file_name, path
 
     @staticmethod
-    def model2bin_file(dependency_structure):
+    def model2bin_file(dependency_structure, time_interval=Time_Interval):
         """
 
         :param dependency_structure:
+        :param time_interval:
         :return:
         """
-        path = os.path.join(Repository_Path, Model_Path)
+        path = os.path.join(Repository_Path, str(time_interval), Model_Path)
 
         Save.assure_path_exist(path)
 

@@ -69,7 +69,7 @@ def data_preprocess(binary_file_path, time_interval=Time_Interval):
 
 
 ###############################################################################
-# Interval Equalization
+# Time Stamp Scaling
 
 def ts_scaling(dictionary_data, time_interval=Time_Interval):
     """
@@ -157,7 +157,7 @@ def ts_validity_checker(present_ts, ts_index, ts_delta):
 
 
 ###############################################################################
-# Interpolation
+# Value Interpolation
 
 def interpolation(data_dictionary):
     """
@@ -207,7 +207,7 @@ def interpolation_rule(idx, value):
 
 
 ###############################################################################
-# Scaling
+# Value Scaling
 
 def scaling(data_dictionary):
     """
