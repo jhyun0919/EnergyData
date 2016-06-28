@@ -416,3 +416,10 @@ class SimilarityScore:
     @staticmethod
     def square_rooted(x):
         return round(sqrt(sum([a * a for a in x])), Round)
+
+
+###############################################################################
+
+
+if __name__ == '__main__':
+

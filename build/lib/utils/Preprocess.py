@@ -29,6 +29,7 @@ def refining_data(raw_data_repository_path=Raw_Data_Repository_Path,
 
         print 'refining : ',
         print file_name
+        print '\t' + 'with ts_interval ' + str(time_interval)
 
         start_time = time.time()
 

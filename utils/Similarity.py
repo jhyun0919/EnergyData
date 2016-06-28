@@ -7,6 +7,7 @@ from Preprocess import ts_synchronize
 from GlobalParameter import *
 import numpy as np
 import os
+import time
 from math import sqrt
 
 
@@ -17,27 +18,49 @@ class Build:
         pass
 
     @staticmethod
-    def similarity(data_repository):
-        similarity_model = {}
+    def similarity_model(time_interval=Time_Interval, refine_type=Fully_Preprocessed_Path):
+        data_repository = os.path.join(Repository_Path, str(time_interval), refine_type)
+        model = {}
 
-        similarity_model['file_list'] = np.asanyarray(Load.binary_file_list(data_repository))
-        similarity_model['covariance'] = symmetric(SimilarityScore.covariance_model(similarity_model['file_list']))
-        similarity_model['cosine_similarity'] = symmetric(
-            SimilarityScore.cosine_similarity_model(similarity_model['file_list']))
-        similarity_model['euclidean_distance'] = symmetric(
-            SimilarityScore.euclidean_distance_model(similarity_model['file_list']))
-        similarity_model['manhattan_distance'] = symmetric(
-            SimilarityScore.manhattan_distance_model(similarity_model['file_list']))
-        similarity_model['gradient_similarity'] = symmetric(
-            SimilarityScore.gradient_similarity_model(similarity_model['file_list']))
-        similarity_model['reversed_gradient_similarity'] = symmetric(
-            SimilarityScore.reversed_gradient_similarity_model(similarity_model['file_list']))
+        model['file_list'] = np.asanyarray(Load.binary_file_list(data_repository))
 
-        saved_path_similarity_model = Save.model2bin_file(data_repository, similarity_model)
+        for similarity_type in Similarity_Type:
+            model[similarity_type] = Build.foo(similarity_type, model['file_list'])
 
-        return similarity_model, saved_path_similarity_model
+        saved_path_model = Save.model2bin_file(data_repository, model)
+
+        return model, saved_path_model
+
+    @staticmethod
+    def foo(similarity_type, file_list):
+
+        print 'calculating ' + similarity_type
+        start_time = time.time()
+
+        if similarity_type == 'covariance':
+            similarity_model = symmetric(SimilarityScore.covariance_model(file_list))
+        elif similarity_type == 'cosine_similarity':
+            similarity_model = symmetric(SimilarityScore.cosine_similarity_model(file_list))
+        elif similarity_type == 'euclidean_distance':
+            similarity_model = symmetric(SimilarityScore.euclidean_distance_model(file_list))
+        elif similarity_type == 'manhattan_distance':
+            similarity_model = symmetric(SimilarityScore.manhattan_distance_model(file_list))
+        elif similarity_type == 'gradient_similarity':
+            similarity_model = symmetric(SimilarityScore.gradient_similarity_model(file_list))
+        elif similarity_type == 'reversed_gradient_similarity':
+            similarity_model = symmetric(SimilarityScore.reversed_gradient_similarity_model(file_list))
+        else:
+            exit()
+
+        end_time = time.time()
+        run_time = end_time - start_time
+
+        print '\t' + 'run_time: ' + str(run_time) + ' sec'
+
+        return similarity_model
 
 
+"""
 class Extend:
     def __init__(self):
         pass
@@ -174,6 +197,7 @@ class Extend:
         row = np.reshape(row, (1, len(row)))
 
         return row, column
+"""
 
 
 ###############################################################################
@@ -184,7 +208,7 @@ class Clean:
         pass
 
     @staticmethod
-    def overlap(similarity_model):
+    def overlap(similarity_model, time_interval=Time_Interval):
         # clean similarity model
         overlap_list = Clean.overlap_detection(similarity_model['file_list'])
 
@@ -202,7 +226,7 @@ class Clean:
 
         # clean preprocessed data repository
         overlap_preprocessed_file_list = Clean.diff(
-            Load.binary_file_list(os.path.join(Repository_Path, Preprocessed_Path)), similarity_model['file_list'])
+            Load.binary_file_list(os.path.join(Repository_Path, str(Time_Interval))), similarity_model['file_list'])
         for file_path in overlap_preprocessed_file_list:
             os.remove(file_path)
 
@@ -422,4 +446,4 @@ class SimilarityScore:
 
 
 if __name__ == '__main__':
-
+    Build.similarity_model()

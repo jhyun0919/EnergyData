@@ -72,7 +72,7 @@ class Save:
         save_path = os.path.join(Repository_Path, Graph_path)
         FileIO.Save.assure_path_exist(save_path)
 
-        for binary_file in FileIO.Load.load_binary_file_list(directory):
+        for binary_file in FileIO.Load.binary_file_list(directory):
             # load data
             dictionary = FileIO.Load.unpickling(binary_file)
 
