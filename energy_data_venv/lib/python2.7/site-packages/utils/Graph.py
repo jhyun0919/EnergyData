@@ -25,7 +25,10 @@ class Show:
 
         plt.figure(figsize=(12, 9))
         plt.title(dictionary['file_name'])
-        plt.scatter(x=dictionary['ts'], y=dictionary['value'], color='b', marker='o')
+        try:
+            plt.scatter(x=dictionary['ts'], y=dictionary['value'], color='b', marker='o')
+        except ValueError:
+            plt.scatter(x=dictionary['ts'][:, 0], y=dictionary['value'], color='b', marker='o')
         plt.show()
         plt.close()
 

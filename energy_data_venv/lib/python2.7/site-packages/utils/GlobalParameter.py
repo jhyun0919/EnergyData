@@ -1,14 +1,10 @@
 # -*- coding: utf-8 -*-
-from datetime import timedelta
 
 ###############################################################################
 # Preprocess
 
 Time_Interval = 15  # minute
-Noise_Filter = 10
-Scale_Size = 100
 Similarity_Matrix_Scaling = 100
-
 
 ###############################################################################
 # Save
@@ -16,24 +12,16 @@ Similarity_Matrix_Scaling = 100
 Repository_Path = '/Users/JH/Documents/GitHub/EnergyData_jhyun/repository'
 Raw_Data_Repository_Path = '/Users/JH/Documents/GitHub/EnergyData_jhyun/repository/VTT'
 Graph_path = 'graph'
-Preprocessed_Path = 'refined_data'
+Fully_Preprocessed_Path = 'refined_data_fully_refined'
+Semi_Preprocessed_Path = 'refined_data_skip_interpolation'
 Model_Path = 'similarity_model'
 Network_Path = 'network_data'
-
 
 ###############################################################################
 # Similarity
 
 Round = 3
 Gradient_Threshold = 0.5
-
-
-###############################################################################
-# Dependency : close
-
-Level = 9
-Divider = float(Scale_Size) / Level
-
 
 ###############################################################################
 # Network

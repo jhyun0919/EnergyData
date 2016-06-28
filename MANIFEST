@@ -2,7 +2,6 @@
 README.txt
 setup.py
 utils/Dataframe.py
-utils/Dependency.py
 utils/FileIO.py
 utils/GlobalParameter.py
 utils/Graph.py
@@ -11,4 +10,5 @@ utils/Network.py
 utils/Preprocess.py
 utils/Similarity.py
 utils/__init__.py
+utils/main.py
 utils/net.py

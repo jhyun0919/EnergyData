@@ -26,27 +26,33 @@ def refining_data(raw_data_repository_path=Raw_Data_Repository_Path,
     """
     for line in FileIO.Load.load_binary_file_list(raw_data_repository_path):
         file_name = line.rsplit('/', 1)[-1]
+
         print 'refining : ',
         print file_name
 
         start_time = time.time()
-        _, save_path = FileIO.Save.refined_data2bin_file(data_preprocess(line, time_interval), time_interval)
+
+        _, fully_refined_path = FileIO.Save.refined_data2bin_file(fully_data_preprocess(line, time_interval),
+                                                                  Fully_Preprocessed_Path, time_interval)
+        _, skip_interpolation_path = FileIO.Save.refined_data2bin_file(
+            skip_interpolation_data_preprocess(line, time_interval), Semi_Preprocessed_Path, time_interval)
+
         end_time = time.time()
         run_time = end_time - start_time
+
         print '\t' + 'run_time: ' + str(run_time) + ' sec'
 
-    return save_path
+    return fully_refined_path, skip_interpolation_path
 
 
 ###############################################################################
 # Data Preprocess
 
-def data_preprocess(binary_file_path, time_interval=Time_Interval):
+def fully_data_preprocess(binary_file_path, time_interval=Time_Interval):
     """
-    - 시간 간격을 일정하게 조정하고,
-      비어있는 곳에 적당한 값을 interpolate 해주고,
-      일정한 크기로 data 값을 scaling 함
-    - 이웃한 time stamp 사이 value 의 변화량을 기록
+    - 일정한 크기로 data 값을 scaling 함
+    - 시간 간격을 일정하게 조정
+    - 비어있는 곳에 적당한 값을 interpolate
 
     :param binary_file_path:
         energy data file 의 path
@@ -58,14 +64,57 @@ def data_preprocess(binary_file_path, time_interval=Time_Interval):
         preprocessing 된 energy data
         - type: dictionary
     """
-    # Load File and Unpickling
-    dictionary_data = FileIO.Load.unpickling(binary_file_path)
-    # Time Stamp Scaling  & Interpolation
-    dictionary_data = interpolation(ts_scaling(dictionary_data, time_interval))
-    # Scaling
-    dictionary_data = scaling(dictionary_data)
+    raw_data = FileIO.Load.unpickling(binary_file_path)
+    refined_data = interpolation(ts_scaling(scaling(raw_data), time_interval))
 
-    return dictionary_data
+    return refined_data
+
+
+def skip_interpolation_data_preprocess(binary_file_path, time_interval=Time_Interval):
+    """
+    - 일정한 크기로 data value 값을 scaling 함
+    - 시간 간격을 일정하게 조정
+
+    :param binary_file_path:
+        energy data file 의 path
+        - type: string
+    :param time_interval:
+        time_scaling 의 argument 로 전달
+        - type: integer
+    :return:
+        preprocessing 된 energy data
+        - type: dictionary
+    """
+    raw_data = FileIO.Load.unpickling(binary_file_path)
+    semi_refined_data = ts_scaling(scaling(raw_data), time_interval)
+
+    return semi_refined_data
+
+
+###############################################################################
+# Value Scaling
+
+def scaling(data_dictionary):
+    """
+    - scaling 을 해주는 함수
+    - Global_Parameter 에서 정의된 Scale_Size 에 따라 scaling 실행
+
+   :param data_dictionary:
+        original_dictionary = {"ts": ..., "value": ...}
+        - type: dictionary
+    :return:
+        scaled_dictionary = {"ts": ..., "value": ...}
+        - type: dictionary
+    """
+
+    # sklearn.preprocessing.scale
+
+    # Standardize a dataset along any axis
+    # Center to the mean
+    # Component wise scale to unit variance.
+    data_dictionary['value'] = scale(data_dictionary['value'], axis=0, with_mean=True, with_std=True, copy=True)
+
+    return data_dictionary
 
 
 ###############################################################################
@@ -207,32 +256,6 @@ def interpolation_rule(idx, value):
 
 
 ###############################################################################
-# Value Scaling
-
-def scaling(data_dictionary):
-    """
-    - scaling 을 해주는 함수
-    - Global_Parameter 에서 정의된 Scale_Size 에 따라 scaling 실행
-
-   :param data_dictionary:
-        original_dictionary = {"ts": ..., "value": ...}
-        - type: dictionary
-    :return:
-        scaled_dictionary = {"ts": ..., "value": ...}
-        - type: dictionary
-    """
-
-    # sklearn.preprocessing.scale
-
-    # Standardize a dataset along any axis
-    # Center to the mean
-    # Component wise scale to unit variance.
-    data_dictionary['value'] = scale(data_dictionary['value'], axis=0, with_mean=True, with_std=True, copy=True)
-
-    return data_dictionary
-
-
-###############################################################################
 # Data-Preprocessing 4 Similarity
 
 def ts_synchronize(binary_file_1, binary_file_2):
@@ -347,17 +370,17 @@ if __name__ == '__main__':
 
     data_dictionary = FileIO.Load.unpickling(file_path)
 
+    data_dictionary = scaling(data_dictionary)
+    print data_dictionary
+    print
+    Graph.Show.dictionary2graph(data_dictionary)
+
     data_dictionary = ts_scaling(data_dictionary)
     print data_dictionary
     print
     Graph.Show.dictionary2graph(data_dictionary)
 
     data_dictionary = interpolation(data_dictionary)
-    print data_dictionary
-    print
-    Graph.Show.dictionary2graph(data_dictionary)
-
-    data_dictionary = scaling(data_dictionary)
     print data_dictionary
     print
     Graph.Show.dictionary2graph(data_dictionary)

@@ -126,23 +126,22 @@ class Save:
         f.close()
 
     @staticmethod
-    def refined_data2bin_file(data_dictionary, time_interval=Time_Interval):
+    def refined_data2bin_file(refined_data, save_directory, time_interval=Time_Interval):
         """
 
-        :param data_dictionary:
+        :param refined_data:
         :param time_interval:
+        :param save_directory:
         :return:
         """
-        path = os.path.join(Repository_Path, str(time_interval), Preprocessed_Path)
-
+        path = os.path.join(Repository_Path, str(time_interval), save_directory)
         Save.assure_path_exist(path)
 
-        preprocessed_binary_file_name = data_dictionary['file_name'] + '.bin'
-        preprocessed_binary_file_name = os.path.join(path, preprocessed_binary_file_name)
+        refined_data_binary_file_name = refined_data['file_name'] + '.bin'
+        refined_data_binary_file_name = os.path.join(path, refined_data_binary_file_name)
+        Save.dumping_bin(refined_data_binary_file_name, refined_data)
 
-        Save.dumping_bin(preprocessed_binary_file_name, data_dictionary)
-
-        return preprocessed_binary_file_name, path
+        return refined_data_binary_file_name, path
 
     @staticmethod
     def model2bin_file(dependency_structure, time_interval=Time_Interval):
