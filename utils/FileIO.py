@@ -120,7 +120,6 @@ class Save:
 
     @staticmethod
     def model2bin_file(directory, similarity_structure):
-
         path = os.path.join(directory, Model_Path)
         Save.assure_path_exist(path)
 

@@ -3,19 +3,21 @@
 from FileIO import Load
 from FileIO import Save
 from Matrix import symmetric
+from Preprocess import ts_synchronize
+from GlobalParameter import *
 import numpy as np
 import os
-from GlobalParameter import Repository_Path
+from math import sqrt
 
 
 ###############################################################################
 # Build Similarity Model
-class Model:
+class Build:
     def __init__(self):
         pass
 
     @staticmethod
-    def build(data_repository):
+    def similarity(data_repository):
         similarity_model = {}
 
         similarity_model['file_list'] = np.asanyarray(Load.binary_file_list(data_repository))
@@ -34,6 +36,144 @@ class Model:
         saved_path_similarity_model = Save.model2bin_file(data_repository, similarity_model)
 
         return similarity_model, saved_path_similarity_model
+
+
+class Extend:
+    def __init__(self):
+        pass
+
+    ###############################################################################
+    # adding similarity column
+
+    @staticmethod
+    def add_extra_model(similarity_model_bin_file, data_file):
+        model = Load.unpickling(similarity_model_bin_file)
+        data_file = Save.preprocessed_data2bin_file(data_preprocess(data_file))
+
+        # file list
+        model['file_list'].append(data_file)
+
+        # covariance
+        covariance_row, covariance_column = Extend.covariance_column(model['file_list'], data_file)
+        model['covariance'] = np.r_[model['covariance'], covariance_row]
+        model['covariance'] = np.c_[model['covariance'], covariance_column]
+
+        # cosine similarity
+        cosine_row, cosine_column = Extend.cosine_similarity_column(model['file_list'], data_file)
+        model['cosine_similarity'] = np.r_[model['cosine_similarity'], cosine_row]
+        model['cosine_similarity'] = np.c_[model['cosine_similarity'], cosine_column]
+
+        # euclidean distance
+        euclidean_row, euclidean_column = Extend.euclidean_distance_column(model['file_list'], data_file)
+        model['euclidean_distance'] = np.r_[model['euclidean_distance'], euclidean_row]
+        model['euclidean_distance'] = np.c_[model['euclidean_distance'], euclidean_column]
+
+        # manhattan distance
+        manhattan_row, manhattan_column = Extend.manhattan_distance_column(model['file_list'], data_file)
+        model['manhattan_distance'] = np.r_[model['manhattan_distance'], manhattan_row]
+        model['manhattan_distance'] = np.c_[model['manhattan_distance'], manhattan_column]
+
+        # gradient similarity
+        gradient_row, gradient_column = Extend.gradient_similarity_column(model['file_list'], data_file)
+        model['gradient_similarity'] = np.r_[model['gradient_similarity'], gradient_row]
+        model['gradient_similarity'] = np.c_[model['gradient_similarity'], gradient_column]
+
+        # reversed-gradient similarity
+        reversed_gradient_row, reversed_gradient_column = Extend.reversed_gradient_similarity_column(model['file_list'],
+                                                                                                     data_file)
+        model['reversed_gradient_similarity'] = np.r_[model['reversed_gradient_similarity'], reversed_gradient_row]
+        model['reversed_gradient_similarity'] = np.c_[model['reversed_gradient_similarity'], reversed_gradient_column]
+
+        _ = Save.model2bin_file(model)
+
+        return model, data_file
+
+    ###############################################################################
+    # build similarity column
+
+    @staticmethod
+    def covariance_column(file_list, data_file):
+        dimension = len(file_list)
+        column = np.zeros((dimension, 1))
+
+        for row in xrange(0, dimension):
+            column[row] = SimilarityScore.covariance_score(file_list[row], data_file)
+
+        row = np.transpose(column)
+        row = row[0][0:-1]
+        row = np.reshape(row, (1, len(row)))
+
+        return row, column
+
+    @staticmethod
+    def cosine_similarity_column(file_list, data_file):
+        dimension = len(file_list)
+        column = np.zeros((dimension, 1))
+
+        for row in xrange(0, dimension):
+            column[row] = SimilarityScore.cosine_similarity_score(file_list[row], data_file)
+
+        row = np.transpose(column)
+        row = row[0][0:-1]
+        row = np.reshape(row, (1, len(row)))
+
+        return row, column
+
+    @staticmethod
+    def euclidean_distance_column(file_list, data_file):
+        dimension = len(file_list)
+        column = np.zeros((dimension, 1))
+
+        for row in xrange(0, dimension):
+            column[row] = SimilarityScore.euclidean_distance_score(file_list[row], data_file)
+
+        row = np.transpose(column)
+        row = row[0][0:-1]
+        row = np.reshape(row, (1, len(row)))
+
+        return row, column
+
+    @staticmethod
+    def manhattan_distance_column(file_list, data_file):
+        dimension = len(file_list)
+        column = np.zeros((dimension, 1))
+
+        for row in xrange(0, dimension):
+            column[row] = SimilarityScore.manhattan_distance_score(file_list[row], data_file)
+
+        row = np.transpose(column)
+        row = row[0][0:-1]
+        row = np.reshape(row, (1, len(row)))
+
+        return row, column
+
+    @staticmethod
+    def gradient_similarity_column(file_list, data_file):
+        dimension = len(file_list)
+        column = np.zeros((dimension, 1))
+
+        for row in xrange(0, dimension):
+            column[row] = SimilarityScore.gradient_similarity_score(file_list[row], data_file)
+
+        row = np.transpose(column)
+        row = row[0][0:-1]
+        row = np.reshape(row, (1, len(row)))
+
+        return row, column
+
+    @staticmethod
+    def reversed_gradient_similarity_column(file_list, data_file):
+        dimension = len(file_list)
+        column = np.zeros((dimension, 1))
+
+        for row in xrange(0, dimension):
+            column[row] = SimilarityScore.reversed_gradient_similarity_score(file_list[row], data_file)
+
+        row = np.transpose(column)
+        row = row[0][0:-1]
+        row = np.reshape(row, (1, len(row)))
+
+        return row, column
 
 
 ###############################################################################
@@ -61,9 +201,8 @@ class Clean:
         saved_path = Save.model2bin_file(similarity_model)
 
         # clean preprocessed data repository
-        old_preprocessed_file_list = Load.binary_file_list(os.path.join(Repository_Path, Preprocessed_Path))
-        overlap_preprocessed_file_list = Clean.diff(old_preprocessed_file_list, similarity_model['file_list'])
-
+        overlap_preprocessed_file_list = Clean.diff(
+            Load.binary_file_list(os.path.join(Repository_Path, Preprocessed_Path)), similarity_model['file_list'])
         for file_path in overlap_preprocessed_file_list:
             os.remove(file_path)
 
@@ -92,7 +231,7 @@ class Clean:
     def pop(matrix, idx):
         """
         - matrix 의 idx-th row & column 을 삭제
-        
+
         :param matrix:
         :param idx:
         :return:
@@ -103,9 +242,8 @@ class Clean:
         return del_row_col
 
     @staticmethod
-    def diff(list_a, list_b):
-        list_b = set(list_b)
-        return [item for item in list_a if item not in list_b]
+    def diff(old_list, new_list):
+        return set(old_list) - set(new_list)
 
 
 ###############################################################################
@@ -122,7 +260,7 @@ class SimilarityScore:
 
         for row in xrange(0, dimension):
             for col in xrange(row, dimension):
-                model[row][col] = Model.covariance_score(file_list[row], file_list[col])
+                model[row][col] = SimilarityScore.covariance_score(file_list[row], file_list[col])
 
         return model
 
@@ -133,7 +271,7 @@ class SimilarityScore:
 
         for row in xrange(0, dimension):
             for col in xrange(row, dimension):
-                model[row][col] = Model.cosine_similarity_score(file_list[row], file_list[col])
+                model[row][col] = SimilarityScore.cosine_similarity_score(file_list[row], file_list[col])
 
         return model
 
@@ -144,7 +282,7 @@ class SimilarityScore:
 
         for row in xrange(0, dimension):
             for col in xrange(row, dimension):
-                model[row][col] = Model.euclidean_distance_score(file_list[row], file_list[col])
+                model[row][col] = SimilarityScore.euclidean_distance_score(file_list[row], file_list[col])
 
         return model
 
@@ -155,7 +293,7 @@ class SimilarityScore:
 
         for row in xrange(0, dimension):
             for col in xrange(row, dimension):
-                model[row][col] = Model.manhattan_distance_score(file_list[row], file_list[col])
+                model[row][col] = SimilarityScore.manhattan_distance_score(file_list[row], file_list[col])
 
         return model
 
@@ -166,7 +304,7 @@ class SimilarityScore:
 
         for row in xrange(0, dimension):
             for col in xrange(row, dimension):
-                model[row][col] = Model.gradient_similarity_score(file_list[row], file_list[col])
+                model[row][col] = SimilarityScore.gradient_similarity_score(file_list[row], file_list[col])
 
         return model
 
@@ -177,6 +315,111 @@ class SimilarityScore:
 
         for row in xrange(0, dimension):
             for col in xrange(row, dimension):
-                model[row][col] = Model.reversed_gradient_similarity_score(file_list[row], file_list[col])
+                model[row][col] = SimilarityScore.reversed_gradient_similarity_score(file_list[row], file_list[col])
 
         return model
+
+    ###############################################################################
+    # assign similarity score
+
+    @staticmethod
+    def covariance_score(binary_file_1, binary_file_2):
+        early, late, _ = ts_synchronize(binary_file_1, binary_file_2)
+        score = SimilarityScore.covariance_calculator(early, late)
+
+        return score
+
+    @staticmethod
+    def cosine_similarity_score(binary_file_1, binary_file_2):
+        early, late, _ = ts_synchronize(binary_file_1, binary_file_2)
+        score = SimilarityScore.cosine_similarity_calculator(early, late)
+
+        return abs(1 - score)
+
+    @staticmethod
+    def euclidean_distance_score(binary_file_1, binary_file_2):
+        early, late, _ = ts_synchronize(binary_file_1, binary_file_2)
+        score = SimilarityScore.euclidean_distance_calculator(early, late)
+
+        return score
+
+    @staticmethod
+    def manhattan_distance_score(binary_file_1, binary_file_2):
+        early, late, length = ts_synchronize(binary_file_1, binary_file_2)
+        score = SimilarityScore.manhattan_distance_calculator(early, late)
+
+        return score / length
+
+    @staticmethod
+    def gradient_similarity_score(binary_file_1, binary_file_2):
+        early, late, length = ts_synchronize(binary_file_1, binary_file_2)
+        score = SimilarityScore.gradient_similarity_calculator(early, late)
+
+        return score / length
+
+    @staticmethod
+    def reversed_gradient_similarity_score(binary_file_1, binary_file_2):
+        early, late, length = ts_synchronize(binary_file_1, binary_file_2)
+        score = SimilarityScore.reversed_gradient_similarity_calculator(early, late)
+
+        return score / length
+
+    ###############################################################################
+    # calculate similarity score
+
+    @staticmethod
+    def covariance_calculator(early, late):
+        return np.cov(early, late)[0][1]
+
+    @staticmethod
+    def cosine_similarity_calculator(early, late):
+        numerator = sum(a * b for a, b in zip(early, late))
+        denominator = SimilarityScore.square_rooted(early) * SimilarityScore.square_rooted(late)
+
+        return round(numerator / float(denominator), Round)
+
+    @staticmethod
+    def euclidean_distance_calculator(early, late):
+        return round(sqrt(sum(pow(a - b, 2) for a, b in zip(early, late))), Round)
+
+    @staticmethod
+    def manhattan_distance_calculator(early, late):
+        return round(sum(abs(a - b) for a, b in zip(early, late)), Round)
+
+    @staticmethod
+    def gradient_similarity_calculator(early, late):
+        score = []
+
+        early_gradient = np.gradient(early)
+        late_gradient = np.gradient(late)
+
+        for a, b, in zip(early_gradient, late_gradient):
+            gradient_distance = abs(a - b)
+            score.append(gradient_distance)
+
+        return round(sum(score), 3)
+
+    @staticmethod
+    def reversed_gradient_similarity_calculator(early, late):
+        score = []
+
+        early_gradient = np.gradient(early)
+        late_gradient = np.gradient(late)
+        late_gradient = late_gradient
+
+        for a, b, in zip(early_gradient, late_gradient):
+            gradient_distance = abs(a - (-b))
+            score.append(gradient_distance)
+
+        return round(sum(score), 3)
+
+    @staticmethod
+    def square_rooted(x):
+        return round(sqrt(sum([a * a for a in x])), Round)
+
+
+###############################################################################
+
+
+if __name__ == '__main__':
+
