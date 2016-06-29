@@ -11,10 +11,10 @@ class HeatMap:
         pass
 
     @staticmethod
-    def write_data(time_interval=Time_Interval, refined_type=Fully_Preprocessed_Path):
+    def write_data(time_interval=TimeInterval, refined_type=FullyPreprocessedPath):
         # set tsv file name
         tsv_file_name = 'sensor_data.tsv'
-        tsv_file_name = os.path.join(Visualization_Repository, HeatMap_Path, tsv_file_name)
+        tsv_file_name = os.path.join(VisualizationRepository, HeatMapPath, tsv_file_name)
 
         # write tsv file with data
         with open(tsv_file_name, "w") as record_file:
@@ -22,7 +22,7 @@ class HeatMap:
 
             col_idx = 0
             for refined_binary_file in Load.binary_file_list(
-                    os.path.join(Repository_Path, str(time_interval), refined_type)):
+                    os.path.join(RepositoryPath, str(time_interval), refined_type)):
 
                 # unpickling data
                 refined_data = pickle.load(open(refined_binary_file))
@@ -38,42 +38,42 @@ class HeatMap:
         HeatMap.set_col_label(time_interval, refined_type)
 
         # write cluster report data
-        HeatMap.set_cluster_report(time_interval, refined_type)
+        # HeatMap.set_cluster_report(time_interval, refined_type)
 
     @staticmethod
-    def set_row_label(time_interval=Time_Interval, refined_type=Fully_Preprocessed_Path):
+    def set_row_label(time_interval=TimeInterval, refined_type=FullyPreprocessedPath):
         # set tsv file name
         tsv_file_name = 'RowLabel.tsv'
-        tsv_file_name = os.path.join(Visualization_Repository, HeatMap_Path, tsv_file_name)
+        tsv_file_name = os.path.join(VisualizationRepository, HeatMapPath, tsv_file_name)
 
         # write tsv file with data
         with open(tsv_file_name, "w") as record_file:
-            file_list = Load.binary_file_list(os.path.join(Repository_Path, str(time_interval), refined_type))
+            file_list = Load.binary_file_list(os.path.join(RepositoryPath, str(time_interval), refined_type))
             refined_data = pickle.load(open(file_list[0]))
             for line in refined_data['ts']:
-                record_file.write(str(line) + '\n')
+                record_file.write('\'' + str(line) + '\'' + '\n')
 
     @staticmethod
-    def set_col_label(time_interval=Time_Interval, refined_type=Fully_Preprocessed_Path):
+    def set_col_label(time_interval=TimeInterval, refined_type=FullyPreprocessedPath):
         # set tsv file name
         tsv_file_name = 'ColLabel.tsv'
-        tsv_file_name = os.path.join(Visualization_Repository, HeatMap_Path, tsv_file_name)
+        tsv_file_name = os.path.join(VisualizationRepository, HeatMapPath, tsv_file_name)
 
         # write tsv file with data
         with open(tsv_file_name, "w") as record_file:
-            file_list = Load.binary_file_list(os.path.join(Repository_Path, str(time_interval), refined_type))
+            file_list = Load.binary_file_list(os.path.join(RepositoryPath, str(time_interval), refined_type))
             for line in file_list:
-                record_file.write(line.rsplit('/', 1)[-1] + '\n')
+                record_file.write('\'' + line.rsplit('/', 1)[-1] + '\'' + '\n')
 
     @staticmethod
-    def set_cluster_report(time_interval=Time_Interval, refined_type=Fully_Preprocessed_Path):
+    def set_cluster_report(time_interval=TimeInterval, refined_type=FullyPreprocessedPath):
         similarity_model = pickle.load(
-            Load.binary_file_list(os.path.join(Repository_Path, str(time_interval), refined_type, Model_Path)))
+            Load.binary_file_list(os.path.join(RepositoryPath, str(time_interval), refined_type, ModelPath)))
 
-        for similarity_type in Similarity_Type:
+        for similarity_type in SimilarityType:
             # set tsv file name
             tsv_file_name = similarity_type + 'tsv'
-            tsv_file_name = os.path.join(Visualization_Repository, HeatMap_Path, tsv_file_name)
+            tsv_file_name = os.path.join(VisualizationRepository, HeatMapPath, tsv_file_name)
 
             # write tsv file with data
             with open(tsv_file_name, "w") as record_file:

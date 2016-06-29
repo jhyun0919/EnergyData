@@ -9,6 +9,7 @@ import numpy as np
 import os
 import time
 from math import sqrt
+import cPickle as pickle
 
 
 ###############################################################################
@@ -19,13 +20,13 @@ class Build:
         pass
 
     @staticmethod
-    def similarity_model(time_interval=Time_Interval, refine_type=Fully_Preprocessed_Path):
-        data_repository = os.path.join(Repository_Path, str(time_interval), refine_type)
+    def similarity_model(time_interval=TimeInterval, refine_type=FullyPreprocessedPath):
+        data_repository = os.path.join(RepositoryPath, str(time_interval), refine_type)
         model = {}
 
         model['file_list'] = np.asanyarray(Load.binary_file_list(data_repository))
 
-        for similarity_type in Similarity_Type:
+        for similarity_type in SimilarityType:
             model[similarity_type] = Build.foo(similarity_type, model['file_list'])
 
         saved_path_model = Save.model2bin_file(data_repository, model)
@@ -53,6 +54,7 @@ class Build:
         else:
             exit()
 
+        # similarity score normalization
         try:
             similarity_model /= similarity_model.std()
         except ZeroDivisionError as err:
@@ -75,7 +77,7 @@ class Clean:
         pass
 
     @staticmethod
-    def overlap(similarity_model, time_interval=Time_Interval):
+    def overlap(similarity_model, time_interval=TimeInterval):
         # clean similarity model
         overlap_list = Clean.overlap_detection(similarity_model['file_list'])
 
@@ -93,7 +95,7 @@ class Clean:
 
         # clean preprocessed data repository
         overlap_preprocessed_file_list = Clean.diff(
-            Load.binary_file_list(os.path.join(Repository_Path, str(Time_Interval))), similarity_model['file_list'])
+            Load.binary_file_list(os.path.join(RepositoryPath, str(time_interval))), similarity_model['file_list'])
         for file_path in overlap_preprocessed_file_list:
             os.remove(file_path)
 
@@ -219,74 +221,151 @@ class SimilarityScore:
 
     @staticmethod
     def covariance_score(binary_file_1, binary_file_2):
-        early, late, _ = ts_synchronize(binary_file_1, binary_file_2)
-        score = SimilarityScore.covariance_calculator(early, late)
+        """
+        - binary file 의 apb_path 를 받아 두 file data 사이 covariance 를 계산하여 반환
+        :param binary_file_1:
+            binary file abs_path
+            - type: string
+        :param binary_file_2:
+            binary file ans_path
+            - type: string
+        :return:
+            covariance score
+            -type: float
+        """
+        # early, late, _ = ts_synchronize(binary_file_1, binary_file_2)
+        score = SimilarityScore.covariance_calculator(binary_file_1, binary_file_2)
 
         return score
 
     @staticmethod
     def cosine_similarity_score(binary_file_1, binary_file_2):
-        early, late, _ = ts_synchronize(binary_file_1, binary_file_2)
-        score = SimilarityScore.cosine_similarity_calculator(early, late)
+        """
+        - binary file 의 apb_path 를 받아 두 file data 사이 cosine similarity 를 계산하여 반환
+        :param binary_file_1:
+            binary file abs_path
+            - type: string
+        :param binary_file_2:
+            binary file ans_path
+            - type: string
+        :return:
+            cosine similarity score
+            -type: float
+        """
+        # early, late, _ = ts_synchronize(binary_file_1, binary_file_2)
+        score = SimilarityScore.cosine_similarity_calculator(binary_file_1, binary_file_2)
 
         return abs(1 - score)
 
     @staticmethod
     def euclidean_distance_score(binary_file_1, binary_file_2):
-        early, late, _ = ts_synchronize(binary_file_1, binary_file_2)
-        score = SimilarityScore.euclidean_distance_calculator(early, late)
+        """
+        - binary file 의 apb_path 를 받아 두 file data 사이 euclidean distance 를 계산하여 반환
+        :param binary_file_1:
+            binary file abs_path
+            - type: string
+        :param binary_file_2:
+            binary file ans_path
+            - type: string
+        :return:
+            euclidean distance score
+            -type: float
+        """
+        # early, late, _ = ts_synchronize(binary_file_1, binary_file_2)
+        score = SimilarityScore.euclidean_distance_calculator(binary_file_1, binary_file_2)
 
         return score
 
     @staticmethod
     def manhattan_distance_score(binary_file_1, binary_file_2):
-        early, late, length = ts_synchronize(binary_file_1, binary_file_2)
-        score = SimilarityScore.manhattan_distance_calculator(early, late)
+        """
+        - binary file 의 apb_path 를 받아 두 file data 사이 manhattan distance 를 계산하여 반환
+        :param binary_file_1:
+            binary file abs_path
+            - type: string
+        :param binary_file_2:
+            binary file ans_path
+            - type: string
+        :return:
+            manhattan distance score
+            -type: float
+        """
+        # early, late, length = ts_synchronize(binary_file_1, binary_file_2)
+        score = SimilarityScore.manhattan_distance_calculator(binary_file_1, binary_file_2)
 
-        return score / length
+        return score
 
     @staticmethod
     def gradient_similarity_score(binary_file_1, binary_file_2):
-        early, late, length = ts_synchronize(binary_file_1, binary_file_2)
-        score = SimilarityScore.gradient_similarity_calculator(early, late)
+        """
+        - binary file 의 apb_path 를 받아 두 file data 사이 gradient similarity 를 계산하여 반환
+        :param binary_file_1:
+            binary file abs_path
+            - type: string
+        :param binary_file_2:
+            binary file ans_path
+            - type: string
+        :return:
+            gradient similarity score
+            -type: float
+        """
+        # early, late, length = ts_synchronize(binary_file_1, binary_file_2)
+        score = SimilarityScore.gradient_similarity_calculator(binary_file_1, binary_file_2)
 
-        return score / length
+        return score
 
     @staticmethod
     def reversed_gradient_similarity_score(binary_file_1, binary_file_2):
-        early, late, length = ts_synchronize(binary_file_1, binary_file_2)
-        score = SimilarityScore.reversed_gradient_similarity_calculator(early, late)
+        """
+        - binary file 의 apb_path 를 받아 두 file data 사이 reversed gradient similarity 를 계산하여 반환
+        :param binary_file_1:
+            binary file abs_path
+            - type: string
+        :param binary_file_2:
+            binary file ans_path
+            - type: string
+        :return:
+            reversed gradient similarity score
+            -type: float
+        """
+        # early, late, length = ts_synchronize(binary_file_1, binary_file_2)
+        score = SimilarityScore.reversed_gradient_similarity_calculator(binary_file_1, binary_file_2)
 
-        return score / length
+        return score
 
     ###############################################################################
     # calculate similarity score
 
     @staticmethod
-    def covariance_calculator(early, late):
-        return np.cov(early, late)[0][1]
+    def covariance_calculator(binary_file_1, binary_file_2):
+        data_1, data_2 = SimilarityScore.unpickling(binary_file_1, binary_file_2)
+        return np.cov(data_1, data_2)[0][1]
 
     @staticmethod
-    def cosine_similarity_calculator(early, late):
-        numerator = sum(a * b for a, b in zip(early, late))
-        denominator = SimilarityScore.square_rooted(early) * SimilarityScore.square_rooted(late)
+    def cosine_similarity_calculator(binary_file_1, binary_file_2):
+        data_1, data_2 = SimilarityScore.unpickling(binary_file_1, binary_file_2)
+        numerator = sum(a * b for a, b in zip(data_1, data_2))
+        denominator = SimilarityScore.square_rooted(data_1) * SimilarityScore.square_rooted(data_2)
 
         return round(numerator / float(denominator), Round)
 
     @staticmethod
-    def euclidean_distance_calculator(early, late):
-        return round(sqrt(sum(pow(a - b, 2) for a, b in zip(early, late))), Round)
+    def euclidean_distance_calculator(binary_file_1, binary_file_2):
+        data_1, data_2 = SimilarityScore.unpickling(binary_file_1, binary_file_2)
+        return round(sqrt(sum(pow(a - b, 2) for a, b in zip(data_1, data_2))), Round)
 
     @staticmethod
-    def manhattan_distance_calculator(early, late):
-        return round(sum(abs(a - b) for a, b in zip(early, late)), Round)
+    def manhattan_distance_calculator(binary_file_1, binary_file_2):
+        data_1, data_2 = SimilarityScore.unpickling(binary_file_1, binary_file_2)
+        return round(sum(abs(a - b) for a, b in zip(data_1, data_2)), Round)
 
     @staticmethod
-    def gradient_similarity_calculator(early, late):
+    def gradient_similarity_calculator(binary_file_1, binary_file_2):
+        data_1, data_2 = SimilarityScore.unpickling(binary_file_1, binary_file_2)
         score = []
 
-        early_gradient = np.gradient(early)
-        late_gradient = np.gradient(late)
+        early_gradient = np.gradient(data_1)
+        late_gradient = np.gradient(data_2)
 
         for a, b, in zip(early_gradient, late_gradient):
             gradient_distance = abs(a - b)
@@ -295,11 +374,12 @@ class SimilarityScore:
         return round(sum(score), 3)
 
     @staticmethod
-    def reversed_gradient_similarity_calculator(early, late):
+    def reversed_gradient_similarity_calculator(binary_file_1, binary_file_2):
+        data_1, data_2 = SimilarityScore.unpickling(binary_file_1, binary_file_2)
         score = []
 
-        early_gradient = np.gradient(early)
-        late_gradient = np.gradient(late)
+        early_gradient = np.gradient(data_1)
+        late_gradient = np.gradient(data_2)
         late_gradient = late_gradient
 
         for a, b, in zip(early_gradient, late_gradient):
@@ -311,6 +391,13 @@ class SimilarityScore:
     @staticmethod
     def square_rooted(x):
         return round(sqrt(sum([a * a for a in x])), Round)
+
+    @staticmethod
+    def unpickling(binary_file_1, binary_file_2):
+        data_1 = pickle.load(open(binary_file_1))
+        data_2 = pickle.load(open(binary_file_2))
+
+        return data_1['value'], data_2['value']
 
 
 ###############################################################################

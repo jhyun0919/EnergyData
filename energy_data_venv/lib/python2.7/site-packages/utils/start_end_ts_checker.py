@@ -3,7 +3,7 @@
 from FileIO import Load
 import cPickle as pickle
 
-data_repository_path = '/Users/JH/Documents/GitHub/EnergyData_jhyun/repository/15/refined_data_fully_refined'
+data_repository_path = '/Users/JH/Documents/GitHub/EnergyData_jhyun/repository/VTT'
 file_list = Load.binary_file_list(data_repository_path)
 
 for file in file_list:

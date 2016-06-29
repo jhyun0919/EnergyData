@@ -101,7 +101,14 @@ class Save:
         f.close()
 
     @staticmethod
-    def refined_data2bin_file(refined_data, save_directory, time_interval=Time_Interval):
+    def ts_standard_data2bin_file(data, file_name):
+        path = os.path.join(RepositoryPath, TimeLengthStandardPath)
+        Save.assure_path_exist(path)
+        file_name = os.path.join(path, file_name)
+        Save.dumping_bin(file_name, data)
+
+    @staticmethod
+    def refined_data2bin_file(refined_data, save_directory, time_interval=TimeInterval):
         """
 
         :param refined_data:
@@ -109,7 +116,7 @@ class Save:
         :param save_directory:
         :return:
         """
-        path = os.path.join(Repository_Path, str(time_interval), save_directory)
+        path = os.path.join(RepositoryPath, str(time_interval), save_directory)
         Save.assure_path_exist(path)
 
         refined_data_binary_file_name = refined_data['file_name'] + '.bin'
@@ -120,7 +127,7 @@ class Save:
 
     @staticmethod
     def model2bin_file(directory, similarity_structure):
-        path = os.path.join(directory, Model_Path)
+        path = os.path.join(directory, ModelPath)
         Save.assure_path_exist(path)
 
         model_binary_file_name = os.path.join(path, 'similarity.bin')
@@ -136,7 +143,7 @@ class Save:
         :param data_dictionary:
         :return:
         """
-        path = os.path.join(Repository_Path, Network_Path)
+        path = os.path.join(RepositoryPath, NetworkPath)
 
         Save.assure_path_exist(path)
 

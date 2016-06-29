@@ -3,32 +3,32 @@
 ###############################################################################
 # Preprocess
 
-Time_Interval = 60  # minute
-Similarity_Matrix_Scaling = 100
+TimeInterval = 1440  # minute
 
 ###############################################################################
 # Save
 
-Repository_Path = '/Users/JH/Documents/GitHub/EnergyData_jhyun/repository'
+RepositoryPath = '/Users/JH/Documents/GitHub/EnergyData_jhyun/repository'
 
-Raw_Data_Repository_Path = '/Users/JH/Documents/GitHub/EnergyData_jhyun/repository/VTT'
+RawDataPath = 'VTT'
+TimeLengthStandardPath = 'ts_standard'
 
-Visualization_Repository = '/Users/JH/Documents/GitHub/EnergyData_jhyun/Visualization'
-HeatMap_Path = 'HeatMap'
-Network_Path = 'Network'
-CalendarHeatMap_Path = 'Calendar_HeatMap'
+VisualizationRepository = '/Users/JH/Documents/GitHub/EnergyData_jhyun/Visualization'
+HeatMapPath = 'HeatMap'
+NetworkPath = 'Network'
+CalendarHeatMapPath = 'Calendar_HeatMap'
 
-Graph_path = 'graph'
+GraphPath = 'graph'
 
-Fully_Preprocessed_Path = 'refined_data_fully_refined'
-Semi_Preprocessed_Path = 'refined_data_skip_interpolation'
+FullyPreprocessedPath = 'fully_refined'
+SemiPreprocessedPath = 'skip_interpolation_refined'
 
-Model_Path = 'similarity_model'
+ModelPath = 'similarity_model'
 
 ###############################################################################
 # Similarity
 
-Similarity_Type = ['covariance', 'cosine_similarity', 'euclidean_distance', 'manhattan_distance', 'gradient_similarity',
+SimilarityType = ['covariance', 'cosine_similarity', 'euclidean_distance', 'manhattan_distance', 'gradient_similarity',
                    'reversed_gradient_similarity']
 Round = 3
 

@@ -11,20 +11,23 @@ import cPickle as pickle
 import os
 
 
-def refining_data(raw_data_repository_path=Raw_Data_Repository_Path, time_interval=Time_Interval):
+def refining_data(repository_path=RepositoryPath, time_interval=TimeInterval):
     """
     - raw sensor data 를 preprocessing 과정을 통해 refined data 로 변환
     - refined data 를 time interval 별로 지정된 directory 에 저장
     - refined data repository directory 를 반환함
 
-    :param raw_data_repository_path:
-        row data repository directory
+    :param repository_path:
+        repository directory
     :param time_interval:
         time interval for time scaling
     :return:
         refined data directory path
     """
-    for line in FileIO.Load.binary_file_list(raw_data_repository_path):
+
+    ts_standardization(time_interval)
+
+    for line in FileIO.Load.binary_file_list(os.path.join(repository_path, TimeLengthStandardPath)):
         file_name = line.rsplit('/', 1)[-1]
 
         print 'refining : ',
@@ -34,25 +37,81 @@ def refining_data(raw_data_repository_path=Raw_Data_Repository_Path, time_interv
         start_time = time.time()
 
         _, fully_refined_path = FileIO.Save.refined_data2bin_file(fully_data_preprocess(line, time_interval),
-                                                                  Fully_Preprocessed_Path, time_interval)
+                                                                  FullyPreprocessedPath, time_interval)
         _, skip_interpolation_path = FileIO.Save.refined_data2bin_file(
-            skip_interpolation_data_preprocess(line, time_interval), Semi_Preprocessed_Path, time_interval)
+            skip_interpolation_data_preprocess(line, time_interval), SemiPreprocessedPath, time_interval)
 
         end_time = time.time()
         run_time = end_time - start_time
 
         print '\t' + 'run_time: ' + str(run_time) + ' sec'
 
-    ts_match(time_interval=Time_Interval, refine_type=Fully_Preprocessed_Path)
-    ts_match(time_interval=Time_Interval, refine_type=Semi_Preprocessed_Path)
-
     return fully_refined_path, skip_interpolation_path
+
+
+###############################################################################
+#
+
+def ts_standardization(time_interval=TimeInterval):
+    print 'time stamp standardization'
+
+    # load raw data binary file list
+    repository_path = os.path.join(RepositoryPath, RawDataPath)
+    raw_data_binary_file_list = FileIO.Load.binary_file_list(repository_path)
+
+    # set temporary start ts & end ts
+    start_ts, end_ts = set_ts_spectrum(raw_data_binary_file_list)
+
+    for binary_file in raw_data_binary_file_list:
+        data = pickle.load(open(binary_file))
+        for i in xrange(0, len(data['ts'])):
+            if start_ts <= data['ts'][i][0]:
+                start_idx = i
+                break
+        for j in xrange(len(data['ts']) - 1, 0, -1):
+            if end_ts >= data['ts'][j][0]:
+                end_idx = j
+                break
+
+        data['ts'] = data['ts'][start_idx:end_idx + 1]
+        data['value'] = data['value'][start_idx:end_idx + 1]
+        data['ts'][0][0] = start_ts
+        data['ts'][-1][0] = end_ts
+
+        FileIO.Save.ts_standard_data2bin_file(data, binary_file.rsplit('/', 1)[-1])
+
+
+def set_ts_spectrum(raw_data_binary_file_list):
+    """
+
+    :param raw_data_binary_file_list:
+    :return:
+    """
+    data = pickle.load(open(raw_data_binary_file_list[0]))
+    start_ts = data['ts'][0][0]
+    end_ts = data['ts'][-1][0]
+
+    print '\tsearching latest start_ts & earliest end_ts...'
+
+    for binary_file in raw_data_binary_file_list:
+        data = pickle.load(open(binary_file))
+        start_ts = max(start_ts, data['ts'][0][0])
+        end_ts = min(end_ts, data['ts'][-1][0])
+
+    start_ts = start_ts.replace(hour=0, minute=0, second=0)
+    start_ts = start_ts + timedelta(days=1)
+    end_ts = end_ts.replace(hour=0, minute=0, second=0)
+
+    print '\t\t' + 'start_ts: ' + str(start_ts)
+    print '\t\t' + 'end_ts: ' + str(end_ts)
+
+    return start_ts, end_ts
 
 
 ###############################################################################
 # Data Preprocess
 
-def fully_data_preprocess(binary_file_path, time_interval=Time_Interval):
+def fully_data_preprocess(binary_file_path, time_interval=TimeInterval):
     """
     - 일정한 크기로 data 값을 scaling 함
     - 시간 간격을 일정하게 조정
@@ -74,7 +133,7 @@ def fully_data_preprocess(binary_file_path, time_interval=Time_Interval):
     return refined_data
 
 
-def skip_interpolation_data_preprocess(binary_file_path, time_interval=Time_Interval):
+def skip_interpolation_data_preprocess(binary_file_path, time_interval=TimeInterval):
     """
     - 일정한 크기로 data value 값을 scaling 함
     - 시간 간격을 일정하게 조정
@@ -126,7 +185,7 @@ def scaling(data_dictionary):
 ###############################################################################
 # Time Stamp Scaling
 
-def ts_scaling(dictionary_data, time_interval=Time_Interval):
+def ts_scaling(dictionary_data, time_interval=TimeInterval):
     """
     - ts 간격을 같게 변환 해주는 함수
 
@@ -264,60 +323,6 @@ def interpolation_rule(idx, value):
 ###############################################################################
 # Data-Preprocessing 4 Similarity
 
-def ts_match(time_interval=Time_Interval, refine_type=Fully_Preprocessed_Path):
-    """
-
-    :param time_interval:
-    :param refine_type:
-    :return:
-    """
-    print 'time stamp start-end matching in ' + refine_type
-
-    # load raw data binary file list
-    repository_path = os.path.join(Repository_Path, str(time_interval), refine_type)
-    raw_data_binary_file_list = FileIO.Load.binary_file_list(repository_path)
-
-    # set temporary start ts & end ts
-    start_ts, end_ts = set_ts_spectrum(raw_data_binary_file_list)
-
-    for binary_file in raw_data_binary_file_list:
-        data = pickle.load(open(binary_file))
-        for i in xrange(0, len(data['ts'])):
-            if start_ts == data['ts'][i]:
-                start_idx = i
-                break
-
-        for j in xrange(len(data['ts']) - 1, 0, -1):
-            if end_ts == data['ts'][j]:
-                end_idx = j
-                break
-
-        data['ts'] = data['ts'][start_idx:end_idx + 1]
-        data['value'] = data['value'][start_idx:end_idx + 1]
-
-        _, _ = FileIO.Save.refined_data2bin_file(data, refine_type, time_interval)
-
-
-def set_ts_spectrum(raw_data_binary_file_list):
-    """
-
-    :param raw_data_binary_file_list:
-    :return:
-    """
-    data = pickle.load(open(raw_data_binary_file_list[0]))
-    start_ts = data['ts'][0]
-    end_ts = data['ts'][-1]
-
-    print '\tsearching latest start_ts & earliest end_ts...'
-    for binary_file in raw_data_binary_file_list:
-        data = pickle.load(open(binary_file))
-        start_ts = max(start_ts, data['ts'][0])
-        end_ts = min(end_ts, data['ts'][-1])
-    print '\t\t' + 'start_ts: ' + str(start_ts)
-    print '\t\t' + 'end_ts: ' + str(end_ts)
-
-    return start_ts, end_ts
-
 
 def ts_synchronize(binary_file_1, binary_file_2):
     """
@@ -400,48 +405,7 @@ def end_ts_synchronize(early, late):
     return early, late, length
 
 
-"""
-    X = X/X.std 로 바꿀 것..
-"""
-
-
-def preprocess4similarity_matrix(similarity_matrix):
-    """
-    -
-
-    :param similarity_matrix:
-    :return:
-    """
-    max_val = np.amax(similarity_matrix)
-    min_val = np.amin(similarity_matrix)
-
-    for i in xrange(0, len(similarity_matrix)):
-        for j in xrange(0, len(similarity_matrix)):
-            similarity_matrix[i][j] = (float(similarity_matrix[i][j] - min_val) / max_val) * Similarity_Matrix_Scaling
-
-    return similarity_matrix
-
-
 ###############################################################################
 
 if __name__ == '__main__':
-    file_path = '/repository/VTT/VTT_GW1_HA11_VM_KV_K.bin'
-
-    Graph.Show.raw_data2graph(file_path)
-
-    data_dictionary = FileIO.Load.unpickling(file_path)
-
-    data_dictionary = scaling(data_dictionary)
-    print data_dictionary
-    print
-    Graph.Show.dictionary2graph(data_dictionary)
-
-    data_dictionary = ts_scaling(data_dictionary)
-    print data_dictionary
-    print
-    Graph.Show.dictionary2graph(data_dictionary)
-
-    data_dictionary = interpolation(data_dictionary)
-    print data_dictionary
-    print
-    Graph.Show.dictionary2graph(data_dictionary)
+    refining_data()
