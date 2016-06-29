@@ -3,28 +3,36 @@
 ###############################################################################
 # Preprocess
 
-Time_Interval = 15  # minute
+Time_Interval = 60  # minute
 Similarity_Matrix_Scaling = 100
 
 ###############################################################################
 # Save
 
 Repository_Path = '/Users/JH/Documents/GitHub/EnergyData_jhyun/repository'
+
 Raw_Data_Repository_Path = '/Users/JH/Documents/GitHub/EnergyData_jhyun/repository/VTT'
+
+Visualization_Repository = '/Users/JH/Documents/GitHub/EnergyData_jhyun/Visualization'
+HeatMap_Path = 'HeatMap'
+Network_Path = 'Network'
+CalendarHeatMap_Path = 'Calendar_HeatMap'
+
 Graph_path = 'graph'
+
 Fully_Preprocessed_Path = 'refined_data_fully_refined'
 Semi_Preprocessed_Path = 'refined_data_skip_interpolation'
+
 Model_Path = 'similarity_model'
-Network_Path = 'network_data'
 
 ###############################################################################
 # Similarity
 
-Similarity_Type = ['covariance', 'cosine_similarity', 'euclidean_distance', 'manhattan_distance',
-                    'gradient_similarity', 'reversed_gradient_similarity']
+Similarity_Type = ['covariance', 'cosine_similarity', 'euclidean_distance', 'manhattan_distance', 'gradient_similarity',
+                   'reversed_gradient_similarity']
 Round = 3
-Gradient_Threshold = 0.5
 
+"""
 ###############################################################################
 # Network
 
@@ -35,3 +43,4 @@ Gradient_Edge_Threshold = 11
 Reversed_Gradient_Edge_Threshold = 15
 
 Deviation_Multiplier = 1
+"""

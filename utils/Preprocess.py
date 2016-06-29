@@ -265,6 +265,12 @@ def interpolation_rule(idx, value):
 # Data-Preprocessing 4 Similarity
 
 def ts_match(time_interval=Time_Interval, refine_type=Fully_Preprocessed_Path):
+    """
+
+    :param time_interval:
+    :param refine_type:
+    :return:
+    """
     print 'time stamp start-end matching in ' + refine_type
 
     # load raw data binary file list

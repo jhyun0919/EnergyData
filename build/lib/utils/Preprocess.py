@@ -7,10 +7,11 @@ import FileIO
 import cmath as math
 import time
 from datetime import timedelta
+import cPickle as pickle
+import os
 
 
-def refining_data(raw_data_repository_path=Raw_Data_Repository_Path,
-                  time_interval=Time_Interval):
+def refining_data(raw_data_repository_path=Raw_Data_Repository_Path, time_interval=Time_Interval):
     """
     - raw sensor data 를 preprocessing 과정을 통해 refined data 로 변환
     - refined data 를 time interval 별로 지정된 directory 에 저장
@@ -41,6 +42,9 @@ def refining_data(raw_data_repository_path=Raw_Data_Repository_Path,
         run_time = end_time - start_time
 
         print '\t' + 'run_time: ' + str(run_time) + ' sec'
+
+    ts_match(time_interval=Time_Interval, refine_type=Fully_Preprocessed_Path)
+    ts_match(time_interval=Time_Interval, refine_type=Semi_Preprocessed_Path)
 
     return fully_refined_path, skip_interpolation_path
 
@@ -259,6 +263,61 @@ def interpolation_rule(idx, value):
 
 ###############################################################################
 # Data-Preprocessing 4 Similarity
+
+def ts_match(time_interval=Time_Interval, refine_type=Fully_Preprocessed_Path):
+    """
+
+    :param time_interval:
+    :param refine_type:
+    :return:
+    """
+    print 'time stamp start-end matching in ' + refine_type
+
+    # load raw data binary file list
+    repository_path = os.path.join(Repository_Path, str(time_interval), refine_type)
+    raw_data_binary_file_list = FileIO.Load.binary_file_list(repository_path)
+
+    # set temporary start ts & end ts
+    start_ts, end_ts = set_ts_spectrum(raw_data_binary_file_list)
+
+    for binary_file in raw_data_binary_file_list:
+        data = pickle.load(open(binary_file))
+        for i in xrange(0, len(data['ts'])):
+            if start_ts == data['ts'][i]:
+                start_idx = i
+                break
+
+        for j in xrange(len(data['ts']) - 1, 0, -1):
+            if end_ts == data['ts'][j]:
+                end_idx = j
+                break
+
+        data['ts'] = data['ts'][start_idx:end_idx + 1]
+        data['value'] = data['value'][start_idx:end_idx + 1]
+
+        _, _ = FileIO.Save.refined_data2bin_file(data, refine_type, time_interval)
+
+
+def set_ts_spectrum(raw_data_binary_file_list):
+    """
+
+    :param raw_data_binary_file_list:
+    :return:
+    """
+    data = pickle.load(open(raw_data_binary_file_list[0]))
+    start_ts = data['ts'][0]
+    end_ts = data['ts'][-1]
+
+    print '\tsearching latest start_ts & earliest end_ts...'
+    for binary_file in raw_data_binary_file_list:
+        data = pickle.load(open(binary_file))
+        start_ts = max(start_ts, data['ts'][0])
+        end_ts = min(end_ts, data['ts'][-1])
+    print '\t\t' + 'start_ts: ' + str(start_ts)
+    print '\t\t' + 'end_ts: ' + str(end_ts)
+
+    return start_ts, end_ts
+
 
 def ts_synchronize(binary_file_1, binary_file_2):
     """

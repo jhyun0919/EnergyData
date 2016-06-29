@@ -153,6 +153,10 @@ class SimilarityScore:
             for col in xrange(row, dimension):
                 model[row][col] = SimilarityScore.covariance_score(file_list[row], file_list[col])
 
+        # 오름차순을 위한 어쩔 수 없는 방법
+        model = model + abs(model.min())
+        model = model.max() - model
+
         return model
 
     @staticmethod
