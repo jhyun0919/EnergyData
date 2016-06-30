@@ -6,7 +6,6 @@ from Matrix import symmetric
 from GlobalParameter import *
 import numpy as np
 import os
-import time
 from math import sqrt
 import cPickle as pickle
 
@@ -19,8 +18,10 @@ class Build:
         pass
 
     @staticmethod
-    def similarity_model(time_interval=TimeInterval, refine_type=FullyPreprocessedPath):
-        data_repository = os.path.join(RepositoryPath, str(time_interval), refine_type)
+    def similarity_model(time_interval=TimeInterval, refined_type=FullyPreprocessedPath):
+        print 'building similarity model'
+
+        data_repository = os.path.join(RepositoryPath, str(time_interval), refined_type)
         model = {}
 
         model['file_list'] = np.asanyarray(Load.binary_file_list(data_repository))
@@ -35,21 +36,21 @@ class Build:
     @staticmethod
     def foo(similarity_type, file_list):
 
+        print '\t',
         print 'calculating ' + similarity_type
-        start_time = time.time()
 
         if similarity_type == 'covariance':
-            similarity_model = symmetric(SimilarityScore.covariance_model(file_list))
+            similarity_model = symmetric(Score.covariance_model(file_list))
         elif similarity_type == 'cosine_similarity':
-            similarity_model = symmetric(SimilarityScore.cosine_similarity_model(file_list))
+            similarity_model = symmetric(Score.cosine_similarity_model(file_list))
         elif similarity_type == 'euclidean_distance':
-            similarity_model = symmetric(SimilarityScore.euclidean_distance_model(file_list))
+            similarity_model = symmetric(Score.euclidean_distance_model(file_list))
         elif similarity_type == 'manhattan_distance':
-            similarity_model = symmetric(SimilarityScore.manhattan_distance_model(file_list))
+            similarity_model = symmetric(Score.manhattan_distance_model(file_list))
         elif similarity_type == 'gradient_similarity':
-            similarity_model = symmetric(SimilarityScore.gradient_similarity_model(file_list))
+            similarity_model = symmetric(Score.gradient_similarity_model(file_list))
         elif similarity_type == 'reversed_gradient_similarity':
-            similarity_model = symmetric(SimilarityScore.reversed_gradient_similarity_model(file_list))
+            similarity_model = symmetric(Score.reversed_gradient_similarity_model(file_list))
         else:
             exit()
 
@@ -59,11 +60,6 @@ class Build:
         except ZeroDivisionError as err:
             print err
             exit()
-
-        end_time = time.time()
-        run_time = end_time - start_time
-
-        print '\t' + 'run_time: ' + str(run_time) + ' sec'
 
         return similarity_model
 
@@ -141,7 +137,7 @@ class Clean:
 ###############################################################################
 #
 
-class SimilarityScore:
+class Score:
     def __init__(self):
         pass
 
@@ -152,7 +148,7 @@ class SimilarityScore:
 
         for row in xrange(0, dimension):
             for col in xrange(row, dimension):
-                model[row][col] = SimilarityScore.covariance_score(file_list[row], file_list[col])
+                model[row][col] = Score.covariance_score(file_list[row], file_list[col])
 
         # 오름차순을 위한 어쩔 수 없는 방법
         model = model + abs(model.min())
@@ -167,7 +163,7 @@ class SimilarityScore:
 
         for row in xrange(0, dimension):
             for col in xrange(row, dimension):
-                model[row][col] = SimilarityScore.cosine_similarity_score(file_list[row], file_list[col])
+                model[row][col] = Score.cosine_similarity_score(file_list[row], file_list[col])
 
         return model
 
@@ -178,7 +174,7 @@ class SimilarityScore:
 
         for row in xrange(0, dimension):
             for col in xrange(row, dimension):
-                model[row][col] = SimilarityScore.euclidean_distance_score(file_list[row], file_list[col])
+                model[row][col] = Score.euclidean_distance_score(file_list[row], file_list[col])
 
         return model
 
@@ -189,7 +185,7 @@ class SimilarityScore:
 
         for row in xrange(0, dimension):
             for col in xrange(row, dimension):
-                model[row][col] = SimilarityScore.manhattan_distance_score(file_list[row], file_list[col])
+                model[row][col] = Score.manhattan_distance_score(file_list[row], file_list[col])
 
         return model
 
@@ -200,7 +196,7 @@ class SimilarityScore:
 
         for row in xrange(0, dimension):
             for col in xrange(row, dimension):
-                model[row][col] = SimilarityScore.gradient_similarity_score(file_list[row], file_list[col])
+                model[row][col] = Score.gradient_similarity_score(file_list[row], file_list[col])
 
         return model
 
@@ -211,7 +207,7 @@ class SimilarityScore:
 
         for row in xrange(0, dimension):
             for col in xrange(row, dimension):
-                model[row][col] = SimilarityScore.reversed_gradient_similarity_score(file_list[row], file_list[col])
+                model[row][col] = Score.reversed_gradient_similarity_score(file_list[row], file_list[col])
 
         return model
 
@@ -233,7 +229,7 @@ class SimilarityScore:
             -type: float
         """
         # early, late, _ = ts_synchronize(binary_file_1, binary_file_2)
-        score = SimilarityScore.covariance_calculator(binary_file_1, binary_file_2)
+        score = Score.covariance_calculator(binary_file_1, binary_file_2)
 
         return score
 
@@ -252,7 +248,7 @@ class SimilarityScore:
             -type: float
         """
         # early, late, _ = ts_synchronize(binary_file_1, binary_file_2)
-        score = SimilarityScore.cosine_similarity_calculator(binary_file_1, binary_file_2)
+        score = Score.cosine_similarity_calculator(binary_file_1, binary_file_2)
 
         return abs(1 - score)
 
@@ -271,7 +267,7 @@ class SimilarityScore:
             -type: float
         """
         # early, late, _ = ts_synchronize(binary_file_1, binary_file_2)
-        score = SimilarityScore.euclidean_distance_calculator(binary_file_1, binary_file_2)
+        score = Score.euclidean_distance_calculator(binary_file_1, binary_file_2)
 
         return score
 
@@ -290,7 +286,7 @@ class SimilarityScore:
             -type: float
         """
         # early, late, length = ts_synchronize(binary_file_1, binary_file_2)
-        score = SimilarityScore.manhattan_distance_calculator(binary_file_1, binary_file_2)
+        score = Score.manhattan_distance_calculator(binary_file_1, binary_file_2)
 
         return score
 
@@ -309,7 +305,7 @@ class SimilarityScore:
             -type: float
         """
         # early, late, length = ts_synchronize(binary_file_1, binary_file_2)
-        score = SimilarityScore.gradient_similarity_calculator(binary_file_1, binary_file_2)
+        score = Score.gradient_similarity_calculator(binary_file_1, binary_file_2)
 
         return score
 
@@ -328,7 +324,7 @@ class SimilarityScore:
             -type: float
         """
         # early, late, length = ts_synchronize(binary_file_1, binary_file_2)
-        score = SimilarityScore.reversed_gradient_similarity_calculator(binary_file_1, binary_file_2)
+        score = Score.reversed_gradient_similarity_calculator(binary_file_1, binary_file_2)
 
         return score
 
@@ -337,30 +333,30 @@ class SimilarityScore:
 
     @staticmethod
     def covariance_calculator(binary_file_1, binary_file_2):
-        data_1, data_2 = SimilarityScore.unpickling(binary_file_1, binary_file_2)
+        data_1, data_2 = Score.unpickling(binary_file_1, binary_file_2)
         return np.cov(data_1, data_2)[0][1]
 
     @staticmethod
     def cosine_similarity_calculator(binary_file_1, binary_file_2):
-        data_1, data_2 = SimilarityScore.unpickling(binary_file_1, binary_file_2)
+        data_1, data_2 = Score.unpickling(binary_file_1, binary_file_2)
         numerator = sum(a * b for a, b in zip(data_1, data_2))
-        denominator = SimilarityScore.square_rooted(data_1) * SimilarityScore.square_rooted(data_2)
+        denominator = Score.square_rooted(data_1) * Score.square_rooted(data_2)
 
         return round(numerator / float(denominator), Round)
 
     @staticmethod
     def euclidean_distance_calculator(binary_file_1, binary_file_2):
-        data_1, data_2 = SimilarityScore.unpickling(binary_file_1, binary_file_2)
+        data_1, data_2 = Score.unpickling(binary_file_1, binary_file_2)
         return round(sqrt(sum(pow(a - b, 2) for a, b in zip(data_1, data_2))), Round)
 
     @staticmethod
     def manhattan_distance_calculator(binary_file_1, binary_file_2):
-        data_1, data_2 = SimilarityScore.unpickling(binary_file_1, binary_file_2)
+        data_1, data_2 = Score.unpickling(binary_file_1, binary_file_2)
         return round(sum(abs(a - b) for a, b in zip(data_1, data_2)), Round)
 
     @staticmethod
     def gradient_similarity_calculator(binary_file_1, binary_file_2):
-        data_1, data_2 = SimilarityScore.unpickling(binary_file_1, binary_file_2)
+        data_1, data_2 = Score.unpickling(binary_file_1, binary_file_2)
         score = []
 
         early_gradient = np.gradient(data_1)
@@ -374,7 +370,7 @@ class SimilarityScore:
 
     @staticmethod
     def reversed_gradient_similarity_calculator(binary_file_1, binary_file_2):
-        data_1, data_2 = SimilarityScore.unpickling(binary_file_1, binary_file_2)
+        data_1, data_2 = Score.unpickling(binary_file_1, binary_file_2)
         score = []
 
         early_gradient = np.gradient(data_1)

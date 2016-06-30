@@ -4,56 +4,51 @@ import numpy as np
 from GlobalParameter import *
 import FileIO
 import cmath as math
-import time
 from datetime import timedelta
 import cPickle as pickle
 import os
 
 
-def refining_data(repository_path=RepositoryPath, time_interval=TimeInterval):
+def refining_data(time_interval=TimeInterval, refined_type=FullyPreprocessedPath):
     """
     - raw sensor data 를 preprocessing 과정을 통해 refined data 로 변환
     - refined data 를 time interval 별로 지정된 directory 에 저장
     - refined data repository directory 를 반환함
 
-    :param repository_path:
-        repository directory
     :param time_interval:
         time interval for time scaling
+    :param refined_type:
+        refine type
     :return:
         refined data directory path
     """
-
+    print 'time stamp standardization'
     ts_standardization()
 
-    for line in FileIO.Load.binary_file_list(os.path.join(repository_path, TimeLengthStandardPath)):
+    print 'data preprocess'
+    for line in FileIO.Load.binary_file_list(os.path.join(RepositoryPath, TimeLengthStandardPath)):
         file_name = line.rsplit('/', 1)[-1]
 
-        print 'refining : ',
-        print file_name
-        print '\t' + 'with ts_interval ' + str(time_interval) + ' min'
+        print '\t',
+        print 'refining : ' + file_name
 
-        start_time = time.time()
+        if refined_type == FullyPreprocessedPath:
+            _, refined_path = FileIO.Save.refined_data2bin_file(fully_data_preprocess(line, time_interval),
+                                                                FullyPreprocessedPath, time_interval)
+        elif refined_type == SemiPreprocessedPath:
+            _, refined_path = FileIO.Save.refined_data2bin_file(
+                skip_interpolation_data_preprocess(line, time_interval), SemiPreprocessedPath, time_interval)
+        else:
+            print "error occurred in preprocess"
+            exit()
 
-        _, fully_refined_path = FileIO.Save.refined_data2bin_file(fully_data_preprocess(line, time_interval),
-                                                                  FullyPreprocessedPath, time_interval)
-        _, skip_interpolation_path = FileIO.Save.refined_data2bin_file(
-            skip_interpolation_data_preprocess(line, time_interval), SemiPreprocessedPath, time_interval)
-
-        end_time = time.time()
-        run_time = end_time - start_time
-
-        print '\t' + 'run_time: ' + str(run_time) + ' sec'
-
-    return fully_refined_path, skip_interpolation_path
+    return refined_path
 
 
 ###############################################################################
 #
 
 def ts_standardization():
-    print 'time stamp standardization'
-
     # load raw data binary file list
     repository_path = os.path.join(RepositoryPath, RawDataPath)
     raw_data_binary_file_list = FileIO.Load.binary_file_list(repository_path)
@@ -61,6 +56,8 @@ def ts_standardization():
     # set temporary start ts & end ts
     start_ts, end_ts = set_ts_spectrum(raw_data_binary_file_list)
 
+    print '\t',
+    print 'synchronizing time stamp'
     for binary_file in raw_data_binary_file_list:
         data = pickle.load(open(binary_file))
         for i in xrange(0, len(data['ts'])):
@@ -90,7 +87,8 @@ def set_ts_spectrum(raw_data_binary_file_list):
     start_ts = data['ts'][0][0]
     end_ts = data['ts'][-1][0]
 
-    print '\tsearching latest start_ts & earliest end_ts...'
+    print '\t',
+    print 'searching latest start_ts & earliest end_ts...'
 
     for binary_file in raw_data_binary_file_list:
         data = pickle.load(open(binary_file))

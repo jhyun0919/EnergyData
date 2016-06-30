@@ -6,6 +6,12 @@ from GlobalParameter import *
 from operator import itemgetter
 
 
+def set_data4visualization(time_interval=TimeInterval, refined_type=FullyPreprocessedPath):
+    print 'setting data for visualization'
+    HeatMap.set_data(time_interval, refined_type)
+    CalendarHeatMap.set_data()
+    Network.set_data()
+
 class HeatMap:
     def __init__(self):
         pass
@@ -22,9 +28,12 @@ class HeatMap:
         :return:
             NA
         """
+        print '\t',
+        print 'HeatMap [O]'
+
         # set tsv file name
         tsv_file_name = 'sensor_data.tsv'
-        tsv_file_name = os.path.join(VisualizationRepository, HeatMapPath, tsv_file_name)
+        tsv_file_name = os.path.join(RepositoryPath, VisualizationRepository, HeatMapPath, tsv_file_name)
 
         # write tsv file with data
         with open(tsv_file_name, "w") as record_file:
@@ -41,7 +50,7 @@ class HeatMap:
                 col_idx += 1
                 for i in xrange(0, len(refined_data['value'])):
                     record_file.write(
-                        str(i + 1) + "\t" + str(col_idx) + "\t" + str(refined_data['value'][i]) + "\n")
+                        str(i + 1) + "\t" + str(col_idx) + "\t" + str(refined_data['value'][i] * 10) + "\n")
 
         # write label data
         HeatMap.set_row_label(time_interval, refined_type)
@@ -54,7 +63,7 @@ class HeatMap:
     def set_row_label(time_interval=TimeInterval, refined_type=FullyPreprocessedPath):
         # set tsv file name
         tsv_file_name = 'RowLabel.tsv'
-        tsv_file_name = os.path.join(VisualizationRepository, HeatMapPath, tsv_file_name)
+        tsv_file_name = os.path.join(RepositoryPath, VisualizationRepository, HeatMapPath, tsv_file_name)
 
         # write tsv file with data
         with open(tsv_file_name, "w") as record_file:
@@ -67,7 +76,7 @@ class HeatMap:
     def set_col_label(time_interval=TimeInterval, refined_type=FullyPreprocessedPath):
         # set tsv file name
         tsv_file_name = 'ColLabel.tsv'
-        tsv_file_name = os.path.join(VisualizationRepository, HeatMapPath, tsv_file_name)
+        tsv_file_name = os.path.join(RepositoryPath, VisualizationRepository, HeatMapPath, tsv_file_name)
 
         # write tsv file with data
         with open(tsv_file_name, "w") as record_file:
@@ -86,7 +95,7 @@ class HeatMap:
         for similarity_type in SimilarityType:
             # set tsv file name
             tsv_file_name = similarity_type + '.tsv'
-            tsv_file_name = os.path.join(VisualizationRepository, HeatMapPath, tsv_file_name)
+            tsv_file_name = os.path.join(RepositoryPath, VisualizationRepository, HeatMapPath, tsv_file_name)
 
             # write tsv file with data
             with open(tsv_file_name, "w") as record_file:
@@ -130,8 +139,9 @@ class CalendarHeatMap:
         pass
 
     @staticmethod
-    def write_data():
-        pass
+    def set_data():
+        print '\t',
+        print 'Calendar_HeatMap [X]'
 
 
 class Network:
@@ -139,8 +149,9 @@ class Network:
         pass
 
     @staticmethod
-    def write_data():
-        pass
+    def set_data():
+        print '\t',
+        print 'Network [X]'
 
 
 if __name__ == '__main__':
