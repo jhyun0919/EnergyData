@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 
-import Graph
 import numpy as np
 from GlobalParameter import *
 import FileIO
@@ -25,7 +24,7 @@ def refining_data(repository_path=RepositoryPath, time_interval=TimeInterval):
         refined data directory path
     """
 
-    ts_standardization(time_interval)
+    ts_standardization()
 
     for line in FileIO.Load.binary_file_list(os.path.join(repository_path, TimeLengthStandardPath)):
         file_name = line.rsplit('/', 1)[-1]
@@ -52,7 +51,7 @@ def refining_data(repository_path=RepositoryPath, time_interval=TimeInterval):
 ###############################################################################
 #
 
-def ts_standardization(time_interval=TimeInterval):
+def ts_standardization():
     print 'time stamp standardization'
 
     # load raw data binary file list
@@ -318,91 +317,6 @@ def interpolation_rule(idx, value):
     interpolated_value = value[idx - 1] + nominator / denominator
 
     return interpolated_value
-
-
-###############################################################################
-# Data-Preprocessing 4 Similarity
-
-
-def ts_synchronize(binary_file_1, binary_file_2):
-    """
-    - 두 data 사이 similarity 를 계산하기 위해 ts 시작과 끝을 일치 시키는 함수
-    - 공통된 ts 부분만 남기고 나머지 부분들은 삭제
-    - 공통된 ts 부분의 value 값만 남긴다
-
-    :param binary_file_1:
-        binary file abs_path
-    :param binary_file_2:
-        binary file abs_path
-    :return:
-    """
-    data_dictionary_1 = FileIO.Load.unpickling(binary_file_1)
-    data_dictionary_2 = FileIO.Load.unpickling(binary_file_2)
-
-    early, late = start_time_compare(data_dictionary_1, data_dictionary_2)
-    early, late = start_ts_synchronize(early, late)
-    early, late, length = end_ts_synchronize(early, late)
-
-    return early['value'], late['value'], length
-
-
-def start_time_compare(data_dictionary_1, data_dictionary_2):
-    """
-    - 시작 ts 값으로 early, late data  로 구분하여 반환
-
-    :param data_dictionary_1:
-    :param data_dictionary_2:
-    :return:
-    """
-    if data_dictionary_1['ts'][0] > data_dictionary_2['ts'][0]:
-        late = data_dictionary_1
-        early = data_dictionary_2
-    elif data_dictionary_1['ts'][0] < data_dictionary_2['ts'][0]:
-        late = data_dictionary_2
-        early = data_dictionary_1
-    else:
-        late = data_dictionary_1
-        early = data_dictionary_2
-
-    return early, late
-
-
-def start_ts_synchronize(early, late):
-    """
-    - start time stamp 값을 통일시켜 반환
-
-    :param early:
-    :param late:
-    :return:
-    """
-    for i in xrange(0, len(early['ts'])):
-        if late['ts'][0] == early['ts'][i]:
-            ts_fix = i
-            break
-
-    early['ts'] = early['ts'][ts_fix:]
-    early['value'] = early['value'][ts_fix:]
-
-    return early, late
-
-
-def end_ts_synchronize(early, late):
-    """
-    - end time stamp 값을 통일시켜 반환
-
-    :param early:
-    :param late:
-    :return:
-    """
-    if len(late['ts']) >= (len(early['ts'])):
-        length = len(early['ts'])
-        late['ts'] = late['ts'][0:length]
-
-    else:
-        length = len(late['ts'])
-        early['ts'] = early['ts'][0:length]
-
-    return early, late, length
 
 
 ###############################################################################

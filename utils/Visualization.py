@@ -11,7 +11,17 @@ class HeatMap:
         pass
 
     @staticmethod
-    def write_data(time_interval=TimeInterval, refined_type=FullyPreprocessedPath):
+    def set_data(time_interval=TimeInterval, refined_type=FullyPreprocessedPath):
+        """
+        - HeatMap 에 필요한 data 를 time-interval 과 refined-type 에 맟주어 tsv 형식으로 가공하여 저장
+
+        :param time_interval:
+            time interval
+        :param refined_type:
+            refined type
+        :return:
+            NA
+        """
         # set tsv file name
         tsv_file_name = 'sensor_data.tsv'
         tsv_file_name = os.path.join(VisualizationRepository, HeatMapPath, tsv_file_name)
@@ -67,9 +77,11 @@ class HeatMap:
 
     @staticmethod
     def set_cluster_report(time_interval=TimeInterval, refined_type=FullyPreprocessedPath):
+        # load similarity model
         similarity_model = pickle.load(
             Load.binary_file_list(os.path.join(RepositoryPath, str(time_interval), refined_type, ModelPath)))
 
+        # write a cluster report for each similarity model type
         for similarity_type in SimilarityType:
             # set tsv file name
             tsv_file_name = similarity_type + 'tsv'
@@ -77,7 +89,8 @@ class HeatMap:
 
             # write tsv file with data
             with open(tsv_file_name, "w") as record_file:
-                pass
+                HeatMap.Report.sorting_foo()
+                record_file.write(str())
 
     class Report:
         def __init__(self):
@@ -85,6 +98,15 @@ class HeatMap:
 
         ###############################################################################
         # ordering algorithm
+
+        @staticmethod
+        def sorting_foo(similarity_score_list):
+
+
+
+
+
+
 
         @staticmethod
         def pick_column(similarity_model_bin_file, data_file):
@@ -176,4 +198,4 @@ class Network:
 
 
 if __name__ == '__main__':
-    HeatMap.write_data()
+    HeatMap.set_data()

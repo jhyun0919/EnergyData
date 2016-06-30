@@ -29,7 +29,7 @@ ModelPath = 'similarity_model'
 # Similarity
 
 SimilarityType = ['covariance', 'cosine_similarity', 'euclidean_distance', 'manhattan_distance', 'gradient_similarity',
-                   'reversed_gradient_similarity']
+                  'reversed_gradient_similarity']
 Round = 3
 
 """

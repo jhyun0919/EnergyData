@@ -3,7 +3,6 @@
 from FileIO import Load
 from FileIO import Save
 from Matrix import symmetric
-from Preprocess import ts_synchronize
 from GlobalParameter import *
 import numpy as np
 import os

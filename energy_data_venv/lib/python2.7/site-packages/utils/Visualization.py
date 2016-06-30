@@ -11,7 +11,17 @@ class HeatMap:
         pass
 
     @staticmethod
-    def write_data(time_interval=TimeInterval, refined_type=FullyPreprocessedPath):
+    def set_data(time_interval=TimeInterval, refined_type=FullyPreprocessedPath):
+        """
+        - HeatMap 에 필요한 data 를 time-interval 과 refined-type 에 맟주어 tsv 형식으로 가공하여 저장
+
+        :param time_interval:
+            time interval
+        :param refined_type:
+            refined type
+        :return:
+            NA
+        """
         # set tsv file name
         tsv_file_name = 'sensor_data.tsv'
         tsv_file_name = os.path.join(VisualizationRepository, HeatMapPath, tsv_file_name)
@@ -67,6 +77,7 @@ class HeatMap:
 
     @staticmethod
     def set_cluster_report(time_interval=TimeInterval, refined_type=FullyPreprocessedPath):
+        # load similarity model
         similarity_model = pickle.load(
             Load.binary_file_list(os.path.join(RepositoryPath, str(time_interval), refined_type, ModelPath)))
 
@@ -176,4 +187,4 @@ class Network:
 
 
 if __name__ == '__main__':
-    HeatMap.write_data()
+    HeatMap.set_data()

@@ -45,8 +45,8 @@ class Load:
             for i in xrange(0, len(file_names)):
                 ext = os.path.splitext(file_names[i])[-1]
                 if ext == '.bin':
-                    file = os.path.join(directory, file_names[i])
-                    bin_file_list.append(file)
+                    binary_file = os.path.join(directory, file_names[i])
+                    bin_file_list.append(binary_file)
         except OSError as err:
             print 'OSError' + str(err)
             exit()
