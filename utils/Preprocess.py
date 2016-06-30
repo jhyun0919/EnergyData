@@ -88,7 +88,7 @@ def set_ts_spectrum(raw_data_binary_file_list):
     end_ts = data['ts'][-1][0]
 
     print '\t',
-    print 'searching latest start_ts & earliest end_ts...'
+    print 'searching latest start_ts & earliest end_ts'
 
     for binary_file in raw_data_binary_file_list:
         data = pickle.load(open(binary_file))

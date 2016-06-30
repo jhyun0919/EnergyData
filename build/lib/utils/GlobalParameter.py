@@ -6,14 +6,14 @@
 TimeInterval = 1440  # minute
 
 ###############################################################################
-# Save
+# Directory
 
 RepositoryPath = '/Users/JH/Documents/GitHub/EnergyData_jhyun/repository'
 
 RawDataPath = 'VTT'
 TimeLengthStandardPath = 'ts_standard'
 
-VisualizationRepository = '/Users/JH/Documents/GitHub/EnergyData_jhyun/Visualization'
+VisualizationRepository = 'Visualization'
 HeatMapPath = 'HeatMap'
 NetworkPath = 'Network'
 CalendarHeatMapPath = 'Calendar_HeatMap'

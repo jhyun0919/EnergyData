@@ -4,7 +4,6 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import FileIO
 import os
-import time
 from GlobalParameter import *
 
 
@@ -69,6 +68,8 @@ class Save:
         :return:
 
         """
+        print 'data graph'
+
         save_path = os.path.join(RepositoryPath, GraphPath)
         FileIO.Save.assure_path_exist(save_path)
 
@@ -76,9 +77,8 @@ class Save:
             # load data
             dictionary = FileIO.Load.unpickling(binary_file)
 
-            print 'drawing : ',
-            print dictionary['file_name']
-            start_time = time.time()
+            print'\t',
+            print 'drawing : ' + dictionary['file_name']
 
             # make a plot
             plt.figure(figsize=(12, 9))
@@ -89,9 +89,5 @@ class Save:
             graph_figure_path = os.path.join(save_path, dictionary['file_name'] + '.png')
             plt.savefig(graph_figure_path, format='png')
             plt.close()
-
-            end_time = time.time()
-            run_time = end_time - start_time
-            print '\t' + 'run_time: ' + str(run_time) + ' sec'
 
         return save_path

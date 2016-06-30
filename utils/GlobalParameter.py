@@ -6,7 +6,7 @@
 TimeInterval = 1440  # minute
 
 ###############################################################################
-# Save
+# Directory
 
 RepositoryPath = '/Users/JH/Documents/GitHub/EnergyData_jhyun/repository'
 
