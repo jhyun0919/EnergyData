@@ -5,6 +5,7 @@ from GlobalParameter import *
 import FileIO
 import cmath as math
 from datetime import timedelta
+from sklearn import preprocessing
 import cPickle as pickle
 import os
 
@@ -25,12 +26,12 @@ def refining_data(time_interval=TimeInterval, refined_type=FullyPreprocessedPath
     print 'time stamp standardization'
     ts_standardization()
 
-    print 'data preprocess'
+    print 'preprocess'
     for line in FileIO.Load.binary_file_list(os.path.join(RepositoryPath, TimeLengthStandardPath)):
         file_name = line.rsplit('/', 1)[-1]
 
         print '\t',
-        print 'refining : ' + file_name
+        print 'refining: ' + file_name
 
         if refined_type == FullyPreprocessedPath:
             _, refined_path = FileIO.Save.refined_data2bin_file(fully_data_preprocess(line, time_interval),
@@ -56,9 +57,10 @@ def ts_standardization():
     # set temporary start ts & end ts
     start_ts, end_ts = set_ts_spectrum(raw_data_binary_file_list)
 
-    print '\t',
-    print 'synchronizing time stamp'
     for binary_file in raw_data_binary_file_list:
+        print '\t',
+        print 'synchronizing time stamp: ',
+        print binary_file.rsplit('/', 1)[-1]
         data = pickle.load(open(binary_file))
         for i in xrange(0, len(data['ts'])):
             if start_ts <= data['ts'][i][0]:
@@ -69,8 +71,14 @@ def ts_standardization():
                 end_idx = j
                 break
 
-        data['ts'] = data['ts'][start_idx:end_idx + 1]
-        data['value'] = data['value'][start_idx:end_idx + 1]
+        try:
+            data['ts'] = data['ts'][start_idx:end_idx + 1]
+            data['value'] = data['value'][start_idx:end_idx + 1]
+        except UnboundLocalError as err:
+            print err
+            print data
+            exit()
+
         data['ts'][0][0] = start_ts
         data['ts'][-1][0] = end_ts
 
@@ -87,20 +95,24 @@ def set_ts_spectrum(raw_data_binary_file_list):
     start_ts = data['ts'][0][0]
     end_ts = data['ts'][-1][0]
 
-    print '\t',
-    print 'searching latest start_ts & earliest end_ts'
-
     for binary_file in raw_data_binary_file_list:
+        print '\t',
+        print 'scanning start_ts & end_ts: ',
+        print binary_file.rsplit('/', 1)[-1]
         data = pickle.load(open(binary_file))
-        start_ts = max(start_ts, data['ts'][0][0])
-        end_ts = min(end_ts, data['ts'][-1][0])
+        if start_ts <= data['ts'][0][0]:
+            start_ts = data['ts'][0][0]
+            start_ts_file = binary_file.rsplit('/', 1)[-1]
+        if end_ts >= data['ts'][-1][0]:
+            end_ts = data['ts'][-1][0]
+            end_ts_file = binary_file.rsplit('/', 1)[-1]
 
     start_ts = start_ts.replace(hour=0, minute=0, second=0)
     start_ts = start_ts + timedelta(days=1)
     end_ts = end_ts.replace(hour=0, minute=0, second=0)
 
-    print '\t\t' + 'start_ts: ' + str(start_ts)
-    print '\t\t' + 'end_ts: ' + str(end_ts)
+    print '\t> ' + 'start_ts: ' + str(start_ts) + ' from ' + start_ts_file
+    print '\t> ' + 'end_ts: ' + str(end_ts) + ' from ' + end_ts_file
 
     return start_ts, end_ts
 
@@ -168,7 +180,7 @@ def scaling(data_dictionary):
     """
 
     # Standardize a data_set
-    data_dictionary['value'] /= data_dictionary['value'].std()
+    data_dictionary['value'] = preprocessing.scale(data_dictionary['value'], axis=0, with_mean=False, with_std=True)
 
     return data_dictionary
 
@@ -228,7 +240,7 @@ def ts_scaling(dictionary_data, time_interval=TimeInterval):
 
             value_collector.append(dictionary_data['value'][i])
 
-        # for final ts & value
+        # for last ts & value
         if i == (len(dictionary_data['ts']) - 1):
             ts.append(present_ts)
             calculated_value = sum(value_collector) / len(value_collector)
@@ -297,18 +309,27 @@ def interpolation_rule(idx, value):
         계산된 interpolation 값
         - type: float
     """
-    denominator = 1
+    if idx == 0:
+        for i in xrange(0, len(value)):
+            if math.isnan(value[i]):
+                pass
+            else:
+                return value[i]
+    elif idx == len(value) - 1:
+        return value[idx - 1]
+    else:
+        denominator = 1
 
-    for i in xrange(idx, len(value)):
-        if math.isnan(value[i]):
-            denominator += 1
-        else:
-            nominator = value[i] - value[idx - 1]
-            break
+        for i in xrange(idx, len(value)):
+            if math.isnan(value[i]):
+                denominator += 1
+            else:
+                numerator = value[i] - value[idx - 1]
+                break
 
-    interpolated_value = value[idx - 1] + nominator / denominator
+        interpolated_value = value[idx - 1] + numerator / denominator
 
-    return interpolated_value
+        return interpolated_value
 
 
 ###############################################################################

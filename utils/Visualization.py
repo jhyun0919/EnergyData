@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 from FileIO import Load
+from FileIO import Save
 import cPickle as pickle
 import os
 from GlobalParameter import *
@@ -11,6 +12,7 @@ def set_data4visualization(time_interval=TimeInterval, refined_type=FullyPreproc
     HeatMap.set_data(time_interval, refined_type)
     CalendarHeatMap.set_data()
     Network.set_data()
+
 
 class HeatMap:
     def __init__(self):
@@ -32,8 +34,10 @@ class HeatMap:
         print 'HeatMap [O]'
 
         # set tsv file name
+        tsv_file_path = os.path.join(RepositoryPath, VisualizationRepository, HeatMapPath)
+        Save.assure_path_exist(tsv_file_path)
         tsv_file_name = 'sensor_data.tsv'
-        tsv_file_name = os.path.join(RepositoryPath, VisualizationRepository, HeatMapPath, tsv_file_name)
+        tsv_file_name = os.path.join(tsv_file_path, tsv_file_name)
 
         # write tsv file with data
         with open(tsv_file_name, "w") as record_file:

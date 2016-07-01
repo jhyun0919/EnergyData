@@ -59,21 +59,24 @@ class Save:
         pass
 
     @staticmethod
-    def raw_data2graph(directory=RepositoryPath):
-        """
-        - directory 에 있는 raw sensor data 를 graph 로 그려 graph-figure 저장
+    def figure(time_interval=TimeInterval, refined_type=FullyPreprocessedPath):
+        Save.raw_data2graph_figure()
+        Save.refined_data2graph_figure(time_interval, refined_type)
 
-        :param directory:
-            raw sensor data repository directory
+    @staticmethod
+    def raw_data2graph_figure():
+        """
+        - raw sensor data 를 graph 로 그려 graph-figure 저장
+
         :return:
 
         """
-        print 'data graph'
+        print 'raw data graph'
 
-        save_path = os.path.join(RepositoryPath, GraphPath)
+        save_path = os.path.join(RepositoryPath, GraphPath, RawDataPath)
         FileIO.Save.assure_path_exist(save_path)
 
-        for binary_file in FileIO.Load.binary_file_list(os.path.join(directory, RawDataPath)):
+        for binary_file in FileIO.Load.binary_file_list(os.path.join(RepositoryPath, RawDataPath)):
             # load data
             dictionary = FileIO.Load.unpickling(binary_file)
 
@@ -90,4 +93,41 @@ class Save:
             plt.savefig(graph_figure_path, format='png')
             plt.close()
 
-        return save_path
+    @staticmethod
+    def refined_data2graph_figure(time_interval=TimeInterval, refined_type=FullyPreprocessedPath):
+        """
+        - refined sensor data 를 graph 로 그려 graph-figure 저장
+
+        :param time_interval:
+        :param refined_type:
+        :return:
+        """
+        print 'refined data graph'
+
+        save_path = os.path.join(RepositoryPath, GraphPath, str(time_interval), refined_type)
+        FileIO.Save.assure_path_exist(save_path)
+
+        path = os.path.join(RepositoryPath, str(time_interval), refined_type)
+
+        for binary_file in FileIO.Load.binary_file_list(path):
+            # load data
+            dictionary = FileIO.Load.unpickling(binary_file)
+
+            print'\t',
+            print 'drawing : ' + dictionary['file_name']
+
+            # make a plot
+            plt.figure(figsize=(12, 9))
+            plt.title(dictionary['file_name'])
+            plt.scatter(x=dictionary['ts'], y=dictionary['value'], color='b', marker='o')
+
+            # save it in png formats
+            graph_figure_path = os.path.join(save_path, dictionary['file_name'] + '.png')
+            plt.savefig(graph_figure_path, format='png')
+            plt.close()
+
+
+###############################################################################
+
+if __name__ == '__main__':
+    Save.figure()

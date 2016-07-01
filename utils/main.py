@@ -5,19 +5,18 @@ import Graph
 import Preprocess
 import Similarity
 import Visualization
-import time
 
 
 def analyze_data(time_interval=TimeInterval, refined_type=FullyPreprocessedPath):
-
     print 'time_interval: ' + str(time_interval) + ' min'
     print 'refined_type: ' + refined_type
     print '--------------------------------------------'
-    # Draw graphs and save the figures
-    graph_directory = Graph.Save.raw_data2graph()
 
     # Refine the data and save
     refined_data_path = Preprocess.refining_data(time_interval, refined_type)
+
+    # Draw graphs and save the figures
+    Graph.Save.figure()
 
     # Build similarity model and save
     Similarity.Build.similarity_model(time_interval, refined_type)

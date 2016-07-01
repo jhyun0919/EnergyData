@@ -13,7 +13,7 @@ RepositoryPath = '/Users/JH/Documents/GitHub/EnergyData_jhyun/repository'
 RawDataPath = 'VTT'
 TimeLengthStandardPath = 'ts_standard'
 
-VisualizationRepository = 'Visualization'
+VisualizationRepository = 'visualization'
 HeatMapPath = 'HeatMap'
 NetworkPath = 'Network'
 CalendarHeatMapPath = 'Calendar_HeatMap'
