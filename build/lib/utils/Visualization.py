@@ -42,7 +42,7 @@ class HeatMap:
         HeatMap.set_col_label(time_interval, refined_type)
 
         # write cluster report data
-        HeatMap.set_cluster_report(time_interval, refined_type)
+        HeatMap.set_sorting(time_interval, refined_type)
 
     @staticmethod
     def set_value(time_interval=TimeInterval, refined_type=FullyPreprocessedPath):
@@ -98,8 +98,8 @@ class HeatMap:
                 record_file.write('\'' + line.rsplit('/', 1)[-1] + '\'' + '\n')
 
     @staticmethod
-    def set_cluster_report(time_interval=TimeInterval, refined_type=FullyPreprocessedPath):
-        print 'setting clusters tsv file'
+    def set_sorting(time_interval=TimeInterval, refined_type=FullyPreprocessedPath):
+        print 'setting sorting tsv file'
         # load similarity model
         similarity_model_path = os.path.join(RepositoryPath, str(time_interval), refined_type, ModelPath,
                                              'similarity.bin')
@@ -113,10 +113,10 @@ class HeatMap:
 
             # write tsv file with data
             with open(tsv_file_name, "w") as record_file:
-                report = HeatMap.Report.sorting_foo(similarity_model[similarity_type][0], similarity_model['file_list'])
+                report = HeatMap.Sort.foo(similarity_model[similarity_type][0], similarity_model['file_list'])
                 record_file.write(str(report))
 
-    class Report:
+    class Sort:
         def __init__(self):
             pass
 
@@ -124,10 +124,10 @@ class HeatMap:
         # ordering algorithm
 
         @staticmethod
-        def sorting_foo(similarity_model, file_list):
+        def foo(similarity_model, file_list):
             report = []
 
-            tuple_list = HeatMap.Report.binder(similarity_model, file_list)
+            tuple_list = HeatMap.Sort.binder(similarity_model, file_list)
             tuple_list.sort(key=itemgetter(1), reverse=False)
 
             for line in file_list:
@@ -158,16 +158,14 @@ class Network:
 
         # write cluster report data
         print 'setting clusters'
-        Network.set_clusters(time_interval, refined_type)
+        Clustering.AffinityProp.build_cluster(time_interval, refined_type)
 
         # Draw graphs and save the figures
         print 'setting graph figure'
-        Graph.Save.figure()
+        Graph.Save.figure(time_interval, refined_type)
 
-    @staticmethod
-    def set_clusters(time_interval=TimeInterval, refined_type=FullyPreprocessedPath):
-        # Clustering
-        Clustering.AffinityProp.build_cluster(time_interval, refined_type)
+
+
 
 
 if __name__ == '__main__':
