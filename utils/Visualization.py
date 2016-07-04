@@ -46,7 +46,7 @@ class HeatMap:
 
     @staticmethod
     def set_value(time_interval=TimeInterval, refined_type=FullyPreprocessedPath):
-        print 'setting value data tsv file'
+        print 'set value data tsv file'
 
         # set tsv file name
         tsv_file_path = os.path.join(RepositoryPath, VisualizationRepository, HeatMapPath)
@@ -72,7 +72,7 @@ class HeatMap:
 
     @staticmethod
     def set_row_label(time_interval=TimeInterval, refined_type=FullyPreprocessedPath):
-        print 'setting row label tsv file'
+        print 'set row label tsv file'
         # set tsv file name
         tsv_file_name = 'RowLabel.tsv'
         tsv_file_name = os.path.join(RepositoryPath, VisualizationRepository, HeatMapPath, tsv_file_name)
@@ -86,7 +86,7 @@ class HeatMap:
 
     @staticmethod
     def set_col_label(time_interval=TimeInterval, refined_type=FullyPreprocessedPath):
-        print 'setting column label tsv file'
+        print 'set column label tsv file'
         # set tsv file name
         tsv_file_name = 'ColLabel.tsv'
         tsv_file_name = os.path.join(RepositoryPath, VisualizationRepository, HeatMapPath, tsv_file_name)
@@ -99,7 +99,7 @@ class HeatMap:
 
     @staticmethod
     def set_sorting(time_interval=TimeInterval, refined_type=FullyPreprocessedPath):
-        print 'setting sorting tsv file'
+        print 'set sorting tsv file'
         # load similarity model
         similarity_model_path = os.path.join(RepositoryPath, str(time_interval), refined_type, ModelPath,
                                              'similarity.bin')
@@ -157,11 +157,11 @@ class Network:
         print '> Network [under construction]'
 
         # write cluster report data
-        print 'setting clusters'
+        print 'set clusters'
         Clustering.AffinityProp.build_cluster(time_interval, refined_type)
 
         # Draw graphs and save the figures
-        print 'setting graph figure'
+        print 'set graph figure'
         Graph.Save.figure(time_interval, refined_type)
 
 

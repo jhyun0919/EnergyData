@@ -23,11 +23,8 @@ def preprocess_data(time_interval=TimeInterval, refined_type=FullyPreprocessedPa
     :return:
         refined data directory path
     """
-    print 'Unify Data Length'
     unify_data_length()
-
     print
-    print 'Refine Data'
     refined_data_repository_path = refine_data(time_interval=TimeInterval, refined_type=FullyPreprocessedPath)
 
     return refined_data_repository_path
@@ -37,6 +34,7 @@ def preprocess_data(time_interval=TimeInterval, refined_type=FullyPreprocessedPa
 #
 
 def unify_data_length():
+    print 'Unify Data Length'
     # load raw data binary file list
     repository_path = os.path.join(RepositoryPath, RawDataPath)
     raw_data_binary_file_list = FileIO.Load.binary_file_list(repository_path)
@@ -45,7 +43,7 @@ def unify_data_length():
     start_ts, end_ts = set_ts_spectrum(raw_data_binary_file_list)
 
     for binary_file in raw_data_binary_file_list:
-        print 'unifying data length: ',
+        print 'unify data length: ',
         print binary_file.rsplit('/', 1)[-1]
         data = pickle.load(open(binary_file))
         for i in xrange(0, len(data['ts'])):
@@ -82,7 +80,7 @@ def set_ts_spectrum(raw_data_binary_file_list):
     end_ts = data['ts'][-1][0]
 
     for binary_file in raw_data_binary_file_list:
-        print 'scanning start_ts & end_ts: ',
+        print 'scan start_ts & end_ts: ',
         print binary_file.rsplit('/', 1)[-1]
         data = pickle.load(open(binary_file))
         if start_ts <= data['ts'][0][0]:
@@ -106,10 +104,10 @@ def set_ts_spectrum(raw_data_binary_file_list):
 # Data Preprocess
 
 def refine_data(time_interval=TimeInterval, refined_type=FullyPreprocessedPath):
+    print 'Refine Data'
     for line in FileIO.Load.binary_file_list(os.path.join(RepositoryPath, UnifyDataLengthPath)):
         file_name = line.rsplit('/', 1)[-1]
-
-        print 'refining: ' + file_name
+        print 'refine: ' + file_name
 
         if refined_type == FullyPreprocessedPath:
             _, refined_path = FileIO.Save.refined_data2bin_file(fully_data_preprocess(line, time_interval),

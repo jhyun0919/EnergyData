@@ -37,7 +37,7 @@ class Build:
 
     @staticmethod
     def foo(similarity_type, file_list):
-        print 'calculating ' + similarity_type
+        print 'calculate ' + similarity_type
 
         if similarity_type == 'covariance':
             similarity_model = symmetric(Score.covariance_model(file_list))

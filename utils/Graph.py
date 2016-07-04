@@ -80,7 +80,7 @@ class Save:
             # load data
             dictionary = FileIO.Load.unpickling(binary_file)
 
-            print 'drawing : ' + dictionary['file_name']
+            print 'draw : ' + dictionary['file_name']
 
             # make a plot
             plt.figure(figsize=(12, 9))
@@ -112,7 +112,7 @@ class Save:
             # load data
             dictionary = FileIO.Load.unpickling(binary_file)
 
-            print 'drawing : ' + dictionary['file_name']
+            print 'draw : ' + dictionary['file_name']
 
             # make a plot
             plt.figure(figsize=(12, 9))
