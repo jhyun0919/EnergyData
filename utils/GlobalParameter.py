@@ -16,7 +16,6 @@ TimeLengthStandardPath = 'ts_standard'
 VisualizationRepository = 'visualization'
 HeatMapPath = 'HeatMap'
 NetworkPath = 'Network'
-CalendarHeatMapPath = 'Calendar_HeatMap'
 
 GraphPath = 'graph'
 
@@ -31,6 +30,11 @@ ModelPath = 'similarity_model'
 SimilarityType = ['covariance', 'cosine_similarity', 'euclidean_distance', 'manhattan_distance', 'gradient_similarity',
                   'reversed_gradient_similarity']
 Round = 3
+
+###############################################################################
+# Clustering
+AffinityPreference = -0.1
+
 
 """
 ###############################################################################

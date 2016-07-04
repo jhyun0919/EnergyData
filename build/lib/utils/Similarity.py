@@ -6,6 +6,7 @@ from Matrix import symmetric
 from GlobalParameter import *
 import numpy as np
 import os
+import cmath as math
 from math import sqrt
 import cPickle as pickle
 
@@ -334,58 +335,78 @@ class Score:
     @staticmethod
     def covariance_calculator(binary_file_1, binary_file_2):
         data_1, data_2 = Score.unpickling(binary_file_1, binary_file_2)
-        return np.cov(data_1, data_2)[0][1]
+        score = np.cov(data_1, data_2)[0][1]
+        return Score.nan_score_filter(binary_file_1.rsplit('/', 1)[-1], binary_file_2.rsplit('/', 1)[-1], score)
 
     @staticmethod
     def cosine_similarity_calculator(binary_file_1, binary_file_2):
         data_1, data_2 = Score.unpickling(binary_file_1, binary_file_2)
         numerator = sum(a * b for a, b in zip(data_1, data_2))
-        denominator = Score.square_rooted(data_1) * Score.square_rooted(data_2)
+        denominator_1 = Score.square_rooted(data_1)
+        denominator_2 = Score.square_rooted(data_2)
+        denominator = denominator_1 * denominator_2
 
-        return round(numerator / float(denominator), Round)
+        if denominator == 0:
+            score = 0
+        else:
+            score = numerator / float(denominator)
+
+        return Score.nan_score_filter(binary_file_1.rsplit('/', 1)[-1], binary_file_2.rsplit('/', 1)[-1], score)
 
     @staticmethod
     def euclidean_distance_calculator(binary_file_1, binary_file_2):
         data_1, data_2 = Score.unpickling(binary_file_1, binary_file_2)
-        return round(sqrt(sum(pow(a - b, 2) for a, b in zip(data_1, data_2))), Round)
+        score = sqrt(sum(pow(a - b, 2) for a, b in zip(data_1, data_2)))
+        return Score.nan_score_filter(binary_file_1.rsplit('/', 1)[-1], binary_file_2.rsplit('/', 1)[-1], score)
 
     @staticmethod
     def manhattan_distance_calculator(binary_file_1, binary_file_2):
         data_1, data_2 = Score.unpickling(binary_file_1, binary_file_2)
-        return round(sum(abs(a - b) for a, b in zip(data_1, data_2)), Round)
+        score = sum(abs(a - b) for a, b in zip(data_1, data_2))
+        return Score.nan_score_filter(binary_file_1.rsplit('/', 1)[-1], binary_file_2.rsplit('/', 1)[-1], score)
 
     @staticmethod
     def gradient_similarity_calculator(binary_file_1, binary_file_2):
         data_1, data_2 = Score.unpickling(binary_file_1, binary_file_2)
-        score = []
+        score_ = []
 
-        early_gradient = np.gradient(data_1)
-        late_gradient = np.gradient(data_2)
+        gradient_1 = np.gradient(data_1)
+        gradient_2 = np.gradient(data_2)
 
-        for a, b, in zip(early_gradient, late_gradient):
+        for a, b, in zip(gradient_1, gradient_2):
             gradient_distance = abs(a - b)
-            score.append(gradient_distance)
+            score_.append(gradient_distance)
+        score = sum(score_)
 
-        return round(sum(score), 3)
+        return Score.nan_score_filter(binary_file_1.rsplit('/', 1)[-1], binary_file_2.rsplit('/', 1)[-1], score)
 
     @staticmethod
     def reversed_gradient_similarity_calculator(binary_file_1, binary_file_2):
         data_1, data_2 = Score.unpickling(binary_file_1, binary_file_2)
-        score = []
+        score_ = []
 
-        early_gradient = np.gradient(data_1)
-        late_gradient = np.gradient(data_2)
-        late_gradient = late_gradient
+        gradient_1 = np.gradient(data_1)
+        gradient_2 = np.gradient(data_2)
 
-        for a, b, in zip(early_gradient, late_gradient):
+        for a, b, in zip(gradient_1, gradient_2):
             gradient_distance = abs(a - (-b))
-            score.append(gradient_distance)
+            score_.append(gradient_distance)
+        score = sum(score_)
 
-        return round(sum(score), 3)
+        return Score.nan_score_filter(binary_file_1.rsplit('/', 1)[-1], binary_file_2.rsplit('/', 1)[-1], score)
 
     @staticmethod
     def square_rooted(x):
         return round(sqrt(sum([a * a for a in x])), Round)
+
+    @staticmethod
+    def nan_score_filter(file_1, file_2, score):
+        if math.isnan(score):
+            print 'nan covariance occurred between'
+            print '\t' + file_1
+            print '\t' + file_2
+
+        return score
 
     @staticmethod
     def unpickling(binary_file_1, binary_file_2):

@@ -13,10 +13,9 @@ RepositoryPath = '/Users/JH/Documents/GitHub/EnergyData_jhyun/repository'
 RawDataPath = 'VTT'
 TimeLengthStandardPath = 'ts_standard'
 
-VisualizationRepository = 'Visualization'
+VisualizationRepository = 'visualization'
 HeatMapPath = 'HeatMap'
 NetworkPath = 'Network'
-CalendarHeatMapPath = 'Calendar_HeatMap'
 
 GraphPath = 'graph'
 
@@ -31,6 +30,11 @@ ModelPath = 'similarity_model'
 SimilarityType = ['covariance', 'cosine_similarity', 'euclidean_distance', 'manhattan_distance', 'gradient_similarity',
                   'reversed_gradient_similarity']
 Round = 3
+
+###############################################################################
+# Clustering
+AffinityPreference = -0.1
+
 
 """
 ###############################################################################

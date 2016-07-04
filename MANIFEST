@@ -2,6 +2,7 @@
 README.txt
 setup.py
 utils/Cloased_Network.py
+utils/Clustering.py
 utils/Dataframe.py
 utils/FileIO.py
 utils/GlobalParameter.py

@@ -5,6 +5,7 @@ import Graph
 import Preprocess
 import Similarity
 import Visualization
+import Clustering
 
 
 def analyze_data(time_interval=TimeInterval, refined_type=FullyPreprocessedPath):
@@ -23,6 +24,9 @@ def analyze_data(time_interval=TimeInterval, refined_type=FullyPreprocessedPath)
 
     # Set data for visualization
     Visualization.set_data4visualization(time_interval, refined_type)
+
+    # Clustering
+    Clustering.AffinityProp.build_cluster(time_interval, refined_type, )
 
 
 if __name__ == '__main__':

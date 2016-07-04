@@ -10,7 +10,6 @@ from operator import itemgetter
 def set_data4visualization(time_interval=TimeInterval, refined_type=FullyPreprocessedPath):
     print 'setting data for visualization'
     HeatMap.set_data(time_interval, refined_type)
-    CalendarHeatMap.set_data()
     Network.set_data()
 
 
@@ -136,16 +135,6 @@ class HeatMap:
                 tuples_list.append(item)
 
             return tuples_list
-
-
-class CalendarHeatMap:
-    def __init__(self):
-        pass
-
-    @staticmethod
-    def set_data():
-        print '\t',
-        print 'Calendar_HeatMap [X]'
 
 
 class Network:
