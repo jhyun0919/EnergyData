@@ -43,9 +43,9 @@ This is a series of process showing the effort to manage energy more efficiently
 ---
 ### Future Works
 
--[] Visualize via HeatMap
--[] Visualize via Network
--[] Abnormal Detection
+- [X] Visualize via HeatMap  
+- [ ] Visualize via Network  
+- [ ] Abnormal Detection  
  
 ---
 ### References
