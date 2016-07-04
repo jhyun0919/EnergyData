@@ -5,12 +5,15 @@ import cPickle as pickle
 import os
 from GlobalParameter import *
 from operator import itemgetter
+import Graph
+import Clustering
 
 
 def set_data4visualization(time_interval=TimeInterval, refined_type=FullyPreprocessedPath):
-    print 'setting data for visualization'
+    print
+    print 'Set Data for Visualization'
     HeatMap.set_data(time_interval, refined_type)
-    Network.set_data()
+    Network.set_data(time_interval, refined_type)
 
 
 class HeatMap:
@@ -29,14 +32,26 @@ class HeatMap:
         :return:
             NA
         """
-        print '\t',
-        print 'HeatMap [O]'
+        print '> HeatMap'
+
+        # write value data
+        HeatMap.set_value(time_interval, refined_type)
+
+        # write label data
+        HeatMap.set_row_label(time_interval, refined_type)
+        HeatMap.set_col_label(time_interval, refined_type)
+
+        # write cluster report data
+        HeatMap.set_cluster_report(time_interval, refined_type)
+
+    @staticmethod
+    def set_value(time_interval=TimeInterval, refined_type=FullyPreprocessedPath):
+        print 'setting value data tsv file'
 
         # set tsv file name
         tsv_file_path = os.path.join(RepositoryPath, VisualizationRepository, HeatMapPath)
         Save.assure_path_exist(tsv_file_path)
-        tsv_file_name = 'sensor_data.tsv'
-        tsv_file_name = os.path.join(tsv_file_path, tsv_file_name)
+        tsv_file_name = os.path.join(tsv_file_path, 'sensor_data.tsv')
 
         # write tsv file with data
         with open(tsv_file_name, "w") as record_file:
@@ -55,15 +70,9 @@ class HeatMap:
                     record_file.write(
                         str(i + 1) + "\t" + str(col_idx) + "\t" + str(refined_data['value'][i] * 10) + "\n")
 
-        # write label data
-        HeatMap.set_row_label(time_interval, refined_type)
-        HeatMap.set_col_label(time_interval, refined_type)
-
-        # write cluster report data
-        HeatMap.set_cluster_report(time_interval, refined_type)
-
     @staticmethod
     def set_row_label(time_interval=TimeInterval, refined_type=FullyPreprocessedPath):
+        print 'setting row label tsv file'
         # set tsv file name
         tsv_file_name = 'RowLabel.tsv'
         tsv_file_name = os.path.join(RepositoryPath, VisualizationRepository, HeatMapPath, tsv_file_name)
@@ -77,6 +86,7 @@ class HeatMap:
 
     @staticmethod
     def set_col_label(time_interval=TimeInterval, refined_type=FullyPreprocessedPath):
+        print 'setting column label tsv file'
         # set tsv file name
         tsv_file_name = 'ColLabel.tsv'
         tsv_file_name = os.path.join(RepositoryPath, VisualizationRepository, HeatMapPath, tsv_file_name)
@@ -89,9 +99,10 @@ class HeatMap:
 
     @staticmethod
     def set_cluster_report(time_interval=TimeInterval, refined_type=FullyPreprocessedPath):
+        print 'setting clusters tsv file'
         # load similarity model
-        similarity_model_path = os.path.join(RepositoryPath, str(time_interval), refined_type,
-                                             ModelPath, 'similarity.bin')
+        similarity_model_path = os.path.join(RepositoryPath, str(time_interval), refined_type, ModelPath,
+                                             'similarity.bin')
         similarity_model = pickle.load(open(similarity_model_path))
 
         # write a cluster report for each similarity model type
@@ -142,10 +153,22 @@ class Network:
         pass
 
     @staticmethod
-    def set_data():
-        print '\t',
-        print 'Network [X]'
+    def set_data(time_interval=TimeInterval, refined_type=FullyPreprocessedPath):
+        print '> Network [under construction]'
+
+        # write cluster report data
+        print 'setting clusters'
+        Network.set_clusters(time_interval, refined_type)
+
+        # Draw graphs and save the figures
+        print 'setting graph figure'
+        Graph.Save.figure()
+
+    @staticmethod
+    def set_clusters(time_interval=TimeInterval, refined_type=FullyPreprocessedPath):
+        # Clustering
+        Clustering.AffinityProp.build_cluster(time_interval, refined_type)
 
 
 if __name__ == '__main__':
-    HeatMap.set_data()
+    set_data4visualization()

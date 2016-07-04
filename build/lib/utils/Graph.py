@@ -80,7 +80,6 @@ class Save:
             # load data
             dictionary = FileIO.Load.unpickling(binary_file)
 
-            print'\t',
             print 'drawing : ' + dictionary['file_name']
 
             # make a plot
@@ -113,7 +112,6 @@ class Save:
             # load data
             dictionary = FileIO.Load.unpickling(binary_file)
 
-            print'\t',
             print 'drawing : ' + dictionary['file_name']
 
             # make a plot

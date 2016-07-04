@@ -36,14 +36,12 @@ class AffinityProp:
 
         n_clusters_ = len(cluster_centers_indices)
 
-        print '\t',
         print('estimated number of clusters: %d' % n_clusters_)
 
         for i in xrange(len(similarity_model['file_list'])):
             similarity_model['file_list'][i] = similarity_model['file_list'][i].rsplit('/', 1)[-1]
 
         for i in xrange(0, n_clusters_):
-            print '\t',
             print('cluster %i: %s' % ((i + 1), ', '.join(similarity_model['file_list'][labels == i])))
 
 

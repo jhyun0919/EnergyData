@@ -11,7 +11,7 @@ TimeInterval = 1440  # minute
 RepositoryPath = '/Users/JH/Documents/GitHub/EnergyData_jhyun/repository'
 
 RawDataPath = 'VTT'
-TimeLengthStandardPath = 'ts_standard'
+UnifyDataLengthPath = 'length_unify'
 
 VisualizationRepository = 'visualization'
 HeatMapPath = 'HeatMap'

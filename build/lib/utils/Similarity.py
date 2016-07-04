@@ -20,7 +20,8 @@ class Build:
 
     @staticmethod
     def similarity_model(time_interval=TimeInterval, refined_type=FullyPreprocessedPath):
-        print 'building similarity model'
+        print
+        print 'Build Similarity Model'
 
         data_repository = os.path.join(RepositoryPath, str(time_interval), refined_type)
         model = {}
@@ -36,8 +37,6 @@ class Build:
 
     @staticmethod
     def foo(similarity_type, file_list):
-
-        print '\t',
         print 'calculating ' + similarity_type
 
         if similarity_type == 'covariance':
