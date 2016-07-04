@@ -19,7 +19,7 @@ This is a series of process showing the effort to manage energy more efficiently
 ### Energy Data Analysis
 
 ##### < Blue Print >
- <img src="https://raw.githubusercontent.com/jhyun0919/EnergyData_jhyun/master/docs/images/blueprint.jpg" alt="Drawing" style="width: 800px;"/>
+ <img src="https://raw.githubusercontent.com/jhyun0919/EnergyData_jhyun/master/docs/images/blueprint.jpg" alt="Drawing" style="width: 600px;"/>
 
  * 건물에서 사용하는 에너지의 효율성을 개선하려면 정확하고 효율적인 방법으로 에너지 사용을 추적 & 분석할 수 있는 방법이 필요함
  * 분석된 data를 바탕으로 아래 과정을 통애 **energy efficiency를 개선**할 수 있음
