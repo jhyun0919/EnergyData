@@ -1,5 +1,4 @@
 # EnergyData Anlysis Toolkit
----
 
 This is a series of process showing the effort to manage energy more efficiently through analyzing sensor data from certatin buildings  
 
@@ -12,14 +11,14 @@ This is a series of process showing the effort to manage energy more efficiently
  
  
 # Why do we have yo Analyze Energy Data
----
+
 * blahblah
 
 ---
 
 
 # What can EnergyData Analysus Toolkit offers
----
+
 * blahblah
 
 
@@ -27,7 +26,7 @@ This is a series of process showing the effort to manage energy more efficiently
 
 
 #Documentation
----
+
 * [EnergyData Analysis Toolkit Documentation]()
 
 
@@ -35,7 +34,6 @@ This is a series of process showing the effort to manage energy more efficiently
 ---
 
 # Future Works
----
 
 - [X] Visualize via HeatMap  
 - [ ] Visualize via Network  
@@ -44,7 +42,6 @@ This is a series of process showing the effort to manage energy more efficiently
 ---
 
 # References
----
  * 
 
 
