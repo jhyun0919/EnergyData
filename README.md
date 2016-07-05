@@ -9,13 +9,13 @@ This is a series of process showing the effort to manage energy more efficiently
 
  
  
-# Why do we have yo Analyze Energy Data
+# Why do we have to Analyze Energy Data
 
 * blahblah
 
 
 
-# What can EnergyData Analysus Toolkit offers
+# What can EnergyData Analysis Toolkit offers
 
 * blahblah
 
