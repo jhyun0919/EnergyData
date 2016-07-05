@@ -9,7 +9,7 @@ This is a series of process showing the effort to manage energy more efficiently
 
  
  
-# Why do we have to Analyze Energy Data
+# Why do we need to Analyze Energy Data
 
 * blahblah
 
