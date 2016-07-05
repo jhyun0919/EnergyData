@@ -7,14 +7,12 @@ This is a series of process showing the effort to manage energy more efficiently
  <img src="https://raw.githubusercontent.com/jhyun0919/EnergyData_jhyun/master/docs/images/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7%202016-06-01%20%EC%98%A4%ED%9B%84%204.58.48.jpg" alt="Drawing" style="width: 800px;"/>
  
 
----
  
  
 # Why do we have yo Analyze Energy Data
 
 * blahblah
 
----
 
 
 # What can EnergyData Analysus Toolkit offers
@@ -22,7 +20,6 @@ This is a series of process showing the effort to manage energy more efficiently
 * blahblah
 
 
----
 
 
 #Documentation
@@ -31,7 +28,6 @@ This is a series of process showing the effort to manage energy more efficiently
 
 
 
----
 
 # Future Works
 
@@ -39,7 +35,6 @@ This is a series of process showing the effort to manage energy more efficiently
 - [ ] Visualize via Network  
 - [ ] Abnormal Detection  
  
----
 
 # References
  * 
