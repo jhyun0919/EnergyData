@@ -8,7 +8,7 @@ TimeInterval = 1440  # minute
 ###############################################################################
 # Directory
 
-RepositoryPath = '/Users/JH/Documents/GitHub/EnergyData_jhyun/repository'
+RepositoryPath = '/Users/JH/Documents/GitHub/EnergyData/repository'
 
 RawDataPath = 'VTT'
 UnifyDataLengthPath = 'length_unify'
