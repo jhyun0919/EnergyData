@@ -33,7 +33,7 @@ Round = 3
 
 ###############################################################################
 # Clustering
-AffinityPreference = -0.1
+AffinityPreference = -0.05
 
 
 """

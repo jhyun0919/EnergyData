@@ -15,8 +15,10 @@ class AffinityProp:
     @staticmethod
     def build_cluster(time_interval=TimeInterval, refined_type=FullyPreprocessedPath, covariance=True,
                       cosine_similarity=True, euclidean_distance=False, manhattan_distance=False,
-                      gradient_similarity=False, reversed_gradient_similarity=False):
-        print 'affinity propagation clusters'
+                      gradient_similarity=False, reversed_gradient_similarity=False,
+                      affinity_preference=AffinityPreference):
+        print 'affinity propagation clusters, ',
+        print 'preference: ' + str(affinity_preference)
 
         path = os.path.join(RepositoryPath, str(time_interval), refined_type, ModelPath)
         binary_files = Load.binary_file_list(path)
@@ -30,7 +32,7 @@ class AffinityProp:
         X = generate_data(similarity_model, covariance, cosine_similarity, euclidean_distance, manhattan_distance,
                           gradient_similarity, reversed_gradient_similarity)
 
-        af = AffinityPropagation(preference=AffinityPreference).fit(X)
+        af = AffinityPropagation(preference=affinity_preference).fit(X)
         cluster_centers_indices = af.cluster_centers_indices_
         labels = af.labels_
 
@@ -70,4 +72,4 @@ def generate_data(model, covariance=True, cosine_similarity=True, euclidean_dist
 
 
 if __name__ == '__main__':
-    AffinityProp.build_cluster()
+    AffinityProp.build_cluster(affinity_preference=-0.1)
