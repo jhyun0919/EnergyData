@@ -153,19 +153,14 @@ class Network:
         pass
 
     @staticmethod
-    def set_data(time_interval=TimeInterval, refined_type=FullyPreprocessedPath, affinity_preference=AffinityPreference):
+    def set_data(time_interval=TimeInterval, refined_type=FullyPreprocessedPath):
         print '> Network [under construction]'
 
         # write cluster report data
-        print 'set clusters'
-        Clustering.AffinityProp.build_cluster(time_interval, refined_type, affinity_preference=affinity_preference)
 
         # Draw graphs and save the figures
         print 'set graph figure'
         Graph.Save.figure(time_interval, refined_type)
-
-
-
 
 
 if __name__ == '__main__':

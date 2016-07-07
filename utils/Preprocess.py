@@ -25,7 +25,7 @@ def preprocess_data(time_interval=TimeInterval, refined_type=FullyPreprocessedPa
     """
     unify_data_length()
     print
-    refined_data_repository_path = refine_data(time_interval=TimeInterval, refined_type=FullyPreprocessedPath)
+    refined_data_repository_path = refine_data(time_interval, refined_type)
 
     return refined_data_repository_path
 

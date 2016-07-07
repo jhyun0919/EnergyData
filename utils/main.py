@@ -17,6 +17,9 @@ def analyze_data(time_interval=TimeInterval, refined_type=FullyPreprocessedPath)
     # Build similarity model and save
     Similarity.Build.similarity_model(time_interval, refined_type)
 
+    # Build cluster
+    Similarity.Build.cluster(time_interval, refined_type)
+
     # Set data for visualization
     Visualization.set_data4visualization(time_interval, refined_type)
 

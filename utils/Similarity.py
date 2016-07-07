@@ -9,14 +9,18 @@ import os
 import cmath as math
 from math import sqrt
 import cPickle as pickle
+from sklearn.cluster import AffinityPropagation
 
 
 ###############################################################################
-# Build Similarity Model
+# Build
 
 class Build:
     def __init__(self):
         pass
+
+    ###############################################################################
+    # Similarity Model
 
     @staticmethod
     def similarity_model(time_interval=TimeInterval, refined_type=FullyPreprocessedPath):
@@ -62,6 +66,67 @@ class Build:
             exit()
 
         return similarity_model
+
+    ###############################################################################
+    # Cluster
+
+    @staticmethod
+    def cluster(time_interval=TimeInterval, refined_type=FullyPreprocessedPath, covariance=True,
+                cosine_similarity=True, euclidean_distance=False, manhattan_distance=False,
+                gradient_similarity=False, reversed_gradient_similarity=False,
+                affinity_preference=AffinityPreference):
+
+        print 'affinity propagation clusters, ',
+        print 'preference: ' + str(affinity_preference)
+        path = os.path.join(RepositoryPath, str(time_interval), refined_type, ModelPath)
+        binary_files = Load.binary_file_list(path)
+
+        similarity_model = pickle.load(open(binary_files[0]))
+
+        Build.generate_data(similarity_model, covariance, cosine_similarity, euclidean_distance, manhattan_distance,
+                            gradient_similarity, reversed_gradient_similarity)
+
+        X = Build.generate_data(similarity_model, covariance, cosine_similarity, euclidean_distance, manhattan_distance,
+                                gradient_similarity, reversed_gradient_similarity)
+
+        af = AffinityPropagation(preference=affinity_preference).fit(X)
+        cluster_centers_indices = af.cluster_centers_indices_
+        labels = af.labels_
+
+        n_clusters_ = len(cluster_centers_indices)
+
+        print('estimated number of clusters: %d' % n_clusters_)
+
+        for i in xrange(len(similarity_model['file_list'])):
+            similarity_model['file_list'][i] = similarity_model['file_list'][i].rsplit('/', 1)[-1]
+
+        for i in xrange(0, n_clusters_):
+            print('cluster %i: %s' % ((i + 1), ', '.join(similarity_model['file_list'][labels == i])))
+
+    @staticmethod
+    def generate_data(model, covariance=True, cosine_similarity=True, euclidean_distance=True,
+                      manhattan_distance=True,
+                      gradient_similarity=True, reversed_gradient_similarity=False):
+        X = []
+        for i in xrange(0, len(model['file_list'])):
+            x = []
+
+            if covariance:
+                x.append(model['covariance'][0][i])
+            if cosine_similarity:
+                x.append(model['cosine_similarity'][0][i])
+            if euclidean_distance:
+                x.append(model['euclidean_distance'][0][i])
+            if manhattan_distance:
+                x.append(model['manhattan_distance'][0][i])
+            if gradient_similarity:
+                x.append(model['gradient_similarity'][0][i])
+            if reversed_gradient_similarity:
+                x.append(model['reversed_gradient_similarity'][0][i])
+
+            X.append(x)
+
+        return X
 
 
 ###############################################################################
@@ -135,7 +200,7 @@ class Clean:
 
 
 ###############################################################################
-#
+# Similarity Score
 
 class Score:
     def __init__(self):
@@ -417,6 +482,7 @@ class Score:
 
 ###############################################################################
 #
+
 
 """
 class Extend:
