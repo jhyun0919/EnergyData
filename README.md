@@ -11,8 +11,10 @@
  
 # Why do we need to Analyze Energy Data
 
-* blah blah
-
+* Buildings account for a large proportion of energy usage. Commoercial and residential building combined account for 41 of national eregy usage in US [1].
+* In order to meet the increasing energy sustainability standards, ‘smart’ buildings are instrumented with sophisticated sensors for fine-grained energy monitoring [2].
+* Analyzing smart meter data in order to identify energy wastage is an important enabler for recovering the installation cost of sensing infrastructure [2].
+* We propose a method for analysing energy data from smart-buildings to make **clusters**, which are grouped with **similar patterns** and indentiy **abnormal ernergy usage events**.
 
 
 # What can EnergyData Analysis Toolkit offers
@@ -37,7 +39,8 @@
  
 
 # References
- * 
+ 1. AEO. US Energy Information Administration. AEO2011: Annual Energy Outlook, April 2011.
+ 2. Pandarasamy Arjunan, Harshad D Khadilkar, Tanuja Ganu, Zainul M Charbiwala, Amarjeet Singh, Pushpendra Singh. Multi-User Energy Consumption Monitoring and Anomaly Detection with Partial Context Information, ACM BuildSys, 2015
 
 
 
