@@ -23,7 +23,7 @@ def preprocess_data(time_interval=TimeInterval, refined_type=FullyPreprocessedPa
     :return:
         refined data directory path
     """
-    unify_data_length()
+    unify_data_length(time_interval)
     print
     refined_data_repository_path = refine_data(time_interval, refined_type)
 
@@ -33,7 +33,7 @@ def preprocess_data(time_interval=TimeInterval, refined_type=FullyPreprocessedPa
 ###############################################################################
 #
 
-def unify_data_length():
+def unify_data_length(time_interval):
     print 'Unify Data Length'
     # load raw data binary file list
     repository_path = os.path.join(RepositoryPath, RawDataPath)
@@ -66,7 +66,7 @@ def unify_data_length():
         data['ts'][0][0] = start_ts
         data['ts'][-1][0] = end_ts
 
-        FileIO.Save.unify_data2bin_file(data, binary_file.rsplit('/', 1)[-1])
+        FileIO.Save.unify_data2bin_file(data, binary_file.rsplit('/', 1)[-1], time_interval)
 
 
 def set_ts_spectrum(raw_data_binary_file_list):
@@ -105,7 +105,7 @@ def set_ts_spectrum(raw_data_binary_file_list):
 
 def refine_data(time_interval=TimeInterval, refined_type=FullyPreprocessedPath):
     print 'Refine Data'
-    for line in FileIO.Load.binary_file_list(os.path.join(RepositoryPath, UnifyDataLengthPath)):
+    for line in FileIO.Load.binary_file_list(os.path.join(RepositoryPath, UnifyDataLengthPath, str(time_interval))):
         file_name = line.rsplit('/', 1)[-1]
         print 'refine: ' + file_name
 

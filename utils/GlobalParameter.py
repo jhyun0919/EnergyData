@@ -3,7 +3,7 @@
 ###############################################################################
 # Preprocess
 
-TimeInterval = 1440  # minute
+TimeInterval = 15  # minute
 
 ###############################################################################
 # Directory
@@ -33,18 +33,12 @@ Round = 3
 
 ###############################################################################
 # Clustering
+
 AffinityPreference = -0.05
 
-
-"""
 ###############################################################################
-# Network
+# Abnormal Detection
 
-Cosine_Edge_Threshold = 3
-Euclidean_Edge_Threshold = 10
-Manhattan_Edge_Threshold = 10
-Gradient_Edge_Threshold = 11
-Reversed_Gradient_Edge_Threshold = 15
-
-Deviation_Multiplier = 1
-"""
+Month = 'month'
+Week = 'week'
+Day = 'day'

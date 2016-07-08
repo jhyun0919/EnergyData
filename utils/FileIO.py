@@ -101,8 +101,8 @@ class Save:
         f.close()
 
     @staticmethod
-    def unify_data2bin_file(data, file_name):
-        path = os.path.join(RepositoryPath, UnifyDataLengthPath)
+    def unify_data2bin_file(data, file_name, time_interval=TimeInterval):
+        path = os.path.join(RepositoryPath, UnifyDataLengthPath, str(time_interval))
         Save.assure_path_exist(path)
         file_name = os.path.join(path, file_name)
         Save.dumping_bin(file_name, data)

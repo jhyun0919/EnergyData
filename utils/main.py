@@ -25,4 +25,4 @@ def analyze_data(time_interval=TimeInterval, refined_type=FullyPreprocessedPath)
 
 
 if __name__ == '__main__':
-    analyze_data(time_interval=1440, refined_type=FullyPreprocessedPath)
+    analyze_data(time_interval=TimeInterval, refined_type=FullyPreprocessedPath)
