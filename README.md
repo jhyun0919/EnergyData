@@ -36,6 +36,7 @@
 - [ ] Visualize via Network-Graph
 - [ ] Abnormal Detection  
 - [ ] Abnormal Detection with Recurrent Neural Networks
+- [ ] @staticmethod method -> method
  
 
 # References
