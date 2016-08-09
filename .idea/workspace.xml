@@ -5,38 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cb953e4b-3ba5-4624-bfb3-f51d8ae97f67" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/references_clipper/dtw_python/Jupyter Notebook Viewer.webloc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/references_clipper/dtw_python/dtw 1.0 - Python Package Index.webloc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/references_clipper/similarity/Programatically understanding dynamic time warping | Nipun Batra.webloc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/repository/length_unify/VTT_GW1_HA10_VM_EP_KV_K.bin" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/repository/length_unify/VTT_GW1_HA10_VM_KV_K.bin" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/repository/length_unify/VTT_GW1_HA10_VM_KV_KAM.bin" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/repository/length_unify/VTT_GW1_HA11_VM_EP_KV_K.bin" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/repository/length_unify/VTT_GW1_HA11_VM_KV_K.bin" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/repository/length_unify/VTT_GW1_HA11_VM_KV_KAM.bin" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/repository/length_unify/VTT_GW1_KIINT_KV_KAM.bin" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/repository/length_unify/VTT_GW1_KIINT_KV_KO_KAM.bin" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/repository/length_unify/VTT_GW1_TAVOIT_KV_KAM.bin" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/repository/length_unify/VTT_GW2_HA31_VM_KV_K.bin" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/repository/length_unify/VTT_GW2_HA35_VM_EP_KV_K.bin" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/repository/length_unify/VTT_GW2_HA35_VM_KV_K.bin" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/repository/length_unify/VTT_GW2_HA35_VM_KV_KAM.bin" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/repository/length_unify/VTT_GW2_HA4_VM_EP_KV_K.bin" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/repository/length_unify/VTT_GW2_HA4_VM_KV_K.bin" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/repository/length_unify/VTT_GW2_HA4_VM_KV_KAM.bin" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repository/visualization/HeatMap/RowLabel.tsv" afterPath="$PROJECT_DIR$/repository/visualization/HeatMap/RowLabel.tsv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repository/visualization/HeatMap/covariance.tsv" afterPath="$PROJECT_DIR$/repository/visualization/HeatMap/covariance.tsv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repository/visualization/HeatMap/euclidean_distance.tsv" afterPath="$PROJECT_DIR$/repository/visualization/HeatMap/euclidean_distance.tsv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repository/visualization/HeatMap/gradient_similarity.tsv" afterPath="$PROJECT_DIR$/repository/visualization/HeatMap/gradient_similarity.tsv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repository/visualization/HeatMap/manhattan_distance.tsv" afterPath="$PROJECT_DIR$/repository/visualization/HeatMap/manhattan_distance.tsv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repository/visualization/HeatMap/reversed_gradient_similarity.tsv" afterPath="$PROJECT_DIR$/repository/visualization/HeatMap/reversed_gradient_similarity.tsv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repository/visualization/HeatMap/sensor_data.tsv" afterPath="$PROJECT_DIR$/repository/visualization/HeatMap/sensor_data.tsv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/utils/AbnormalDetection.py" afterPath="$PROJECT_DIR$/utils/AbnormalDetection.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/utils/FileIO.py" afterPath="$PROJECT_DIR$/utils/FileIO.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/utils/GlobalParameter.py" afterPath="$PROJECT_DIR$/utils/GlobalParameter.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/utils/Preprocess.py" afterPath="$PROJECT_DIR$/utils/Preprocess.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/utils/main.py" afterPath="$PROJECT_DIR$/utils/main.py" />
     </list>
     <ignored path="EnergyData_jhyun.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -78,11 +47,11 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="AbnormalDetection.py" pinned="false" current-in-tab="true">
+          <file leaf-file-name="AbnormalDetection.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/utils/AbnormalDetection.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="3.372591">
-                  <caret line="105" column="17" selection-start-line="105" selection-start-column="17" selection-end-line="105" selection-end-column="17" />
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="9" column="29" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
                   <folding>
                     <element signature="e#25#48#0" expanded="true" />
                   </folding>
@@ -106,7 +75,7 @@
             <entry file="file://$PROJECT_DIR$/utils/main.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state vertical-scroll-proportion="0.0">
-                  <caret line="27" column="43" selection-start-line="27" selection-start-column="43" selection-end-line="27" selection-end-column="43" />
+                  <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
                   <folding>
                     <element signature="e#25#54#0" expanded="true" />
                   </folding>
@@ -114,21 +83,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Visualization.py" pinned="false" current-in-tab="false">
+          <file leaf-file-name="Visualization.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/utils/Visualization.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
+                <state vertical-scroll-proportion="0.87215906">
                   <caret line="167" column="0" selection-start-line="167" selection-start-column="0" selection-end-line="167" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="FileIO.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/utils/FileIO.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="104" column="83" selection-start-line="104" selection-start-column="83" selection-end-line="104" selection-end-column="83" />
                   <folding />
                 </state>
               </provider>
@@ -153,7 +112,7 @@
           <file leaf-file-name="Similarity.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/utils/Similarity.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="70.111115">
+                <state vertical-scroll-proportion="0.0">
                   <caret line="62" column="32" selection-start-line="62" selection-start-column="32" selection-end-line="62" selection-end-column="32" />
                   <folding>
                     <element signature="e#25#48#0" expanded="true" />
@@ -175,7 +134,7 @@
           <file leaf-file-name="Matrix.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/utils/Matrix.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.4496788">
+                <state vertical-scroll-proportion="0.29829547">
                   <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
                   <folding />
                 </state>
@@ -258,7 +217,7 @@
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
+    <navigator proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -271,54 +230,17 @@
       <manualOrder />
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="EnergyData_jhyun" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="EnergyData_jhyun" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="EnergyData" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="EnergyData_jhyun" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="EnergyData" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="utils" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
-    <property name="FullScreen" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="$USER_HOME$/anaconda2/envs/energydata-env/bin/python2.7" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/KETI/Sensors_Kang" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="FullScreen" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -653,7 +575,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16986156" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32905138" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -661,18 +583,18 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.263834" sideWeight="0.48509052" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32905138" sideWeight="0.49041533" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3270751" sideWeight="0.5170394" order="2" side_tool="true" content_ui="tabs" x="396" y="-849" width="789" height="651" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32650274" sideWeight="0.48296058" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23497267" sideWeight="0.48296058" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3270751" sideWeight="0.5170394" order="2" side_tool="true" content_ui="tabs" x="396" y="-849" width="789" height="651" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32905138" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32905138" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1020,42 +942,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/utils/Visualization.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="167" column="0" selection-start-line="167" selection-start-column="0" selection-end-line="167" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utils/FileIO.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="104" column="83" selection-start-line="104" selection-start-column="83" selection-end-line="104" selection-end-column="83" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utils/Preprocess.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="107" column="112" selection-start-line="107" selection-start-column="112" selection-end-line="107" selection-end-column="112" />
-          <folding>
-            <element signature="e#25#43#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utils/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="27" column="43" selection-start-line="27" selection-start-column="43" selection-end-line="27" selection-end-column="43" />
-          <folding>
-            <element signature="e#25#54#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/utils/GlobalParameter.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1074,21 +960,57 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/utils/Matrix.py">
+    <entry file="file://$PROJECT_DIR$/utils/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4496788">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding>
+            <element signature="e#25#54#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/Preprocess.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="107" column="112" selection-start-line="107" selection-start-column="112" selection-end-line="107" selection-end-column="112" />
+          <folding>
+            <element signature="e#25#43#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/utils/AbnormalDetection.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="3.372591">
-          <caret line="105" column="17" selection-start-line="105" selection-start-column="17" selection-end-line="105" selection-end-column="17" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="29" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
           <folding>
             <element signature="e#25#48#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/Matrix.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.29829547">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/FileIO.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.27698863">
+          <caret line="15" column="32" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/Visualization.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.87215906">
+          <caret line="167" column="0" selection-start-line="167" selection-start-column="0" selection-end-line="167" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
