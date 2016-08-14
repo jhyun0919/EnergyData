@@ -1,4 +1,4 @@
-# EnergyData Analysis Toolkit
+# Energy Data Analysis Toolkit
 
 * This is a series of process showing the effort to **manage energy efficiently** through **analyzing sensor data** from certain buildings  
 
@@ -17,7 +17,7 @@
 * We propose a method for analyzing energy data from smart-buildings to make **clusters**, which are grouped with **similar patterns** and identify **abnormal energy usage events**.
 
 
-# What can EnergyData Analysis Toolkit offers
+# What can Energy Data Analysis Toolkit offers
 
 * The toolkit will analyze energy data from various sensors allowing you to find and understand **dependencies between each power consuming appliances**.
 * Based on sensor data analyzing results, it provides you a chance to **detect abnormal energy consuming behavior**, which is a main reason of wasting power.
@@ -28,7 +28,7 @@
 
 #Documentation
 
-* [EnergyData Analysis Toolkit Documentation](https://github.com/jhyun0919/EnergyData_jhyun/tree/master/docs)
+* [Energy Data Analysis Toolkit Documentation](https://github.com/jhyun0919/EnergyData_jhyun/tree/master/docs)
 
 
 
