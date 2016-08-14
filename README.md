@@ -1,6 +1,6 @@
 # EnergyData Analysis Toolkit
 
-* This is a series of process showing the effort to **manage energy efficiently** through **analyzing sensor data** from certatin buildings  
+* This is a series of process showing the effort to **manage energy efficiently** through **analyzing sensor data** from certain buildings  
 
  
 ##### [ Conceptual Scheme ]
