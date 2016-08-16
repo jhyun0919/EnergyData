@@ -19,7 +19,7 @@
 
 # What can Energy Data Analysis Toolkit offers
 
-* The toolkit will analyze energy data from various sensors allowing you to find and understand **dependencies between each power consuming appliances**.
+* The toolkit will analyze energy data from various sensors allowing you to **understand dependencies** between each power consuming appliances and **identify energy wastage**.
 * Based on sensor data analyzing results, it provides you a chance to **detect abnormal energy consuming behavior**, which is a main reason of wasting power.
 * 
 
